@@ -29,5 +29,5 @@ jobs:
         env:
             SSH_PRIVATE_KEY: ${{ secrets.GC_SSH_PRIVATE }}
             REMOTE_HOST: "brisbanepetrescue.me"
-            REMOTE_USER: "b.estrade@uqconnect.edu.au"
+            REMOTE_USER: "b.estrade"
             TARGET: "/var/www/html/"
