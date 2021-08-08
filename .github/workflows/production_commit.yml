@@ -31,4 +31,4 @@ jobs:
             REMOTE_HOST: "brisbanepetrescue.me"
             REMOTE_USER: "b.estrade"
             TARGET: "/var/www/html"
-            EXCLUDE: "/.github/"
+            EXCLUDE: "/.github/, /.git/"
