@@ -3,7 +3,6 @@
 
 <head>
     <title>Brisbane Pet Rescue</title>
-    <link rel="stylesheet" href="css/style.css">
     <!-- import generic head section -->
     <?php include('partials/head.php'); ?>
 </head>
@@ -12,7 +11,18 @@
     <!-- import menu -->
     <?php include('partials/menu.php'); ?>
 
-    <h1>Brisbane Pet Rescue</h1>
+    <!-- fOOD sEARCH Section Starts Here -->
+    <section class="food-search text-center">
+        <div class="container">
+
+            <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
+                <input type="search" name="search" placeholder="Search for Pets.." required>
+                <input type="submit" name="submit" value="Search" class="btn btn-primary">
+            </form>
+
+        </div>
+    </section>
+    <!-- fOOD sEARCH Section Ends Here -->
 
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
