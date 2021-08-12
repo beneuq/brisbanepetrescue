@@ -11,26 +11,26 @@
     <!-- import menu -->
     <?php include('partials/menu.php'); ?>
 
-    <!-- fOOD sEARCH Section Starts Here -->
+    <!-- Food Search Section Starts Here -->
     <section class="food-search text-center">
         <div class="container">
 
             <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
-                <input type="search" name="search" placeholder="Search for Pets.." required>
+                <input type="search" name="search" placeholder="Search for Pets..." required>
                 <input type="submit" name="submit" value="Search" class="btn btn-primary">
             </form>
 
         </div>
     </section>
-    <!-- fOOD sEARCH Section Ends Here -->
+    <!-- Food Search Section Ends Here -->
 
-    <!-- CAtegories Section Starts Here -->
+    <!-- Categories Section Starts Here -->
     <section class="categories">
         <div class="container">
             <h2 class="text-center">Explore Breeds</h2>
 
             <?php
-            //Create SQL Query to Display CAtegories from Database
+            //Create SQL Query to Display Categories from Database
             $sql = "SELECT breed_id AS id, breed_name as title, image_url as image_name, alt_text as image_alt FROM tbl_breed, tbl_image WHERE breed_id=image_id AND breed_active='Yes' AND breed_featured='Yes' LIMIT 3";
             //Execute the Query
             $res = mysqli_query($conn, $sql);
