@@ -3,6 +3,7 @@
 
 <head>
     <title>Brisbane Pet Rescue</title>
+    <link rel="stylesheet" href="css/style.css">
     <!-- import generic head section -->
     <?php include('partials/head.php'); ?>
 </head>
@@ -16,7 +17,7 @@
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
         <div class="container">
-            <h2 class="text-center">Explore Foods</h2>
+            <h2 class="text-center">Explore Breeds</h2>
 
             <?php
             //Create SQL Query to Display CAtegories from Database
