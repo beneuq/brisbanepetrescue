@@ -243,6 +243,13 @@ fieldset {
 }
 
 
+/* Footer styling */
+
+.footer {
+    background-color: #ececec;
+}
+
+
 /* CSS for Mobile Size or Smaller Screen */
 
 @media only screen and (max-width:768px) {
