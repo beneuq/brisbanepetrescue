@@ -3,23 +3,26 @@
     <div class="container">
         <div class="logo">
             <a href="#" title="Logo">
-                <img src="images/logo/logo-trans.png" alt="Brisbane Pet Rescue Logo" class="img-responsive">
+                <img src="/images/logo/logo-trans.png" alt="Brisbane Pet Rescue Logo" class="img-responsive">
             </a>
         </div>
 
         <div class="menu text-right">
             <ul>
                 <li>
-                    <a href="<?php echo SITEURL; ?>">Home</a>
+                    <a href="/index.php">Home</a>
                 </li>
                 <li>
-                    <a href="<?php echo SITEURL; ?>breeds.php">Breeds</a>
+                    <a href="/breeds.php">Breeds</a>
                 </li>
                 <li>
-                    <a href="<?php echo SITEURL; ?>pets.php">Pets</a>
+                    <a href="/pets.php">Pets</a>
                 </li>
                 <li>
                     <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="/login.php">Login</a>
                 </li>
             </ul>
         </div>
