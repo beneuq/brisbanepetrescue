@@ -130,6 +130,7 @@ fieldset {
 
 .menu ul {
     list-style-type: none;
+    color: white;
 }
 
 .menu ul li {
