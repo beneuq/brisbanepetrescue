@@ -15,7 +15,7 @@
     <section class="food-search text-center">
         <div class="container">
 
-            <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
+            <form action="food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Pets..." required>
                 <input type="submit" name="submit" value="Search" class="btn btn-primary">
             </form>
@@ -30,33 +30,33 @@
             <h2 class="text-center">Explore Breeds</h2>
 
             <?php
-            //Create SQL Query to Display Categories from Database
+            // Create SQL Query to Display Categories from Database
             $sql = "SELECT breed_id AS id, Breed as title FROM dog_breeds LIMIT 3";
-            //Execute the Query
+            // Execute the Query
             $res = mysqli_query($conn, $sql);
-            //Count rows to check whether the category is available or not
+            // Count rows to check whether the category is available or not
             $count = mysqli_num_rows($res);
 
             if ($count > 0) {
-                //Breeds Available
+                // Breeds Available
                 while ($row = mysqli_fetch_assoc($res)) {
-                    //Get the Values like id, title, image_name
+                    // Get the Values like id, title, image_name
                     $id = $row['id'];
                     $title = $row['title'];
                     $image_name = "";
             ?>
 
-                    <a href="<?php echo SITEURL; ?>category-breeds.php?category_id=<?php echo $id; ?>">
+                    <a href="category-breeds.php?breed_id=<?php echo $id; ?>">
                         <div class="box-3 float-container">
                             <?php
                             //Check whether Image is available or not
                             if ($image_name == "") {
-                                //Display MEssage
+                                // Display Message
                                 echo "<div class='error'>Image not Available</div>";
                             } else {
-                                //Image Available
+                                // Image Available
                             ?>
-                                <img src="<?php echo SITEURL; ?>images/<?php echo $image_name; ?>" alt="<?php echo $image_alt; ?>" class="img-responsive img-curve">
+                                <img src="images/<?php echo $image_name; ?>" alt="<?php echo $image_alt; ?>" class="img-responsive img-curve">
                             <?php
                             }
                             ?>
@@ -69,7 +69,7 @@
             <?php
                 }
             } else {
-                //Breeds not Available
+                // Breeds not Available
                 echo "<div class='error'>Breeds not Added.</div>";
             }
             ?>

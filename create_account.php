@@ -30,10 +30,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if(mysqli_stmt_execute($query)) {
             // Send user to login page now
-            alertBox("Thanks for signing up, $first_name!");
+            alert_box("Thanks for signing up, $first_name!");
             header("Location: login.php");
         } else {
-            alertBox("Error creating account!");
+            alert_box("Error creating account!");
         }
         mysqli_stmt_close($query);
     }

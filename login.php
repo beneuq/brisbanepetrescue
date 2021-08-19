@@ -27,13 +27,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($password_attempt == $password) {
                     header("Location: https://pics.me.me/whats-the-password-is-it-dog-muffled-meeting-behind-the-63634880.png");
                 } else {
-                    alertBox("Login failed! {$first_name}'s password is actually {$password}");
+                    alert_box("Login failed! $first_name's password is actually $password");
                 }
             } else {
-                alertBox("No user found matching the username: {$username}");
+                alert_box("No user found matching the username: $username");
             }
         } else {
-            alertBox("SQL Error!");
+            alert_box("SQL Error!");
         }
         mysqli_stmt_close($query);
     }

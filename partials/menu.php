@@ -2,7 +2,7 @@
 <section class="navbar">
     <div class="container">
         <div class="logo">
-            <a href="#" title="Logo">
+            <a href="/" title="Logo">
                 <img src="/images/logo/logo-trans.png" alt="Brisbane Pet Rescue Logo" class="img-responsive">
             </a>
         </div>
