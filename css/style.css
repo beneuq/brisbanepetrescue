@@ -112,8 +112,11 @@ fieldset {
     color: green;
 }
 
+td {
+    border: thin solid black;
+}
 
-/* CSSS for navbar section */
+/* CSS for navbar section */
 
 .navbar {
     background-color: #747d8c;
@@ -137,7 +140,6 @@ fieldset {
     padding: 1%;
     font-weight: bold;
 }
-
 
 /* CSS for Food SEarch Section */
 
