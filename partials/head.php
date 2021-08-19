@@ -4,4 +4,4 @@
 <!-- Link our CSS file -->
 <link rel="stylesheet" href="/css/style.css">
 <!-- Import Constants -->
-<?php include('config/constants.php'); ?>
+<?php require_once 'config/constants.php'; ?>
