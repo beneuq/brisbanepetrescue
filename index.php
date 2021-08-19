@@ -31,7 +31,7 @@
 
             <?php
             //Create SQL Query to Display Categories from Database
-            $sql = "SELECT breed_id AS id, breed_name as title, image_url as image_name, alt_text as image_alt FROM tbl_breed, tbl_image WHERE breed_id=image_id AND breed_active='Yes' AND breed_featured='Yes' LIMIT 3";
+            $sql = "SELECT breed_id AS id, Breed as title FROM dog_breeds LIMIT 3";
             //Execute the Query
             $res = mysqli_query($conn, $sql);
             //Count rows to check whether the category is available or not
@@ -43,7 +43,7 @@
                     //Get the Values like id, title, image_name
                     $id = $row['id'];
                     $title = $row['title'];
-                    $image_name = $row['image_name'];
+                    $image_name = "";
             ?>
 
                     <a href="<?php echo SITEURL; ?>category-breeds.php?category_id=<?php echo $id; ?>">
@@ -62,7 +62,7 @@
                             ?>
 
 
-                            <h3 class="float-text text-white"><?php echo $title; ?></h3>
+                            <h3 class="float-text"><?php echo $title; ?></h3>
                         </div>
                     </a>
 
