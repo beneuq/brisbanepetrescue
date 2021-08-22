@@ -48,6 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Brisbane Pet Rescue | Login</title>
     <!-- import generic head section -->
     <?php include('partials/head.php'); ?>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
