@@ -253,7 +253,25 @@ td {
 
 /* Login styling */
 
-.wrapper {
+.wrapper input{
+    width: 100%;
+    padding: 12px 20px;
+}
+
+.wrapper input[type=submit] {
+    float: right;
+    background: linear-gradient(-90deg, rgb(255, 255, 255), rgb(20, 185, 197));
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+.wrapper{
+    width: 350px;
+    padding: 20px;
     background: rgb(197, 206, 207);
     color: black;
     margin: auto;
@@ -263,6 +281,24 @@ td {
     border: 0;
     border-radius: 10px;
     font-size: 20px;
+}
+
+.wrapper h2 {
+    margin-bottom: 50px;
+    color: black;
+}
+
+.wrapper p {
+    margin-bottom: 50px;
+}
+
+.wrapper div {
+    margin-bottom: 50px;
+}
+.username {
+    text-align: center;
+    color: white;
+    font-size: 40px;
 }
 
 

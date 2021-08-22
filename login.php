@@ -68,9 +68,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 
     <br>
-    <h2> New User?</h2>
-    <p><a href="create_account.php">Click here</a> to create a new account!</p>
-
+    <p> "Don't have an account? " 
+        <a href="create_account.php">Sign up now</a>"."
+    </p>
+    
     <!-- import footer -->
     <?php include('partials/footer.php'); ?>
     </body>
