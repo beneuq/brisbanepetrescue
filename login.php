@@ -56,6 +56,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include('partials/menu.php'); ?>
 
     <h1>Log in to your Account</h1>
+    <p>Please fill in your credentials to login.</p>
     <form action="login.php" method="post">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" value="<?php echo $username;?>">
