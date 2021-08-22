@@ -50,30 +50,41 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include('partials/head.php'); ?>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<div class="wrapper"> 
-    <body>
-    <!-- import menu -->
-    <?php include('partials/menu.php'); ?>
 
-    <h1>Log in to your Account</h1>
-    <p>Please fill in your credentials to login.</p>
-    <form action="login.php" method="post">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" value="<?php echo $username;?>">
-        <br>
-        <label for="password_attempt">Password</label>
-        <input type="password" id="password_attempt" name="password_attempt" value="<?php echo $password_attempt;?>">
-        <br><br>
-        <input type="submit" class="btn btn-primary" value="Login">
-    </form>
+<body>
+    <div id="top"></div>
+    <div class="wrapper"> 
+        <!-- import menu -->
+        <?php include('partials/menu.php'); ?>
 
-    <br>
-    <p> "Don't have an account? " 
-        <a href="create_account.php">Sign up now</a>"."
-    </p>
+        <h1>Log in to your Account</h1>
+        <p>Please fill in your credentials to login.</p>
+        <form action="login.php" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="<?php echo $username;?>" class="form-control">
+            </div>
+            
+            <<div class="form-group">
+                <label for="password_attempt">Password</label>
+                <input type="password" id="password_attempt" name="password_attempt" value="<?php echo $password_attempt;?>">
+            </div>
+
+            <<div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Login">
+            </div>
+            
+        </form>
+
     
-    <!-- import footer -->
-    <?php include('partials/footer.php'); ?>
-    </body>
-</div>
+        <p> "Don't have an account? " 
+            <a href="create_account.php">Sign up now</a>"."
+        </p>
+        
+        <!-- import footer -->
+        <?php include('partials/footer.php'); ?>
+        
+    </div>
+
+</body>
 </html>
