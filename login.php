@@ -62,12 +62,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <form action="login.php" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" value="<?php echo $username;?>" class="form-control">
+                <input type="text" id="username" name="username" class="form-control">
             </div>
             
             <<div class="form-group">
                 <label for="password_attempt">Password</label>
-                <input type="password" id="password_attempt" name="password_attempt" value="<?php echo $password_attempt;?>">
+                <input type="password" id="password_attempt" name="password_attempt">
             </div>
 
             <<div class="form-group">
