@@ -57,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
 
-        <h1>Log in to your Account</h1>
+        <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
         <form action="login.php" method="post">
             <div class="form-group">
@@ -77,8 +77,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
 
     
-        <p> "Don't have an account? " 
-            <a href="create_account.php">Sign up now</a>"."
+        <p>Don't have an account?  
+            <a href="create_account.php">Sign up now.</a>
         </p>
         
         <!-- import footer -->
