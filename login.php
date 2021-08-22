@@ -66,12 +66,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" id="username" name="username" class="form-control">
             </div>
             
-            <<div class="form-group">
+            <div class="form-group">
                 <label for="password_attempt">Password</label>
                 <input type="password" id="password_attempt" name="password_attempt">
             </div>
 
-            <<div class="form-group">
+            <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
             
@@ -84,10 +84,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         
         
         
-        </div>
-
-        <!-- import footer -->
-        <?php include('partials/footer.php'); ?>
+    </div>
+    <div id="top"></div>
+    <!-- import footer -->
+    <?php include('partials/footer.php'); ?>
 
 </body>
 </html>
