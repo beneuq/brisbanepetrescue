@@ -50,28 +50,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include('partials/head.php'); ?>
     <link rel="stylesheet" href="css/style.css">
 </head>
+<div class="wrapper"> 
+    <body>
+    <!-- import menu -->
+    <?php include('partials/menu.php'); ?>
 
-<body>
-<!-- import menu -->
-<?php include('partials/menu.php'); ?>
+    <h1>Log in to your Account</h1>
+    <form action="login.php" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" value="<?php echo $username;?>">
+        <br>
+        <label for="password_attempt">Password</label>
+        <input type="password" id="password_attempt" name="password_attempt" value="<?php echo $password_attempt;?>">
+        <br><br>
+        <input type="submit" class="btn btn-primary" value="Login">
+    </form>
 
-<h1>Log in to your Account</h1>
-<form action="login.php" method="post">
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" value="<?php echo $username;?>">
     <br>
-    <label for="password_attempt">Password</label>
-    <input type="password" id="password_attempt" name="password_attempt" value="<?php echo $password_attempt;?>">
-    <br><br>
-    <input type="submit" class="btn btn-primary" value="Login">
-</form>
+    <h2> New User?</h2>
+    <p><a href="create_account.php">Click here</a> to create a new account!</p>
 
-<br>
-<h2> New User?</h2>
-<p><a href="create_account.php">Click here</a> to create a new account!</p>
-
-<!-- import footer -->
-<?php include('partials/footer.php'); ?>
-</body>
-
+    <!-- import footer -->
+    <?php include('partials/footer.php'); ?>
+    </body>
+</div>
 </html>
