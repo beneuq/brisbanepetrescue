@@ -51,7 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="banner">
     <?php include('partials/menu.php'); ?>
     <div id="top"></div>
     <div class="wrapper"> 
