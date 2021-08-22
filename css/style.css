@@ -318,6 +318,12 @@ h2 {
     font-size: 40px;
 }
 
+body {
+    background-image: url(../images/banner.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 
 /* CSS for Mobile Size or Smaller Screen */
 
