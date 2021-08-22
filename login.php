@@ -82,10 +82,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="create_account.php">Sign up now.</a>
         </p>
         
+        
+        
+        </div>
+
         <!-- import footer -->
         <?php include('partials/footer.php'); ?>
-        
-    </div>
 
 </body>
 </html>
