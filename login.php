@@ -52,10 +52,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+    <?php include('partials/menu.php'); ?>
     <div id="top"></div>
     <div class="wrapper"> 
         <!-- import menu -->
-        <?php include('partials/menu.php'); ?>
+        
 
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
