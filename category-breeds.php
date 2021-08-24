@@ -37,12 +37,12 @@
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
         <div class="container">
-            <h2 class="text-center">Food Menu</h2>
+            <h2 class="text-center"><?php echo $breed_title ?></h2>
 
             <?php
 
             //Create SQL Query to Get foods based on Selected CAtegory
-            $sql2 = "SELECT b.breed_id AS id, Breed as title, path, alt_text, b.lifetime_cost_class as price FROM dog_breeds AS b, breed_image as i WHERE b.breed_id = i.breed_id AND main_image = 1 AND b.breed_id==$breed_id";
+            $sql2 = "SELECT b.breed_id AS id, Breed as title, path, alt_text, b.lifetime_cost_class as price FROM dog_breeds AS b, breed_image as i WHERE b.breed_id = i.breed_id AND main_image = 1 AND b.breed_id=$breed_id";
 
             //Execute the Query
             $res2 = mysqli_query($conn, $sql2);
