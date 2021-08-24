@@ -57,7 +57,7 @@
                     $id = $row2['id'];
                     $title = $row2['title'];
                     $price = $row2['price'];
-                    $image_name = $row2['image_name'];
+                    $image_name = $row2['path'];
                     $image_alt = $row2['alt_text']
             ?>
 
