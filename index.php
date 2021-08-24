@@ -31,7 +31,7 @@
 
             <?php
             // Create SQL Query to Display Categories from Database
-            $sql = "SELECT breed_id AS id, Breed as title FROM dog_breeds LIMIT 3";
+            $sql = "SELECT b.breed_id AS id, Breed as title, path, alt_text, height, width FROM dog_breeds AS b, breed_image as i WHERE b.breed_id = i.breed_id AND main_image = 1 AND b.popularity_class = 5 LIMIT 32";
             // Execute the Query
             $res = mysqli_query($conn, $sql);
             // Count rows to check whether the category is available or not
@@ -43,7 +43,8 @@
                     // Get the Values like id, title, image_name
                     $id = $row['id'];
                     $title = $row['title'];
-                    $image_name = "";
+                    $image_name = $row['path'];
+                    $image_alt = $row['alt_text'];
             ?>
 
                     <a href="category-breeds.php?breed_id=<?php echo $id; ?>">
@@ -56,7 +57,7 @@
                             } else {
                                 // Image Available
                             ?>
-                                <img src="images/<?php echo $image_name; ?>" alt="<?php echo $image_alt; ?>" class="img-responsive img-curve">
+                                <img src="https://brisbanepetrescue.me<?php echo $image_name; ?>" alt="<?php echo $image_alt; ?>" class="img-responsive img-curve">
                             <?php
                             }
                             ?>
