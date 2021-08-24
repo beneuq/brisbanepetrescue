@@ -1,4 +1,15 @@
-    <?php include('partials-front/menu.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Brisbane Pet Rescue</title>
+    <!-- import generic head section -->
+    <?php include('partials/head.php'); ?>
+</head>
+
+<body>
+    <!-- import menu -->
+    <?php include('partials/menu.php'); ?>
 
     <?php
     //CHeck whether id is passed or not
@@ -21,18 +32,6 @@
         header('location:' . SITEURL);
     }
     ?>
-
-
-    <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-search text-center">
-        <div class="container">
-
-            <h2>Foods on <a href="#" class="text-white">"<?php echo $breed_title; ?>"</a></h2>
-
-        </div>
-    </section>
-    <!-- fOOD sEARCH Section Ends Here -->
-
 
 
     <!-- fOOD MEnu Section Starts Here -->
@@ -110,3 +109,6 @@
     <!-- fOOD Menu Section Ends Here -->
 
     <?php include('partials-front/footer.php'); ?>
+</body>
+
+</html>
