@@ -340,8 +340,13 @@ h2 {
     background-color: var(--base);
     color: white;
     text-align: left;
+    font-weight: bold;
 }
 
+.breed-table th,
+.breed-table td {
+    padding: 12px 15px;
+}
 
 /* CSS for Mobile Size or Smaller Screen */
 
