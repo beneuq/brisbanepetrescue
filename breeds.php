@@ -24,28 +24,32 @@ TODO: @Front-end guys - someone wanna come up with a way to format this nicely?
         Doesn't have to be a table if you'd rather use something else.
 -->
 <div id="sqldata">
-    <table>
-        <tr>
-            <th>Breed</th>
-            <th>Intelligence</th>
-            <th>Lifetime Cost</th>
-            <th>Popularity</th>
-            <th class="text-left">Size Class</th>
-        </tr>
-        <?php
-            $res = mysqli_query($conn,"SELECT * FROM dog_breeds ORDER BY Breed ");
-            while($entry = mysqli_fetch_array($res)) {
-                $size_image = "images/icons/dog_size_" . $entry['size_class'];
-                echo "<tr>
-                        <td>" . $entry['Breed'] . "</td>
-                        <td>" . $entry['intelligence_desc'] . "</td>
-                        <td class='text-center'>" . str_repeat("&#x1F4B2;",$entry['lifetime_cost_class']) . "</td>
-                        <td>" . str_repeat("&#x2B50;",$entry['popularity_class']) . "</td>
-                        <td> <img src='images/icons/dog_size_{$entry['size_class']}' alt='dog size chart' width='15%'> </td>
-                    </tr>";
-            }
-            mysqli_close($conn)
-        ?>
+    <table class="breed-table">
+        <thead>
+            <tr>
+                <th>Breed</th>
+                <th>Intelligence</th>
+                <th>Lifetime Cost</th>
+                <th>Popularity</th>
+                <th class="text-left">Size Class</th>
+            </tr>
+        <thead>
+        <tbody>
+            <?php
+                $res = mysqli_query($conn,"SELECT * FROM dog_breeds ORDER BY Breed ");
+                while($entry = mysqli_fetch_array($res)) {
+                    $size_image = "images/icons/dog_size_" . $entry['size_class'];
+                    echo "<tr>
+                            <td>" . $entry['Breed'] . "</td>
+                            <td>" . $entry['intelligence_desc'] . "</td>
+                            <td class='text-center'>" . str_repeat("&#x1F4B2;",$entry['lifetime_cost_class']) . "</td>
+                            <td>" . str_repeat("&#x2B50;",$entry['popularity_class']) . "</td>
+                            <td> <img src='images/icons/dog_size_{$entry['size_class']}' alt='dog size chart' width='15%'> </td>
+                        </tr>";
+                }
+                mysqli_close($conn)
+            ?>
+        <tbody>
     </table>
 </div>
 <!-- End main page body -->

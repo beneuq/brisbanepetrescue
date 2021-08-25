@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+root {
+    --base: rgba(74,15,120,255);
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -322,6 +326,20 @@ h2 {
     background-image: url(../images/banner.jpg);
     background-attachment: fixed;
     background-size: cover;
+}
+
+/* CSS for breeds page */
+.breed-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+}
+
+.breed-table thead tr {
+    background-color: var(--base);
+    color: white;
+    text-align: left;
 }
 
 
