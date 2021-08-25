@@ -2,15 +2,19 @@
     //Start Session
     session_start();
 
+    // Set to true if running test server locally, some features will not work.
+    const SKIP_DB_CONNECTION = false;
 
     //Create Constants to Store Non Repeating Values
-    define('SITEURL', 'https://brisbanepetrescue.me/');
-    define('LOCALHOST', 'localhost');
-    define('DB_USERNAME', 'root');
-    define('DB_PASSWORD', 'PL6VCaRJ978WB4');
-    define('DB_NAME', 'pet_rescue_db');
+    const SITEURL = 'https://brisbanepetrescue.me/';
+    const LOCALHOST = 'localhost';
+    const DB_USERNAME = 'root';
+    const DB_PASSWORD = 'PL6VCaRJ978WB4';
+    const DB_NAME = 'pet_rescue_db';
 
-    // TODO - Get SQL working (needs DB created first)
-    // $conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD) or die(mysqli_error()); //Database Connection
-    // $db_select = mysqli_select_db($conn, DB_NAME) or die(mysqli_error()); //SElecting Database
-?>
+    if (!SKIP_DB_CONNECTION) {
+        $conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD, DB_NAME); //Database Connection
+        if (!$conn) {
+            die("Could not connect to db" . mysqli_connect_error());
+        }
+    }

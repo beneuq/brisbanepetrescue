@@ -3,7 +3,6 @@
     <!-- Top half of navigation bar -->
     <div class="container flex">
         <a class="main-logo pad-bottom-1" href=index.php>Brisbane Pet Rescue</a>
-
         <!-- Searchbar -->
         <div id="searchbar">
             <form action="<?php echo SITEURL; ?>search.php" method="POST" class="flex">
