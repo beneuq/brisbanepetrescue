@@ -4,9 +4,9 @@
     <head>
         <!-- import generic head section -->
         <?php 
-        $page_title = 'Home';
+        $page_title = 'Help';
         include('partials/head.php'); 
-        $active_home = 'active';
+        $active_help = 'active';
         ?>
     </head>
 
@@ -19,18 +19,9 @@
         <section class="hero-section pos-relative">
             <div class="flex container">
                 <div class="flex f-col hero-content">
-                    <h1 class="pad-bottom-1">Brisbane Pet Rescue</h1>
-                    <h2 class="pad-bottom-1">Find the Perfect Dog for You!</h2>
-                    <p class="pad-bottom-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat id earum iste minus sed libero alias nam illo aut nemo deserunt, temporibus necessitatibus ad, magnam est facere? Cumque adipisci quis aliquam.</p>
-
-                    <div class="pad-bottom-2">
-                        <a href="#" class="margin-right-1 hero-btn">Available Dogs</a>
-                        <a href="#" class="hero-btn hero-btn-alt">Personality Quiz</a>
-                    </div>
+                    <h1 class="pad-bottom-1"><?php echo $page_title; ?></h1>
                 </div>
-                <img class="hero-img" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down">
             </div>
-
         </section>
         <!-- Section 2 -->
         <section class="pg-section">

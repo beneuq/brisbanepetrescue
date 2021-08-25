@@ -11,6 +11,6 @@
     define('DB_NAME', 'pet_rescue_db');
 
     // TODO - Get SQL working (needs DB created first)
-    $conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD) or die(mysqli_error()); //Database Connection
-    $db_select = mysqli_select_db($conn, DB_NAME) or die(mysqli_error()); //SElecting Database
+    // $conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD) or die(mysqli_error()); //Database Connection
+    // $db_select = mysqli_select_db($conn, DB_NAME) or die(mysqli_error()); //SElecting Database
 ?>

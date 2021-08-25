@@ -2,9 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Brisbane Pet Rescue</title>
     <!-- import generic head section -->
-    <?php include('partials/head.php'); ?>
+    <?php 
+    $page_title = 'Login';
+    include('partials/head.php'); 
+    $active_login = 'active';
+    ?>
 </head>
 
 <body>

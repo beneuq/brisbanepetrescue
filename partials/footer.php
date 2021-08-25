@@ -1,7 +1,9 @@
 <!-- footer Section Starts Here -->
-<section class="footer">
-    <div class="container text-center">
-        <p>All rights reserved. Designed By <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Bit by bit</a></p>
+<footer>
+    <div class="container">
+        <p>©2021 Brisbane Pet Rescue. Designed by 'Bit By Bit'</p>
     </div>
-</section>
+</footer>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/script.js" async defer></script>
 <!-- footer Section Ends Here -->
