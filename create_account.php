@@ -64,10 +64,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         </section>
 <!-- TODO @Front-end team please make my page look less bad :) -->
 
-    <div class="wrapper"> 
-        <fieldset>
-            <legend>Create a New Account</legend>
-            <form action="create_account.php" method="post">
+    <div class="wrapper2">   
+        <form action="create_account.php" method="post">
+            <fieldset>
+                <legend>Create a New Account</legend>
                 <div class="form-group">
                     <label for="first_name">First Name</label>
                     <input type="text" id="first_name" name="first_name" value="<?php echo $first_name;?>">
@@ -97,8 +97,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Create Account">
                 </div>
-            </form>
-        </fieldset>
+            </fieldset>
+        </form>
+        
     </div>
 </body>
 <!-- import footer -->
