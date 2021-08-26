@@ -57,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body class="banner">
 <h1>Create a New Account</h1>
-    <div class="wrapper2"> 
+    <div class="wrapper"> 
         <form action="create_account.php" method="post">
             <div class="form-group">
                 <label for="first_name">First Name</label>
