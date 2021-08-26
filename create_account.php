@@ -69,16 +69,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="dob">Date of Birth</label>
                 <input type="date" id="dob" name="dob" value="<?php echo $dob;?>">
             </div>
-            <br>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" value="<?php echo $email;?>">
             </div>
-            <br>
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" value="<?php echo $username;?>">
-                <br>
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" value="<?php echo $password;?>">
             </div>
