@@ -54,6 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body class="banner">
+    <div id="top"></div>
         <div class="underneath-nav"></div>
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
@@ -88,7 +89,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         </p>
 
         </div>
-    <div id="top"></div>
+   
     <!-- import footer -->
     <?php include('partials/footer.php'); ?>
 
