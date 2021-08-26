@@ -15,10 +15,6 @@
         <!-- Account Icons -->
         <div id="user-icons">
             <button>
-<<<<<<< HEAD
-                <img src="images/account-icon.png" alt="Acount icon" width="40px" height="40px">
-                <a href="login.php"></a>
-=======
                 <?php
                     $send_to_page = isset($_SESSION['logged_in']) ? "/account.php" : "/login.php";
                     $login_caption = isset($_SESSION['logged_in']) ? $_SESSION['firstname'] : "Login";
@@ -26,7 +22,6 @@
                 <a href=<?php echo $send_to_page ?>>
                     <img src="images/account-icon.png" alt="Account icon" width="40px" height="40px">
                 </a>
->>>>>>> e1bf83c1712dd4074a202fde4931278802d02492
             </button>
             <button>
                 <img src="images/favourites-icon.png" alt="Favourites icon" width="40px" height="40px">
