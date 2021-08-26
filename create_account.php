@@ -65,38 +65,40 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- TODO @Front-end team please make my page look less bad :) -->
 
     <div class="wrapper"> 
-        <legend>Create a New Account</legend>
-        <form action="create_account.php" method="post">
-            <div class="form-group">
-                <label for="first_name">First Name</label>
-                <input type="text" id="first_name" name="first_name" value="<?php echo $first_name;?>">
-            </div>
+        <fieldset>
+            <legend>Create a New Account</legend>
+            <form action="create_account.php" method="post">
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" value="<?php echo $first_name;?>">
+                </div>
 
-            <div class="form-group">
-                <label for="last_name">Last Name</label>
-                <input type="text" id="last_name" name="last_name" value="<?php echo $last_name;?>">
-            </div>
-            <div class="form-group">
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob" value="<?php echo $dob;?>">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" value="<?php echo $email;?>">
-            </div>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" value="<?php echo $username;?>">
-            </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" value="<?php echo $last_name;?>">
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" value="<?php echo $dob;?>">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" value="<?php echo $email;?>">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="<?php echo $username;?>">
+                </div>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" value="<?php echo $password;?>">
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Create Account">
-            </div>
-        </form>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" value="<?php echo $password;?>">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Create Account">
+                </div>
+            </form>
+        </fieldset>
     </div>
 </body>
 <!-- import footer -->
