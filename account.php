@@ -40,6 +40,12 @@
                 </div>
                 <img class="hero-img" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down">
             </div>
+
+            <!-- Section 3 -->
+            <section class="pg-section" style="background-color: grey;">
+                <h2>Breeds I'm interested in</h2>
+                <p>Maybe users can favourite breeds from the quiz results to appear here</p>
+            </section>
         <!-- FOOTER -->
         <?php include('partials/footer.php'); ?>
     </body>
