@@ -40,6 +40,9 @@
             <li class="<?php echo $active_dogs; ?>">
                 <a href="dogs.php">Dogs</a>
             </li>
+            <li class="<?php echo $active_breeds; ?>">
+                <a href="breeds.php">Breeds</a>
+            </li>
             <li class="<?php echo $active_about_us; ?>">
                 <a href="about-us.php">About Us</a>
             </li>

@@ -15,8 +15,9 @@
 <?php 
     $active_home = '';
     $active_dogs = '';
+    $active_breeds = '';
     $active_about_us = '';
     $active_help = '';
     $active_contact = '';
-    require_once 'config/constants.php';
+    include('config/constants.php'); 
 ?>
