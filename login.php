@@ -45,32 +45,51 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 
 <head>
-    <title>Brisbane Pet Rescue | Login</title>
     <!-- import generic head section -->
-    <?php include('partials/head.php'); ?>
+    <?php 
+    $page_title = 'Login';
+    include('partials/head.php'); 
+    $active_login = 'active';
+    ?>
 </head>
 
-<body>
-<!-- import menu -->
-<?php include('partials/menu.php'); ?>
+<body class="banner">
+    <?php include('partials/menu.php'); ?>
+    <div id="top"></div>
+    <div class="wrapper"> 
+        <!-- import menu -->
+        
 
-<h1>Log in to your Account</h1>
-<form action="login.php" method="post">
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" value="<?php echo $username;?>">
-    <br>
-    <label for="password_attempt">Password</label>
-    <input type="password" id="password_attempt" name="password_attempt" value="<?php echo $password_attempt;?>">
-    <br><br>
-    <input type="submit" class="btn btn-primary" value="Login">
-</form>
+        <h2>Login</h2>
+        <p>Please fill in your credentials to login.</p>
+        <form action="login.php" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label for="password_attempt">Password</label>
+                <input type="password" id="password_attempt" name="password_attempt">
+            </div>
 
-<br>
-<h2> New User?</h2>
-<p><a href="create_account.php">Click here</a> to create a new account!</p>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Login">
+            </div>
+            
+        </form>
 
-<!-- import footer -->
-<?php include('partials/footer.php'); ?>
+    
+        <p>Don't have an account?  
+            <a href="create_account.php">Sign up now.</a>
+        </p>
+        
+        
+        
+    </div>
+    <div id="top"></div>
+    <!-- import footer -->
+    <?php include('partials/footer.php'); ?>
+
 </body>
-
 </html>
