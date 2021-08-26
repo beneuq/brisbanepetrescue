@@ -49,42 +49,44 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include('partials/head.php'); ?>
 </head>
 
-<body>
+
 <!-- import menu -->
 <?php include('partials/menu.php'); ?>
 <!-- TODO @Front-end team please make my page look less bad :) -->
 
+
+<body class="banner">
 <h1>Create a New Account</h1>
-<div class="wrapper"> 
-    <form action="create_account.php" method="post">
-        <div class="form-group">
-            <label for="first_name">First Name</label>
-            <input type="text" id="first_name" name="first_name" value="<?php echo $first_name;?>">
-            <label for="last_name">Last Name</label>
-            <input type="text" id="last_name" name="last_name" value="<?php echo $last_name;?>">
-        </div>
-        <div class="form-group">
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" name="dob" value="<?php echo $dob;?>">
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" value="<?php echo $email;?>">
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" value="<?php echo $username;?>">
+    <div class="wrapper"> 
+        <form action="create_account.php" method="post">
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name" value="<?php echo $first_name;?>">
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" value="<?php echo $last_name;?>">
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" value="<?php echo $dob;?>">
+            </div>
             <br>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" value="<?php echo $password;?>">
-        </div>
-        <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="Create Account">
-        </div>
-    </form>
-</div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" value="<?php echo $email;?>">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="<?php echo $username;?>">
+                <br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" value="<?php echo $password;?>">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Create Account">
+            </div>
+        </form>
+    </div>
 <!-- import footer -->
 <?php include('partials/footer.php'); ?>
 </body>
