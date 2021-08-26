@@ -436,6 +436,34 @@ footer {
     font-size: 40px;
 }
 
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h2 {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 40px;
+}
+
+#form-control {
+    margin-bottom: 50px;
+}
+
+.banner {
+    background-image: url(../images/banner.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#top {
+    background: black;
+}
+
 /* CSS for Mobile Size or Smaller Screen */
 
 @media only screen and (max-width:768px) {
