@@ -54,20 +54,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body class="banner">
-    <?php include('partials/menu.php'); ?>
-    <div id="top"></div>
-    <div class="wrapper"> 
+        <div class="underneath-nav"></div>
         <!-- import menu -->
-        
+        <?php include('partials/menu.php'); ?>
 
-        <h2>Login</h2>
+        <!-- Hero Section -->
+        <section class="hero-section pos-relative">
+            <div class="flex container">
+                <div class="flex f-col hero-content">
+                    <h1 class="pad-bottom-1"><?php echo $page_title; ?></h1>
+                </div>
+            </div>
+        </section>
         <p>Please fill in your credentials to login.</p>
         <form action="login.php" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" class="form-control">
             </div>
-            
+
             <div class="form-group">
                 <label for="password_attempt">Password</label>
                 <input type="password" id="password_attempt" name="password_attempt">
@@ -76,17 +81,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
-            
-        </form>
 
-    
-        <p>Don't have an account?  
+        </form>
+        <p>Don't have an account?
             <a href="create_account.php">Sign up now.</a>
         </p>
-        
-        
-        
-    </div>
+
+        </div>
     <div id="top"></div>
     <!-- import footer -->
     <?php include('partials/footer.php'); ?>

@@ -14,7 +14,7 @@
             <!-- Account Icons -->
         <div id="user-icons">
             <button>
-                <img src="images/account-icon.png" alt="Acount icon" width="40px" height="40px">
+                <a href="/login.php"><img src="images/account-icon.png" alt="Account icon" width="40px" height="40px"></a>
             </button>
             <button>
                 <img src="images/favourites-icon.png" alt="Favourites icon" width="40px" height="40px">

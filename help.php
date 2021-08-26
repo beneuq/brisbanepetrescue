@@ -25,7 +25,7 @@
         </section>
         <!-- Section 2 -->
         <section class="pg-section">
-
+            <a href="breeds.php"><h2>Learn more about Breeds</h2></a>
         </section>
         <!-- Section 3 -->
         <section class="pg-section" style="background-color: grey;">
