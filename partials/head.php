@@ -19,5 +19,5 @@
     $active_about_us = '';
     $active_help = '';
     $active_contact = '';
-    include('config/constants.php'); 
+    require_once 'config/constants.php';
 ?>
