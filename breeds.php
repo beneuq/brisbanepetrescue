@@ -2,12 +2,16 @@
 <html lang="en">
 
 <head>
-    <title>Brisbane Pet Rescue - Breeds</title>
     <!-- import generic head section -->
-    <?php include('partials/head.php'); ?>
+    <?php
+    $page_title = 'Breeds';
+    include('partials/head.php');
+    $active_help = 'active';
+    ?>
 </head>
 
 <body>
+<div class="underneath-nav"></div>
 <!-- import menu -->
 <?php include('partials/menu.php'); ?>
 
