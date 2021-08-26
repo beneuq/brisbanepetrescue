@@ -330,6 +330,55 @@ button {
     max-width: 312.6px;
 }
 
+.breed-title {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.breeds-table {
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 0.9em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    width: 75%;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.breeds-table thead tr {
+    background-color: #4A0F78;
+    color: white;
+    font-weight: bold;
+}
+
+.breeds-table th {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.breeds-table td {
+    text-align: center;
+}
+
+.breeds-table tbody tr {
+    border-bottom: 1px solid grey;
+}
+
+/* Applies styling to every second row of table */
+.breeds-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/* Applies styling to last row of table */
+.breeds-table tbody tr:last-of-type {
+    border-bottom: 4px solid #4A0F78;
+}
+
 
 /* FOOTER */
 footer {
