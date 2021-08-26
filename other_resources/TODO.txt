@@ -4,6 +4,7 @@ A list of tasks to be done by anyone who needs work to do.
 
 @Front-End:
     - ! Fix menu bar position and transparency (keeps appearing on top of things)
+    - ! Fix giant purple section at top of Login and account creation pages (Can be much smaller)
     - Make username/login text under account icon look better (especially with longer names)
     - About us page
     - Contact us page
