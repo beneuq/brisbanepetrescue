@@ -58,7 +58,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body class="banner">
     <div id="top"></div>
-    <div class="wrapper"> 
         <div class="underneath-nav"></div>
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
@@ -71,28 +70,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
         </section>
-        <p>Please fill in your credentials to login.</p>
-        <form action="login.php" method="post">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" class="form-control">
-            </div>
+        <div class="wrapper"> 
+            <p>Please fill in your credentials to login.</p>
+            <form action="login.php" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" class="form-control">
+                </div>
 
-            <div class="form-group">
-                <label for="password_attempt">Password</label>
-                <input type="password" id="password_attempt" name="password_attempt">
-            </div>
+                <div class="form-group">
+                    <label for="password_attempt">Password</label>
+                    <input type="password" id="password_attempt" name="password_attempt">
+                </div>
 
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login">
-            </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Login">
+                </div>
 
-        </form>
-        <p>Don't have an account?
-            <a href="create_account.php">Sign up now.</a>
-        </p>
+            </form>
+            <p>Don't have an account?
+                <a href="create_account.php">Sign up now.</a>
+            </p>
 
-    </div>
+        </div>
    
     <!-- import footer -->
     <?php include('partials/footer.php'); ?>
