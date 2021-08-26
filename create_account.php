@@ -63,8 +63,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </section>
 <!-- TODO @Front-end team please make my page look less bad :) -->
-<h1>Create a New Account</h1>
+
     <div class="wrapper"> 
+        <legend>Create a New Account</legend>
         <form action="create_account.php" method="post">
             <div class="form-group">
                 <label for="first_name">First Name</label>
