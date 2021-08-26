@@ -1,6 +1,5 @@
 <?php
 require_once "config/constants.php";
-require "config/helper_functions.php";
 
 $username = "";
 $password_attempt = "";
@@ -25,7 +24,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 mysqli_stmt_bind_result($query, $first_name, $password);
                 mysqli_stmt_fetch($query);
                 if ($password_attempt == $password) {
-                    header("Location: https://pics.me.me/whats-the-password-is-it-dog-muffled-meeting-behind-the-63634880.png");
+                    // Login success!
+                    $_SESSION['logged_in'] = true;
+                    $_SESSION['username'] = $username;
+                    $_SESSION['firstname'] = $first_name;
+                    header("Location: /account.php");
                 } else {
                     alert_box("Login failed! $first_name's password is actually $password");
                 }
@@ -57,6 +60,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="underneath-nav"></div>
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
+
+        <!-- TODO @Front-end team please make my page look less bad :) -->
 
         <!-- Hero Section -->
         <section class="hero-section pos-relative">

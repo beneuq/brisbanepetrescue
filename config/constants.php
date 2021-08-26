@@ -18,3 +18,5 @@
             die("Could not connect to db" . mysqli_connect_error());
         }
     }
+
+    require_once "config/helper_functions.php";

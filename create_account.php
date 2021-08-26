@@ -1,6 +1,5 @@
 <?php
 require_once "config/constants.php";
-require "config/helper_functions.php";
 
 // Initialise form parameters
 $email = "";
@@ -20,6 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     // TODO Validate all user inputs!
+    //      I think mysqli has some functionality to escape characters but also check for blank inputs, etc.
     $sql = "INSERT INTO users (username, first_name, last_name, dob, email, password) VALUES (?, ?, ?, ?, ?, ?)";
 
     if($query = mysqli_prepare($conn, $sql)) {
@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         if(mysqli_stmt_execute($query)) {
             // Send user to login page now
             alert_box("Thanks for signing up, $first_name!");
-            header("Location: login.php");
+            header("Location: /login.php");
         } else {
             alert_box("Error creating account!");
         }
@@ -52,7 +52,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <!-- import menu -->
 <?php include('partials/menu.php'); ?>
-
+<!-- TODO @Front-end team please make my page look less bad :) -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <h1>Create a New Account</h1>
 <form action="create_account.php" method="post">
     <div class="form-group">

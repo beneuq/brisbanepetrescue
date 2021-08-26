@@ -1,3 +1,4 @@
+<?php require_once "config/constants.php"; ?>
 <!-- Navigation bar -->
 <nav id="main-menu" class="pad-top-1 pad-bottom-1">
     <!-- Top half of navigation bar -->
@@ -11,14 +12,21 @@
             </form>
         </div>
         
-            <!-- Account Icons -->
+        <!-- Account Icons -->
         <div id="user-icons">
             <button>
-                <a href="/login.php"><img src="images/account-icon.png" alt="Account icon" width="40px" height="40px"></a>
+                <?php
+                    $send_to_page = isset($_SESSION['logged_in']) ? "/account.php" : "/login.php";
+                    $login_caption = isset($_SESSION['logged_in']) ? $_SESSION['firstname'] : "Login";
+                ?>
+                <a href=<?php echo $send_to_page ?>>
+                    <img src="images/account-icon.png" alt="Account icon" width="40px" height="40px">
+                </a>
             </button>
             <button>
                 <img src="images/favourites-icon.png" alt="Favourites icon" width="40px" height="40px">
             </button>
+            <p><?php echo $login_caption?></p>
         </div>
     </div>
 
