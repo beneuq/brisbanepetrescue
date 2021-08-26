@@ -62,6 +62,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group">
                 <label for="first_name">First Name</label>
                 <input type="text" id="first_name" name="first_name" value="<?php echo $first_name;?>">
+            </div>
+
+            <div class="form-group">
                 <label for="last_name">Last Name</label>
                 <input type="text" id="last_name" name="last_name" value="<?php echo $last_name;?>">
             </div>
@@ -76,6 +79,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" value="<?php echo $username;?>">
+            </div>
+
+            <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" value="<?php echo $password;?>">
             </div>
