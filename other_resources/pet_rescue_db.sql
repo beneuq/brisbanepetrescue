@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 26, 2021 at 09:24 AM
+-- Generation Time: Aug 26, 2021 at 10:59 AM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -1601,6 +1601,17 @@ INSERT INTO `dog_breeds` (`breed_id`, `Breed`, `height_low`, `height_high`, `wei
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `favourite_breeds`
+--
+
+CREATE TABLE `favourite_breeds` (
+  `user_id` int(11) NOT NULL,
+  `breed_id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `shelters`
 --
 
@@ -1684,6 +1695,12 @@ ALTER TABLE `dogs`
 --
 ALTER TABLE `dog_breeds`
   ADD PRIMARY KEY (`breed_id`);
+
+--
+-- Indexes for table `favourite_breeds`
+--
+ALTER TABLE `favourite_breeds`
+  ADD PRIMARY KEY (`user_id`,`breed_id`);
 
 --
 -- Indexes for table `shelters`

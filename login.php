@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $password_attempt = $_POST["password_attempt"];
 
     // TODO Validate all user inputs!
-    $sql = "SELECT first_name, password FROM users WHERE username LIKE ?";
+    $sql = "SELECT user_id, first_name, password FROM users WHERE username LIKE ?";
 
     if($query = mysqli_prepare($conn, $sql)) {
         mysqli_stmt_bind_param($query, "s", $username);
@@ -21,11 +21,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         if(mysqli_stmt_execute($query)) {
             mysqli_stmt_store_result($query);
             if(mysqli_stmt_num_rows($query)) { // A matching username was found
-                mysqli_stmt_bind_result($query, $first_name, $password);
+                mysqli_stmt_bind_result($query, $user_id, $first_name, $password);
                 mysqli_stmt_fetch($query);
                 if ($password_attempt == $password) {
                     // Login success!
                     $_SESSION['logged_in'] = true;
+                    $_SESSION['user_id'] = $user_id;
                     $_SESSION['username'] = $username;
                     $_SESSION['firstname'] = $first_name;
                     header("Location: /account.php");

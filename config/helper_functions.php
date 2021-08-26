@@ -16,5 +16,6 @@ function enforce_login() {
     if (!isset($_SESSION['logged_in'])) {
         // User not logged in, redirect them to login page
         header("Location: /login.php");
+        exit();
     }
 }

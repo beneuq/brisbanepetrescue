@@ -19,4 +19,4 @@
         }
     }
 
-    require_once "config/helper_functions.php";
+    require_once "helper_functions.php";
