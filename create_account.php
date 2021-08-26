@@ -44,16 +44,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 
 <body class="banner">
-
+<div id="top"></div>
 <head>
     <title>Brisbane Pet Rescue | Sign Up</title>
     <!-- import generic head section -->
     <?php include('partials/head.php'); ?>
 </head>
+<div class="underneath-nav"></div>
+        <!-- import menu -->
+        <?php include('partials/menu.php'); ?>
 
-
-<!-- import menu -->
-<?php include('partials/menu.php'); ?>
+        <!-- Hero Section -->
+        <section class="hero-section pos-relative">
+            <div class="flex container">
+                <div class="flex f-col hero-content">
+                    <h1 class="pad-bottom-1"><?php echo $page_title; ?></h1>
+                </div>
+            </div>
+        </section>
 <!-- TODO @Front-end team please make my page look less bad :) -->
 <h1>Create a New Account</h1>
     <div class="wrapper"> 
