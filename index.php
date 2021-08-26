@@ -23,7 +23,7 @@
                     <p class="pad-bottom-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat id earum iste minus sed libero alias nam illo aut nemo deserunt, temporibus necessitatibus ad, magnam est facere? Cumque adipisci quis aliquam.</p>
 
                     <div class="pad-bottom-2">
-                        <a href="#" class="margin-right-1 hero-btn">Available Dogs</a>
+                        <a href="dogs.php" class="margin-right-1 hero-btn">Available Dogs</a>
                         <a href="#" class="hero-btn hero-btn-alt">Personality Quiz</a>
                     </div>
                 </div>

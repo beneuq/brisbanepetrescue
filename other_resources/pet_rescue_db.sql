@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 26, 2021 at 10:59 AM
+-- Generation Time: Aug 26, 2021 at 12:16 PM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -1609,6 +1609,27 @@ CREATE TABLE `favourite_breeds` (
   `breed_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `favourite_breeds`
+--
+
+INSERT INTO `favourite_breeds` (`user_id`, `breed_id`) VALUES
+(1, 18),
+(1, 29),
+(1, 31),
+(1, 53);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `favourite_dogs`
+--
+
+CREATE TABLE `favourite_dogs` (
+  `user_id` int(11) NOT NULL,
+  `dog_id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
 -- --------------------------------------------------------
 
 --
@@ -1701,6 +1722,12 @@ ALTER TABLE `dog_breeds`
 --
 ALTER TABLE `favourite_breeds`
   ADD PRIMARY KEY (`user_id`,`breed_id`);
+
+--
+-- Indexes for table `favourite_dogs`
+--
+ALTER TABLE `favourite_dogs`
+  ADD PRIMARY KEY (`user_id`,`dog_id`);
 
 --
 -- Indexes for table `shelters`

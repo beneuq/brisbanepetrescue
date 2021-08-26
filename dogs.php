@@ -23,18 +23,19 @@
     <table class="breeds-table">
         <thead>
         <tr>
+            <th></th>
             <th>Name</th>
             <th>Breed</th>
             <th>Age</th>
             <th>Gender</th>
             <th>Shelter</th>
-            <th>Image</th>
+            <th></th>
         </tr>
         <thead>
         <tbody>
         <?php
         $res = mysqli_query($conn,"
-            SELECT dogs.name as Dog, Breed, age, gender, shelters.name as Shelter, path
+            SELECT dogs.name as Dog, Breed, age, gender, shelters.name as Shelter, path, dog_id
             FROM dogs 
             INNER JOIN shelters ON dogs.shelter_id = shelters.shelter_id
             INNER JOIN dog_breeds ON dogs.breed_id = dog_breeds.breed_id
@@ -45,13 +46,14 @@
         ");
         while($entry = mysqli_fetch_array($res)) {
             echo "<tr>
-                                <td style='font-weight:bold; width:20%;'>" . $entry['Dog'] . "</td>
-                                <td style='width:20%;'>" . $entry['Breed'] . "</td>
-                                <td style='width:10%;'>" . $entry['age'] . " years</td>
-                                <td style='width:10%;'> <img src='/images/icons/". $entry['gender'] .".png' alt='dog image' width='20%'> </td>
-                                <td style='width:20%;'>" . $entry['Shelter'] . "</td>
-                                <td style='width:20%;'> <img src='". SITEURL.$entry['path'] ."' alt='dog image' width='50%'> </td>
-                            </tr>";
+                    <td style='width:5%;' class='text-center'><form method='POST' action='/form_submissions/favourite_dog.php'> <button type='submit' name='dog_id' value='".$entry['dog_id']."'>Shortlist</button></td></form>
+                    <td style='font-weight:bold; width:20%;'>" . $entry['Dog'] . "</td>
+                    <td style='width:20%;'>" . $entry['Breed'] . "</td>
+                    <td style='width:10%;'>" . $entry['age'] . " years</td>
+                    <td style='width:10%;'> <img src='/images/icons/". $entry['gender'] .".png' alt='dog image' width='20%'> </td>
+                    <td style='width:20%;'>" . $entry['Shelter'] . "</td>
+                    <td style='width:20%;'> <img src='". SITEURL.$entry['path'] ."' alt='dog image' width='50%'> </td>
+                </tr>";
         }
         mysqli_close($conn)
         ?>

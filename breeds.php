@@ -41,7 +41,7 @@
                     while($entry = mysqli_fetch_array($res)) {
                         $size_image = "images/icons/dog_size_" . $entry['size_class'];
                         echo "<tr>
-                                <form method='POST' action='/form_submissions/favourite_breed.php'> <td style='width:10%;' class='text-center'><button type='submit' name='breed_id' value='".$entry['breed_id']."'>Favourite</button></td></form>
+                                <td style='width:10%;' class='text-center'><form method='POST' action='/form_submissions/favourite_breed.php'> <button type='submit' name='breed_id' value='".$entry['breed_id']."'>Favourite</button></td></form>
                                 <td style='font-weight:bold; width:25%;'>" . $entry['Breed'] . "</td>
                                 <td style='width:25%;'>" . $entry['intelligence_desc'] . "</td>
                                 <td class='text-center' style='width:15%;'>" . str_repeat("&#x1F4B2;",$entry['lifetime_cost_class']) . "</td>

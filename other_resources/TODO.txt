@@ -21,6 +21,8 @@ A list of tasks to be done by anyone who needs work to do.
                           (as opposed to creating a html page for every single dog)
                   - Should display all info about the dog, maybe some photos of the breed
                   - Should also display all the info for the shelter the dog is at (maybe even a map if time allows?)
+    - Create a way to filter the dogs and breeds page
+            - Then create a way to apply a filter by default for logged-in users to the breeds they're interested in
     - Validate user inputs in login form
     - Validate user inputs in account creation form
     - Maybe start using password hashes? Low priority though
