@@ -43,6 +43,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html lang="en">
 
+<body class="banner">
+
 <head>
     <title>Brisbane Pet Rescue | Sign Up</title>
     <!-- import generic head section -->
@@ -53,9 +55,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- import menu -->
 <?php include('partials/menu.php'); ?>
 <!-- TODO @Front-end team please make my page look less bad :) -->
-
-
-<body class="banner">
 <h1>Create a New Account</h1>
     <div class="wrapper"> 
         <form action="create_account.php" method="post">
