@@ -87,8 +87,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </form>
     </div>
+</body>
 <!-- import footer -->
 <?php include('partials/footer.php'); ?>
-</body>
+
 
 </html>
