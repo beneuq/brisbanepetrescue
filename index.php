@@ -47,7 +47,7 @@
         <!-- Categories Section Starts Here -->
         <section class="categories">
             <div class="container">
-                <h2 class="text-center">Explore Breeds</h2>
+                <h2 class="breed-title">Explore Breeds</h2>
 
                 <?php
                 // Create SQL Query to Display Categories from Database
@@ -83,7 +83,7 @@
                                 ?>
 
 
-                                <h3 class="float-text"><?php echo $title; ?></h3>
+                                <h3 class="breed-text"><?php echo $title; ?></h3>
                             </div>
                         </a>
 

@@ -27,6 +27,11 @@ body {
     padding: 1%;
 }
 
+.clearfix {
+    clear: both;
+    float: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -61,6 +66,18 @@ button {
 .pg-section {
     min-height: 50vh;
     padding: 50px 0 50px 0;
+}
+
+.float-container {
+    position: relative;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+.img-curve {
+    border-radius: 15px;
 }
 
 /* Spacing/Format */
@@ -264,8 +281,6 @@ button {
     padding-right: 10px;
 }
 
-
-
 /* User icons */
 #user-icons {
     width: 10%;
@@ -330,8 +345,34 @@ button {
     max-width: 312.6px;
 }
 
+/* CSS for Categories */
+
+.categories {
+    padding: 4% 0;
+}
+
+.box-3 {
+    width: 28%;
+    float: left;
+    margin: 2%;
+}
+
+/* Styling for breed squares on index.php */
+.breed-text {
+    text-align: center;
+    color: white;
+    background-color: #4A0F78;
+    bottom: 50px;
+    left: 40%;
+    font-size: 1.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Styling for breeds table on breeds.php*/
 .breed-title {
-    margin-top: 35px;
+    color: black;
+    margin-top: 5%;
     text-align: center;
 }
 
@@ -363,6 +404,8 @@ button {
 
 .breeds-table td {
     text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .breeds-table tbody tr {
