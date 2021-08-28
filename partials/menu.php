@@ -1,9 +1,9 @@
 <?php require_once "config/constants.php"; ?>
 <!-- Navigation bar -->
-<nav id="main-menu" class="pad-top-1 pad-bottom-1">
+<div id="main-menu">
     <!-- Top half of navigation bar -->
-    <div class="container flex">
-        <a class="main-logo pad-bottom-1" href=index.php>Brisbane Pet Rescue</a>
+    <div class="container flex" id="topnav">
+        <a class="main-logo" href=index.php>Brisbane Pet Rescue</a>
         <!-- Searchbar -->
         <div id="searchbar">
             <form action="<?php echo SITEURL; ?>search.php" method="POST" class="flex">
@@ -26,13 +26,13 @@
             <button>
                 <img src="images/favourites-icon.png" alt="Favourites icon" width="40px" height="40px">
             </button>
-            <p><?php echo $login_caption?></p>
+            <p id="login-caption"><?php echo $login_caption?></p>
         </div>
     </div>
 
     <!-- Top half of navigation bar -->
     <!-- Navigation bar links -->
-    <div class="container">
+    <div class="container" id="navbar">
         <ul class="flex">
             <li class="<?php echo $active_home; ?>">
                 <a href="index.php">Home</a>
@@ -54,4 +54,4 @@
             </li>
         </ul>
     </div>
-</nav>
+</div>
