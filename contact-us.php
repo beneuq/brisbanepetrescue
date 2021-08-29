@@ -43,6 +43,8 @@
         </div>
         <!-- FOOTER -->
         <?php include('partials/footer.php'); ?>
+
+        <script src="js/submit.js"></script>
     </body>
     
 </html>
