@@ -453,7 +453,7 @@ footer {
 }
 
 .wrapper input[type=submit] {
-    background: linear-gradient(-90deg, rgb(255, 255, 255), rgb(20, 185, 197));
+    background: linear-gradient(-90deg, rgb(183, 1, 255), rgb(207, 105, 255));
     color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
