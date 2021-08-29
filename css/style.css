@@ -462,6 +462,22 @@ footer {
     font-size: 1.3em;
     margin-bottom: 20px;
 }
+
+
+.wrapper legend {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0.5em 1em;
+    margin: 0 -1em;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    background: linear-gradient(141deg, #000000 0%, #2e2f30 51%, #000000 75%);
+}
+
 .wrapper {
     background: rgb(197, 206, 207);
     color: black;
