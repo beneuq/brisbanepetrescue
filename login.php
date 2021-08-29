@@ -63,14 +63,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
 
-        <!-- Hero Section -->
-        <section class="hero-section pos-relative">
-            <div class="flex container">
-                <div class="flex f-col hero-content">
-                    <h1 class="pad-bottom-1"><?php echo $page_title; ?></h1>
-                </div>
-            </div>
-        </section>
         <div class="wrapper"> 
             <p>Please fill in your credentials to login.</p>
             <form action="login.php" method="post">
