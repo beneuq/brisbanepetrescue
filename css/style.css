@@ -594,6 +594,10 @@ h2 {
 }
 
 /* Contact */
+#contact-bg {
+    color: rgb(195, 0, 255);
+}
+
 #contact fieldset {
     margin-bottom: 2em;
     padding: 1em 2em;
@@ -654,15 +658,13 @@ h2 {
 
 #contact button{
     float: right;
-    background: linear-gradient(-90deg, rgb(43, 189, 92), rgb(20, 185, 197));
-    color: rgb(0, 0, 0);
+    background: linear-gradient(-90deg, rgb(183, 1, 255), rgb(207, 105, 255));
     border: none;
     cursor: pointer;
     text-align: center;
     font-weight: bold;
     font-size: 1.3em;
     border-radius: 10px;
-    
 }
 
 /* CSS for Mobile Size or Smaller Screen */
