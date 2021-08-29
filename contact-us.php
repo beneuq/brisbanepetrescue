@@ -15,26 +15,30 @@
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
 
-        <!-- Hero Section -->
-        <section class="hero-section pos-relative">
-            <div class="flex container">
-                <div class="flex f-col hero-content">
-                <h1 class="pad-bottom-1"><?php echo $page_title; ?></h1>
+        <form id="contact" onsubmit="contactSubmit()">
+            <fieldset>
+			    <legend>
+			        Contact Us
+                </legend>
+                <div id="contact-inf">
+                    <div>
+                        <label>Name:</label>
+                        <input type="text" placeholder="First and last names" required>
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <input type="email" placeholder="Enter a valid email address" required>
+                    </div>
+                    <div>
+                        <label>Message:</label>
+                        <textarea placeholder="Write something.." required></textarea>
+                    </div>
+                    <button type="submit" value="Submit">SUBMIT</button>
                 </div>
-            </div>
-        </section>
-        <!-- Section 2 -->
-        <section class="pg-section">
+                    
+            </fieldset>
 
-        </section>
-        <!-- Section 3 -->
-        <section class="pg-section" style="background-color: grey;">
-            
-        </section>
-        <!-- Section 4 -->
-        <section class="pg-section">
-            
-        </section>
+        </form>
 
         <!-- FOOTER -->
         <?php include('partials/footer.php'); ?>
