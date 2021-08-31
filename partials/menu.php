@@ -3,10 +3,12 @@
 <div id="main-menu">
     <!-- Top half of navigation bar -->
     <div class="container flex" id="top-nav">
-        <div class="main-logo">
-            <img src="images/paw-logo-2-white.png" alt="BPR logo" height="26px">
-            <a href=index.php>Brisbane Pet Rescue</a>
-        </div>
+        <a href="index.php">
+            <div class="main-logo">
+                <img src="images/paw-logo-2-white.png" alt="BPR logo" height="26px">
+                <span>Brisbane Pet Rescue</span>
+            </div>
+        </a>
         <!-- Searchbar -->
         <div id="searchbar">
             <form action="<?php echo SITEURL; ?>search.php" method="POST" class="flex">
