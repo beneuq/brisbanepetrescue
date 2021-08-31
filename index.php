@@ -22,7 +22,7 @@
                     <h2 class="pad-bottom-1">Brisbane Pet Rescue Has You Covered</h2>
                     <p class="pad-bottom-2">Here, we understand the struggles of finding the perfect K-9 companion. Browse through the availabe dogs straight away or do a short quiz to find the perfect pet for you.</p>
 
-                    <div class="pad-bottom-2">
+                    <div class="btn-group pad-bottom-2">
                         <a href="dogs.php" class="margin-right-1 hero-btn">Available Dogs</a>
                         <a href="personality-quiz.php" class="hero-btn hero-btn-alt">Personality Quiz</a>
                     </div>

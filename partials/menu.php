@@ -2,8 +2,11 @@
 <!-- Navigation bar -->
 <div id="main-menu">
     <!-- Top half of navigation bar -->
-    <div class="container flex" id="topnav">
-        <a class="main-logo" href=index.php>Brisbane Pet Rescue</a>
+    <div class="container flex" id="top-nav">
+        <div class="main-logo">
+            <img src="images/paw-logo-2-white.png" alt="BPR logo" height="26px">
+            <a href=index.php>Brisbane Pet Rescue</a>
+        </div>
         <!-- Searchbar -->
         <div id="searchbar">
             <form action="<?php echo SITEURL; ?>search.php" method="POST" class="flex">
@@ -13,7 +16,7 @@
         </div>
         
         <!-- Account Icons -->
-        <div id="user-icons">
+        <div id="user-icons" class="sm-d-none">
             <button>
                 <?php
                     $send_to_page = isset($_SESSION['logged_in']) ? "/account.php" : "/login.php";
@@ -30,9 +33,9 @@
         </div>
     </div>
 
-    <!-- Top half of navigation bar -->
+    <!-- Bottom half of navigation bar -->
     <!-- Navigation bar links -->
-    <div class="container" id="navbar">
+    <div id="bottom-nav" class="container sm-v-hidden">
         <ul class="flex">
             <li class="<?php echo $active_home; ?>">
                 <a href="index.php">Home</a>
