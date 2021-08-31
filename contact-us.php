@@ -34,7 +34,7 @@
                             <label>Message:</label>
                             <textarea placeholder="Write something.." required></textarea>
                         </div>
-                        <button type="submit" value="Submit">Submit</button>
+                        <button class="submit-btn" type="submit" value="Submit">Submit</button>
                     </div>
                         
                 </fieldset>

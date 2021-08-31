@@ -26,6 +26,10 @@ body {
     font-size: 16px;
 }
 
+input[type="radio"] {
+    margin-right: 1.5em;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -371,7 +375,7 @@ button {
 
 .hero-content .hero-btn:first-child {
     background-color: var(--h1Color);
-    border: 3px soli var(--h1Color)
+    border: 3px soli var(--h1Color);
     color: white;
 }
 
@@ -478,8 +482,9 @@ footer {
     padding: 12px 20px;
 }
 
-.wrapper input[type=submit] {
-    background:  var(--mainColor);
+.submit-btn {
+    width: 100%;
+    background: var(--mainColor);
     font-size: 1em;
     color: white;
     border: none;
@@ -487,6 +492,12 @@ footer {
     text-align: center;
     font-weight: bold;
     margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondaryColor);
 }
 
 
@@ -501,22 +512,22 @@ footer {
     border-radius: 10px;
 }
 
-.wrapper fieldset {
+.input-card fieldset {
     border: 0;
     border-radius: 10px;
     display: block;
 }
 
-.wrapper h2 {
-    margin-bottom: 50px;
+.input-card h2 {
+    margin-bottom: 20px;
     color: black;
 }
 
-.wrapper p {
-    margin-bottom: 50px;
+.input-card p {
+    margin-bottom: 20px;
 }
 
-.wrapper div {
+.input-card div {
     margin-bottom: 20px;
 }
 .username {
@@ -607,26 +618,31 @@ h1 {
 }
 
 .input-card input, textarea{
-    background: white;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px 15px;
-    width: 100%;
+    /* width: 100%; */
     margin-bottom: 1em;
 }
 
-#contact button{
-    float: right;
-    background: var(--mainColor);
+#contact .input-card input, textarea{
     width: 100%;
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 10px;
-    padding: 10px 15px;
+}
+
+
+/* PERSONALITY QUIZ */
+#personality-quiz form {
+    width:50%;
+}
+
+#personality-quiz fieldset h1 {
+    color: var(--mainColor);
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+#personality-quiz h2 {
+    font-size: 1.2em;
 }
 
 /* CSS for Mobile Size or Smaller Screen */
@@ -644,10 +660,6 @@ h1 {
         width: 90%;
         padding: 2%;
         margin-bottom: 3%;
-    }
-    .btn {
-        width: 91%;
-        padding: 2%;
     }
     .food-search {
         padding: 10% 0;

@@ -85,7 +85,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="password" id="password" name="password" value="<?php echo $password;?>">
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="Create Account">
+                    <input type="submit" class="submit-btn" value="Create Account">
                 </div>
             </fieldset>
         </form>
