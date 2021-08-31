@@ -6,7 +6,7 @@
     <?php
     $page_title = 'Breeds';
     include('partials/head.php');
-    $active_help = 'active';
+    $active_breeds = 'active';
     ?>
 </head>
 
