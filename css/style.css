@@ -712,6 +712,9 @@ h1 {
         display: flex;
     }
 
+    #personality-quiz form {
+        width: 100%;
+    }
     
     /* Navigation bar */
     .home-hero-img, .main-logo {
