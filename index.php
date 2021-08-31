@@ -18,29 +18,29 @@
         <section class="hero-section pos-relative">
             <div class="flex container">
                 <div class="flex f-col hero-content">
-                    <h1 class="pad-bottom-1">Brisbane Pet Rescue</h1>
-                    <h2 class="pad-bottom-1">Find the Perfect Dog for You!</h2>
-                    <p class="pad-bottom-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat id earum iste minus sed libero alias nam illo aut nemo deserunt, temporibus necessitatibus ad, magnam est facere? Cumque adipisci quis aliquam.</p>
+                    <h1 class="pad-top-2 pad-bottom-1">Looking to adopt?</h1>
+                    <h2 class="pad-bottom-1">Brisbane Pet Rescue Has You Covered</h2>
+                    <p class="pad-bottom-2">Here, we understand the struggles of finding the perfect K-9 companion. Browse through the availabe dogs straight away or do a short quiz to find the perfect pet for you.</p>
 
                     <div class="pad-bottom-2">
                         <a href="dogs.php" class="margin-right-1 hero-btn">Available Dogs</a>
-                        <a href="#" class="hero-btn hero-btn-alt">Personality Quiz</a>
+                        <a href="personality-quiz.php" class="hero-btn hero-btn-alt">Personality Quiz</a>
                     </div>
                 </div>
-                <img class="hero-img" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down">
+                <img class="home-hero-img margin-top-2" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down">
             </div>
 
         </section>
         <!-- Section 2 -->
-        <section class="pg-section">
+        <section class="pg-section" style="background-color: lightgrey;">
 
         </section>
         <!-- Section 3 -->
-        <section class="pg-section" style="background-color: grey;">
+        <section class="pg-section">
             
         </section>
         <!-- Section 4 -->
-        <section class="pg-section">
+        <section class="pg-section" style="background-color: lightgrey;">
             
         </section>
 
@@ -77,7 +77,7 @@
                                 } else {
                                     // Image Available
                                 ?>
-                                    <img src="https://brisbanepetrescue.me<?php echo $image_name; ?>" alt="<?php echo $image_alt; ?>" class="img-responsive img-curve">
+                                    <img src="https://brisbanepetrescue.me<?php echo $image_name; ?>" alt="<?php echo $image_alt; ?>" class="img-responsive">
                                 <?php
                                 }
                                 ?>

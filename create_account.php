@@ -54,9 +54,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
 
-    <div class="wrapper2">   
+    <div class="wrapper">   
         <form action="create_account.php" method="post">
-            <fieldset>
+            <fieldset class ="input-card">
                 <legend>Create a New Account</legend>
                 <div class="form-group">
                     <label for="first_name">First Name</label>

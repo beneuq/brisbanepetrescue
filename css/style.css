@@ -1,6 +1,11 @@
 /* VARIABLES */
 :root {
     --navbarHeight: 130px;
+    --mainColor: #4A0F78;
+    --secondaryColor: #6b18aa;
+    --h1Color: #989898;
+    --h2Color: white;
+
 }
 
 
@@ -63,8 +68,12 @@ button {
 }
 
 .pg-section {
-    min-height: 50vh;
+    min-height: 65vh;
     padding: 50px 0 50px 0;
+}
+
+.small-pg-section {
+    min-height: 50vh;
 }
 
 .float-container {
@@ -96,17 +105,28 @@ button {
     margin: 80px;
 }
 
+.margin-top-1 {
+    margin-top: 20px;
+}
+
+.margin-top-2 {
+    margin-top: 50px;
+}
+
+.margin-top-3 {
+    margin-top: 80px;
+}
 
 .margin-bottom-1 {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .margin-bottom-2 {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .margin-bottom-3 {
-    padding-bottom: 80px;
+    margin-bottom: 80px;
 }
 
 
@@ -211,19 +231,19 @@ button {
 #navbar {
     background-color: #6b18aa;
     width: 100%;
-    padding-left: 10%;
+    padding-left: 7.5%;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .underneath-nav {
-    background-color: #4A0F78;
+    background-color: var(--mainColor);
     height: var(--navbarHeight);
     top: 0;
 }
 
 #main-menu {
-    background-color: #4A0F78;
+    background-color: var(--mainColor);
     color:white;
     top: 0;
     position: fixed;
@@ -252,7 +272,7 @@ button {
 }
 
 #main-menu li.active a{
-    color: rgba(0, 0, 0, 0.8);
+    color: var(--h1Color);
 }
 
 #main-menu li {
@@ -309,11 +329,17 @@ button {
 /* HERO SECTION */
 .hero-section {
     min-height: calc(75vh - var(--navbarHeight));
-    background-color: #4A0F78;
+    background-color: var(--mainColor);
     color: white;
     /* top: var(--navbarHeight); */
     padding-top: 3%;
+
 }
+
+.small-hero {
+    min-height: calc(45vh - var(--navbarHeight));
+}
+
 .hero-section a {
     color: white;
 }
@@ -326,10 +352,10 @@ button {
 }
 
 .hero-content h1 {
-    font-size:40px;
     text-transform: uppercase;
-    color: black;
+    color: var(--h1Color);
 }
+
 
 .hero-btn {
     border: 3px solid white;
@@ -340,22 +366,22 @@ button {
 
 .hero-btn:hover {
     background-color: white;
-    color:black;
+    color: var(--h1Color);
 }
 
 .hero-content .hero-btn:first-child {
-    background-color: white;
-    color: black;
+    background-color: var(--h1Color);
+    border: 3px soli var(--h1Color)
+    color: white;
 }
 
 .hero-content .hero-btn:first-child:hover {
-    border: 3px solid black;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: var(--h1Color);
     border-radius: 30px;
 }
 
-.hero-img {
+.home-hero-img {
     max-height: 410.25px;
     max-width: 312.6px;
 }
@@ -376,7 +402,7 @@ button {
 .breed-text {
     text-align: center;
     color: white;
-    background-color: #4A0F78;
+    background-color: var(--mainColor);
     bottom: 50px;
     left: 40%;
     font-size: 1.5em;
@@ -405,7 +431,7 @@ button {
 }
 
 .breeds-table thead tr {
-    background-color: #4A0F78;
+    background-color: var(--mainColor);
     color: white;
     font-weight: bold;
 }
@@ -434,7 +460,7 @@ button {
 
 /* Applies styling to last row of table */
 .breeds-table tbody tr:last-of-type {
-    border-bottom: 4px solid #4A0F78;
+    border-bottom: 4px solid var(--mainColor);
 }
 
 
@@ -453,30 +479,16 @@ footer {
 }
 
 .wrapper input[type=submit] {
-    background: linear-gradient(-90deg, rgb(183, 1, 255), rgb(207, 105, 255));
-    color: rgb(0, 0, 0);
+    background:  var(--mainColor);
+    font-size: 1em;
+    color: white;
     border: none;
     cursor: pointer;
     text-align: center;
     font-weight: bold;
-    font-size: 1.3em;
     margin-bottom: 20px;
 }
 
-
-.wrapper legend {
-    font-size: 30px;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: bold;
-    letter-spacing: 2px;
-    padding: 0.5em 1em;
-    margin: 0 -1em;
-    border-radius: 10px;
-    background: black;
-    color: white;
-    background: linear-gradient(141deg, #000000 0%, #2e2f30 51%, #000000 75%);
-}
 
 .wrapper {
     color: black;
@@ -487,14 +499,11 @@ footer {
     padding: 1em 2em;
     border: 0;
     border-radius: 10px;
-    font-size: 20px;
 }
 
 .wrapper fieldset {
-    padding: 1em 2em;
     border: 0;
     border-radius: 10px;
-    background: rgb(197, 206, 207);
     display: block;
 }
 
@@ -508,12 +517,11 @@ footer {
 }
 
 .wrapper div {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .username {
     text-align: center;
     color: white;
-    font-size: 40px;
 }
 
 p {
@@ -524,10 +532,8 @@ p {
     margin-inline-end: 0px;
 }
 
-h2 {
-    color: whitesmoke;
-    text-align: center;
-    font-size: 40px;
+h1 {
+    font-size:36px;
 }
 
 #form-control {
@@ -535,7 +541,7 @@ h2 {
 }
 
 .banner {
-    background-image: url(../images/banner.jpg);
+    /* background-image: url(../images/banner.jpg); */
     background-attachment: fixed;
     background-size: cover;
 }
@@ -545,122 +551,54 @@ h2 {
     opacity: 0.8;
 }
 
-.wrapper2 fieldset {
-    margin-bottom: 2em;
-    padding: 1em 2em;
-    border: 0;
-    border-radius: 10px;
-    background: rgb(197, 206, 207);
-    display: block;
-}
-
-.wrapper2 {
-    max-width: 500px;
-    margin: 0 auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    justify-content: center;
-    
-}
-
-.wrapper2 legend {
-    font-size: 30px;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: bold;
-    letter-spacing: 2px;
-    padding: 0.5em 1em;
-    margin: 0 -1em;
-    border-radius: 10px;
-    background: black;
-    color: white;
-    background: linear-gradient(141deg, #000000 0%, #2e2f30 51%, #000000 75%);
-}
-
-.wrapper2 label {
-    color: black;
-    margin-bottom: 1em;
-}
-
-.wrapper2 label {
-    display: inline-block; 
-    font-size: 20px; 
-}
-
-.wrapper2 textarea {
-    height: 200px;
-    resize: vertical;
-}
-
-.wrapper2 input, textarea{
-    box-shadow: rgba(0,0,0,0.15) 3px 3px 5px;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px 15px;
-    width: 100%;
-    font-size: 0.9em;
-    margin-bottom: 1em;
-}
-
-.wrapper2 button{
-    float: right;
-    background: linear-gradient(-90deg, rgb(183, 1, 255), rgb(207, 105, 255));
-    color: rgb(0, 0, 0);
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.3em;
-    border-radius: 10px;
-    
-}
 
 /* Contact */
 #contact-bg {
-    background: rgb(103 68 113);
+    /* background: rgb(103 68 113); */
 }
 
-#contact fieldset {
+.input-card {
+    background-color: white;
     margin-bottom: 2em;
     padding: 1em 2em;
     border: 0;
     border-radius: 10px;
-    background: rgb(197, 206, 207);
     display: block;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.411);
 }
+
+#contact input:focus {
+    border: 1px solid rgb(175, 175, 175);
+}
+
 
 #contact {
     max-width: 700px;
     margin: 0 auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     justify-content: center;
     
 }
 
-#contact legend {
-    font-size: 30px;
-    text-transform: uppercase;
+.input-card legend {
     font-size: 1em;
     font-weight: bold;
     letter-spacing: 2px;
     padding: 0.5em 1em;
     margin: 0 -1em;
     border-radius: 10px;
-    background: black;
     color: white;
-    background: linear-gradient(141deg, #000000 0%, #2e2f30 51%, #000000 75%);
+    background: var(--h1Color);
 }
 
-#contact label {
+.input-card label {
     color: black;
     margin-bottom: 1em;
 }
 
-#contact label {
+.input-card label {
     display: inline-block; 
-    font-size: 20px; 
 }
 
 #contact textarea {
@@ -668,25 +606,25 @@ h2 {
     resize: vertical;
 }
 
-#contact input, textarea{
-    box-shadow: rgba(0,0,0,0.15) 3px 3px 5px;
+.input-card input, textarea{
     background: white;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px 15px;
     width: 100%;
-    font-size: 0.9em;
     margin-bottom: 1em;
 }
 
 #contact button{
     float: right;
-    background: linear-gradient(-90deg, rgb(183, 1, 255), rgb(207, 105, 255));
+    background: var(--mainColor);
+    width: 100%;
+    color: white;
     border: none;
     cursor: pointer;
     text-align: center;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 16px;
     border-radius: 10px;
     padding: 10px 15px;
 }

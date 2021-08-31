@@ -15,9 +15,9 @@
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
 
-        <div id="contact-bg">
+        <div id="contact-bg" class="container">
             <form id="contact" onsubmit="contactSubmit()">
-                <fieldset>
+                <fieldset class="input-card">
                     <legend>
                         Contact Us
                     </legend>
@@ -34,7 +34,7 @@
                             <label>Message:</label>
                             <textarea placeholder="Write something.." required></textarea>
                         </div>
-                        <button type="submit" value="Submit">SUBMIT</button>
+                        <button type="submit" value="Submit">Submit</button>
                     </div>
                         
                 </fieldset>

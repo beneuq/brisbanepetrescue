@@ -64,10 +64,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php include('partials/menu.php'); ?>
 
         <div class="wrapper"> 
-            <fieldset>
-                <legend>
-                    Login
-                </legend>
+            <fieldset class="input-card">
+                <legend>Login</legend>
                 <div class="form-group">
                     <p>Please fill in your credentials to login.</p>
                     <form action="login.php" method="post">
