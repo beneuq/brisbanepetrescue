@@ -14,10 +14,8 @@ if (isset($_POST['breed_id'])) {
             mysqli_stmt_bind_param($query, "ss", $_SESSION["user_id"], $_POST['breed_id']);
             if (mysqli_stmt_execute($query)) {
                 echo("Breed with ID = ".$_POST['breed_id']." favourited! for user ".$_SESSION['username']);
-                header('Location: ../breeds.php');
             } else {
                 alert_box("Error favouriting breed!");
-                header('Location: ../breeds.php');
             }
             mysqli_stmt_close($query);
         }
@@ -28,12 +26,12 @@ if (isset($_POST['breed_id'])) {
             mysqli_stmt_bind_param($query, "ss", $_SESSION["user_id"], $_POST['breed_id']);
             if (mysqli_stmt_execute($query)) {
                 echo("Breed with ID = ".$_POST['breed_id']." un-favourited! for user ".$_SESSION['username']);
-                header('Location: ../breeds.php');
             } else {
                 alert_box("Error un-favouriting breed!");
-                header('Location: ../breeds.php');
             }
             mysqli_stmt_close($query);
         }
     }
 }
+// Send user back to exactly where they were on the breeds page
+header('Location: '.$_SERVER['HTTP_REFERER'].'#breed_id='.$_POST['breed_id']);

@@ -68,7 +68,7 @@
                         ");
                         while($entry = mysqli_fetch_array($res)) {
                             $size_image = "images/icons/dog_size_" . $entry['size_class'];
-                            echo "<tr>
+                            echo "<tr id='breed_id=".$entry['breed_id']."'>
                                 <td style='font-weight:bold; width:20%;'>" . $entry['Breed'] . "</td>
                                 <td style='width:25%;'>" . $entry['intelligence_desc'] . "</td>
                                 <td class='text-center' style='width:10%;'>" . str_repeat("&#x1F4B2;",$entry['lifetime_cost_class']) . "</td>
@@ -114,7 +114,7 @@
                             ORDER BY dogs.name
                         ");
                         while($entry = mysqli_fetch_array($res)) {
-                            echo "<tr>
+                            echo "<tr id='dog_id=".$entry['dog_id']."'>
                                 <td style='font-weight:bold; width:15%;'>" . $entry['Dog'] . "</td>
                                 <td style='width:20%;'>" . $entry['Breed'] . "</td>
                                 <td style='width:10%;'>" . $entry['age'] . " years</td>

@@ -55,7 +55,7 @@
                 ");
                     while($entry = mysqli_fetch_array($res)) {
                         $size_image = "images/icons/dog_size_" . $entry['size_class'];
-                        echo "<tr>
+                        echo "<tr id='breed_id=".$entry['breed_id']."'>
                                 <td style='width:5%;'><form method='POST' action='/form_submissions/favourite_breed.php'> <button type='submit' name='breed_id' value='".$entry['breed_id']."'><img width='33%' src='images/icons/heart-".$entry['favourite_icon'].".png'></button></form></td>
                                 <td style='font-weight:bold; width:25%;'>" . $entry['Breed'] . "</td>
                                 <td style='width:25%;'>" . $entry['intelligence_desc'] . "</td>

@@ -14,10 +14,8 @@ if (isset($_POST['dog_id'])) {
             mysqli_stmt_bind_param($query, "ss", $_SESSION["user_id"], $_POST['dog_id']);
             if (mysqli_stmt_execute($query)) {
                 echo("Dog with ID = ".$_POST['dog_id']." favourited! for user ".$_SESSION['username']);
-                header('Location: ../dogs.php');
             } else {
                 alert_box("Error favouriting dog!");
-                header('Location: ../dogs.php');
             }
             mysqli_stmt_close($query);
         }
@@ -28,12 +26,12 @@ if (isset($_POST['dog_id'])) {
             mysqli_stmt_bind_param($query, "ss", $_SESSION["user_id"], $_POST['dog_id']);
             if (mysqli_stmt_execute($query)) {
                 echo("Dog with ID = ".$_POST['dog_id']." un-favourited! for user ".$_SESSION['username']);
-                header('Location: ../dogs.php');
             } else {
                 alert_box("Error un-favouriting dog!");
-                header('Location: ../dogs.php');
             }
             mysqli_stmt_close($query);
         }
     }
 }
+// Send user back to exactly where they were on the previous page
+header('Location: '.$_SERVER['HTTP_REFERER'].'#dog_id='.$_POST['dog_id']);

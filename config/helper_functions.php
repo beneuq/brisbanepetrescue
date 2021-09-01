@@ -29,3 +29,8 @@ function enforce_login() {
         exit();
     }
 }
+?>
+
+<script>
+
+</script>
