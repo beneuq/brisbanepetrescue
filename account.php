@@ -44,7 +44,7 @@
 
             <!-- Section 3 -->
             <section class="pg-section" style="background-color: grey;">
-                <h2>Breeds I'm interested in</h2>
+                <h2 class="center-txt">Breeds I'm interested in</h2>
                 <div id="sqldata">
                     <table class="breeds-table">
                         <thead>
@@ -83,7 +83,7 @@
 
             <!-- Section 4 -->
             <section class="pg-section" style="background-color: white;">
-                <h2 style="color: black">Dogs I'm considering adopting</h2>
+                <h2 class="center-txt" style="color: black">Dogs I'm considering adopting</h2>
                 <div id="sqldata">
                     <table class="breeds-table">
                         <thead>
