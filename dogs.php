@@ -23,7 +23,7 @@
     <table class="breeds-table">
         <thead>
         <tr>
-            <th></th>
+            <th>Shortlist</th>
             <th>Name</th>
             <th>Breed</th>
             <th>Age</th>
@@ -34,19 +34,31 @@
         <thead>
         <tbody>
         <?php
-        $res = mysqli_query($conn,"
-            SELECT dogs.name as Dog, Breed, age, gender, shelters.name as Shelter, path, dog_id
-            FROM dogs 
-            INNER JOIN shelters ON dogs.shelter_id = shelters.shelter_id
-            INNER JOIN dog_breeds ON dogs.breed_id = dog_breeds.breed_id
-            INNER JOIN breed_image ON dogs.breed_id = breed_image.breed_id
-            WHERE owner_id IS NULL
-            AND main_image
-            ORDER BY dogs.name
+        $user_id_for_sql = logged_in() ? get_userid() : "NULL";
+        // Gets all dogs, as well as their shelter, and also whether the dog has been shortlisted by the logged-in user
+        $res = mysqli_query($conn, "
+            SELECT DISTINCT
+                d.name AS Dog,
+                Breed,
+                age,
+                gender,
+                s.name AS Shelter,
+                path,
+                d.dog_id AS dog_id,
+                IF(user_id=".$user_id_for_sql.", 'full', 'empty') as favourite_icon
+                FROM dogs d
+                    INNER JOIN shelters s ON d.shelter_id = s.shelter_id
+                    INNER JOIN dog_breeds b ON d.breed_id = b.breed_id
+                    INNER JOIN breed_image bi ON d.breed_id = bi.breed_id
+                    LEFT JOIN favourite_dogs f ON d.dog_id = f.dog_id
+                WHERE owner_id IS NULL 
+                    AND main_image  
+                    AND (user_id=".$user_id_for_sql." OR user_id IS NULL)
+                ORDER BY d.name
         ");
         while($entry = mysqli_fetch_array($res)) {
             echo "<tr>
-                    <td style='width:5%;' class='text-center'><form method='POST' action='/form_submissions/favourite_dog.php'> <button type='submit' name='dog_id' value='".$entry['dog_id']."'>Shortlist</button></td></form>
+                    <td style='width:5%;'><form method='POST' action='/form_submissions/favourite_dog.php'> <button type='submit' name='dog_id' value='".$entry['dog_id']."'><img width='50%' src='images/icons/heart-".$entry['favourite_icon'].".png'></button></form></td>
                     <td style='font-weight:bold; width:20%;'>" . $entry['Dog'] . "</td>
                     <td style='width:20%;'>" . $entry['Breed'] . "</td>
                     <td style='width:10%;'>" . $entry['age'] . " years</td>
