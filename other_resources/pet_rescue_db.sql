@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 26, 2021 at 12:16 PM
+-- Generation Time: Sep 01, 2021 at 09:59 AM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -58,11 +58,11 @@ INSERT INTO `breed_image` (`image_id`, `breed_id`, `path`, `alt_text`, `image_ac
 (13, 1, '/images/breeds/akita-i37.jpg', 'Akita example image', b'1', b'0', 540, 540),
 (14, 1, '/images/breeds/Akita-Japanese.jpg', 'Akita example image', b'1', b'0', 540, 540),
 (15, 1, '/images/breeds/1200px-Akita_Inu_dog.jpg', 'Akita example image', b'1', b'1', 540, 540),
-(16, 29, '/images/breeds/953aad8d1b43596857b4b558804e751b.jpg', 'Australian Shepherd example image', b'1', b'1', 540, 540),
-(17, 29, '/images/breeds/b3bcaf1fea645fbad288f546fd18cc64.jpg', 'Australian Shepherd example image', b'1', b'0', 540, 540),
-(18, 29, '/images/breeds/62fafcfb15356f723cdf6de553e83efd.jpg', 'Australian Shepherd example image', b'1', b'0', 540, 540),
-(19, 29, '/images/breeds/01b09bdac592b0eb9909dd105314ad3a.jpg', 'Australian Shepherd example image', b'1', b'0', 540, 540),
-(20, 29, '/images/breeds/693f4cd00978df07e1283d3da4d02e0c.jpg', 'Australian Shepherd example image', b'1', b'0', 540, 540),
+(16, 29, '/images/breeds/Australian-Shepherd.1.jpg', 'Australian Shepherd example image', b'1', b'1', 540, 540),
+(17, 29, '/images/breeds/Australian-Shepherd.2.jpg', 'Australian Shepherd example image', b'1', b'0', 540, 540),
+(18, 29, '/images/breeds/australian-shepherd-dg.jpg', 'Australian Shepherd example image', b'1', b'0', 540, 540),
+(19, 29, '/images/breeds/australian-shepherd-dog-breed-info.jpg', 'Australian Shepherd example image', b'1', b'0', 540, 540),
+(20, 29, '/images/breeds/australian-shepherd-puppy.jpg', 'Australian Shepherd example image', b'1', b'0', 540, 540),
 (21, 51, '/images/breeds/2c5c6ed3fac9666d5ef89ab3931f6785.jpg', 'Australian Terrier example image', b'1', b'0', 540, 540),
 (22, 51, '/images/breeds/5de0c02ceacc7a724f48c12a2d6489db.jpg', 'Australian Terrier example image', b'1', b'0', 540, 540),
 (23, 51, '/images/breeds/16fd2ee2057012b1d3db46e219a4d022.jpg', 'Australian Terrier example image', b'1', b'0', 540, 540),
@@ -78,7 +78,7 @@ INSERT INTO `breed_image` (`image_id`, `breed_id`, `path`, `alt_text`, `image_ac
 (33, 30, '/images/breeds/fc518958bdeda396c5431d8a8ec319df.jpg', 'Basset Hound example image', b'1', b'0', 540, 540),
 (34, 30, '/images/breeds/eccc1f78f99e1f5fc1fa618be4ae7f67.jpg', 'Basset Hound example image', b'1', b'1', 540, 540),
 (35, 30, '/images/breeds/2ac2f5944e38c9873fddd80f44929a91.jpg', 'Basset Hound example image', b'1', b'0', 540, 540),
-(36, 53, '/images/breeds/20a9238dd34f189ec7de945e006e660b.jpg', 'Beagle example image', b'1', b'1', 540, 540),
+(36, 53, '/images/breeds/beagle.jpg', 'Beagle example image', b'1', b'1', 540, 540),
 (37, 53, '/images/breeds/0ea78b024dc3955332d3ddb08b8e50f0.jpg', 'Beagle example image', b'1', b'0', 540, 540),
 (38, 53, '/images/breeds/de33550ba1323a0376fc1292a1d25d71.jpg', 'Beagle example image', b'1', b'0', 540, 540),
 (39, 53, '/images/breeds/bdec813dff4bb79ff07cbe0440f217a2.jpg', 'Beagle example image', b'1', b'0', 540, 540),
@@ -97,7 +97,7 @@ INSERT INTO `breed_image` (`image_id`, `breed_id`, `path`, `alt_text`, `image_ac
 (52, 2, '/images/breeds/470af08ca80c554c02367a0e1a90bc39.jpg', 'Bernese Mountain Dog example image', b'1', b'0', 540, 540),
 (53, 2, '/images/breeds/a5621787bbc9210a919ccbf5832426ef.jpg', 'Bernese Mountain Dog example image', b'1', b'0', 540, 540),
 (54, 2, '/images/breeds/04fb4d719e9fe2b6ffe32d9ae7be8a22.jpg', 'Bernese Mountain Dog example image', b'1', b'0', 540, 540),
-(55, 2, '/images/breeds/1e5ce138280eabd214664398f19491b3.jpg', 'Bernese Mountain Dog example image', b'1', b'1', 540, 540),
+(55, 2, '/images/breeds/Bernese-Mountain-Dog-sitting-in-a-field.jpg', 'Bernese Mountain Dog example image', b'1', b'1', 540, 540),
 (56, 55, '/images/breeds/bichon-frise-2.jpg', 'Bichon Frise example image', b'1', b'0', 540, 540),
 (57, 55, '/images/breeds/shutterstock_1469998787-1.jpg', 'Bichon Frise example image', b'1', b'0', 540, 540),
 (58, 55, '/images/breeds/dog-4398243_1280.jpg', 'Bichon Frise example image', b'1', b'0', 540, 540),
@@ -129,7 +129,7 @@ INSERT INTO `breed_image` (`image_id`, `breed_id`, `path`, `alt_text`, `image_ac
 (84, 57, '/images/breeds/85ee2259befe2e52c2200c7ca75f35e1.jpg', 'Boston Terrier example image', b'1', b'0', 540, 540),
 (85, 57, '/images/breeds/b16549549ac51020efa4ab86923c37b3.jpg', 'Boston Terrier example image', b'1', b'0', 540, 540),
 (86, 13, '/images/breeds/9e486b33df53bfef19c178ecc95f3e4d.jpg', 'Boxer example image', b'1', b'0', 540, 540),
-(87, 13, '/images/breeds/a5c6ca31780472bc6297dcb230ba8d0d.jpg', 'Boxer example image', b'1', b'1', 540, 540),
+(87, 13, '/images/breeds/boxer.jpg', 'Boxer example image', b'1', b'1', 540, 540),
 (88, 13, '/images/breeds/53165a38e33bb747c04a57480e863395.jpg', 'Boxer example image', b'1', b'0', 540, 540),
 (89, 13, '/images/breeds/9eb2557572aff149c5143e287799b48d.jpg', 'Boxer example image', b'1', b'0', 540, 540),
 (90, 13, '/images/breeds/70d889ecc5ab471c8ef59c5a110b705e.jpg', 'Boxer example image', b'1', b'0', 540, 540),
@@ -301,8 +301,8 @@ INSERT INTO `breed_image` (`image_id`, `breed_id`, `path`, `alt_text`, `image_ac
 (256, 75, '/images/breeds/4dc262bd3c3f5bbab4c38147ddf204a1.jpg', 'Maltese example image', b'1', b'0', 540, 540),
 (257, 75, '/images/breeds/f4c3afa01a61b3471656b42f8d5cb1e1.jpg', 'Maltese example image', b'1', b'0', 540, 540),
 (258, 75, '/images/breeds/f5020914618ca6445b1bb1ca2e0a4d51.jpg', 'Maltese example image', b'1', b'0', 540, 540),
-(259, 75, '/images/breeds/2071036a0cb133584c9b917b1a7e90d7.jpg', 'Maltese example image', b'1', b'1', 540, 540),
-(260, 75, '/images/breeds/f523e20f7fac8e1d9909d0956a468467.jpg', 'Maltese example image', b'1', b'0', 540, 540),
+(259, 75, '/images/breeds/2071036a0cb133584c9b917b1a7e90d7.jpg', 'Maltese example image', b'1', b'0', 540, 540),
+(260, 75, '/images/breeds/f523e20f7fac8e1d9909d0956a468467.jpg', 'Maltese example image', b'1', b'1', 540, 540),
 (261, 9, '/images/breeds/7e69e9e20cf3b78cb6d2336df72575f7.jpg', 'Mastiff example image', b'1', b'0', 540, 540),
 (262, 9, '/images/breeds/1dc49198d8a33372c106640a387dbefc.jpg', 'Mastiff example image', b'1', b'0', 540, 540),
 (263, 9, '/images/breeds/55e1635823f2d3500fd9e5f6dc10170e.jpg', 'Mastiff example image', b'1', b'0', 540, 540),
@@ -1614,10 +1614,9 @@ CREATE TABLE `favourite_breeds` (
 --
 
 INSERT INTO `favourite_breeds` (`user_id`, `breed_id`) VALUES
-(1, 18),
-(1, 29),
+(1, 1),
 (1, 31),
-(1, 53);
+(1, 47);
 
 -- --------------------------------------------------------
 
@@ -1629,6 +1628,15 @@ CREATE TABLE `favourite_dogs` (
   `user_id` int(11) NOT NULL,
   `dog_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `favourite_dogs`
+--
+
+INSERT INTO `favourite_dogs` (`user_id`, `dog_id`) VALUES
+(1, 339),
+(1, 867),
+(1, 996);
 
 -- --------------------------------------------------------
 
