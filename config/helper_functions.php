@@ -25,7 +25,7 @@ function get_userid() {
 function enforce_login() {
     if (!logged_in()) {
         // User not logged in, redirect them to login page
-        header("Location: /login.php");
+        header("Location: /login.php?display-error");
         exit();
     }
 }

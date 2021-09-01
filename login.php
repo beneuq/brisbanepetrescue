@@ -67,6 +67,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <fieldset class="input-card">
                 <legend>Login</legend>
                 <div class="form-group">
+                    <?php
+                        if (isset($_GET['display-error'])) {
+                            echo "<p class='error-box'>
+                                Please sign-in to use that feature
+                                </p>";
+                        }
+                    ?>
                     <p>Please fill in your credentials to login.</p>
                     <form action="login.php" method="post">
                         <div class="form-group">
@@ -85,7 +92,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     </form>
                     <p>Don't have an account?
-                        <a href="create_account.php">Sign up now.</a>
+                        <a href="create_account.php">Sign up now for free!</a>
                     </p>
                 </div>
             <fieldset>

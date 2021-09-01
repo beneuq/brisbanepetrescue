@@ -543,6 +543,13 @@ footer {
     color: white;
 }
 
+.error-box {
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 10px;
+    background: lightpink;
+}
+
 p {
     display: block;
     margin-block-start: 1em;
