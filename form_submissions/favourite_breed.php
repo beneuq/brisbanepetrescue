@@ -33,5 +33,11 @@ if (isset($_POST['breed_id'])) {
         }
     }
 }
-// Send user back to exactly where they were on the breeds page
-header('Location: '.$_SERVER['HTTP_REFERER'].'#breed_id='.$_POST['breed_id']);
+// Send user back to exactly where they were on the previous page
+if (strpos($_SERVER['HTTP_REFERER'], 'account.php') !== false) {
+    // User came from account page
+    header('Location: '.$_SERVER['HTTP_REFERER'].'#fav-breeds');
+} else {
+    // User came from breeds page
+    header('Location: '.$_SERVER['HTTP_REFERER'].'#breed_id='.$_POST['breed_id']);
+}

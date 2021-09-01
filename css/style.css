@@ -87,6 +87,10 @@ button {
     min-height: 50vh;
 }
 
+.min-pg-section {
+    min-height: 10vh;
+}
+
 .float-container {
     position: relative;
 }

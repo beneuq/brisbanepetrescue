@@ -15,28 +15,33 @@
     ?>
 </head>
 
-<body>
+<body class="banner">
+<div id="top"></div>
 <div class="underneath-nav"></div>
 <!-- import menu -->
 <?php include('partials/menu.php'); ?>
 
-<!-- Hero Section -->
-<section class="hero-section pos-relative">
-    <div class="flex container">
-        <div class="flex f-col hero-content">
-            <h1 class="pad-bottom-1">You have been logged out.</h1>
-            <h2 class="pad-bottom-1">Redirecting to homepage in 3 seconds...</h2>
+<div class="wrapper">
+    <fieldset class="input-card">
+        <legend>You have been logged out of your account</legend>
+        <div class="form-group">
+            <p>Redirecting to homepage in <span id="remaining-secs">3 </span> seconds...</p>
         </div>
-    </div>
-</section>
+        <fieldset>
+</div>
 
-<!-- FOOTER -->
+<script type="text/javascript">
+    let remaining_secs = 3;
+    const downloadTimer = setInterval(function () {
+        remaining_secs--;
+        document.getElementById("remaining-secs").textContent = remaining_secs.toString();
+        if (remaining_secs <= 0)
+            window.location.href = '/'
+    }, 1000);
+</script>
+
+<!-- import footer -->
 <?php include('partials/footer.php'); ?>
 </body>
 
 </html>
-
-<?php
-header('Refresh: 3; URL=/');
-//other code
-?>

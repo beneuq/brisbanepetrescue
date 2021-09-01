@@ -42,8 +42,8 @@
                 <img class="hero-img" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down">
             </div>
 
-            <!-- Section 3 -->
-            <section class="pg-section" style="background-color: grey;">
+            <!-- Favourite Breeds Section -->
+            <section id="fav-breeds" class="pg-section min-pg-section" style="background-color: grey;">
                 <h2 class="center-txt">Breeds I'm interested in</h2>
                 <div id="sqldata">
                     <table class="breeds-table">
@@ -83,8 +83,8 @@
                 </div>
             </section>
 
-            <!-- Section 4 -->
-            <section class="pg-section" style="background-color: white;">
+            <!-- Favourite Dogs Section -->
+            <section id="fav-dogs" class="pg-section min-pg-section" style="background-color: white;">
                 <h2 class="center-txt" style="color: black">Dogs I'm considering adopting</h2>
                 <div id="sqldata">
                     <table class="breeds-table">

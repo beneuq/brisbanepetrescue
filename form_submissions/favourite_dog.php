@@ -34,4 +34,10 @@ if (isset($_POST['dog_id'])) {
     }
 }
 // Send user back to exactly where they were on the previous page
-header('Location: '.$_SERVER['HTTP_REFERER'].'#dog_id='.$_POST['dog_id']);
+if (strpos($_SERVER['HTTP_REFERER'], 'account.php') !== false) {
+    // User came from account page
+    header('Location: '.$_SERVER['HTTP_REFERER'].'#fav-dogs');
+} else {
+    // User came from dogs page
+    header('Location: '.$_SERVER['HTTP_REFERER'].'#dog_id='.$_POST['dog_id']);
+}
