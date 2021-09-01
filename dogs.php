@@ -6,7 +6,7 @@
     <?php
     $page_title = 'Dogs';
     include('partials/head.php');
-    $active_help = 'active';
+    $active_dogs = 'active';
     ?>
 </head>
 
