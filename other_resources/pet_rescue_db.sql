@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 01, 2021 at 03:08 PM
+-- Generation Time: Sep 01, 2021 at 03:54 PM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -477,7 +477,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (20, NULL, 7, 25, 'Ivy', 0, '2021-08-18', 'female', 1, 1, 250, NULL),
 (21, NULL, 3, 56, 'Odessa', 4, '2017-04-30', 'female', 0, 1, 200, NULL),
 (22, NULL, 13, 66, 'Davy', 3, '2018-08-16', 'male', 0, 1, 150, NULL),
-(23, NULL, 17, 40, 'Kali', 10, '2010-11-30', 'female', 0, 1, 250, NULL),
+(23, 2, 17, 40, 'Kali', 10, '2010-11-30', 'female', 0, 1, 250, '2015-05-13'),
 (24, NULL, 9, 13, 'Finn', 8, '2013-08-24', 'male', 1, 1, 200, NULL),
 (25, NULL, 8, 4, 'Quincy', 7, '2014-04-27', 'male', 1, 1, 200, NULL),
 (26, NULL, 11, 77, 'Nadia', 4, '2017-06-25', 'female', 1, 0, 200, NULL),
@@ -637,7 +637,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (180, NULL, 8, 37, 'Saul', 6, '2015-05-13', 'male', 1, 0, 350, NULL),
 (181, NULL, 7, 17, 'Skye', 7, '2014-06-23', 'female', 0, 0, 350, NULL),
 (182, NULL, 6, 67, 'Oscar', 1, '2020-02-09', 'male', 0, 1, 350, NULL),
-(183, NULL, 2, 29, 'Annie', 6, '2015-01-13', 'female', 0, 1, 300, NULL),
+(183, 1, 2, 29, 'Annie', 6, '2015-01-13', 'female', 0, 1, 300, '2017-04-17'),
 (184, NULL, 9, 71, 'Hamilton', 3, '2018-05-23', 'male', 1, 1, 150, NULL),
 (185, NULL, 5, 63, 'Ursula', 4, '2016-12-06', 'female', 0, 0, 300, NULL),
 (186, NULL, 8, 43, 'Greta', 10, '2011-02-22', 'female', 0, 1, 200, NULL),
@@ -1076,7 +1076,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (619, NULL, 7, 42, 'Delia', 0, '2020-11-05', 'female', 1, 1, 350, NULL),
 (620, NULL, 14, 28, 'Vivienne', 5, '2016-03-04', 'female', 0, 0, 350, NULL),
 (621, NULL, 15, 18, 'Hogan', 4, '2017-05-12', 'male', 0, 1, 300, NULL),
-(622, NULL, 6, 31, 'Parley', 6, '2015-06-23', 'male', 1, 1, 150, NULL),
+(622, 1, 6, 31, 'Parley', 6, '2015-06-23', 'male', 1, 1, 150, '2020-06-02'),
 (623, NULL, 14, 20, 'Opal', 6, '2014-12-10', 'female', 1, 1, 300, NULL),
 (624, NULL, 12, 7, 'Iggy', 11, '2009-12-31', 'male', 1, 1, 300, NULL),
 (625, NULL, 12, 29, 'Oakley', 7, '2013-09-15', 'male', 0, 0, 150, NULL),
@@ -1451,7 +1451,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (993, NULL, 12, 73, 'Easton', 11, '2010-08-05', 'male', 0, 1, 250, NULL),
 (994, NULL, 10, 27, 'Titus', 1, '2019-11-12', 'male', 1, 0, 200, NULL),
 (995, NULL, 11, 20, 'Jasper', 5, '2015-10-30', 'male', 0, 0, 300, NULL),
-(996, NULL, 10, 44, 'Ada', 11, '2010-02-20', 'female', 1, 1, 300, NULL),
+(996, 2, 10, 44, 'Ada', 11, '2010-02-20', 'female', 1, 1, 300, '2011-01-20'),
 (997, NULL, 3, 17, 'Cosmo', 2, '2018-11-15', 'male', 0, 0, 150, NULL),
 (998, NULL, 14, 15, 'Hawkeye', 9, '2012-07-19', 'male', 1, 0, 250, NULL),
 (999, NULL, 1, 29, 'Carmela', 6, '2014-10-25', 'female', 1, 1, 300, NULL),
@@ -1619,7 +1619,10 @@ INSERT INTO `favourite_breeds` (`user_id`, `breed_id`) VALUES
 (1, 29),
 (1, 31),
 (1, 46),
-(1, 69);
+(1, 69),
+(2, 11),
+(2, 53),
+(2, 67);
 
 -- --------------------------------------------------------
 
@@ -1639,8 +1642,11 @@ CREATE TABLE `favourite_dogs` (
 INSERT INTO `favourite_dogs` (`user_id`, `dog_id`) VALUES
 (1, 27),
 (1, 183),
+(1, 345),
 (1, 867),
 (1, 996),
+(2, 66),
+(2, 399),
 (5, 888),
 (7, 849);
 
