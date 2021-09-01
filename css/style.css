@@ -329,16 +329,17 @@ button {
 
 /* User icons */
 #user-icons {
-    width: 10%;
+    width: 20%;
     margin-left: 5%;
 }
 
-#user-icons button:first-child {
-    margin-right: 20px;
+#user-icons button {
+    margin-right: 10px;
 }
 
-#login-caption {
+#user-icons p {
     margin-top: 0;
+    color: white;
 }
 
 /* HERO SECTION */

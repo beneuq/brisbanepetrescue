@@ -3,16 +3,11 @@ A list of tasks to be done by anyone who needs work to do.
 ! <-- Indicates high priority task
 
 @Front-End:
-    - ! Fix menu bar position and transparency (keeps appearing on top of things)
-    - ! Fix giant purple section at top of Login and account creation pages (Can be much smaller)
     - Make username/login text under account icon look better (especially with longer names)
     - About us page
     - Contact us page
 
 @Back-End:
-    - Make favourite button change once clicked
-            - This will require checking if the breed is in user's favourites with SQL (assuming user is logged in),
-                    and displaying icon or text to match (maybe a heart or empty heart button?)
     - ! Make page (or maybe popup window?) to showcase a dog breed.
             - This should be dynamic in that once the name of breed is clicked on, it shows info for that breed
                     (as opposed to creating a html page for every single breed)
@@ -24,6 +19,7 @@ A list of tasks to be done by anyone who needs work to do.
                   - Should also display all the info for the shelter the dog is at (maybe even a map if time allows?)
     - Create a way to filter the dogs and breeds page
             - Then create a way to apply a filter by default for logged-in users to the breeds they're interested in
+    - Make checkboxes work on My Pets page (use breed favourites button as example of how to do this)
     - Validate user inputs in login form
     - Validate user inputs in account creation form
     - Maybe start using password hashes? Low priority though

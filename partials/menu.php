@@ -19,19 +19,31 @@
         
         <!-- Account Icons -->
         <div id="user-icons" class="sm-d-none">
-            <button>
-                <?php
-                    $send_to_page = isset($_SESSION['logged_in']) ? "/account.php" : "/login.php";
-                    $login_caption = isset($_SESSION['logged_in']) ? $_SESSION['firstname'] : "Login";
-                ?>
-                <a href=<?php echo $send_to_page ?>>
+            <?php
+                $account_page = isset($_SESSION['logged_in']) ? "/account.php" : "/login.php";
+                $favourites_page = isset($_SESSION['logged_in']) ? "/favourites.php" : "/login.php";
+                $mypets_page = isset($_SESSION['logged_in']) ? "/mypets.php" : "/login.php";
+                $login_caption = isset($_SESSION['logged_in']) ? $_SESSION['firstname'] : "Login";
+            ?>
+            <button onclick="location.href = '<?php echo $account_page ?>'">
+                <figure>
                     <img src="images/account-icon.png" alt="Account icon" width="40px" height="40px">
-                </a>
+                    <p><?php echo $login_caption?></p>
+                </figure>
             </button>
-            <button>
-                <img src="images/favourites-icon.png" alt="Favourites icon" width="40px" height="40px">
+            <button onclick="location.href = '<?php echo $favourites_page ?>'">
+                <figure>
+                    <img src="images/favourites-icon.png" alt="Favourites icon" width="40px" height="40px">
+                    <p>Saved</p>
+                </figure>
             </button>
-            <p id="login-caption"><?php echo $login_caption?></p>
+            <button onclick="location.href = '<?php echo $mypets_page ?>'">
+                <figure>
+                    <img src="images/icons/kennel.png" alt="Favourites icon" width="40px" height="40px">
+                    <p>My Pets</p>
+                </figure>
+            </button>
+
         </div>
     </div>
 

@@ -18,7 +18,7 @@
 <!-- Start main page body -->
 <h1 class="breed-title">Dogs looking for a home</h1>
 
-<!-- This code iterates through the database and adds a table row for each breed in the database -->
+<!-- This code iterates through the database and adds a table row for each dog in the database -->
 <div id="sqldata">
     <table class="breeds-table">
         <thead>
