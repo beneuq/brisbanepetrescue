@@ -24,3 +24,4 @@ A list of tasks to be done by anyone who needs work to do.
     - Validate user inputs in login form
     - Validate user inputs in account creation form
     - Maybe start using password hashes? Low priority though
+    - @Matt todo: add a post-adoption tasks of "set-up tick medicine schedule IF NULL"
