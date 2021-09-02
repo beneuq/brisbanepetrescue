@@ -3,7 +3,7 @@ A list of tasks to be done by anyone who needs work to do.
 ! <-- Indicates high priority task
 
 @Front-End:
-    - Make username/login text under account icon look better (especially with longer names)
+    - ! Make it look better on mobile - can't see menu at all currently
     - About us page
     - Contact us page
 
@@ -20,6 +20,7 @@ A list of tasks to be done by anyone who needs work to do.
     - Create a way to filter the dogs and breeds page
             - Then create a way to apply a filter by default for logged-in users to the breeds they're interested in
     - Make checkboxes work on My Pets page (use breed favourites button as example of how to do this)
+    - Add a way for users to update worming and tick medication data, and also just a button to reset last med dates to now
     - Validate user inputs in login form
     - Validate user inputs in account creation form
     - Maybe start using password hashes? Low priority though
