@@ -117,28 +117,34 @@
                     <p>All breeds are given a rating from 1 to 5 (5 being high) for a number of important physical and personality traits.
                         Please note that these are general traits and may not reflect every dog of this breed. </p>
                     <h4>General</h4>
+                    <p>Type of dog: <span style="text-transform: capitalize;"><?php echo $row3['type_of_dog']; ?></span></p>
+                    <p>Popularity: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['popularity_class'])
+                                        . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['popularity_class']); ?></p>
                     <p>Good first time pet: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['good_for_novice_owners'])
                                                 . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['good_for_novice_owners']); ?></p>
-                    <p>Height: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['height_class'])
-                                    . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['height_class']); ?>
-                    <p><?php echo $row3['height_low']; ?>cm - <?php echo $row3['height_high']; ?>cm</p>
-                    <p>Weight: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['weight_class'])
-                                    . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['weight_class']); ?>
-                    <p><?php echo $row3['weight_low']; ?>kgs - <?php echo $row3['weight_high']; ?>kgs</p>
+                    <p>Size: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['size_class'])
+                                    . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['size_class']); ?></p>
+                    <p>Height: <?php echo $row3['height_low']; ?>cm - <?php echo $row3['height_high']; ?>cm</p>
+                    <p>Weight: <?php echo $row3['weight_low']; ?>kgs - <?php echo $row3['weight_high']; ?>kgs</p>
                     <p>Calorie intake (when adult):
                         <?php echo $row3['adult_cal_intake_low'] . "cals - "
                             . $row3['adult_cal_intake_high'] . "cals"; ?></p>
-                    <p>Amount of shedding: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['shedding_amount_class'])
-                                                . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['shedding_amount_class']); ?></p>
-                    <p>Drooling potential: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['drooling_potential_class'])
-                                                . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['drooling_potential_class']); ?></p>
-                    <p>Ease of grooming: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['ease_of_grooming_class'])
-                                                . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['ease_of_grooming_class']); ?></p>
+                    <p>Average Lifespan: <?php echo $row3['average_lifespan']; ?> years</p>
                     <h4>Personality</h4>
                     <p>Adaptability: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['adaptability_class'])
                                             . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['adaptability_class']); ?></p>
+                    <p>Playful: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['potential_for_playfulness_class'])
+                                    . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['potential_for_playfulness_class']); ?></p>
+                    <p>Sensitive: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['sensitivity_class'])
+                                        . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['sensitivity_class']); ?></p>
                     <p>High Energy: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['energy_level_class'])
                                         . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['energy_level_class']); ?></p>
+                    <p>Wanderlust Potential: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['wanderlust_potential_class'])
+                                                    . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['wanderlust_potential_class']); ?></p>
+                    <p>Intensity: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['intensity_class'])
+                                        . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['intensity_class']); ?></p>
+                    <p>Potential to be loud: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['potential_for_mouthiness_class'])
+                                                    . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['potential_for_mouthiness_class']); ?></p>
                     <h4>Family, Friends and other pets</h4>
                     <p>General Friendliness: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['general_friendliness_class'])
                                                     . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['general_friendliness_class']); ?></p>
@@ -150,21 +156,45 @@
                                                         . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['dog_friendly_class']); ?></p>
                     <p>Friendly towards strangers: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['friendly_toward_strangers_class'])
                                                         . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['friendly_toward_strangers_class']); ?></p>
+                    <p>Prey Drive: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['prey_drive_class'])
+                                        . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['prey_drive_class']); ?></p>
                     <h4>Health and Lifestyle</h4>
                     <p>Exercise Required: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['exercise_needs_class'])
                                                 . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['exercise_needs_class']); ?></p>
                     <p>Suited to aparment living: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['apartment_living_class'])
                                                         . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['apartment_living_class']); ?></p>
+                    <p>Ok alone: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['tolerates_being_alone_class'])
+                                        . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['tolerates_being_alone_class']); ?></p>
                     <p>Generaly health: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['general_health_class'])
                                             . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['general_health_class']); ?></p>
+                    <p>Potential to put on weight: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['potential_for_weight_gain_class'])
+                                                        . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['potential_for_weight_gain_class']); ?></p>
+                    <p>Common Genetic Conditions: <?php echo $row3['genetic_conditions']; ?></p>
+                    <p>Common Genetic Diseases: <?php echo $row3['genetic_diseases']; ?></p>
                     <h4>Intelligence</h4>
-                    <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['intelligence_class'])
-                        . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['intelligence_class']); ?>
-                    <p>Overall: <?php echo $row3['inteligence_desc']; ?></p>
-                    <p>Obey instructions %: <?php echo $row3['obey_perc'] * 100; ?>%</p>
+                    <p><?php echo $row3['intelligence_desc']; ?></p>
+                    <p>Overall: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['intelligence_class'])
+                                    . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['intelligence_class']); ?></p>
+                    <p>Obeys instructions (%): <?php echo $row3['obey_perc'] * 100; ?>%</p>
                     <p>Repetitions required to train: <?php echo $row3['training_reps_low'] . " - " . $row3['training_reps_high']; ?></p>
-
                     <h4>Cost</h4>
+                    <p>Initial Cost: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['average_purchase_price_class'])
+                                            . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['average_purchase_price_class']); ?></p>
+                    <p>Lifetime Cost: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['lifetime_cost_class'])
+                                            . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['lifetime_cost_class']); ?></p>
+                    <h4>Other things to consider</h4>
+                    <p>Amount of shedding: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['shedding_amount_class'])
+                                                . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['shedding_amount_class']); ?></p>
+                    <p>Drooling potential: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['drooling_potential_class'])
+                                                . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['drooling_potential_class']); ?></p>
+                    <p>Ease of grooming: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['ease_of_grooming_class'])
+                                                . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['ease_of_grooming_class']); ?></p>
+                    <p>Makes a good watchdog: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['watchdog_class'])
+                                                    . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['watchdog_class']); ?></p>
+                    <p>Suited to warm weather: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['tolerates_hot_weather_class'])
+                                                    . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['tolerates_hot_weather_class']); ?></p>
+                    <p>Suited to cold weather: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['tolerates_cold_weather_class'])
+                                                    . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['tolerates_cold_weather_class']); ?></p>
                     <p>count: <?php echo $count2; ?></p>
                     <br>
 
