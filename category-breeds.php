@@ -107,7 +107,7 @@
                     <!-- Section with all details -->
                     <?php
                         // Grabbing all the info on that breed
-                        $sql2 = "SELECT * FROM dog_breeds WHERE breed_id=$breed_id"
+                        $sql3 = "SELECT * FROM dog_breeds WHERE breed_id=$breed_id"
                         //Execute the Query
                         $res3 = mysqli_query($conn, $sql3);
                         // Get the row (should only ever be 1)
