@@ -109,7 +109,7 @@
                         // Grabbing all the info on that breed
                         $sql2 = "SELECT * FROM dog_breeds WHERE breed_id=$breed_id"
                         //Execute the Query
-                        $res3 = mysqli_query($conn, $sql2);
+                        $res3 = mysqli_query($conn, $sql3);
                         // Get the row (should only ever be 1)
                         $row3 = mysqli_fetch_assoc($res3);
                     ?>
@@ -118,8 +118,8 @@
                         Please note that these are general traits and may not reflect every dog of this breed. </p>
                     <h4>General</h4>
                     <p>Height: </p>
-                        <p><?php echo $row3['height_low'];?>cm - <?php echo $row3['height_high'];?>cm</p>
-                    <p>Weight: <?php echo $row3['weight_low'];?>kgs - <?php echo $row3['weight_low'];?>kgs</p>
+                    <p><?php echo $row3['height_low'];?>cm - <?php echo $row3['height_high'];?>cm</p>
+                    <p>Weight: <?php echo $row3['weight_low'];?>kgs - <?php echo $row3['weight_high'];?>kgs</p>
 
                     <h4>Family, Friends and other pets</h4>
                     <h4>Health and Lifestyle</h4>
