@@ -117,8 +117,7 @@
                     <p>All breeds are given a rating from 1 to 5 (5 being high) for a number of important physical and personality traits.
                         Please note that these are general traits and may not reflect every dog of this breed. </p>
                     <h4>General</h4>
-                    <p>Height: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['height_class'])
-                    . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-empty.png\">", 5 - $row3['height_class']);?></p>
+                    <p>Height: </p>
                         <p><?php echo $row3['height_low'];?>cm - <?php echo $row3['height_high'];?>cm</p>
                     <p>Weight: <?php echo $row3['weight_low'];?>kgs - <?php echo $row3['weight_low'];?>kgs</p>
 
