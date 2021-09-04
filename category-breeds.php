@@ -39,6 +39,7 @@
 
 
     <!-- fOOD MEnu Section Starts Here -->
+    <div class="underneath-nav"></div>
     <section class="food-menu">
         <div class="container">
 
@@ -56,39 +57,36 @@
             //CHeck whether food is available or not
             if ($count2 > 0) {
             ?>
-                <p>count: <?php echo $count2; ?></p>
-                <div class="food-menu-img">
-                    <div class="glide">
-                        <div class="glide__track" data-glide-el="track">
-                            <ul class="glide__slides">
-                                <?php
-                                //Food is Available
-                                while ($row2 = mysqli_fetch_assoc($res2)) {
-                                    $id = $row2['id'];
-                                    $title = $row2['title'];
-                                    $price = $row2['price'];
-                                    $image_name = $row2['path'];
-                                    $image_alt = $row2['alt_text'];
-                                    if ($image_name == "") {
-                                        //Image not Available
-                                        echo "<div class='error'>Image not Available.</div>";
-                                    } else {
-                                        //Image Available
-                                ?>
-                                        <!-- use slider for images -->
-                                        <li class="glide__slide"><img src="https://brisbanepetrescue.me<?php echo $image_name; ?>" alt="<?php echo $image_alt; ?>"></li>
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
                             <?php
-                                    }
+                            //Food is Available
+                            while ($row2 = mysqli_fetch_assoc($res2)) {
+                                $id = $row2['id'];
+                                $title = $row2['title'];
+                                $price = $row2['price'];
+                                $image_name = $row2['path'];
+                                $image_alt = $row2['alt_text'];
+                                if ($image_name == "") {
+                                    //Image not Available
+                                    echo "<div class='error'>Image not Available.</div>";
+                                } else {
+                                    //Image Available
+                            ?>
+                                    <!-- use slider for images -->
+                                    <li class="glide__slide"><img src="https://brisbanepetrescue.me<?php echo $image_name; ?>" alt="<?php echo $image_alt; ?>"></li>
+                        <?php
                                 }
                             }
-                            ?>
-                            </ul>
+                        }
+                        ?>
+                        </ul>
 
-                        </div>
-                        <div class="glide__arrows" data-glide-el="controls">
-                            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-                        </div>
+                    </div>
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
                     </div>
                 </div>
 
@@ -97,11 +95,20 @@
 
                 <!-- description if exists -->
                 <div class="food-menu-desc">
-                    <h4><?php echo $title; ?></h4>
-                    <p class="food-price">$<?php echo $price; ?></p>
-                    <p class="food-detail">
-                        Add doggy details
-                    </p>
+                    <h3>Description</h3>
+                    <p> TODO: Add description </p>
+                    <h3>Great breed qualities</h3>
+                    <p> TODO: Add breed qualities</p>
+                    <h3>Breed not recommended for:</h3>
+                    <p> TODO: Add breed negatives</p>
+                    <h3>Detailed breed information</h3>
+                    <p>All breeds are given a rating from 1 to 5 (5 being high) for a number of important physical and personality traits.
+                        Please note that these are general traits and may not reflect every dog of this breed. </p>
+                    <h4>Physical Atrributes</h4>
+                    <h4>Lifestyle</h4>
+                    <h4>Family, Friends and other pets</h4>
+                    <h4>Cost</h4>
+                    <p>count: <?php echo $count2; ?></p>
                     <br>
 
                 </div>
