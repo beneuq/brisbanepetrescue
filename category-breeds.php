@@ -56,6 +56,7 @@
             //CHeck whether food is available or not
             if ($count2 > 0) {
             ?>
+                <p>count: <?php echo $count2; ?></p>
                 <div class="food-menu-img">
                     <div class="glide">
                         <div class="glide__track" data-glide-el="track">
