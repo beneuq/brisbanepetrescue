@@ -89,6 +89,9 @@
                         <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
                     </div>
                 </div>
+                <script>
+                    new Glide('.glide').mount()
+                </script>
 
                 <!-- heading -->
                 <h2 class="text-center"><?php echo $breed_title ?></h2>
