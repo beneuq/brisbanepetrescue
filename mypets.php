@@ -28,9 +28,8 @@
                 <div class="flex f-col hero-content">
                     <h1 class="pad-bottom-1">My Pets</h1>
                     <h2 class="pad-bottom-2"><?php echo $firstname ?>'s Adopted K-9 Friends</h2>
-                    </div>
-                    <br>
                 </div>
+            </div>
         </section>
 
         <!-- This code iterates through the database and adds a table row for each dog in the database -->
