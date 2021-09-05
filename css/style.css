@@ -669,6 +669,8 @@ h1 {
 
 .task-set {
     width: 50%;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 /* PERSONALITY QUIZ */
