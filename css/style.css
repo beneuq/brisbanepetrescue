@@ -645,22 +645,22 @@ h1 {
 }
 
 /* mypets */
-#tasks {
+.tasks {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
   }
   
-#tasks  td, #tasks th {
+.tasks  td, .tasks th {
     border: 1px solid #ddd;
     padding: 8px;
 }
   
-#tasks tr:nth-child(even){background-color: #f2f2f2;}
+.tasks tr:nth-child(even){background-color: #f2f2f2;}
   
-#tasks tr:hover {background-color: #ddd;}
+.tasks tr:hover {background-color: #ddd;}
   
-#tasks th {
+.tasks th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
