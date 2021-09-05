@@ -663,9 +663,12 @@ h1 {
 .tasks th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
     background-color: #8b128f;
     color: white;
+}
+
+.task-set {
+    width: 50%;
 }
 
 /* PERSONALITY QUIZ */

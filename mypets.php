@@ -34,6 +34,7 @@
 
         <!-- This code iterates through the database and adds a table row for each dog in the database -->
         <div id="sqldata">
+            <div class="task-set">
                 <table class="tasks">
                     <h2 class="center-txt">Post-adoption</h2>
                         <tr>
@@ -51,6 +52,8 @@
                             <th>Birthday</th>
                         </tr>
                 </table>
+            </div>
+            <div class="task-set">
                 <table class="tasks">
                     <h2 class="center-txt">Recommendations</h2>
                         <tr>
@@ -59,6 +62,7 @@
                         </tr>
 
                 </table>
+           
                 <table class="tasks">
                     <h2 class="center-txt">In your area</h2>
                         <tr>
