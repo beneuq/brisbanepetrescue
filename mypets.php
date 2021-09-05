@@ -42,6 +42,11 @@
                             <th>Vaccinated?</th>
                             <th>Registration</th>
                         </tr>
+                        <tr>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                        </tr>
                 </table>
                 <table class="tasks">
                     <h2 class="tasks-txt">Reminders</h2>
@@ -50,6 +55,12 @@
                             <th>Worming Tablet</th>
                             <th>Tick Medication</th>
                             <th>Birthday</th>
+                        </tr>
+                        <tr>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
                         </tr>
                 </table>
             </div>
@@ -61,6 +72,11 @@
                             
                         </tr>
 
+                        <tr>
+                            <td>EXAMPLE</td>
+
+                        </tr>
+
                 </table>
            
                 <table class="tasks">
@@ -70,6 +86,13 @@
                             <th>Puppy Preschools</th>
                             <th>Dog Parks</th>
                             <th>Dog Groomers</th>
+                        </tr>
+
+                        <tr>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
                         </tr>
                 </table>
             </div>
