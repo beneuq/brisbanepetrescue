@@ -36,7 +36,7 @@
         <div id="sqldata">
             <div class="task-set">
                 <table class="tasks">
-                    <h2 class="center-txt">Post-adoption</h2>
+                    <h2 class="tasks-txt">Post-adoption</h2>
                         <tr>
                             <th>Desexed?</th>
                             <th>Vaccinated?</th>
@@ -44,7 +44,7 @@
                         </tr>
                 </table>
                 <table class="tasks">
-                    <h2 class="center-txt">Reminders</h2>
+                    <h2 class="tasks-txt">Reminders</h2>
                         <tr>
                             <th>Appointment</th>
                             <th>Worming Tablet</th>
@@ -55,7 +55,7 @@
             </div>
             <div class="task-set">
                 <table class="tasks">
-                    <h2 class="center-txt">Recommendations</h2>
+                    <h2 class="tasks-txt">Recommendations</h2>
                         <tr>
                             <th>Recommended Food</th>
                             
@@ -64,7 +64,7 @@
                 </table>
            
                 <table class="tasks">
-                    <h2 class="center-txt">In your area</h2>
+                    <h2 class="tasks-txt">In your area</h2>
                         <tr>
                             <th>Obedience training</th>
                             <th>Puppy Preschools</th>
