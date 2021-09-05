@@ -42,6 +42,8 @@
                             <th>Vaccinated?</th>
                             <th>Registration</th>
                         </tr>
+                </table>
+                <table class="tasks">
                     <h2 class="center-txt">Reminders</h2>
                         <tr>
                             <th>Appointment</th>
@@ -56,6 +58,9 @@
                             <th>Recommended Food</th>
                             
                         </tr>
+
+                </table>
+                <table class="tasks">
                     <h2 class="center-txt">In your area</h2>
                         <tr>
                             <th>Obedience training</th>
