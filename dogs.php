@@ -58,7 +58,7 @@
             ");
             while($entry = mysqli_fetch_array($res)) {
                 echo "<tr id='dog_id=".$entry['dog_id']."'>
-                        <td style='width:10%;'><form method='POST' action='/form_submissions/favourite_dog.php'> <button type='submit' name='dog_id' value='".$entry['dog_id']."'><img width='30%' src='images/icons/heart-".$entry['favourite_icon'].".png'></button></form></td>
+                        <td style='width:10%;'><form method='POST' action='/form_submissions/favourite_dog.php'> <button type='submit' name='dog_id' value='".$entry['dog_id']."'><img width='20%' src='images/icons/heart-".$entry['favourite_icon'].".png'></button></form></td>
                         <td style='font-weight:bold; width:14%;'>" . $entry['Dog'] . "</td>
                         <td style='width:14%;'>" . $entry['Breed'] . "</td>
                         <td style='width:14%;'>" . $entry['age'] . " years</td>
