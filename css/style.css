@@ -697,6 +697,25 @@ h1 {
     font-size: 1.2em;
 }
 
+/* Category breeds page styling */
+.category-title {
+    font-size: 2em;
+    margin-top: 2%;
+}
+
+.category-info h3 {
+    margin-top: 2%;
+    font-size: 1.5em;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+}
+
+.glide img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* CSS for Mobile Size or Smaller Screen */
 
 @media only screen and (max-width:768px) {

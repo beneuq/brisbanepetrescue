@@ -94,10 +94,10 @@
                 </script>
 
                 <!-- heading -->
-                <h2 class="text-center"><?php echo $breed_title ?></h2>
+                <h2 class="category-title"><?php echo $breed_title ?></h2>
 
                 <!-- description if exists -->
-                <div class="food-menu-desc">
+                <div class="category-info">
                     <h3>Description</h3>
                     <p> TODO: Add description </p>
                     <h3>Great breed qualities</h3>
