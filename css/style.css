@@ -468,7 +468,7 @@ button {
 
 .breeds-table tbody tr {
     border-bottom: 1px solid grey;
-    scroll-margin-top: 50px
+    scroll-margin-top: 50px;
 }
 
 /* Applies styling to every second row of table */
