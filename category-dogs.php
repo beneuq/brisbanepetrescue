@@ -72,7 +72,7 @@
                                     //Image Available
                             ?>
                                     <!-- use slider for images -->
-                                    <li class="glide__slide"><img src="https://brisbanepetrescue.me<?php echo $image_name; ?>" alt="<?php echo $image_alt; ?>"></li>
+                                    <li class="glide__slide"><img src="<?php echo SITEURL.$image_name; ?>" alt="<?php echo $image_alt; ?>"></li>
                         <?php
                                 }
                             }
@@ -90,15 +90,12 @@
                     new Glide('.glide').mount()
                 </script>
 
-                <!-- heading -->
-                <h2 class="category-title"><?php echo $breed_title; ?></h2>
-
                 <!-- description if exists -->
                 <div class="category-info">
                     <?php
 
                     //Create SQL Query to Get foods based on Selected CAtegory
-                    $sql3 = "SELECT d.name as d_name, Breed, age, gender, type_of_dog, popularity_class, good_for_novice_owners, size_class, height_low, height_high, weight_low, weight_high, adult_cal_intake_low, adult_cal_intake_high, b.breed_id as b_breed_id, s.name as s_name, address, phone, hours, email FROM dogs as d, dog_breeds as b, shelters as s WHERE d.breed_id = b.breed_id AND s.shelter_id = d.shelter_id AND d.dog_id=$dog_id";
+                    $sql3 = "SELECT d.name as d_name, Breed, age, gender, type_of_dog, popularity_class, good_for_novice_owners, size_class, height_low, height_high, weight_low, weight_high, adult_cal_intake_low, adult_cal_intake_high, average_lifespan, b.breed_id as breed_id, s.name as s_name, address, phone, hours, email FROM dogs as d, dog_breeds as b, shelters as s WHERE d.breed_id = b.breed_id AND s.shelter_id = d.shelter_id AND d.dog_id=$dog_id";
 
                     //Execute the Query
                     $res3 = mysqli_query($conn, $sql3);
@@ -106,6 +103,9 @@
                     //SHould be only 1 row to grab
                     $row3 = mysqli_fetch_assoc($res3);
                     ?>
+                    <!-- heading -->
+                    <h2 class="category-title"><?php echo $row3['d_name']; ?>'s Adoption Profile</h2>
+
                     <h3>Dog Info</h3>
                     <p>Name: <?php echo $row3['d_name']; ?></p>
                     <p>Breed: <?php echo $row3['Breed']; ?></p>
@@ -115,19 +115,19 @@
 
                     <h3>Breed info</h3>
                     <p>Type of dog: <span style="text-transform: capitalize;"><?php echo $row3['type_of_dog']; ?></span></p>
-                    <p>Popularity: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['popularity_class'])
-                                        . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['popularity_class']); ?></p>
-                    <p>Good first time pet: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['good_for_novice_owners'])
-                                                . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['good_for_novice_owners']); ?></p>
-                    <p>Size: <?php echo str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\">", $row3['size_class'])
-                                    . str_repeat("<img src=\"https://brisbanepetrescue.me/images/icons/star-full.png\" style=\"opacity:0.4\">", 5 - $row3['size_class']); ?></p>
+                    <p>Popularity: <?php echo str_repeat("<img src='/images/icons/star-full.png'>", $row3['popularity_class'])
+                                        . str_repeat("<img src='/images/icons/star-full.png' style=opacity:0.2>", 5 - $row3['popularity_class']); ?></p>
+                    <p>Good first time pet: <?php echo str_repeat("<img src='/images/icons/star-full.png'>", $row3['good_for_novice_owners'])
+                                                . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $row3['good_for_novice_owners']); ?></p>
+                    <p>Size: <?php echo str_repeat("<img src='/images/icons/star-full.png'>", $row3['size_class'])
+                                    . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $row3['size_class']); ?></p>
                     <p>Height: <?php echo $row3['height_low']; ?>cm - <?php echo $row3['height_high']; ?>cm</p>
                     <p>Weight: <?php echo $row3['weight_low']; ?>kgs - <?php echo $row3['weight_high']; ?>kgs</p>
                     <p>Calorie intake (when adult):
                         <?php echo $row3['adult_cal_intake_low'] . "cals - "
                             . $row3['adult_cal_intake_high'] . "cals"; ?></p>
                     <p>Average Lifespan: <?php echo $row3['average_lifespan']; ?> years</p>
-                    <p><a href="brisbanepetrescue.me/category-breeds.php?breed-id=<?php echo $row['b_breed_id']; ?>">More breed info</a></p>
+                    <p><a href="/category-breeds.php?breed_id=<?php echo $row3['breed_id']; ?>">More breed info</a></p>
                     <h3>Shelter Info</h3>
                     <p>Name: <?php echo $row3['s_name']; ?></p>
                     <p>Address: <?php echo $row3['address']; ?></p>
@@ -143,7 +143,7 @@
     </section>
     <!-- fOOD Menu Section Ends Here -->
 
-    <?php include('partials-front/footer.php'); ?>
+    <?php include('partials/footer.php'); ?>
 </body>
 
 </html>
