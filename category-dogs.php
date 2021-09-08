@@ -91,7 +91,7 @@
                 </script>
 
                 <!-- heading -->
-                <h2 class="category-title"><?php echo $breed_title ?></h2>
+                <h2 class="category-title"><?php echo $breed_title; ?></h2>
 
                 <!-- description if exists -->
                 <div class="category-info">
@@ -107,10 +107,10 @@
                     $row3 = mysqli_fetch_assoc($res3);
                     ?>
                     <h3>Dog Info</h3>
-                    <p>Name: <?php $row3['d_name'] ?></p>
-                    <p>Breed: <?php $row3['Breed'] ?></p>
-                    <p>Age: <?php $row3['age'] ?></p>
-                    <p>Gender: <?php $row3['gender'] ?></p>
+                    <p>Name: <?php $row3['d_name']; ?></p>
+                    <p>Breed: <?php $row3['Breed']; ?></p>
+                    <p>Age: <?php $row3['age']; ?></p>
+                    <p>Gender: <?php $row3['gender']; ?></p>
                     <!-- These will only display if they are true -->
 
                     <h3>Breed info</h3>
@@ -127,14 +127,14 @@
                         <?php echo $row3['adult_cal_intake_low'] . "cals - "
                             . $row3['adult_cal_intake_high'] . "cals"; ?></p>
                     <p>Average Lifespan: <?php echo $row3['average_lifespan']; ?> years</p>
-                    <p><a href="brisbanepetrescue.me/category-breeds.php?breed-id=<?php echo $row['b_breed_id'] ?>">More breed info</a></p>
+                    <p><a href="brisbanepetrescue.me/category-breeds.php?breed-id=<?php echo $row['b_breed_id']; ?>">More breed info</a></p>
                     <h3>Shelter Info</h3>
-                    <p>Name: <?php $row3['s_name'] ?></p>
-                    <p>Address: <?php $row3['address'] ?></p>
-                    <p>Phone: <?php $row3['phone'] ?></p>
-                    <p>Email: <?php $row3['email'] ?></p>
-                    <p>Hours: <?php $row3['hours'] ?></p>
-                    <form action="https://form.jotform.com/212502680325043?<?php echo "shelterName=" . $row3['s_name'] . "&shelterEmail=" . $row3['email'] . "&dogId=" . $dog_id . "&dogName=" . $row3['d_name'] ?>">
+                    <p>Name: <?php $row3['s_name']; ?></p>
+                    <p>Address: <?php $row3['address']; ?></p>
+                    <p>Phone: <?php $row3['phone']; ?></p>
+                    <p>Email: <?php $row3['email']; ?></p>
+                    <p>Hours: <?php $row3['hours']; ?></p>
+                    <form action="https://form.jotform.com/212502680325043?<?php echo "shelterName=" . $row3['s_name'] . "&shelterEmail=" . $row3['email'] . "&dogId=" . $dog_id . "&dogName=" . $row3['d_name']; ?>">
                         <input type="submit" value="Apply to adopt" />
                     </form>
                 </div>
