@@ -134,7 +134,7 @@
                     <p>Phone: <?php echo $row3['phone']; ?></p>
                     <p>Email: <?php echo $row3['email']; ?></p>
                     <p>Hours: <?php echo $row3['hours']; ?></p>
-                    <form action="https://form.jotform.com/212502680325043?<?php echo "shelterName=" . $row3['s_name'] . "&shelterEmail=" . $row3['email'] . "&dogId=" . $dog_id . "&dogName=" . $row3['d_name']; ?>">
+                    <form action="https://form.jotform.com/212502680325043?<?php echo str_replace(' ', '%20', "shelterName=" . $row3['s_name'] . "&shelterEmail=" . $row3['email'] . "&dogId=" . $dog_id . "&dogName=" . $row3['d_name']); ?>">
                         <input type="submit" value="Apply to adopt" />
                     </form>
                 </div>
