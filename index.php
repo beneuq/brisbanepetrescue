@@ -17,7 +17,7 @@
         <!-- Hero Section -->
         <section class="hero-section pos-relative">
             <div class="flex container">
-                <div class="flex f-col hero-content">
+                <div class="flex f-col hero-content hero-imgg">
                     <h1 class="pad-top-2 pad-bottom-1">Looking to adopt?</h1>
                     <h2 class="pad-bottom-1">Brisbane Pet Rescue Has You Covered</h2>
                     <p class="pad-bottom-2">Here, we understand the struggles of finding the perfect K-9 companion. Browse through the availabe dogs straight away or do a short quiz to find the perfect pet for you.</p>
@@ -32,8 +32,23 @@
 
         </section>
         <!-- Section 2 -->
-        <section class="pg-section" style="background-color: lightgrey;">
+        <section id="hero-section-2" class="pg-section" style="background-color: lightgrey;">
+            <!-- first half -->
+            <div class="flex">
+                <div class="flex f-col container">
+                    <h1 class="pad-top-2 pad-bottom-1">Why we do what we do</h1>
+                    <h2 class="pad-bottom-3">Giving dogs a home is our mission</h2>
 
+                    <!-- "Call to Action" buttons -->
+                    <div class="btn-group pad-bottom-2">
+                        <a href="dogs.php" class="margin-right-1 hero-btn">Learn more</a>
+                    </div>
+                </div>
+                <!-- second half -->
+                <div class="home-section2-img">
+
+                </div>
+            </div>
         </section>
         <!-- Section 3 -->
         <section class="pg-section">

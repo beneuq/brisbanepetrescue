@@ -83,6 +83,10 @@ button {
     padding: 50px 0 50px 0;
 }
 
+.pg-section h2, .pg-section p {
+    color: white;
+}
+
 .small-pg-section {
     min-height: 50vh;
 }
@@ -369,7 +373,7 @@ button {
 }
 
 .hero-content h1 {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: var(--h1Color);
 }
 
@@ -379,6 +383,8 @@ button {
     border-radius: 30px;
     padding: 15px 30px;
     font-weight: bold;
+    background-color: var(--mainColor);
+    color: white;
 }
 
 .hero-btn:hover {
@@ -403,6 +409,16 @@ button {
     max-width: 312.6px;
 }
 
+.hero-imgg {
+    /* background-image: image(images/newHero.jpg); */
+}
+
+.home-section2-img {
+    background-image: url("/images/about-us-cta.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50%;
+}
 /* CSS for Categories */
 
 .categories {
@@ -425,6 +441,10 @@ button {
     font-size: 1.5em;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+.breed-text:hover {
+    background-color: var(--secondaryColor);
 }
 
 /* Styling for breeds table on breeds.php*/
