@@ -28,13 +28,74 @@
                 <div class="flex f-col hero-content">
                     <h1 class="pad-bottom-1">My Pets</h1>
                     <h2 class="pad-bottom-2"><?php echo $firstname ?>'s Adopted K-9 Friends</h2>
-                    </div>
-                    <br>
                 </div>
+            </div>
         </section>
 
         <!-- This code iterates through the database and adds a table row for each dog in the database -->
         <div id="sqldata">
+            <div class="task-set">
+                <table class="tasks">
+                    <h2 class="tasks-txt">Post-adoption</h2>
+                        <tr>
+                            <th>Desexed?</th>
+                            <th>Vaccinated?</th>
+                            <th>Registration</th>
+                        </tr>
+                        <tr>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                        </tr>
+                </table>
+                <table class="tasks">
+                    <h2 class="tasks-txt">Reminders</h2>
+                        <tr>
+                            <th>Appointment</th>
+                            <th>Worming Tablet</th>
+                            <th>Tick Medication</th>
+                            <th>Birthday</th>
+                        </tr>
+                        <tr>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                        </tr>
+                </table>
+            </div>
+            <div class="task-set">
+                <table class="tasks">
+                    <h2 class="tasks-txt">Recommendations</h2>
+                        <tr>
+                            <th>Recommended Food</th>
+                            
+                        </tr>
+
+                        <tr>
+                            <td>EXAMPLE</td>
+
+                        </tr>
+
+                </table>
+           
+                <table class="tasks">
+                    <h2 class="tasks-txt">In your area</h2>
+                        <tr>
+                            <th>Obedience training</th>
+                            <th>Puppy Preschools</th>
+                            <th>Dog Parks</th>
+                            <th>Dog Groomers</th>
+                        </tr>
+
+                        <tr>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                        </tr>
+                </table>
+            </div>
             <table class="breeds-table">
                 <thead>
                 <tr>
@@ -44,10 +105,6 @@
                     <th>Birthday</th>
                     <th>Adopted</th>
                     <th>Gender</th>
-                    <th>Desexed?</th>
-                    <th>Vaccinated?</th>
-                    <th>Worming Tablet</th>
-                    <th>Tick Medication</th>
                     <th></th>
                 </tr>
                 <thead>
