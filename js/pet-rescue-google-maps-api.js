@@ -9,8 +9,8 @@ let longitude;
 let service;
 
 let maxResults = 5; //Be sure to limit radius as well - maxResults just hides extra results, queries still take place!
-let radiusVet = 3000; // metres
-let radiusDogPark = 1000; // metres
+let radiusVet = 5000; // metres
+let radiusDogPark = 5000; // metres
 
 // Initiate request for location permission
 getCoordinates();
@@ -93,7 +93,7 @@ function displayNearby(results, tableHeaderID, maxResults) {
         let ratingCell = newRow.insertCell(2);
         nameCell.innerText = results[i].name;
         locationCell.innerText = results[i].vicinity;
-        if (results[i].user_ratings_total != null) {
+        if (results[i].user_ratings_total != null && results[i].user_ratings_total > 0) {
             ratingCell.innerText = "⭐".repeat(results[i].rating) + " (" + results[i].user_ratings_total + ")";
         } else {
             ratingCell.innerText = "No Ratings"
