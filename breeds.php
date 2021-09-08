@@ -57,7 +57,7 @@
                         $size_image = "images/icons/dog_size_" . $entry['size_class'];
                         echo "<tr id='breed_id=".$entry['breed_id']."'>
                                 <td style='width:10%;'><form method='POST' action='/form_submissions/favourite_breed.php'> <button type='submit' name='breed_id' value='".$entry['breed_id']."'><img width='20%' src='images/icons/heart-".$entry['favourite_icon'].".png'></button></form></td>
-                                <td style='font-weight:bold; width:20%;'>" . $entry['Breed'] . "</td>
+                                <td style='font-weight:bold; width:20%;'><a href='category-breeds.php?breed_id=".$entry['breed_id']."'>" . $entry['Breed'] . "</a></td>
                                 <td style='width:22%;'>" . $entry['intelligence_desc'] . "</td>
                                 <td class='text-center' style='width:16%;'>" . str_repeat("&#x1F4B2;",$entry['lifetime_cost_class']) . "</td>
                                 <td class='text-left' style='width:10%;'>" . str_repeat("&#x2B50;",$entry['popularity_class']) . "</td>
