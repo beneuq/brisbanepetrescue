@@ -834,11 +834,46 @@ h1 {
     background-size: cover;
     height: 100%;
     padding-top: 43%;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 20px;
 }
+
+/* Styling for RSS Feeds */
+.rss-feed {font-size: small;}
+
+/* Title of RSS Feed */
+.feed-title a {
+    color: black;
+    font-size: large;
+}
+.feed-title {
+    font-size: large;
+    padding-bottom: 1em;
+}
+
+/* Headlines of RSS feed items */
+.feed-item-title a {
+    padding-top: 1em;
+    color: #6b18aa;
+    font-size: medium;
+}
+.feed-item-title {
+    /*padding-top: 1em;*/
+}
+
+/* Main content of RSS feed */
+.rss-feed p {
+    line-height: 125%;
+    font-size: 11pt;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+/* Appeared First text */
+.rss-left {font-size: 0}
+.rss-right p:nth-child(5n) {display: none;}
+
+/* Read More text */
+.rss-left p a {display: none;}
 
 /* CSS for Mobile Size or Smaller Screen */
 

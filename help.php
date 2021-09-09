@@ -47,6 +47,9 @@
             </div>
         </section>
 
+        <!-- Show some pet care RSS feeds -->
+        <?php include('partials/rss-feeds.php'); ?>
+
         <!-- FOOTER -->
         <?php include('partials/footer.php'); ?>
     </body>

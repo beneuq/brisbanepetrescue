@@ -41,6 +41,11 @@
                 </div>
                 <img class="hero-img" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down">
             </div>
+        </section>
+
+        <!-- Show some pet care RSS feeds -->
+        <?php include('partials/rss-feeds.php'); ?>
+
         <!-- FOOTER -->
         <?php include('partials/footer.php'); ?>
     </body>
