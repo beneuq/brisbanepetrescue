@@ -134,9 +134,9 @@
                     <h3>Description</h3>
                     <p> TODO: Add description </p>
                     <h3>Great breed qualities</h3>
-                        <ul class="good-traits"> <?php foreach ($best_traits as $quality) {echo "<li>".$quality."</li>";} ?> </ul>
+                        <ul> <?php foreach ($best_traits as $quality) {echo "<li class='good-traits'>".$quality."</li>";} ?> </ul>
                     <h3>Breed not recommended for:</h3>
-                        <ul class="bad-traits"> <?php foreach ($worst_traits as $quality) {echo "<li>".$quality."</li>";} ?> </ul>
+                        <ul> <?php foreach ($worst_traits as $quality) {echo "<li  class='bad-traits'>".$quality."</li>";} ?> </ul>
                     <!-- Section with all details -->
 
                     <h3>Detailed breed information</h3>
