@@ -19,6 +19,11 @@ function get_userid() {
     return $_SESSION['user_id'];
 }
 
+/** Reverses classes (1 becomes 5, 5 becomes 1, etc.) */
+function reverse1to5($num) {
+    return 6 - $num;
+}
+
 /**
  * Redirects the user to login page if they are not logged in, otherwise does nothing.
  */

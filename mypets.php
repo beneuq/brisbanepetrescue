@@ -37,12 +37,10 @@
                 <table class="tasks">
                     <h2 class="tasks-txt">Post-adoption</h2>
                         <tr>
-                            <th>Desexed?</th>
-                            <th>Vaccinated?</th>
-                            <th>Registration</th>
+                            <th>Tasks</th>
+                            <th>Complete</th>
                         </tr>
                         <tr>
-                            <td>EXAMPLE</td>
                             <td>EXAMPLE</td>
                             <td>EXAMPLE</td>
                         </tr>
@@ -137,7 +135,11 @@
                             AND main_image  
                         ORDER BY d.name
                 ");
+
                 while($entry = mysqli_fetch_array($res)) {
+                    // Store data in php array
+
+
                     // Hide countdown or set to red if null or overdue
                     if (is_null($entry['worm_meds_due'])) {
                         $add_style_worm = 'font-size:0';

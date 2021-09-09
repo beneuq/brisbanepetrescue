@@ -487,6 +487,30 @@ button {
     border-bottom: 4px solid var(--mainColor);
 }
 
+/*.good-traits{*/
+/*    list-style-position: inside;*/
+/*    list-style-image: url('/images/icons/good.png');*/
+/*}*/
+
+.good-traits li {
+    margin: 0;
+    padding: 5px 0 5px 30px;
+    list-style: none;
+    background-image: url("/images/icons/good.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+}
+
+.bad-traits li {
+    margin: 0;
+    padding: 5px 0 5px 30px;
+    list-style: none;
+    background-image: url("/images/icons/bad.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+}
 
 /* FOOTER */
 footer {
