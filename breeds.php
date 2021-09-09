@@ -56,7 +56,16 @@
                     while($entry = mysqli_fetch_array($res)) {
                         $size_image = "images/icons/dog_size_" . $entry['size_class'];
                         echo "<tr id='breed_id=".$entry['breed_id']."'>
-                                <td style='width:10%;'><form method='POST' action='/form_submissions/favourite_breed.php'> <button type='submit' name='breed_id' value='".$entry['breed_id']."'><img width='20%' src='images/icons/heart-".$entry['favourite_icon'].".png'></button></form></td>
+                                <td style='width:10%;'>
+                                    <form method='POST' action='/form_submissions/favourite_breed.php'> 
+                                        <button type='submit' name='breed_id' value='".$entry['breed_id']."'>
+                                            <img width='20%' src='images/icons/heart-".$entry['favourite_icon'].".png' 
+                                                onmouseover='favHover(this,\"".$entry['favourite_icon']."\");' 
+                                                onmouseout='favUnhover(this,\"".$entry['favourite_icon']."\");'
+                                            >
+                                        </button>
+                                    </form>
+                                </td>
                                 <td style='width:20%;' class='breed-name'><a href='category-breeds.php?breed_id=".$entry['breed_id']."'>" . $entry['Breed'] . "</a></td>
                                 <td style='width:22%;'>" . $entry['intelligence_desc'] . "</td>
                                 <td style='width:16%;' class='text-center'>" . str_repeat("&#x1F4B2;",$entry['lifetime_cost_class']) . "</td>

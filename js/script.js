@@ -18,3 +18,14 @@ $(document).ready(function(){
         }
 
 });
+
+/** Inverts favourite button */
+function favHover(element, currentVal) {
+    let newVal = currentVal === "full" ? "empty" : "full";
+    element.setAttribute('src', "images/icons/heart-" + newVal + ".png");
+}
+
+/** Sets favourite button to currentVal */
+function favUnhover(element, currentVal) {
+    element.setAttribute('src', "images/icons/heart-" + currentVal + ".png");
+}
