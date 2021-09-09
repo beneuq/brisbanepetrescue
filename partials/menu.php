@@ -16,6 +16,8 @@
                 <button><img src="images/search-icon.png" alt="Search icon" width="20px" height="20px"></button>
             </form>
         </div>
+
+        
         
         <!-- Account Icons -->
         <div id="user-icons" class="sm-d-none">
@@ -46,6 +48,36 @@
 
         </div>
     </div>
+
+    <nav role="navigation">
+		<div id="menuToggle">
+		    <input type="checkbox" />
+			    <span></span>
+			    <span></span>
+			    <span></span>
+					
+			    <ul id="menu">
+                    <li class="<?php echo $active_home; ?>">
+                        <a href="index.php">Home</a>
+                    </li>
+                    <li class="<?php echo $active_dogs; ?>">
+                        <a href="dogs.php">Dogs</a>
+                    </li>
+                    <li class="<?php echo $active_breeds; ?>">
+                        <a href="breeds.php">Breeds</a>
+                    </li>
+                    <li class="<?php echo $active_about_us; ?>">
+                        <a href="about-us.php">About Us</a>
+                    </li>
+                    <li class="<?php echo $active_help; ?>">
+                        <a href="help.php">Pet Help</a>
+                    </li>
+                    <li class="<?php echo $active_contact; ?>">
+                        <a href="contact-us.php">Contact</a>
+                    </li>
+			    </ul>
+		</div>
+	</nav>
 
     <!-- Bottom half of navigation bar -->
     <!-- Navigation bar links -->
