@@ -34,8 +34,8 @@
         <!-- This code iterates through the database and adds a table row for each dog in the database -->
         <div id="sqldata">
             <div class="task-set">
+                <h2 class="tasks-txt">Post-adoption</h2>
                 <table class="tasks">
-                    <h2 class="tasks-txt">Post-adoption</h2>
                         <tr>
                             <th>Tasks</th>
                             <th>Complete</th>
@@ -45,8 +45,8 @@
                             <td>EXAMPLE</td>
                         </tr>
                 </table>
+                <h2 class="tasks-txt">Reminders</h2>
                 <table class="tasks">
-                    <h2 class="tasks-txt">Reminders</h2>
                         <tr>
                             <th>Appointment</th>
                             <th>Worming Tablet</th>
@@ -62,8 +62,8 @@
                 </table>
             </div>
             <div class="task-set">
+                <h2 class="tasks-txt">Recommendations</h2>
                 <table class="tasks">
-                    <h2 class="tasks-txt">Recommendations</h2>
                         <tr>
                             <th>Recommended Food</th>
                         </tr>
@@ -73,8 +73,8 @@
 
                 </table>
            
+                <h2 class="tasks-txt">In your area</h2>
                 <table class="tasks" id="nearby-places">
-                    <h2 class="tasks-txt">In your area</h2>
                     <!-- Load Google Maps Places API Library (if enabled) -->
                     <div id="map"></div>
                     <?php

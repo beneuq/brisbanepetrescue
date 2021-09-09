@@ -34,4 +34,3 @@ function enforce_login() {
         exit();
     }
 }
-?>

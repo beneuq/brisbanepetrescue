@@ -71,7 +71,7 @@
                                 <td class='text-center' style='width:10%;'>" . str_repeat("&#x1F4B2;",$entry['lifetime_cost_class']) . "</td>
                                 <td class='text-left' style='width:10%;'>" . str_repeat("&#x2B50;",$entry['popularity_class']) . "</td>
                                 <td style='width:10%;'> <img src='images/icons/dog_size_{$entry['size_class']}' alt='dog size chart' width='50%'> </td>
-                                <td style='width:5%;'><form method='POST' action='/form_submissions/favourite_breed.php'> <button type='submit' name='breed_id' value='".$entry['breed_id']."'><img width='20% alt='Remove from favourites' src='images/icons/x-icon.png'></button></form></td>
+                                <td style='width:5%;'><form method='POST' action='/form_submissions/favourite_breed.php'> <button type='submit' name='breed_id' value='".$entry['breed_id']."'><img width='20%' alt='Remove from favourites' src='images/icons/x-icon.png'></button></form></td>
                             </tr>";
                         }
                         ?>

@@ -1,13 +1,15 @@
+/*noinspection ALL*/
+
 .glide__arrow {
   position: absolute;
   display: block;
   top: 50%;
   z-index: 2;
-  color: white;
+  color: #4A0F78;
   text-transform: uppercase;
   padding: 9px 12px;
   background-color: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid #6b18aa;
   border-radius: 4px;
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
   text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
@@ -19,7 +21,8 @@
   .glide__arrow:focus {
     outline: none; }
   .glide__arrow:hover {
-    border-color: white; }
+    background-color: #6b18aa;
+    color: white; }
   .glide__arrow--left {
     left: 2em; }
   .glide__arrow--right {
@@ -56,11 +59,13 @@
   .glide__bullet--active {
     background-color: white; }
 
+/*noinspection ALL*/
 .glide--swipeable {
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab; }
 
+/*noinspection ALL*/
 .glide--dragging {
   cursor: grabbing;
   cursor: -moz-grabbing;

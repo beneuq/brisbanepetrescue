@@ -50,7 +50,7 @@ let request = {
 
 /** Callback function: Formats and displays the nearby vet clinics */
 function displayNearbyVets(results, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
         displayNearby(results, "vet-clinics", maxResults)
     }
 }
@@ -69,7 +69,7 @@ function queryNearbyDogParks(latitude, longitude, radius) {
 
 /** Callback function: Formats and displays the nearby dog parks */
 function displayNearbyDogParks(results, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
         displayNearby(results, "dog-parks", maxResults)
     }
 }
