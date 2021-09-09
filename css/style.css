@@ -356,6 +356,12 @@ button {
     min-height: calc(45vh - var(--navbarHeight));
 }
 
+/* Hero layout for about page */
+.about-hero {
+    min-height: calc(25vh - var(--navbarHeight));
+}
+
+
 .hero-section a {
     color: white;
 }
@@ -370,7 +376,7 @@ button {
 
 .hero-content h1 {
     text-transform: uppercase;
-    color: var(--h1Color);
+    color: white;
 }
 
 
@@ -468,7 +474,7 @@ button {
 
 .breeds-table tbody tr {
     border-bottom: 1px solid grey;
-    scroll-margin-top: 50px
+    scroll-margin-top: 50px;
 }
 
 /* Applies styling to every second row of table */
