@@ -750,8 +750,8 @@ h1 {
 
 .help-box {
     box-shadow: 0px 10px 10px rgb(0 0 0 / 10%);
-    width: 33%;
-    min-height: 303px;
+    width: 40%;
+    max-height: 303px;
     background: white;
     float: left;
     top: 0;
@@ -759,7 +759,8 @@ h1 {
     transform: translateY(-5px);
     opacity: 1;
     margin-top: 4%;
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding-top: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
