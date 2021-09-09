@@ -2,6 +2,7 @@
     require_once "config/constants.php";
     enforce_login(); // Redirect to login page if not logged in.
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -68,32 +69,31 @@
                     <h2 class="tasks-txt">Recommendations</h2>
                         <tr>
                             <th>Recommended Food</th>
+                            
                         </tr>
+
                         <tr>
                             <td>EXAMPLE</td>
+
                         </tr>
 
                 </table>
            
-                <table class="tasks" id="nearby-places">
+                <table class="tasks">
                     <h2 class="tasks-txt">In your area</h2>
-                    <!-- Load Google Maps Places API Library (if enabled) -->
-                    <div id="map"></div>
-                    <?php
-                        if (USE_GOOGLE_MAPS_API) {
-                            echo "
-                            <script async src='https://maps.googleapis.com/maps/api/js?key=".GOOGLE_MAPS_API_KEY."&libraries=places'></script>
-                            <script src='js/pet-rescue-google-maps-api.js'></script>
-                            ";
-                        } else {
-                            echo "<p style='background-color: red'>Results are not being displayed to save our free API credits. <br>Enable USE_GOOGLE_MAPS_API in constants.php to test </p>";
-                        }
-                    ?>
+                        <tr>
+                            <th>Obedience training</th>
+                            <th>Puppy Preschools</th>
+                            <th>Dog Parks</th>
+                            <th>Dog Groomers</th>
+                        </tr>
 
-                    <tr id="vet-clinics"><th>Veterinary Clinics</th><th>Location</th><th>Rating</th></tr>
-                    <tr id="dog-parks"><th>Dog Parks</th><th>Location</th><th>Rating</th></tr>
-                    <tr><th>Puppy Preschools / Obedience Training</th><th>Location</th><th>Rating</th></tr>
-                    <tr><th>Dog Groomers</th><th>Location</th><th>Rating</th></tr>
+                        <tr>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                            <td>EXAMPLE</td>
+                        </tr>
                 </table>
             </div>
             <table class="breeds-table">
@@ -105,10 +105,6 @@
                     <th>Birthday</th>
                     <th>Adopted</th>
                     <th>Gender</th>
-                    <th>Desexed</th>
-                    <th>Vaccinated</th>
-                    <th>Worming Tablet</th>
-                    <th>Tick Medication</th>
                     <th></th>
                 </tr>
                 <thead>

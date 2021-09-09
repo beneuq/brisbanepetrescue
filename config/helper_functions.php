@@ -30,3 +30,7 @@ function enforce_login() {
     }
 }
 ?>
+
+<script>
+
+</script>
