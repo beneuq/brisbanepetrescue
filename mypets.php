@@ -158,8 +158,8 @@
                     }
 
                     echo "<tr id='dog_id=".$entry['dog_id']."'>
-                    <td style='font-weight:bold; width:5%;'><a href='category-dogs.php?dog_id=".$entry['dog_id']."'>". $entry['Dog'] . "</a></td>
-                    <td style='width:10%;'><a href='category-breeds.php?breed_id=".$entry['breed_id']."'>" . $entry['Breed'] . "</a></td>
+                    <td style='width:5%;' class='dog-name'><a href='category-dogs.php?dog_id=".$entry['dog_id']."'>". $entry['Dog'] . "</a></td>
+                    <td style='width:10%;' class='breed-name'><a href='category-breeds.php?breed_id=".$entry['breed_id']."'>" . $entry['Breed'] . "</a></td>
                     <td style='width:5%;'>" . $entry['age'] . "</td>
                     <td style='width:5%;'>" . $entry['birthday'] . "</td>
                     <td style='width:10%;'>" . $entry['adoption_date'] . "</td>

@@ -477,6 +477,25 @@ button {
     scroll-margin-top: 50px;
 }
 
+.dog-name a {
+    font-weight:normal;
+    font-size: large;
+    color: var(--secondaryColor);
+}
+.dog-name a:hover {
+    font-weight: bold;
+    color: var(--secondaryColor);
+}
+
+.breed-name a {
+    font-weight:normal;
+    color: var(--secondaryColor);
+}
+.breed-name a:hover {
+    font-weight: bold;
+    color: var(--secondaryColor);
+}
+
 /* Applies styling to every second row of table */
 .breeds-table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
@@ -486,11 +505,6 @@ button {
 .breeds-table tbody tr:last-of-type {
     border-bottom: 4px solid var(--mainColor);
 }
-
-/*.good-traits{*/
-/*    list-style-position: inside;*/
-/*    list-style-image: url('/images/icons/good.png');*/
-/*}*/
 
 .good-traits {
     margin: 0;
