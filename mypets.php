@@ -125,6 +125,7 @@
                         vaccinated,
                         path,
                         d.dog_id AS dog_id,
+                        d.breed_id AS breed_id,
                         DATEDIFF(DATE_ADD(last_worming_medication, INTERVAL worming_medication_frequency DAY), SYSDATE()) as worm_meds_due,
                         DATEDIFF(DATE_ADD(last_tick_medication, INTERVAL tick_medication_frequency DAY), SYSDATE()) as tick_meds_due
                         FROM dogs d
@@ -157,8 +158,8 @@
                     }
 
                     echo "<tr id='dog_id=".$entry['dog_id']."'>
-                    <td style='font-weight:bold; width:5%;'>" . $entry['Dog'] . "</td>
-                    <td style='width:10%;'>" . $entry['Breed'] . "</td>
+                    <td style='font-weight:bold; width:5%;'><a href='category-dogs.php?dog_id=".$entry['dog_id']."'>". $entry['Dog'] . "</a></td>
+                    <td style='width:10%;'><a href='category-breeds.php?breed_id=".$entry['breed_id']."'>" . $entry['Breed'] . "</a></td>
                     <td style='width:5%;'>" . $entry['age'] . "</td>
                     <td style='width:5%;'>" . $entry['birthday'] . "</td>
                     <td style='width:10%;'>" . $entry['adoption_date'] . "</td>
