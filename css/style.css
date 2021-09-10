@@ -74,7 +74,7 @@ button {
 
 .bg-img {
     background-size: cover;
-    background-position: center center;
+    /* background-position: center center; */
     background-repeat: no-repeat;
 }
 
@@ -349,11 +349,34 @@ button {
 /* HERO SECTION */
 .hero-section {
     min-height: calc(75vh - var(--navbarHeight));
-    background-color: var(--mainColor);
     color: white;
-    /* top: var(--navbarHeight); */
     padding-top: 3%;
+    background: var(--mainColor);
+}
 
+#main-hero {
+    background-image: url(/images/newHero2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 40%;
+}
+
+#about-us-cta {
+    color: var(--mainColor);
+    text-align: center;
+    align-items: center;
+}
+
+#about-us-cta p {
+    color: var(--mainColor);
+    padding-right: 20%;
+    padding-left: 20%;
+
+}
+
+#pet-help-hero {
+    background-image: url(/images/about-us-cta-dim.jpg);
+    background-position: right center;
 }
 
 .small-hero {
@@ -380,7 +403,7 @@ button {
 
 .hero-btn {
     border: 3px solid white;
-    border-radius: 30px;
+    border-radius: 10px;
     padding: 15px 30px;
     font-weight: bold;
     background-color: var(--mainColor);
@@ -394,31 +417,28 @@ button {
 
 .hero-content .hero-btn:first-child {
     background-color: var(--h1Color);
-    border: 3px soli var(--h1Color);
+    border: 3px solid var(--h1Color);
     color: white;
 }
 
 .hero-content .hero-btn:first-child:hover {
     background-color: white;
     color: var(--h1Color);
-    border-radius: 30px;
+    border-radius: 10px;
+    border: 3px solid white;
 }
 
 .home-hero-img {
     max-height: 410.25px;
     max-width: 312.6px;
 }
-
-.hero-imgg {
-    /* background-image: image(images/newHero.jpg); */
-}
-
-.home-section2-img {
+ 
+/* .home-section2-img {
     background-image: url("/images/about-us-cta.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     width: 50%;
-}
+} */
 /* CSS for Categories */
 
 .categories {

@@ -15,9 +15,9 @@
         <?php include('partials/menu.php'); ?>
 
         <!-- Hero Section -->
-        <section class="hero-section pos-relative">
+        <section id="main-hero" class="hero-section pos-relative">
             <div class="flex container">
-                <div class="flex f-col hero-content hero-imgg">
+                <div class="flex f-col hero-content bg-img">
                     <h1 class="pad-top-2 pad-bottom-1">Looking to adopt?</h1>
                     <h2 class="pad-bottom-1">Brisbane Pet Rescue Has You Covered</h2>
                     <p class="pad-bottom-2">Here, we understand the struggles of finding the perfect K-9 companion. Browse through the availabe dogs straight away or do a short quiz to find the perfect pet for you.</p>
@@ -27,36 +27,36 @@
                         <a href="personality-quiz.php" class="hero-btn hero-btn-alt">Personality Quiz</a>
                     </div>
                 </div>
-                <img class="home-hero-img margin-top-2" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down">
+                <!-- <img class="home-hero-img margin-top-2" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down"> -->
             </div>
 
         </section>
         <!-- Section 2 -->
-        <section id="hero-section-2" class="pg-section" style="background-color: lightgrey;">
-            <!-- first half -->
-            <div class="flex">
-                <div class="flex f-col container">
-                    <h1 class="pad-top-2 pad-bottom-1">Why we do what we do</h1>
-                    <h2 class="pad-bottom-3">Giving dogs a home is our mission</h2>
-
-                    <!-- "Call to Action" buttons -->
-                    <div class="btn-group pad-bottom-2">
-                        <a href="dogs.php" class="margin-right-1 hero-btn">Learn more</a>
-                    </div>
-                </div>
-                <!-- second half -->
-                <div class="home-section2-img">
-
-                </div>
+        <section id="about-us-cta" class="pg-section small-pg-section flex" style="background-color: lightgrey;">
+        <div class="container">
+            <div class="fleX pad-top-1">
+                <h1 class="margin-bottom-1">Brisbane Pet Rescure - Who are we?</h1>
+                <p class="pad-bottom-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium explicabo impedit nam odio quas, eum hic, perspiciatis delectus dolore natus nemo assumenda magnam. Totam?</p>
             </div>
+            <div class="btn-group">
+                <a href="about-us.php" class="hero-btn hero-btn-alt">Learn more</a>
+            </div>
+        </div>
         </section>
         <!-- Section 3 -->
-        <section class="pg-section">
-            
-        </section>
-        <!-- Section 4 -->
-        <section class="pg-section" style="background-color: lightgrey;">
-            
+        <section id="pet-help-hero" class="pg-section bg-img">
+            <div class="flex container">
+                <div class="flex f-col hero-content">
+                    <h1 class="pad-top-2 pad-bottom-1">Looking for help with your pet?</h1>
+                    <h2 class="pad-bottom-1">Well, you're in the right place</h2>
+                    <p class="pad-bottom-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus possimus eveniet quo totam blanditiis placeat asperiores sed beatae vel voluptate alias explicabo iure, corporis quam.</p>
+
+                    <div class="btn-group pad-bottom-2">
+                        <a href="help.php" class="margin-right-1 hero-btn">Pet Help</a>
+                        <a href="contact-us.php" class="hero-btn hero-btn-alt">Contact Us</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Categories Section Starts Here -->
