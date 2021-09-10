@@ -66,12 +66,14 @@
                         while($entry = mysqli_fetch_array($res)) {
                             $size_image = "images/icons/dog_size_" . $entry['size_class'];
                             echo "<tr id='breed_id=".$entry['breed_id']."'>
-                                <td style='font-weight:bold; width:20%;'>" . $entry['Breed'] . "</td>
+                                <td style='font-weight:bold; width:20%;' class='breed-name'>
+                                    <a href='category-breeds.php?breed_id=".$entry['breed_id']."' style='color:black'>" . $entry['Breed'] . "</a>
+                                </td>
                                 <td style='width:25%;'>" . $entry['intelligence_desc'] . "</td>
                                 <td class='text-center' style='width:10%;'>" . str_repeat("&#x1F4B2;",$entry['lifetime_cost_class']) . "</td>
                                 <td class='text-left' style='width:10%;'>" . str_repeat("&#x2B50;",$entry['popularity_class']) . "</td>
                                 <td style='width:10%;'> <img src='images/icons/dog_size_{$entry['size_class']}' alt='dog size chart' width='50%'> </td>
-                                <td style='width:5%;'><form method='POST' action='/form_submissions/favourite_breed.php'> <button type='submit' name='breed_id' value='".$entry['breed_id']."'><img width='20% alt='Remove from favourites' src='images/icons/x-icon.png'></button></form></td>
+                                <td style='width:5%;'><form method='POST' action='/form_submissions/favourite_breed.php'> <button type='submit' name='breed_id' value='".$entry['breed_id']."'><img width='20%' alt='Remove from favourites' src='images/icons/x-icon.png'></button></form></td>
                             </tr>";
                         }
                         ?>
@@ -99,7 +101,7 @@
                         <tbody style="color: black">
                         <?php
                         $res = mysqli_query($conn,"
-                            SELECT dogs.name as Dog, Breed, age, gender, shelters.name as Shelter, path, dogs.dog_id
+                            SELECT dogs.name as Dog, Breed, age, gender, shelters.name as Shelter, path, dogs.dog_id, dogs.breed_id as breed_id
                             FROM dogs 
                             INNER JOIN shelters ON dogs.shelter_id = shelters.shelter_id
                             INNER JOIN dog_breeds ON dogs.breed_id = dog_breeds.breed_id
@@ -112,8 +114,8 @@
                         ");
                         while($entry = mysqli_fetch_array($res)) {
                             echo "<tr id='dog_id=".$entry['dog_id']."'>
-                                <td style='font-weight:bold; width:15%;'>" . $entry['Dog'] . "</td>
-                                <td style='width:20%;'>" . $entry['Breed'] . "</td>
+                                <td style='width:15%;' class='dog-name'><a href='category-dogs.php?dog_id=".$entry['dog_id']."'>". $entry['Dog'] . "</a></td>
+                                <td style='width:20%;' class='breed-name'><a href='category-breeds.php?breed_id=".$entry['breed_id']."'>" . $entry['Breed'] . "</a></td>
                                 <td style='width:10%;'>" . $entry['age'] . " years</td>
                                 <td style='width:5%;'> <img src='/images/icons/". $entry['gender'] .".png' alt='dog image' width='20%'> </td>
                                 <td style='width:20%;'>" . $entry['Shelter'] . "</td>

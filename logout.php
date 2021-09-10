@@ -32,7 +32,7 @@
 
 <script type="text/javascript">
     let remaining_secs = 3;
-    const downloadTimer = setInterval(function () {
+    setInterval(function () {
         remaining_secs--;
         document.getElementById("remaining-secs").textContent = remaining_secs.toString();
         if (remaining_secs <= 0)

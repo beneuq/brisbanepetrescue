@@ -4,11 +4,11 @@ $(document).ready(function(){
     $("body").addClass("js");
 
     //  Menu hide on scroll
-    var prevScrollpos = window.pageXOffset;
-        window.onscroll = function () {
+    let prevScrollpos = window.pageXOffset;
+    window.onscroll = function () {
 
-            var currentScrollpos = window.pageYOffset;
-            if (prevScrollpos > currentScrollpos) {
+        const currentScrollpos = window.pageYOffset;
+        if (prevScrollpos > currentScrollpos) {
                 document.getElementById("main-menu").style.top = "0";
             } else {
                 document.getElementById("main-menu").style.top = "-130px";
@@ -18,3 +18,14 @@ $(document).ready(function(){
         }
 
 });
+
+/** Inverts favourite button */
+function favHover(element, currentVal) {
+    let newVal = currentVal === "full" ? "empty" : "full";
+    element.setAttribute('src', "images/icons/heart-" + newVal + ".png");
+}
+
+/** Sets favourite button to currentVal */
+function favUnhover(element, currentVal) {
+    element.setAttribute('src', "images/icons/heart-" + currentVal + ".png");
+}

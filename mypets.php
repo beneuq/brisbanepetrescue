@@ -2,7 +2,6 @@
     require_once "config/constants.php";
     enforce_login(); // Redirect to login page if not logged in.
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,21 +34,19 @@
         <!-- This code iterates through the database and adds a table row for each dog in the database -->
         <div id="sqldata">
             <div class="task-set">
+                <h2 class="tasks-txt">Post-adoption</h2>
                 <table class="tasks">
-                    <h2 class="tasks-txt">Post-adoption</h2>
                         <tr>
-                            <th>Desexed?</th>
-                            <th>Vaccinated?</th>
-                            <th>Registration</th>
+                            <th>Tasks</th>
+                            <th>Complete</th>
                         </tr>
                         <tr>
-                            <td>EXAMPLE</td>
                             <td>EXAMPLE</td>
                             <td>EXAMPLE</td>
                         </tr>
                 </table>
+                <h2 class="tasks-txt">Reminders</h2>
                 <table class="tasks">
-                    <h2 class="tasks-txt">Reminders</h2>
                         <tr>
                             <th>Appointment</th>
                             <th>Worming Tablet</th>
@@ -65,35 +62,36 @@
                 </table>
             </div>
             <div class="task-set">
+                <h2 class="tasks-txt">Recommendations</h2>
                 <table class="tasks">
-                    <h2 class="tasks-txt">Recommendations</h2>
                         <tr>
                             <th>Recommended Food</th>
-                            
                         </tr>
-
                         <tr>
                             <td>EXAMPLE</td>
-
                         </tr>
 
                 </table>
            
-                <table class="tasks">
-                    <h2 class="tasks-txt">In your area</h2>
-                        <tr>
-                            <th>Obedience training</th>
-                            <th>Puppy Preschools</th>
-                            <th>Dog Parks</th>
-                            <th>Dog Groomers</th>
-                        </tr>
+                <h2 class="tasks-txt">In your area</h2>
+                <table class="tasks" id="nearby-places">
+                    <!-- Load Google Maps Places API Library (if enabled) -->
+                    <div id="map"></div>
+                    <?php
+                        if (USE_GOOGLE_MAPS_API) {
+                            echo "
+                            <script async src='https://maps.googleapis.com/maps/api/js?key=".GOOGLE_MAPS_API_KEY."&libraries=places'></script>
+                            <script src='js/pet-rescue-google-maps-api.js'></script>
+                            ";
+                        } else {
+                            echo "<p style='background-color: red'>Results are not being displayed to save our free API credits. <br>Enable USE_GOOGLE_MAPS_API in constants.php to test </p>";
+                        }
+                    ?>
 
-                        <tr>
-                            <td>EXAMPLE</td>
-                            <td>EXAMPLE</td>
-                            <td>EXAMPLE</td>
-                            <td>EXAMPLE</td>
-                        </tr>
+                    <tr id="vet-clinics"><th>Veterinary Clinics</th><th>Location</th><th>Rating</th></tr>
+                    <tr id="dog-parks"><th>Dog Parks</th><th>Location</th><th>Rating</th></tr>
+                    <tr><th>Puppy Preschools / Obedience Training</th><th>Location</th><th>Rating</th></tr>
+                    <tr><th>Dog Groomers</th><th>Location</th><th>Rating</th></tr>
                 </table>
             </div>
             <table class="breeds-table">
@@ -105,6 +103,10 @@
                     <th>Birthday</th>
                     <th>Adopted</th>
                     <th>Gender</th>
+                    <th>Desexed</th>
+                    <th>Vaccinated</th>
+                    <th>Worming Tablet</th>
+                    <th>Tick Medication</th>
                     <th></th>
                 </tr>
                 <thead>
@@ -123,6 +125,7 @@
                         vaccinated,
                         path,
                         d.dog_id AS dog_id,
+                        d.breed_id AS breed_id,
                         DATEDIFF(DATE_ADD(last_worming_medication, INTERVAL worming_medication_frequency DAY), SYSDATE()) as worm_meds_due,
                         DATEDIFF(DATE_ADD(last_tick_medication, INTERVAL tick_medication_frequency DAY), SYSDATE()) as tick_meds_due
                         FROM dogs d
@@ -133,7 +136,11 @@
                             AND main_image  
                         ORDER BY d.name
                 ");
+
                 while($entry = mysqli_fetch_array($res)) {
+                    // Store data in php array
+
+
                     // Hide countdown or set to red if null or overdue
                     if (is_null($entry['worm_meds_due'])) {
                         $add_style_worm = 'font-size:0';
@@ -151,8 +158,8 @@
                     }
 
                     echo "<tr id='dog_id=".$entry['dog_id']."'>
-                    <td style='font-weight:bold; width:5%;'>" . $entry['Dog'] . "</td>
-                    <td style='width:10%;'>" . $entry['Breed'] . "</td>
+                    <td style='width:5%;' class='dog-name'><a href='category-dogs.php?dog_id=".$entry['dog_id']."'>". $entry['Dog'] . "</a></td>
+                    <td style='width:10%;' class='breed-name'><a href='category-breeds.php?breed_id=".$entry['breed_id']."'>" . $entry['Breed'] . "</a></td>
                     <td style='width:5%;'>" . $entry['age'] . "</td>
                     <td style='width:5%;'>" . $entry['birthday'] . "</td>
                     <td style='width:10%;'>" . $entry['adoption_date'] . "</td>

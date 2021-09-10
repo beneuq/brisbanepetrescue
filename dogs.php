@@ -8,6 +8,7 @@
     include('partials/head.php');
     $active_dogs = 'active';
     ?>
+    <script src="/js/script.js"></script>
 </head>
 
 <body>
@@ -45,6 +46,7 @@
                     s.name AS Shelter,
                     path,
                     d.dog_id AS dog_id,
+                    d.breed_id AS breed_id,
                     IF(user_id=".$user_id_for_sql.", 'full', 'empty') as favourite_icon
                     FROM dogs d
                         INNER JOIN shelters s ON d.shelter_id = s.shelter_id
@@ -58,9 +60,18 @@
             ");
             while($entry = mysqli_fetch_array($res)) {
                 echo "<tr id='dog_id=".$entry['dog_id']."'>
-                        <td style='width:10%;'><form method='POST' action='/form_submissions/favourite_dog.php'> <button type='submit' name='dog_id' value='".$entry['dog_id']."'><img width='20%' src='images/icons/heart-".$entry['favourite_icon'].".png'></button></form></td>
-                        <td style='font-weight:bold; width:14%;'>" . $entry['Dog'] . "</td>
-                        <td style='width:14%;'>" . $entry['Breed'] . "</td>
+                        <td style='width:10%;'>
+                            <form method='POST' action='/form_submissions/favourite_dog.php'> 
+                                <button type='submit' name='dog_id' value='".$entry['dog_id']."'>
+                                    <img width='20%' src='images/icons/heart-".$entry['favourite_icon'].".png' 
+                                        onmouseover='favHover(this,\"".$entry['favourite_icon']."\");' 
+                                        onmouseout='favUnhover(this,\"".$entry['favourite_icon']."\");'
+                                    >
+                                </button>
+                            </form>
+                        </td>
+                        <td style='width:14%;' class='dog-name'><a href='category-dogs.php?dog_id=".$entry['dog_id']."'>". $entry['Dog'] . "</a></td>
+                        <td style='width:14%;' class='breed-name'><a href='category-breeds.php?breed_id=".$entry['breed_id']."'>" . $entry['Breed'] . "</a></td>
                         <td style='width:14%;'>" . $entry['age'] . " years</td>
                         <td style='width:10%;'> <img src='/images/icons/". $entry['gender'] .".png' alt='dog image' width='20%'> </td>
                         <td style='width:18%;'>" . $entry['Shelter'] . "</td>

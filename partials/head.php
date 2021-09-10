@@ -3,8 +3,8 @@
 <title>Brisbane Pet Rescue | <?php echo $page_title;?></title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
-<link rel="icon" href="images/paw-logo-2-purple.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" href="/images/paw-logo-2-purple.png">
     <!-- Fonts Here -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
