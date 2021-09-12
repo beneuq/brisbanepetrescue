@@ -3,6 +3,7 @@
     --navbarHeight: 130px;
     --mainColor: #4A0F78;
     --secondaryColor: #6b18aa;
+    --titleColor: white;
     --h1Color: #989898;
     --h2Color: white;
 
@@ -81,10 +82,6 @@ button {
 .pg-section {
     min-height: 70vh;
     padding: 50px 0 50px 0;
-}
-
-.pg-section h2, .pg-section p {
-    color: white;
 }
 
 .small-pg-section {
@@ -379,6 +376,14 @@ button {
     background-position: right center;
 }
 
+#pet-help-hero h2 {
+    color: white;
+}
+
+#pet-help-hero p {
+    color: white;
+}
+
 .small-hero {
     min-height: calc(45vh - var(--navbarHeight));
 }
@@ -403,7 +408,7 @@ button {
 
 .hero-content h1 {
     /* text-transform: uppercase; */
-    color: var(--h1Color);
+    color: var(--titleColor);
 }
 
 
