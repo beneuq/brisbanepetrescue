@@ -16,7 +16,7 @@
     <?php include('partials/menu.php'); ?>
 
     <!-- Start main page body -->
-    <h1 class="breed-title">Dog Information by Breed</h1>
+    <h1 class="table-title">Dog Information by Breed</h1>
 
     <!--
     This code iterates through the database and adds a table row for each breed in the database
