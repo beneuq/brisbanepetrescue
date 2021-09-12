@@ -463,10 +463,20 @@ button {
 }
 
 /* Styling for breed squares on index.php */
+.box-3 img {
+    transition: all 250ms;
+    border-radius: 10px;
+}
+
+.box-3 img:hover {
+    transform: rotate(2deg);
+}
+
 .breed-text {
     text-align: center;
     color: white;
     background-color: var(--mainColor);
+    border-radius: 5px;
     bottom: 50px;
     left: 40%;
     font-size: 1.5em;
@@ -480,9 +490,11 @@ button {
 
 /* Styling for breeds table on breeds.php*/
 .breed-title {
+    font-size: 3em;
     color: black;
-    margin-top: 5%;
+    margin-top: 2%;
     text-align: center;
+    text-decoration: underline 4px var(--mainColor);
 }
 
 .breeds-table {
