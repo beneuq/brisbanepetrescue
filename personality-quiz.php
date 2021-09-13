@@ -7,6 +7,7 @@
         include('partials/head.php'); 
         $active_home = 'active';
         ?>
+        <script defer src="js/quiz.js"></script>
     </head>
 
     <body>
@@ -34,27 +35,27 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o1"><span>Large</span>
+                                <input id="questionOneAnswerA" type="radio" class="answerTypeA" name="p-quiz-o1"><span>Large</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o2"><span>Fairly Large</span>
+                                <input id="questionOneAnswerB" type="radio" class="answerTypeA" name="p-quiz-o2"><span>Fairly Large</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeB" name="p-quiz-o3"><span>Moderate</span>
+                                <input id="questionOneAnswerC" type="radio" class="answerTypeB" name="p-quiz-o3"><span>Moderate</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o4"><span>Fairly Small</span>
+                                <input id="questionOneAnswerD" type="radio" class="answerTypeA" name="p-quiz-o4"><span>Fairly Small</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o5"><span>Small</span>
+                                <input id="questionOneAnswerE" type="radio" class="answerTypeA" name="p-quiz-o5"><span>Small</span>
                             </label>
                         </li>     
                     </ul>
@@ -66,27 +67,27 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
+                                <input id="questionTwoAnswerA" type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
+                                <input id="questionTwoAnswerB" type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
+                                <input id="questionTwoAnswerC" type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
+                                <input id="questionTwoAnswerD" type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
+                                <input id="questionTwoAnswerE" type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
                             </label>
                         </li>     
                     </ul>
@@ -98,27 +99,27 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
+                                <input id="questionThreeAnswerA" type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
+                                <input id="questionThreeAnswerB" type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
+                                <input id="questionThreeAnswerC" type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
+                                <input id="questionThreeAnswerD" type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
+                                <input id="questionThreeAnswerE" type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
                             </label>
                         </li>     
                     </ul>
@@ -130,27 +131,27 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
+                                <input id="questionFourAnswerA" type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
+                                <input id="questionFourAnswerB" type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
+                                <input id="questionFourAnswerC" type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
+                                <input id="questionFourAnswerD" type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
+                                <input id="questionFourAnswerE" type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
                             </label>
                         </li>     
                     </ul>
@@ -162,27 +163,27 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
+                                <input id="questionFiveAnswerA" type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
+                                <input id="questionFiveAnswerB" type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
+                                <input id="questionFiveAnswerC" type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
+                                <input id="questionFiveAnswerD" type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
+                                <input id="questionFiveAnswerE" type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
                             </label>
                         </li>     
                     </ul>
@@ -194,27 +195,27 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
+                                <input id="questionSixAnswerA" type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
+                                <input id="questionSixAnswerB" type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
+                                <input id="questionSixAnswerC" type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
+                                <input id="questionSixAnswerD" type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
+                                <input id="questionSixAnswerE" type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
                             </label>
                         </li>     
                     </ul>
@@ -226,27 +227,27 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
+                                <input id="questionSevenAnswerA" type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
+                                <input id="questionSevenAnswerB" type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
+                                <input id="questionSevenAnswerC" type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
+                                <input id="questionSevenAnswerD" type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
+                                <input id="questionSevenAnswerE" type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
                             </label>
                         </li>     
                     </ul>
@@ -258,27 +259,27 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
+                                <input id="questionEightAnswerA" type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
+                                <input id="questionEightAnswerB" type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
+                                <input id="questionEightAnswerC" type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
+                                <input id="questionEightAnswerD" type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
+                                <input id="questionEightAnswerE" type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
                             </label>
                         </li>     
                     </ul>
@@ -290,27 +291,27 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
+                                <input id="questionNineAnswerA" type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
+                                <input id="questionNineAnswerB" type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
+                                <input id="questionNineAnswerC" type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
+                                <input id="questionNineAnswerD" type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
+                                <input id="questionNineAnswerE" type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
                             </label>
                         </li>     
                     </ul>
@@ -322,36 +323,53 @@
                     <ul>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
+                                <input id="questionTenAnswerA" type="radio" class="answerTypeA" name="p-quiz-o1"><span>Answer 1</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
+                                <input id="questionTenAnswerB" type="radio" class="answerTypeB" name="p-quiz-o2"><span>Answer 2</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
+                                <input id="questionTenAnswerC" type="radio" class="answerTypeC" name="p-quiz-o3"><span>Answer 3</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
+                                <input id="questionTenAnswerD" type="radio" class="answerTypeD" name="p-quiz-o4"><span>Answer 4</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
+                                <input id="questionTenAnswerE" type="radio" class="answerTypeE" name="p-quiz-o5"><span>Answer 5</span>
                             </label>
                         </li>     
                     </ul>
                 </fieldset>
 
                 <!-- Submit button -->
-                <button class="submit-btn submit-p-quiz" type="submit" value="Submit">Submit</button>
+                <button id="submit" class="submit-btn submit-p-quiz" type="submit" value="Submit">Submit</button>
             
             </form>
+
+            <!-- This bit of code below is me attempting to make a listen loop. Might be an easier way to do this -->
+            <!-- <?php
+            for ($i=0;$i<2;$i++)
+            {
+                // Check if submit button has been clicked
+                if (submitClicked(0) == 0) 
+                {
+                    $i = 0;
+                } else 
+                {
+                    // Here was where I had the sql. The ruins of what I was trying to do can be seen in the quiz.js
+                }
+            }
+                
+                
+            ?> -->
         </section>
 
         <!-- FOOTER -->
