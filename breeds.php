@@ -13,7 +13,7 @@
 <body>
     <div class="underneath-nav"></div>
     <!-- import menu -->
-    <?php include('partials/menu.php'); ?>
+    <?php include('partials/menu.php');?>
 
     <!-- Start main page body -->
     <h1 class="table-title">Dog Information by Breed</h1>
@@ -47,31 +47,35 @@
                         lifetime_cost_class,
                         popularity_class,
                         size_class,
-                        IF(user_id=".$user_id_for_sql.", 'full', 'empty') as favourite_icon
+                        IF(user_id={$user_id_for_sql}, 'full', 'empty') as favourite_icon
                         FROM dog_breeds d
                             LEFT JOIN favourite_breeds f ON d.breed_id = f.breed_id
-                        WHERE (user_id=".$user_id_for_sql." OR user_id IS NULL)
+                        WHERE (user_id={$user_id_for_sql} OR user_id IS NULL)
                         ORDER BY Breed
                 ");
-                    while($entry = mysqli_fetch_array($res)) {
-                        $size_image = "images/icons/dog_size_" . $entry['size_class'];
-                        echo "<tr id='breed_id=".$entry['breed_id']."'>
-                                <td style='width:10%;'>
-                                    <form method='POST' action='/form_submissions/favourite_breed.php'> 
-                                        <button type='submit' name='breed_id' value='".$entry['breed_id']."'>
-                                            <img width='20%' src='images/icons/heart-".$entry['favourite_icon'].".png' 
-                                                onmouseover='favHover(this,\"".$entry['favourite_icon']."\");' 
-                                                onmouseout='favUnhover(this,\"".$entry['favourite_icon']."\");'
-                                            >
-                                        </button>
-                                    </form>
-                                </td>
-                                <td style='width:20%;' class='breed-name'><a href='category-breeds.php?breed_id=".$entry['breed_id']."'>" . $entry['Breed'] . "</a></td>
-                                <td style='width:22%;'>" . $entry['intelligence_desc'] . "</td>
-                                <td style='width:16%;' class='text-center'>" . str_repeat("&#x1F4B2;",$entry['lifetime_cost_class']) . "</td>
-                                <td style='width:10%;' class='text-left'>" . str_repeat("&#x2B50;",$entry['popularity_class']) . "</td>
-                                <td style='width:16%;'> <img src='images/icons/dog_size_{$entry['size_class']}' alt='dog size chart' width='50%'> </td>
-                            </tr>";
+                while($entry = mysqli_fetch_array($res)) {
+                    $size_image = "images/icons/dog_size_" . $entry['size_class'];
+                    ?>
+                    <!-- Start Individual Breed Row -->
+                    <tr id='breed_id=<?php echo $entry['breed_id'];?>'>
+                        <td style='width:10%;'>
+                            <form method='POST' action='/form_submissions/favourite_breed.php'>
+                                <button type='submit' name='breed_id' value='<?php echo $entry['breed_id'];?>'>
+                                    <img width='20%' src='images/icons/heart-<?php echo $entry['favourite_icon'];?>.png'
+                                        onmouseover='favHover(this,"<?php echo $entry['favourite_icon'];?>");'
+                                        onmouseout='favUnhover(this,"<?php echo $entry['favourite_icon'];?>");'
+                                    >
+                                </button>
+                            </form>
+                        </td>
+                        <td style='width:20%;' class='breed-name'><a href='category-breeds.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
+                        <td style='width:22%;'><?php echo $entry['intelligence_desc'];?></td>
+                        <td style='width:16%;' class='text-center'><?php echo str_repeat("&#x1F4B2;",$entry['lifetime_cost_class']);?></td>
+                        <td style='width:10%;' class='text-left'><?php echo str_repeat("&#x2B50;",$entry['popularity_class']);?></td>
+                        <td style='width:16%;'><img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'></td>
+                    </tr>
+                    <!-- End Individual Breed Row -->
+                <?php
                     }
                     mysqli_close($conn)
                 ?>
@@ -81,7 +85,7 @@
     <!-- End main page body -->
 
     <!-- import footer -->
-    <?php include('partials/footer.php'); ?>
+    <?php include('partials/footer.php');?>
 </body>
 
 </html>

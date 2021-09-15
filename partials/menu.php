@@ -1,6 +1,41 @@
 <?php require_once "config/constants.php"; ?>
 <!-- Navigation bar -->
+
 <div id="main-menu">
+
+    <nav role="navigation"> 
+        <div id="menuToggle-2">
+            <input type="checkbox" />
+            <img src="/images/account-icon.png" alt="Account icon" width="33px" height="33px" id="mobileLogin">
+            <ul id="menu-2">
+                <?php
+                    $account_page = isset($_SESSION['logged_in']) ? "/account.php" : "/login.php";
+                    $favourites_page = isset($_SESSION['logged_in']) ? "/favourites.php" : "/login.php";
+                    $mypets_page = isset($_SESSION['logged_in']) ? "/mypets.php" : "/login.php";
+                    $login_caption = isset($_SESSION['logged_in']) ? $_SESSION['firstname'] : "Login";
+                ?>
+                <li>
+                    <button onclick="location.href = '<?php echo $account_page ?>'">
+                        
+                        <a><?php echo $login_caption?></a>
+                
+                    </button>
+                </li>
+                <li>
+                    <button onclick="location.href = '<?php echo $favourites_page ?>'">
+                        <a>Saved</a>
+                    </button>
+                </li>
+                <li>
+                    <button onclick="location.href = '<?php echo $mypets_page ?>'">
+                        <a>My Pets</a>
+                    </button>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+   
     <!-- Top half of navigation bar -->
     <div class="container flex" id="top-nav">
         <a href="/index.php">
@@ -17,8 +52,6 @@
             </form>
         </div>
 
-        
-        
         <!-- Account Icons -->
         <div id="user-icons" class="sm-d-none">
             <?php
@@ -49,35 +82,39 @@
         </div>
     </div>
 
-    <nav role="navigation">
-		<div id="menuToggle">
-		    <input type="checkbox" />
-			    <span></span>
-			    <span></span>
-			    <span></span>
-					
-			    <ul id="menu">
-                    <li class="<?php echo $active_home; ?>">
-                        <a href="/index.php">Home</a>
-                    </li>
-                    <li class="<?php echo $active_dogs; ?>">
-                        <a href="/dogs.php">Dogs</a>
-                    </li>
-                    <li class="<?php echo $active_breeds; ?>">
-                        <a href="/breeds.php">Breeds</a>
-                    </li>
-                    <li class="<?php echo $active_about_us; ?>">
-                        <a href="/about-us.php">About Us</a>
-                    </li>
-                    <li class="<?php echo $active_help; ?>">
-                        <a href="/help.php">Pet Help</a>
-                    </li>
-                    <li class="<?php echo $active_contact; ?>">
-                        <a href="/contact-us.php">Contact</a>
-                    </li>
-			    </ul>
-		</div>
-	</nav>
+    <nav role="navigation"> 
+        <div id="menuToggle">
+            
+            <input type="checkbox" />
+
+            <span></span>
+            <span></span>
+            <span></span>  
+
+
+            <ul id="menu">
+                <li class="<?php echo $active_home; ?>">
+                    <a href="/index.php">Home</a>
+                </li>
+                <li class="<?php echo $active_dogs; ?>">
+                    <a href="/dogs.php">Dogs</a>
+                </li>
+                <li class="<?php echo $active_breeds; ?>">
+                    <a href="/breeds.php">Breeds</a>
+                </li>
+                <li class="<?php echo $active_about_us; ?>">
+                    <a href="/about-us.php">About Us</a>
+                </li>
+                <li class="<?php echo $active_help; ?>">
+                    <a href="/help.php">Pet Help</a>
+                </li>
+                <li class="<?php echo $active_contact; ?>">
+                    <a href="/contact-us.php">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
 
     <!-- Bottom half of navigation bar -->
     <!-- Navigation bar links -->
