@@ -128,7 +128,7 @@ function onClick(question, answer) {
     // First, let's check if the answer has been changed and set a flag if appropriate
     answerWasChanged = 0;
     let oldAnswer;
-    if (answersSelected[question] != "None" && answerSelected[question] != answer) {
+    if (answersSelected[question] != "None" && answersSelected[question] != answer) {
         // Flag has been set and set oldAnswer
         answerWasChanged = 1;
         oldAnswer = answersSelected[question];

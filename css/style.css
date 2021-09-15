@@ -1054,6 +1054,15 @@ h1 {
         display: flex;
     }
 
+    #main-hero {
+        background-size: 225%;
+        background-position: 90%;
+    }
+
+    #pet-help-hero {
+        background-position: center;
+    }
+
     #personality-quiz form {
         width: 100%;
     }
