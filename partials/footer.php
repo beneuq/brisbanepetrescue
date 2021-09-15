@@ -15,7 +15,7 @@
                     <li><a href="/breeds.php">Breeds</a></li>
                     <li><a href="/about-us.php">About Us</a></li>
                     <li><a href="/help.php">Pet Help</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/contact-us.php">Contact</a></li>
 
                 </ul>
             </nav>
