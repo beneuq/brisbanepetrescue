@@ -32,7 +32,8 @@
             <thead>
             <tbody>    
                 <?php
-                $user_id_or_null = logged_in() ? get_userid() : "NULL"; //todo deal with any vs null
+                $user_id_or_null = logged_in() ? get_userid() : "NULL"; //todo deal with any vs null (favourite the Affenpinscher signed in as mpowell to see)
+                $user_id_or_any = logged_in() ? get_userid() : "'%'"; //todo deal with any vs null
                 // Gets all breeds, and also whether the breed has been favourited by the logged-in user
                 $res = mysqli_query($conn, "
                     SELECT DISTINCT
@@ -45,7 +46,7 @@
                         IF(user_id={$user_id_or_null}, 'full', 'empty') as favourite_icon
                         FROM dog_breeds d
                             LEFT JOIN favourite_breeds f ON d.breed_id = f.breed_id
-                        WHERE (user_id={$user_id_or_null} OR user_id IS NULL)
+                        WHERE (user_id LIKE {$user_id_or_any} OR user_id IS NULL OR (user_id LIKE '%' AND user_id NOT LIKE {$user_id_or_any}))
                         ORDER BY Breed
                 ");
                 while($entry = mysqli_fetch_array($res)) {
@@ -59,6 +60,7 @@
                                     <img width='20%' src='images/icons/heart-<?php echo $entry['favourite_icon'];?>.png'
                                         onmouseover='favHover(this,"<?php echo $entry['favourite_icon'];?>");'
                                         onmouseout='favUnhover(this,"<?php echo $entry['favourite_icon'];?>");'
+                                         class="zoom-on-hover"
                                     >
                                 </button>
                             </form>

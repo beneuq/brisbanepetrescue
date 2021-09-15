@@ -75,7 +75,13 @@
                                 <td class='text-center' style='width:10%;'><?php echo str_repeat(EMOJI_DOLLAR,$entry['lifetime_cost_class']);?></td>
                                 <td class='text-left' style='width:10%;'><?php echo str_repeat(EMOJI_STAR,$entry['popularity_class']);?></td>
                                 <td style='width:10%;'> <img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'> </td>
-                                <td style='width:5%;'><form method='POST' action='/form_submissions/favourite_breed.php'> <button type='submit' name='breed_id' value='<?php echo $entry['breed_id'];?>'><img width='20%' alt='Remove from favourites' src='images/icons/x-icon.png'></button></form></td>
+                                <td style='width:5%;'>
+                                    <form method='POST' action='/form_submissions/favourite_breed.php'>
+                                        <button type='submit' name='breed_id' value='<?php echo $entry['breed_id'];?>'>
+                                            <img width='20%' alt='Remove from favourites' src='images/icons/x-icon.png' class="zoom-on-hover">
+                                        </button>
+                                    </form>
+                                </td>
                             </tr>
                             <!-- End Individual Breed Row -->
                         <?php
@@ -123,10 +129,16 @@
                                 <td style='width:15%;' class='dog-name'><a href='category-dogs.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
                                 <td style='width:20%;' class='breed-name'><a href='category-breeds.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
                                 <td style='width:10%;'><?php echo $entry['age'];?> years</td>
-                                <td style='width:5%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%'></td>
+                                <td style='width:5%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%' class="zoom-on-hover"></td>
                                 <td style='width:20%;'><?php echo $entry['Shelter'];?></td>
                                 <td style='width:15%;'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='33%'></td>
-                                <td style='width:5%;'><form method='POST' action='/form_submissions/favourite_dog.php'> <button type='submit' name='dog_id' value='<?php echo $entry['dog_id'];?>'><img width='25%' alt='Remove from favourites' src='images/icons/x-icon.png'></button></form></td>
+                                <td style='width:5%;'>
+                                    <form method='POST' action='/form_submissions/favourite_dog.php'>
+                                        <button type='submit' name='dog_id' value='<?php echo $entry['dog_id'];?>'>
+                                            <img width='25%' alt='Remove from favourites' src='images/icons/x-icon.png' class="zoom-on-hover">
+                                        </button>
+                                    </form>
+                                </td>
                             </tr>
                             <!-- End Individual Dog Row -->
                         <?php

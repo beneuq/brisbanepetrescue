@@ -32,7 +32,7 @@
 
                     <div class="pad-bottom-2">
                         <a href="dogs.php" class="margin-right-1 hero-btn">Available Dogs</a>
-                        <a href="#" class="hero-btn hero-btn-alt">Personality Quiz</a>
+                        <a href="/quiz.php" class="hero-btn hero-btn-alt">Personality Quiz</a>
                     </div>
                     <br>
                     <div class="pad-bottom-2">
