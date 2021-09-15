@@ -138,9 +138,6 @@
                 ");
 
                 while($entry = mysqli_fetch_array($res)) {
-                    // Store data in php array
-
-
                     // Hide countdown or set to red if null or overdue
                     if (is_null($entry['worm_meds_due'])) {
                         $add_style_worm = 'font-size:0';
@@ -156,22 +153,23 @@
                     } else {
                         $add_style_tick = '';
                     }
-
-                    echo "<tr id='dog_id=".$entry['dog_id']."'>
-                    <td style='width:5%;' class='dog-name'><a href='category-dogs.php?dog_id=".$entry['dog_id']."'>". $entry['Dog'] . "</a></td>
-                    <td style='width:10%;' class='breed-name'><a href='category-breeds.php?breed_id=".$entry['breed_id']."'>" . $entry['Breed'] . "</a></td>
-                    <td style='width:5%;'>" . $entry['age'] . "</td>
-                    <td style='width:5%;'>" . $entry['birthday'] . "</td>
-                    <td style='width:10%;'>" . $entry['adoption_date'] . "</td>
-                    <td style='width:5%;'><img src='/images/icons/". $entry['gender'] .".png' alt='dog image' width='20%'></td>
-                    <td style='width:5%;'><img src='/images/icons/boolean-checkbox-". $entry['desexed'] .".png' alt='dog image' width='25%'></td>
-                    <td style='width:5%;'><img src='/images/icons/boolean-checkbox-". $entry['vaccinated'] .".png' alt='dog image' width='25%'></td>
-                    <td style='width:5%;".$add_style_worm."'>" . $entry['worm_meds_due'] . " days</td>
-                    <td style='width:5%;".$add_style_tick."'>" . $entry['tick_meds_due'] . " days</td>
-                    <td style='width:10%;'> <img src='". SITEURL.$entry['path'] ."' alt='dog image' width='50%'> </td>
-                </tr>";
-                }
-                mysqli_close($conn)
+                    ?>
+                    <tr id='dog_id=<?php echo $entry['dog_id'];?>'>
+                    <td style='width:5%;' class='dog-name'><a href='category-dogs.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
+                    <td style='width:10%;' class='breed-name'><a href='category-breeds.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
+                    <td style='width:5%;'><?php echo $entry['age'];?></td>
+                    <td style='width:5%;'><?php echo $entry['birthday'];?></td>
+                    <td style='width:10%;'><?php echo $entry['adoption_date'];?></td>
+                    <td style='width:5%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%'></td>
+                    <td style='width:5%;'><img src='/images/icons/boolean-checkbox-<?php echo $entry['desexed'];?>.png' alt='dog image' width='25%'></td>
+                    <td style='width:5%;'><img src='/images/icons/boolean-checkbox-<?php echo $entry['vaccinated'];?>.png' alt='dog image' width='25%'></td>
+                    <td style='width:5%;<?php echo $add_style_worm;?>'><?php echo $entry['worm_meds_due'];?> days</td>
+                    <td style='width:5%;<?php echo $add_style_tick;?>'><?php echo $entry['tick_meds_due'];?> days</td>
+                    <td style='width:10%;'> <img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='50%'> </td>
+                </tr>
+                <?php
+                    }
+                    mysqli_close($conn)
                 ?>
                 <tbody>
             </table>
