@@ -67,8 +67,8 @@ function updateScores(slider) {
             // Update the cookie
             setCookie("breed_scores", JSON.stringify(breed_scores), 1);
         }
-        console.log("New Breed Weightings after setting "+question+"="+answer+":");
-        console.log(JSON.parse(getCookie("breed_scores")));
+        // console.log("New Breed Weightings after setting "+question+"="+answer+":");
+        // console.log(JSON.parse(getCookie("breed_scores")));
 
         // Also update the result images
         updateBreedResults();
@@ -94,8 +94,8 @@ function updateBreedResults() {
     for (let top_breed in top_arr) {
         top.push(top_arr[top_breed][0]);
     }
-    console.log("Top "+NUM_RESULTS_TO_SHOW+": "+top.join(", "));
-    console.log("");
+    // console.log("Top "+NUM_RESULTS_TO_SHOW+": "+top.join(", "));
+    // console.log("");
 
     let xmlReq2 = new XMLHttpRequest();
     xmlReq2.onload = function () {
