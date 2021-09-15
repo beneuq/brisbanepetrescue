@@ -24,7 +24,7 @@
 
                     <div class="btn-group pad-bottom-2">
                         <a href="dogs.php" class="margin-right-1 hero-btn">Available Dogs</a>
-                        <a href="personality-quiz.php" class="hero-btn hero-btn-alt">Personality Quiz</a>
+                        <a href="quiz.php" class="hero-btn hero-btn-alt">Personality Quiz</a>
                     </div>
                 </div>
                 <!-- <img class="home-hero-img margin-top-2" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down"> -->

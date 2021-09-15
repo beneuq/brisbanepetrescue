@@ -32,7 +32,7 @@
             <thead>
             <tbody>    
                 <?php
-                $user_id_for_sql = logged_in() ? get_userid() : "NULL";
+                $user_id_or_null = logged_in() ? get_userid() : "NULL"; //todo deal with any vs null
                 // Gets all breeds, and also whether the breed has been favourited by the logged-in user
                 $res = mysqli_query($conn, "
                     SELECT DISTINCT
@@ -42,10 +42,10 @@
                         lifetime_cost_class,
                         popularity_class,
                         size_class,
-                        IF(user_id={$user_id_for_sql}, 'full', 'empty') as favourite_icon
+                        IF(user_id={$user_id_or_null}, 'full', 'empty') as favourite_icon
                         FROM dog_breeds d
                             LEFT JOIN favourite_breeds f ON d.breed_id = f.breed_id
-                        WHERE (user_id={$user_id_for_sql} OR user_id IS NULL)
+                        WHERE (user_id={$user_id_or_null} OR user_id IS NULL)
                         ORDER BY Breed
                 ");
                 while($entry = mysqli_fetch_array($res)) {
