@@ -15,7 +15,7 @@
         <?php include('partials/menu.php'); ?>
 
         <!-- Hero Section -->
-        <section id="main-hero" class="hero-section pos-relative">
+        <section id="main-hero" class="hero-section pos-relative dimmer-sm">
             <div class="flex container">
                 <div class="flex f-col hero-content bg-img">
                     <h1 class="pad-top-2 pad-bottom-1">Looking to adopt?</h1>
@@ -36,7 +36,7 @@
         <div class="container">
             <div class="fleX pad-top-1">
                 <h1 class="margin-bottom-1">Brisbane Pet Rescure - Who are we?</h1>
-                <p class="pad-bottom-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium explicabo impedit nam odio quas, eum hic, perspiciatis delectus dolore natus nemo assumenda magnam. Totam?</p>
+                <p class="pad-bottom-2">Here at Brisbane Pet Rescue, our primary mission is to give great dogs a chance at a loving home. By doing so, we hope to prevent overcrowing in animal shelters.</p>
             </div>
             <div class="btn-group">
                 <a href="about-us.php" class="hero-btn hero-btn-alt">Learn more</a>
@@ -44,12 +44,12 @@
         </div>
         </section>
         <!-- Section 3 -->
-        <section id="pet-help-hero" class="pg-section bg-img">
+        <section id="pet-help-hero" class="pg-section bg-img dimmer dimmer-sm">
             <div class="flex container">
                 <div class="flex f-col hero-content">
                     <h1 class="pad-top-2 pad-bottom-1">Looking for help with your pet?</h1>
                     <h2 class="pad-bottom-1">Well, you're in the right place</h2>
-                    <p class="pad-bottom-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus possimus eveniet quo totam blanditiis placeat asperiores sed beatae vel voluptate alias explicabo iure, corporis quam.</p>
+                    <p class="pad-bottom-2">Taking care of a pet can very difficult. That's why we have worked hard to make it easy-peasy. Check out articles from our partners or contact us for more information.</p>
 
                     <div class="btn-group pad-bottom-2">
                         <a href="help.php" class="margin-right-1 hero-btn">Pet Help</a>
