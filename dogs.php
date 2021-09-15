@@ -68,6 +68,7 @@
                             <img width='20%' src='images/icons/heart-<?php echo $entry['favourite_icon'];?>.png'
                                  onmouseover='favHover(this,"<?php echo $entry['favourite_icon'];?>");'
                                  onmouseout='favUnhover(this,"<?php echo $entry['favourite_icon'];?>");'
+                                 class="zoom-on-hover"
                             >
                         </button>
                     </form>
@@ -77,7 +78,7 @@
                 <td style='width:14%;'><?php echo $entry['age'];?> years</td>
                 <td style='width:10%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%'></td>
                 <td style='width:18%;'><?php echo $entry['Shelter'];?></td>
-                <td style='width:22%;'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='50%'></td>
+                <td style='width:22%;'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='50%' class="zoom-on-hover"></td>
             </tr>
             <!-- End Individual Dog Row -->
         <?php
