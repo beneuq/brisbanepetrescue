@@ -72,8 +72,8 @@
                                     <a href='category-breeds.php?breed_id=<?php echo $entry['breed_id'];?>' style='color:black'><?php echo $entry['Breed'];?></a>
                                 </td>
                                 <td style='width:25%;'><?php echo $entry['intelligence_desc'];?></td>
-                                <td class='text-center' style='width:10%;'><?php echo str_repeat("&#x1F4B2;",$entry['lifetime_cost_class']);?></td>
-                                <td class='text-left' style='width:10%;'><?php echo str_repeat("&#x2B50;",$entry['popularity_class']);?></td>
+                                <td class='text-center' style='width:10%;'><?php echo str_repeat(EMOJI_DOLLAR,$entry['lifetime_cost_class']);?></td>
+                                <td class='text-left' style='width:10%;'><?php echo str_repeat(EMOJI_STAR,$entry['popularity_class']);?></td>
                                 <td style='width:10%;'> <img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'> </td>
                                 <td style='width:5%;'><form method='POST' action='/form_submissions/favourite_breed.php'> <button type='submit' name='breed_id' value='<?php echo $entry['breed_id'];?>'><img width='20%' alt='Remove from favourites' src='images/icons/x-icon.png'></button></form></td>
                             </tr>

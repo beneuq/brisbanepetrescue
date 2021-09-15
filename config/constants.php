@@ -8,13 +8,17 @@
         // Set to false to avoid using up our maximum free 5000 results/month, only set to true when ready to test
         const USE_GOOGLE_MAPS_API = false;
 
-    //Create Constants to Store Non Repeating Values
+    // Create Constants to Store Non Repeating Values
     const SITEURL = 'https://brisbanepetrescue.me/';
     const LOCALHOST = 'localhost';
     const DB_USERNAME = 'root';
     const DB_PASSWORD = 'PL6VCaRJ978WB4';
     const DB_NAME = 'pet_rescue_db';
     const GOOGLE_MAPS_API_KEY = USE_GOOGLE_MAPS_API ? 'AIzaSyD008QAqbvBSWA-fQ0CUkDFkcuEzime1yQ' : 'avoiding-using-free-credits';
+
+    // Emojis
+    const EMOJI_DOLLAR = "&#x1F4B2;";
+    const EMOJI_STAR = "&#x2B50;";
 
     if (!SKIP_DB_CONNECTION) {
         $conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD, DB_NAME); //Database Connection
