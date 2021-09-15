@@ -498,7 +498,7 @@ button {
 }
 
 .zoom-on-hover {
-    transition: all 250ms;
+    transition: all 250ms ease-out;
 }
 
 .zoom-on-hover:hover {
