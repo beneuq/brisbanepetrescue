@@ -35,8 +35,8 @@
         <section id="about-us-cta" class="pg-section small-pg-section flex" style="background-color: lightgrey;">
         <div class="container">
             <div class="fleX pad-top-1">
-                <h1 class="margin-bottom-1">Brisbane Pet Rescure - Who are we?</h1>
-                <p class="pad-bottom-2">Here at Brisbane Pet Rescue, our primary mission is to give great dogs a chance at a loving home. By doing so, we hope to prevent overcrowing in animal shelters.</p>
+                <h1 class="margin-bottom-1">Brisbane Pet Rescue - Who are we?</h1>
+                <p class="pad-bottom-2">For the team at Brisbane Pet Rescue, our primary mission is to give great dogs a chance at a loving home. By doing so, we hope to prevent overcrowing in animal shelters.</p>
             </div>
             <div class="btn-group">
                 <a href="about-us.php" class="hero-btn hero-btn-alt">Learn more</a>
