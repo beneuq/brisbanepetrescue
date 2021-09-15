@@ -217,6 +217,21 @@
                                                     . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['lifetime_cost_class']); ?></p>
                         </div>
                         <div class="info-box">
+                            <h4>Health and Lifestyle</h4>
+                            <p>Exercise Required: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['exercise_needs_class'])
+                                                        . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['exercise_needs_class']); ?></p>
+                            <p>Suited to aparment living: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['apartment_living_class'])
+                                                                . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['apartment_living_class']); ?></p>
+                            <p>Ok alone: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['tolerates_being_alone_class'])
+                                                . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['tolerates_being_alone_class']); ?></p>
+                            <p>Generaly health: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['general_health_class'])
+                                                    . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['general_health_class']); ?></p>
+                            <p>Potential to put on weight: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['potential_for_weight_gain_class'])
+                                                                . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['potential_for_weight_gain_class']); ?></p>
+                            <p>Common Genetic Conditions: <br><?php echo $entry_breed_info['genetic_conditions']; ?></p>
+                            <p>Common Genetic Diseases: <br><?php echo $entry_breed_info['genetic_diseases']; ?></p>
+                        </div>
+                        <div class="info-box">
                             <h4>Other things to consider</h4>
                             <p>Amount of shedding: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['shedding_amount_class'])
                                                         . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['shedding_amount_class']); ?></p>
@@ -231,21 +246,6 @@
                             <p>Suited to cold weather: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['tolerates_cold_weather_class'])
                                                             . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['tolerates_cold_weather_class']); ?></p>
                             <p>count: <?php echo $count2; ?></p>
-                        </div>
-                        <div class="info-box">
-                            <h4>Health and Lifestyle</h4>
-                            <p>Exercise Required: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['exercise_needs_class'])
-                                                        . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['exercise_needs_class']); ?></p>
-                            <p>Suited to aparment living: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['apartment_living_class'])
-                                                                . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['apartment_living_class']); ?></p>
-                            <p>Ok alone: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['tolerates_being_alone_class'])
-                                                . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['tolerates_being_alone_class']); ?></p>
-                            <p>Generaly health: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['general_health_class'])
-                                                    . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['general_health_class']); ?></p>
-                            <p>Potential to put on weight: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['potential_for_weight_gain_class'])
-                                                                . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['potential_for_weight_gain_class']); ?></p>
-                            <p>Common Genetic Conditions: <br><?php echo $entry_breed_info['genetic_conditions']; ?></p>
-                            <p>Common Genetic Diseases: <br><?php echo $entry_breed_info['genetic_diseases']; ?></p>
                         </div>
                     </div>
 
