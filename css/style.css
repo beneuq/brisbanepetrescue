@@ -497,6 +497,15 @@ button {
     background-color: var(--secondaryColor);
 }
 
+.zoom-on-hover {
+    transition: all 250ms;
+}
+
+.zoom-on-hover:hover {
+    transform: scale(2);
+    border-radius: 10px;
+}
+
 /* Styling for breeds table on breeds.php*/
 .table-title {
     color: black;
@@ -918,10 +927,10 @@ h1 {
     box-shadow: 1px 1px 10px var(--secondaryColor);
     border-radius: 20px;
     text-align: center;
+    transition: all .2s ease-in-out;
 }
 
 .info-box:hover {
-    transition: all .2s ease-in-out;
     box-shadow: 1px 1px 20px var(--secondaryColor);
 }
 
@@ -1001,11 +1010,11 @@ h1 {
     padding-left: 20px;
     padding-bottom: 20px;
     display: flex;
+    transition: all .2s ease-in-out;
 }
 
 .help-box:hover {
     margin-top: 3.5%;
-    transition: all .2s ease-in-out;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
 }
 
