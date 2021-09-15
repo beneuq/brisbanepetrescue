@@ -1114,10 +1114,11 @@ h1 {
 /* CSS for Mobile Size or Smaller Screen */
 
 @media only screen and (max-width:768px) {
-    *{
+    /* may need to hide overflow, but it stuffs up the navbar currently */
+    /* *{
         overflow-x: hidden;
-    }
-    
+    } */
+
     .logo {
         width: 80%;
         float: none;
