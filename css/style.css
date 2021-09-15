@@ -6,6 +6,7 @@
     --titleColor: white;
     --h1Color: #989898;
     --h2Color: white;
+    --background: rgba(0, 0, 0, 0.05);
 
 }
 
@@ -477,7 +478,7 @@ button {
 }
 
 .box-3 img:hover {
-    transform: rotate(2deg);
+    transform: translateY(-5px);
 }
 
 .breed-text {
@@ -879,6 +880,11 @@ h1 {
     margin-top: 2%;
 }
 
+.category-section {
+    padding-top: 7%;
+    background-color: var(--background);
+}
+
 .category-info h3 {
     margin-top: 2%;
     font-size: 1.5em;
@@ -897,15 +903,17 @@ h1 {
 .information-boxes {
     display: flex;
     flex-flow: column wrap;
-    height: 1500px;
+    height: 1400px;
+    margin-top: 2%;
 }
 
 .info-box {
     margin-bottom: 1%;
-    height:fit-content;
+    height: fit-content;
     width: 22%;
     max-height: 50%;
     padding-top: 10px;
+    background-color: white;
     border: 2px solid var(--mainColor);
     box-shadow: 1px 1px 10px var(--secondaryColor);
     border-radius: 20px;
@@ -919,6 +927,39 @@ h1 {
 
 .info-box h4 {
     text-decoration: underline;
+}
+
+.dog-information-boxes {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dog-info-box {
+    margin-bottom: 1%;
+    height: fit-content;
+    width: fit-content;
+    min-width: 22%;
+    max-height: 50%;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    background-color: white;
+    box-shadow: 1px 1px 10px grey;
+}
+
+.dog-info-box p {
+    border-bottom: 1px solid #afbdaa;
+}
+
+.dog-info-box h4 {
+    font-size: 1.2em;
+}
+
+.dog-info-box:nth-of-type(even) {
+    background-color: rgb(202, 116, 202);
+    border-bottom: 1px solid black;
 }
 
 /* About us page styling */
@@ -1280,6 +1321,10 @@ h1 {
 		transform: none;
 	}
 
+    .category-section {
+        margin-top: 25%;
+    }
+
     .information-boxes {
         height: fit-content;
     }
@@ -1293,6 +1338,17 @@ h1 {
     .category-title {
         text-align: center;
         margin-top: 10%;
+    }
+
+    .dog-information-boxes {
+        flex-direction: column;
+    }
+
+    .dog-info-box {
+        min-width: 80%;
+        width: fit-content;
+        align-self: center;
+        margin-bottom: 5%;
     }
     
 }

@@ -37,10 +37,7 @@
     }
     ?>
 
-
-    <!-- fOOD MEnu Section Starts Here -->
-    <div class="underneath-nav"></div>
-    <section>
+    <section class="category-section">
         <div class="container">
 
             <?php
