@@ -40,7 +40,7 @@
 
     <!-- fOOD MEnu Section Starts Here -->
     <div class="underneath-nav"></div>
-    <section class="food-menu">
+    <section>
         <div class="container">
 
             <?php
@@ -93,6 +93,12 @@
                     const config = {
                         type: 'carousel',
                         perView: 3,
+                        autoplay: 2500,
+                        breakpoints: {
+                            768: {
+                            perView: 1
+                            }
+                        }
                     }
                     new Glide('.glide', config).mount()
                 </script>
