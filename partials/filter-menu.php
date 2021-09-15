@@ -156,4 +156,5 @@ while ($row = mysqli_fetch_array($res)) {
         $newFilters .= "</table>";
     }
 }
+echo $newFilters;
 ?>
