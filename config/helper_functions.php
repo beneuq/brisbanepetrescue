@@ -34,3 +34,16 @@ function enforce_login() {
         exit();
     }
 }
+
+/**
+ * From https://stackoverflow.com/questions/3109978/display-numbers-with-ordinal-suffix-in-php
+ * Returns the ordinal format for a number (e.g. 1 becomes "1st", 2 becomes "2nd", etc.)
+ */
+function ordinal($number): string
+{
+    $suffix = array('th','st','nd','rd','th','th','th','th','th','th');
+    if ((($number % 100) >= 11) && (($number%100) <= 13))
+        return $number. 'th';
+    else
+        return $number. $suffix[$number % 10];
+}
