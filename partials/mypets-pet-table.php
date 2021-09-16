@@ -1,5 +1,4 @@
 <?php
-    if(empty($current_page)) die(); // Can only be viewed from mypets.php
     include_once "config/constants.php";
 /**
  * This file is designed to be called from mypets.php.

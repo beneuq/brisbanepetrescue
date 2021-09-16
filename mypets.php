@@ -1,7 +1,6 @@
 <?php
     require_once "config/constants.php";
     enforce_login(); // Redirect to login page if not logged in.
-    $current_page = "/mypets.php";
     const REMINDER_DAYS_TO_SHOW = 365; // Don't show reminders more than this many days away
     // TODO maybe set to <30 days (but must be sure to pick dogs where this can be shown off in the demo)
 ?>
