@@ -46,6 +46,29 @@ while($entry = mysqli_fetch_array($res)) {
         array_push($post_adopt_tasks, $task);
     }
 
+    // Check vaccination status
+    if (!$entry['vaccinated']) {
+        // Not vaccinated yet, add as task
+        $task = array(
+            "text" => "Vaccinate {$entry['name']} at your local vet",
+            "dog_id" => $entry['dog_id'],
+            "type" => "vaccinated",
+        );
+        array_push($post_adopt_tasks, $task);
+    }
+
+    // Check if de-sexed
+    // todo maybe set to null (should not set to 1) to ignore?
+    if (!$entry['desexed']) {
+        // Not desexed yet, add as task
+        $task = array(
+            "text" => "Get {$entry['name']} de-sexed at your local vet",
+            "dog_id" => $entry['dog_id'],
+            "type" => "desexed",
+        );
+        array_push($post_adopt_tasks, $task);
+    }
+
     // Check if birthday approaching
     $age = new NumberFormatter('en_US', NumberFormatter::ORDINAL);
     $ordinal_age = $age->format($entry['age']); // 8 becomes "8th", 2 becomes "2nd"
@@ -72,6 +95,11 @@ while($entry = mysqli_fetch_array($res)) {
         );
         array_push($reminders, $reminder);
     }
+
+    // Check if adoption anniversary approaching
+    // TODO can mostly copy birthday one above, just need to calculate how many years
+
+
 
     // Check worming medication status
     if (is_null($entry['worm_meds_due'])) {
