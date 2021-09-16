@@ -35,6 +35,7 @@
 
         <!-- This code iterates through the database and adds a table row for each dog in the database -->
         <?php
+        echo "<p>Test1</p>";
         // Empty arrays to fill with task and reminder associative arrays
         $post_adopt_tasks = array();
         $reminders = array();
@@ -60,7 +61,7 @@
         WHERE owner_id=". get_userid()."
         ORDER BY name
 ");
-
+        echo "<p>Test2</p>";
         // Populate tasks and reminders from data returned by SQL query
         while($entry = mysqli_fetch_array($res)) {
             // Check council registration status
@@ -195,13 +196,17 @@
                 array_push($reminders, $reminder);
             }
         }
+        echo "<p>Test3</p>";
         // Sort reminders by nearest approaching
         usort($reminders, function ($item1, $item2) {
             return $item1['days'] <=> $item2['days'];
         });
+        echo "<p>Test4</p>";
 
         // Exclude any reminders that are more than REMINDER_DAYS_TO_SHOW away
         $reminders = array_filter($reminders, function ($x) { return $x['days'] <= REMINDER_DAYS_TO_SHOW; });
+        echo "<p>Test5</p>";
+
         ?>
 
         <?php include "partials/mypets-tasks-and-reminders-logic.php";?>
