@@ -5,7 +5,7 @@
  * It is the logic that runs prior to the table creation.
  * It runs an SQL query and then populates arrays for the tasks and reminders data
  */
-
+echo "test";
 // Empty arrays to fill with task and reminder associative arrays
 $post_adopt_tasks = array();
 $reminders = array();
