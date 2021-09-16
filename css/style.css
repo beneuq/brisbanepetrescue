@@ -517,11 +517,8 @@ button {
 
 .breeds-table {
     border-collapse: collapse;
-    margin-top: 25px;
     font-size: 0.9em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
+    margin: 25px auto;
     width: 75%;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
@@ -887,6 +884,15 @@ h1 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.regularReminder {
+    /* TODO */
+}
+
+.overdueReminder {
+    /* TODO */
+    color: red;
 }
 
 /* PERSONALITY QUIZ */
