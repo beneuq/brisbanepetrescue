@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Sep 16, 2021 at 07:41 AM
--- Server version: 5.7.31
--- PHP Version: 7.3.21
+-- Host: localhost
+-- Generation Time: Sep 16, 2021 at 09:30 AM
+-- Server version: 5.7.34
+-- PHP Version: 7.4.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -25,7 +25,6 @@ DELIMITER $$
 --
 -- Procedures
 --
-DROP PROCEDURE IF EXISTS `search_tables`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `search_tables` (`breed_id` TEXT, `breed_field` TEXT)  SET @sql = CONCAT( 'SELECT ''', breed_field,
 				''' AS value, breed_field, good_text 
 				FROM dog_breeds, breed_good_bad_desc 
@@ -37,18 +36,73 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `breed_filters`
+--
+
+CREATE TABLE `breed_filters` (
+  `breed_filter_id` int(11) NOT NULL,
+  `field_name` varchar(31) NOT NULL,
+  `filter_by` bit(1) NOT NULL,
+  `display_name` varchar(27) NOT NULL,
+  `filter_order` int(11) NOT NULL,
+  `is_string` bit(1) NOT NULL,
+  `sort_by` bit(1) NOT NULL,
+  `sort_order` int(11) DEFAULT NULL,
+  `class_field` bit(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `breed_filters`
+--
+
+INSERT INTO `breed_filters` (`breed_filter_id`, `field_name`, `filter_by`, `display_name`, `filter_order`, `is_string`, `sort_by`, `sort_order`, `class_field`) VALUES
+(1, 'Breed', b'1', 'Name', 1, b'1', b'1', 1, NULL),
+(2, 'intelligence_desc', b'1', 'Intelligence', 5, b'0', b'1', 6, NULL),
+(3, 'adaptability_class', b'1', 'Adaptability', 6, b'0', b'0', NULL, b'1'),
+(4, 'general_friendliness_class', b'1', 'General Friendliness', 7, b'0', b'1', 5, b'1'),
+(5, 'exercise_needs_class', b'1', 'Exercise Needs', 8, b'0', b'0', NULL, b'1'),
+(6, 'apartment_living_class', b'1', 'Adapts to Apartment', 9, b'0', b'0', NULL, b'1'),
+(7, 'family_affectionate_class', b'1', 'Affectionate Towards Family', 10, b'0', b'0', NULL, b'1'),
+(8, 'shedding_amount_class', b'1', 'Shedding Amount', 11, b'0', b'0', NULL, b'1'),
+(9, 'dog_friendly_class', b'1', 'Friendly towards Dogs', 12, b'0', b'0', NULL, b'1'),
+(10, 'drooling_potential_class', b'1', 'Drooling Potential', 13, b'0', b'0', NULL, b'1'),
+(11, 'ease_of_grooming_class', b'1', 'Easy to Groom', 14, b'0', b'0', NULL, b'1'),
+(12, 'energy_level_class', b'1', 'Engery Levels', 15, b'0', b'0', NULL, b'1'),
+(13, 'exercise_needs_class', b'1', 'Exercise Needs', 16, b'0', b'0', NULL, b'1'),
+(14, 'friendly_toward_strangers_class', b'1', 'Friendly towards Strangers', 17, b'0', b'0', NULL, b'1'),
+(15, 'general_health_class', b'1', 'General Health', 18, b'0', b'0', NULL, b'1'),
+(16, 'good_for_novice_owners', b'1', 'Good for First Time Owners', 19, b'0', b'1', 4, NULL),
+(17, 'incredibly_kid_friendly_class', b'1', 'Incredibly Child Friendly', 20, b'0', b'0', NULL, b'1'),
+(18, 'intensity_class', b'1', 'Intensity', 21, b'0', b'0', NULL, b'1'),
+(19, 'potential_for_playfulness_class', b'1', 'Playfull', 22, b'0', b'0', NULL, b'1'),
+(20, 'potential_for_weight_gain_class', b'1', 'Easily Gains Weight', 23, b'0', b'0', NULL, b'1'),
+(21, 'prey_drive_class', b'1', 'Prey Drive', 24, b'0', b'0', NULL, b'1'),
+(22, 'sensitivity_class', b'1', 'Sensitivity', 25, b'0', b'0', NULL, b'1'),
+(23, 'size_class', b'1', 'Size', 3, b'0', b'1', 2, b'1'),
+(24, 'tolerates_being_alone_class', b'1', 'OK Alone', 26, b'0', b'0', NULL, b'1'),
+(25, 'tolerates_cold_weather_class', b'1', 'Suits Cold Weather', 27, b'0', b'0', NULL, b'1'),
+(26, 'tolerates_hot_weather_class', b'1', 'Suits Hot Weather', 28, b'0', b'0', NULL, b'1'),
+(27, 'wanderlust_potential_class', b'1', 'Wanderlust Potential', 29, b'0', b'0', NULL, b'1'),
+(28, 'watchdog_class', b'1', 'Good Watchdog', 30, b'0', b'0', NULL, b'1'),
+(29, 'type_of_dog', b'1', 'Type of Dog', 2, b'1', b'1', 3, NULL),
+(30, 'lifetime_cost_class', b'1', 'Lifetime Cost', 30, b'0', b'1', 7, b'1'),
+(31, 'average_lifespan_class', b'1', 'Lifespan', 31, b'0', b'0', NULL, b'1'),
+(32, 'average_purchase_price_class', b'1', 'Purchase Price', 32, b'0', b'1', 8, b'1'),
+(33, 'popularity_class', b'1', 'Popularity', 4, b'0', b'1', 2, b'1');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `breed_good_bad_desc`
 --
 
-DROP TABLE IF EXISTS `breed_good_bad_desc`;
-CREATE TABLE IF NOT EXISTS `breed_good_bad_desc` (
-  `desc_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `breed_good_bad_desc` (
+  `desc_id` int(11) NOT NULL,
   `breed_field` varchar(50) NOT NULL,
   `high_good` bit(1) NOT NULL,
   `good_text` varchar(100) DEFAULT NULL,
-  `bad_text` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`desc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+  `bad_text` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `breed_good_bad_desc`
@@ -68,7 +122,7 @@ INSERT INTO `breed_good_bad_desc` (`desc_id`, `breed_field`, `high_good`, `good_
 (11, 'good_for_novice_owners', b'1', 'Great for first time pet owners', 'Challenging for novice owners'),
 (12, 'incredibly_kid_friendly_class', b'1', 'Loves kids', 'Not recommend for families with young children'),
 (13, 'potential_for_mouthiness_class', b'0', 'Not very loud', 'Has the potential to be quite loud'),
-(14, 'potential_for_playfulness_class', b'1', 'Playful', 'Not especially playful'),
+(14, 'potential_for_playfulness_class', b'1', 'Quite a playful breed', 'Not especially playful'),
 (15, 'potential_for_weight_gain_class', b'0', 'Doesn\'t gain weight easily', 'Easily gains weight'),
 (16, 'tolerates_being_alone_class', b'1', 'Can handle being left alone', 'Struggles when alone'),
 (17, 'tolerates_hot_weather_class', b'1', 'Suited to warm weather', 'Not well suited to hot weather'),
@@ -83,18 +137,16 @@ INSERT INTO `breed_good_bad_desc` (`desc_id`, `breed_field`, `high_good`, `good_
 -- Table structure for table `breed_image`
 --
 
-DROP TABLE IF EXISTS `breed_image`;
-CREATE TABLE IF NOT EXISTS `breed_image` (
-  `image_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `breed_image` (
+  `image_id` int(11) NOT NULL,
   `breed_id` int(11) NOT NULL,
   `path` varchar(256) NOT NULL,
   `alt_text` varchar(64) NOT NULL,
   `image_active` bit(1) NOT NULL,
   `main_image` bit(1) NOT NULL,
   `width` int(11) NOT NULL,
-  `height` int(11) NOT NULL,
-  PRIMARY KEY (`image_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=386 DEFAULT CHARSET=utf8;
+  `height` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `breed_image`
@@ -493,9 +545,8 @@ INSERT INTO `breed_image` (`image_id`, `breed_id`, `path`, `alt_text`, `image_ac
 -- Table structure for table `dogs`
 --
 
-DROP TABLE IF EXISTS `dogs`;
-CREATE TABLE IF NOT EXISTS `dogs` (
-  `dog_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `dogs` (
+  `dog_id` int(11) NOT NULL,
   `owner_id` int(11) DEFAULT NULL,
   `shelter_id` int(11) NOT NULL,
   `breed_id` int(11) NOT NULL,
@@ -511,9 +562,8 @@ CREATE TABLE IF NOT EXISTS `dogs` (
   `last_worming_medication` date DEFAULT NULL,
   `worming_medication_frequency` int(11) DEFAULT NULL,
   `last_tick_medication` date DEFAULT NULL,
-  `tick_medication_frequency` int(11) DEFAULT NULL,
-  PRIMARY KEY (`dog_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=utf8;
+  `tick_medication_frequency` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `dogs`
@@ -525,7 +575,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (3, NULL, 9, 47, 'Bernard', 9, '2012-01-11', 'male', 0, 0, NULL, 150, NULL, NULL, NULL, NULL, NULL),
 (4, NULL, 11, 42, 'Nori', 1, '2020-06-17', 'female', 1, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
 (5, NULL, 16, 70, 'Atlas', 9, '2012-02-12', 'male', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
-(6, 1, 1, 75, 'Barkley', 9, '2012-03-03', 'male', 0, 1, NULL, 200, '2021-09-01', NULL, NULL, NULL, NULL),
+(6, NULL, 1, 75, 'Barkley', 9, '2012-03-03', 'male', 0, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (7, NULL, 13, 56, 'Coco', 11, '2009-09-16', 'male', 0, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (8, NULL, 6, 44, 'Storm', 10, '2011-01-23', 'male', 0, 0, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (9, NULL, 15, 47, 'Barton', 1, '2020-04-26', 'male', 0, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
@@ -542,7 +592,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (20, NULL, 7, 25, 'Ivy', 0, '2021-08-18', 'female', 1, 1, NULL, 250, NULL, NULL, NULL, NULL, NULL),
 (21, NULL, 3, 56, 'Odessa', 4, '2017-04-30', 'female', 0, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (22, NULL, 13, 66, 'Davy', 3, '2018-08-16', 'male', 0, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
-(23, 2, 17, 40, 'Kali', 10, '2010-11-30', 'female', 0, 1, NULL, 250, '2015-05-13', '2021-08-25', 60, '2021-09-01', 30),
+(23, 2, 17, 40, 'Kali', 10, '2010-11-30', 'female', 0, 1, 5641637, 250, '2015-05-13', '2021-08-25', 60, '2021-09-01', 30),
 (24, NULL, 9, 13, 'Finn', 8, '2013-08-24', 'male', 1, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (25, NULL, 8, 4, 'Quincy', 7, '2014-04-27', 'male', 1, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (26, NULL, 11, 77, 'Nadia', 4, '2017-06-25', 'female', 1, 0, NULL, 200, NULL, NULL, NULL, NULL, NULL),
@@ -702,7 +752,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (180, NULL, 8, 37, 'Saul', 6, '2015-05-13', 'male', 1, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (181, NULL, 7, 17, 'Skye', 7, '2014-06-23', 'female', 0, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (182, NULL, 6, 67, 'Oscar', 1, '2020-02-09', 'male', 0, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
-(183, 1, 2, 29, 'Annie', 6, '2015-01-13', 'female', 0, 1, 5678567, 300, '2017-04-17', '2021-08-26', 60, '2021-08-04', 28),
+(183, 1, 2, 29, 'Annie', 6, '2015-01-13', 'female', 0, 1, 4856345, 300, '2017-04-17', '2021-08-26', 60, '2021-08-04', 28),
 (184, NULL, 9, 71, 'Hamilton', 3, '2018-05-23', 'male', 1, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
 (185, NULL, 5, 63, 'Ursula', 4, '2016-12-06', 'female', 0, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (186, NULL, 8, 43, 'Greta', 10, '2011-02-22', 'female', 0, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
@@ -1142,7 +1192,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (619, NULL, 7, 42, 'Delia', 0, '2020-11-05', 'female', 1, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (620, NULL, 14, 28, 'Vivienne', 5, '2016-03-04', 'female', 0, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (621, NULL, 15, 18, 'Hogan', 4, '2017-05-12', 'male', 0, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
-(622, 1, 6, 31, 'Parley', 6, '2015-06-23', 'male', 1, 1, 2345234, 150, '2020-06-02', NULL, NULL, '2021-08-18', 30),
+(622, 1, 6, 31, 'Parley', 6, '2015-06-23', 'male', 1, 1, NULL, 150, '2020-06-02', NULL, NULL, '2021-08-18', 30),
 (623, NULL, 14, 20, 'Opal', 6, '2014-12-10', 'female', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (624, NULL, 12, 7, 'Iggy', 11, '2009-12-31', 'male', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (625, NULL, 12, 29, 'Oakley', 7, '2013-09-15', 'male', 0, 0, NULL, 150, NULL, NULL, NULL, NULL, NULL),
@@ -1517,7 +1567,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (993, NULL, 12, 73, 'Easton', 11, '2010-08-05', 'male', 0, 1, NULL, 250, NULL, NULL, NULL, NULL, NULL),
 (994, NULL, 10, 27, 'Titus', 1, '2019-11-12', 'male', 1, 0, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (995, NULL, 11, 20, 'Jasper', 5, '2015-10-30', 'male', 0, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
-(996, 2, 10, 44, 'Ada', 11, '2010-02-20', 'female', 1, 1, 3756878, 300, '2011-01-20', '2021-08-04', 30, '2021-08-04', 14),
+(996, 2, 10, 44, 'Ada', 11, '2010-02-20', 'female', 1, 1, 5678567, 300, '2011-01-20', '2021-08-04', 30, '2021-08-04', 14),
 (997, NULL, 3, 17, 'Cosmo', 2, '2018-11-15', 'male', 0, 0, NULL, 150, NULL, NULL, NULL, NULL, NULL),
 (998, NULL, 14, 15, 'Hawkeye', 9, '2012-07-19', 'male', 1, 0, NULL, 250, NULL, NULL, NULL, NULL, NULL),
 (999, NULL, 1, 29, 'Carmela', 6, '2014-10-25', 'female', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
@@ -1529,9 +1579,8 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 -- Table structure for table `dog_breeds`
 --
 
-DROP TABLE IF EXISTS `dog_breeds`;
-CREATE TABLE IF NOT EXISTS `dog_breeds` (
-  `breed_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `dog_breeds` (
+  `breed_id` int(11) NOT NULL,
   `Breed` varchar(64) NOT NULL,
   `height_low` int(11) NOT NULL,
   `height_high` int(11) NOT NULL,
@@ -1580,9 +1629,8 @@ CREATE TABLE IF NOT EXISTS `dog_breeds` (
   `lifetime_cost_class` int(11) NOT NULL,
   `average_lifespan_class` int(11) NOT NULL,
   `average_purchase_price_class` int(11) NOT NULL,
-  `popularity_class` int(11) NOT NULL,
-  PRIMARY KEY (`breed_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8;
+  `popularity_class` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `dog_breeds`
@@ -1673,11 +1721,9 @@ INSERT INTO `dog_breeds` (`breed_id`, `Breed`, `height_low`, `height_high`, `wei
 -- Table structure for table `favourite_breeds`
 --
 
-DROP TABLE IF EXISTS `favourite_breeds`;
-CREATE TABLE IF NOT EXISTS `favourite_breeds` (
+CREATE TABLE `favourite_breeds` (
   `user_id` int(11) NOT NULL,
-  `breed_id` int(11) NOT NULL,
-  PRIMARY KEY (`user_id`,`breed_id`)
+  `breed_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -1685,7 +1731,7 @@ CREATE TABLE IF NOT EXISTS `favourite_breeds` (
 --
 
 INSERT INTO `favourite_breeds` (`user_id`, `breed_id`) VALUES
-(1, 2),
+(1, 1),
 (1, 29),
 (1, 31),
 (1, 46),
@@ -1694,10 +1740,7 @@ INSERT INTO `favourite_breeds` (`user_id`, `breed_id`) VALUES
 (2, 53),
 (2, 67),
 (5, 33),
-(5, 71),
-(8, 28),
-(8, 32),
-(8, 51);
+(5, 71);
 
 -- --------------------------------------------------------
 
@@ -1705,11 +1748,9 @@ INSERT INTO `favourite_breeds` (`user_id`, `breed_id`) VALUES
 -- Table structure for table `favourite_dogs`
 --
 
-DROP TABLE IF EXISTS `favourite_dogs`;
-CREATE TABLE IF NOT EXISTS `favourite_dogs` (
+CREATE TABLE `favourite_dogs` (
   `user_id` int(11) NOT NULL,
-  `dog_id` int(11) NOT NULL,
-  PRIMARY KEY (`user_id`,`dog_id`)
+  `dog_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -1718,20 +1759,15 @@ CREATE TABLE IF NOT EXISTS `favourite_dogs` (
 
 INSERT INTO `favourite_dogs` (`user_id`, `dog_id`) VALUES
 (1, 27),
-(1, 121),
 (1, 183),
+(1, 345),
 (1, 701),
-(1, 867),
-(1, 975),
 (1, 996),
 (2, 66),
 (2, 399),
 (5, 339),
 (5, 888),
-(7, 849),
-(8, 40),
-(8, 425),
-(8, 626);
+(7, 849);
 
 -- --------------------------------------------------------
 
@@ -1739,16 +1775,14 @@ INSERT INTO `favourite_dogs` (`user_id`, `dog_id`) VALUES
 -- Table structure for table `shelters`
 --
 
-DROP TABLE IF EXISTS `shelters`;
-CREATE TABLE IF NOT EXISTS `shelters` (
-  `shelter_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `shelters` (
+  `shelter_id` int(11) NOT NULL,
   `name` varchar(64) DEFAULT NULL,
   `address` varchar(256) DEFAULT NULL,
   `phone` varchar(16) DEFAULT NULL,
   `hours` varchar(256) DEFAULT NULL,
-  `email` varchar(64) DEFAULT NULL,
-  PRIMARY KEY (`shelter_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+  `email` varchar(64) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `shelters`
@@ -1780,19 +1814,15 @@ INSERT INTO `shelters` (`shelter_id`, `name`, `address`, `phone`, `hours`, `emai
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
   `username` varchar(16) NOT NULL,
   `first_name` varchar(32) NOT NULL,
   `last_name` varchar(32) NOT NULL,
   `dob` date NOT NULL,
   `email` varchar(128) NOT NULL,
-  `password` varchar(32) NOT NULL,
-  PRIMARY KEY (`user_id`),
-  UNIQUE KEY `username` (`username`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+  `password` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
@@ -1804,8 +1834,107 @@ INSERT INTO `users` (`user_id`, `username`, `first_name`, `last_name`, `dob`, `e
 (3, 'rick_astley', 'Rick', 'Astley', '1966-02-06', 'rick.astley@gmail.com', 'NeverG0nnaGiveUUp'),
 (4, 'test', 'Test', 'User', '2021-08-19', 'test@test.com', '1234'),
 (5, 'johnsmith', 'John', 'Smith', '2007-07-07', 'john.smith@outlook.com', 'abcde'),
-(7, 'johnsmith123', 'John', 'Smith', '2007-07-07', 'john.smith1@outlook.com', 'abcde'),
-(8, 'mattyp', 'Matt', 'Powell', '2001-05-01', 'matt@gmail.com', '123456');
+(7, 'johnsmith123', 'John', 'Smith', '2007-07-07', 'john.smith1@outlook.com', 'abcde');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `breed_filters`
+--
+ALTER TABLE `breed_filters`
+  ADD PRIMARY KEY (`breed_filter_id`);
+
+--
+-- Indexes for table `breed_good_bad_desc`
+--
+ALTER TABLE `breed_good_bad_desc`
+  ADD PRIMARY KEY (`desc_id`);
+
+--
+-- Indexes for table `breed_image`
+--
+ALTER TABLE `breed_image`
+  ADD PRIMARY KEY (`image_id`);
+
+--
+-- Indexes for table `dogs`
+--
+ALTER TABLE `dogs`
+  ADD PRIMARY KEY (`dog_id`);
+
+--
+-- Indexes for table `dog_breeds`
+--
+ALTER TABLE `dog_breeds`
+  ADD PRIMARY KEY (`breed_id`);
+
+--
+-- Indexes for table `favourite_breeds`
+--
+ALTER TABLE `favourite_breeds`
+  ADD PRIMARY KEY (`user_id`,`breed_id`);
+
+--
+-- Indexes for table `favourite_dogs`
+--
+ALTER TABLE `favourite_dogs`
+  ADD PRIMARY KEY (`user_id`,`dog_id`);
+
+--
+-- Indexes for table `shelters`
+--
+ALTER TABLE `shelters`
+  ADD PRIMARY KEY (`shelter_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `breed_good_bad_desc`
+--
+ALTER TABLE `breed_good_bad_desc`
+  MODIFY `desc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `breed_image`
+--
+ALTER TABLE `breed_image`
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=386;
+
+--
+-- AUTO_INCREMENT for table `dogs`
+--
+ALTER TABLE `dogs`
+  MODIFY `dog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1001;
+
+--
+-- AUTO_INCREMENT for table `dog_breeds`
+--
+ALTER TABLE `dog_breeds`
+  MODIFY `breed_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+
+--
+-- AUTO_INCREMENT for table `shelters`
+--
+ALTER TABLE `shelters`
+  MODIFY `shelter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
