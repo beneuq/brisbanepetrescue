@@ -100,9 +100,9 @@ function createOrderBy(array $pageVars, $filterTable)
         $res = mysqli_query($conn, "SELECT field_name FROM $filterTable WHERE sort_by = 1 ORDER BY sort_order");
         $sortBy = array();
         while ($row = mysqli_fetch_array($res)) {
+            consolePrintArgs("Q Results", $row, "End Q results");
             $sortBy[] = $row['field_name'];
         }
-        consolePrintArgs($sortBy, "test", [5, 10, 2]);
         if (isset($pageVars['sortby']) and in_array($pageVars['sortby'], $sortBy)) {
             $orderFilter = $pageVars['sortby'];
         } else {
