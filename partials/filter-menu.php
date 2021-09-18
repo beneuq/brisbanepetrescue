@@ -13,10 +13,8 @@ function filterVarList(string $filterTable, array $pageVars, $conn)
     while ($row = mysqli_fetch_assoc($res)) {
         $filters[] = $row['field_name'];
     }
-    consolePrintArgs("Initial Filters:", $filters, "End Initial filters", "Filters to match:", array_keys($pageVars), "End filters to match");
     foreach (array_keys($pageVars) as $var) {
         if (!(in_array($var, $filters))) {
-            consolePrintArgs("Unset: $var");
             unset($pageVars[$var]);
         }
     }
@@ -53,7 +51,6 @@ function createWhereFilters(array $filters, $filterTable, $conn)
 {
     //if empty return empty string
     if (empty($filters)) {
-        consolePrintArgs("Empty filters");
         return "";
     }
 
@@ -61,13 +58,10 @@ function createWhereFilters(array $filters, $filterTable, $conn)
     $res = mysqli_query($conn, "SELECT field_name, is_string FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
     $isString = [];
     while ($row = mysqli_fetch_assoc($res)) {
-        consolePrintArgs("Where Q Row:", $row, "Where Q Row End");
         $isString[$row['field_name']] = $row['is_string'];
     }
-    consolePrintArgs("filters:", $filters, "End filters", "isString:", $isString, "End isString");
     $whereFilters = "AND (";
     foreach (array_keys($filters) as $filter) {
-        consolePrintArgs("filter:", $filter, "End fiter");
         if ($isString[$filter]) {
             $whereFilters .= " $filter = \"$filters[$filter]\" AND ";
         } else {
@@ -111,7 +105,6 @@ function createOrderBy(array $pageVars, string $filterTable, $conn)
 <?php
 $filters = filterVarList($filterTable, $_GET, $conn);
 $orderFilter = createOrderBy($_GET, $filterTable, $conn);
-consolePrintArgs("Starting where filters");
 // where filter used for displaying results
 $whereFilters = createWhereFilters($filters, $filterTable, $conn);
 // I need to remove the WHERE AND depending on the where filters for showing the filters
@@ -146,10 +139,6 @@ if (!empty($filters)) {
 $res = mysqli_query($conn, "SELECT field_name, display_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
 $newFilters = "";
 while ($row = mysqli_fetch_assoc($res)) {
-    consolePrintArgs("Filter Main Q Row:", $row);
-    consolePrintArgs("SELECT " . $row['field_name'] .
-        " as field_value, COUNT(*) as field_count FROM $table " . $whereFiltersForFilter .
-        "GROUP BY " . $row['field_name']);
     $res2 = mysqli_query($conn, "SELECT " . $row['field_name'] .
         " as field_value, COUNT(*) as field_count FROM $table " . $whereFiltersForFilter .
         "GROUP BY " . $row['field_name']);
@@ -159,19 +148,16 @@ while ($row = mysqli_fetch_assoc($res)) {
         <tr>
             <th colspan=\"2\" scope=\"colgroup\">" . $row['display_name'] . "</th>
         </tr>";
-        consolePrintArgs("Filter Secondary Q Row", $row2, "End filter seconday q row");
         $newFilters .= "<tr><th scope=\"col\"><a href=\"";
         $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
         $newFilters .= "\">" . $row2['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
         while ($row2 = mysqli_fetch_assoc($res2)) {
-            consolePrintArgs("Filter Secondary Q Row", $row2, "End filter seconday q row");
             $newFilters .= "<tr><th scope=\"col\"><a href=\"";
             $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
             $newFilters .= "\">" . $row2['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
         }
         $newFilters .= "</table>";
     }
-    consolePrintArgs("End Main Q Row");
 }
 echo $newFilters;
 ?>
