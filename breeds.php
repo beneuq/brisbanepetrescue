@@ -23,7 +23,7 @@
         <?php
         $filterTable = "breed_filters";
         $table = "dog_breeds d";
-        $page = "breeds";
+        $page = "breeds.php";
         include('partials/filter-menu.php') ?>
     </div>
 

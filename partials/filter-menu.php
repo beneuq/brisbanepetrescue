@@ -8,13 +8,6 @@ $orderFilter = "Breed"
 <?php
 function filterVarList(string $filterTable, array $pageVars, $conn)
 {
-    consolePrintArgs("SELECT field_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
-    $res = mysqli_query($conn, "SELECT field_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
-    $filters = array();
-    while ($row = mysqli_fetch_assoc($res)) {
-        consolePrintArgs("Filter Q Row:", $row, "End filter Q Row");
-        $fitlers[] = $row['field_name'];
-    }
     $res = mysqli_query($conn, "SELECT field_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
     $filters = array();
     while ($row = mysqli_fetch_assoc($res)) {
@@ -148,6 +141,7 @@ if (!empty($filters)) {
 $res = mysqli_query($conn, "SELECT field_name, display_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
 $newFilters = "";
 while ($row = mysqli_fetch_assoc($res)) {
+    consolePrintArgs("Filter Main Q Row:", $row);
     $res2 = mysqli_query($conn, "SELECT " . $row['field_name'] .
         "as field_value, COUNT(*) as field_count FROM $table WHERE $whereFilters "  .
         "GROUP BY " . $row['field_name']);
@@ -161,12 +155,14 @@ while ($row = mysqli_fetch_assoc($res)) {
         $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
         $newFilters .= "\">" . $row['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row['field_count'] . "</th>" . "</tr>";
         while ($row2 = mysqli_fetch_assoc($res2)) {
+            consolePrintArgs("Filter Secondary Q Row", $row2, "End filter seconday q row");
             $newFilters .= "<tr><th scope=\"col\"><a href=\"";
             $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
             $newFilters .= "\">" . $row['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row['field_count'] . "</th>" . "</tr>";
         }
         $newFilters .= "</table>";
     }
+    consolePrintArgs("End Main Q Row");
 }
 echo $newFilters;
 ?>
