@@ -90,6 +90,8 @@ function createOrderBy(array $pageVars, string $filterTable)
         // get list of possible sortby fields
         consolePrintArgs("filter table: ", $filterTable);
         $res = mysqli_query($conn, "SELECT field_name FROM breed_filters WHERE sort_by = 1 ORDER BY sort_order");
+        //TODO: Delete after testing
+        $res = mysqli_query($conn, "SELECT * FROM dogs LIMIT 2");
         $sortBy = array();
         while ($row = mysqli_fetch_array($res)) {
             consolePrintArgs("Q Results", $row, "End Q results");
