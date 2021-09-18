@@ -38,7 +38,7 @@ function consolePrintArgs()
                 }
             }
         }
-        $htmlString .= "</string>";
+        $htmlString .= "</script>";
         echo $htmlString;
     }
 }
