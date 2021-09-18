@@ -13,8 +13,10 @@ function filterVarList(string $filterTable, array $pageVars, $conn)
     while ($row = mysqli_fetch_assoc($res)) {
         $fitlers[] = $row['field_name'];
     }
+    consolePrintArgs("Initial Filters:", $filters, "End Initial filters", "Filters to match:", array_keys($pageVars), "End filters to match");
     foreach (array_keys($pageVars) as $var) {
         if (!(in_array($var, $filters))) {
+            consolePrintArgs("Unset: $var");
             unset($pageVars[$var]);
         }
     }
@@ -51,6 +53,7 @@ function createWhereFilters(array $filters, $filterTable, $conn)
 {
     //if empty return empty string
     if (empty($filters)) {
+        consolePrintArgs("Empty filters");
         return "";
     }
 
@@ -65,7 +68,7 @@ function createWhereFilters(array $filters, $filterTable, $conn)
     $whereFilters = "AND (";
     foreach (array_keys($filters) as $filter) {
         consolePrintArgs("filter:", $filter, "End fiter");
-        if (isset($isString[$filter])) {
+        if ($isString[$filter]) {
             $whereFilters .= " $filter = \"$filters[$filter]\" AND ";
         } else {
             $whereFilters .= " $filter = $filters[$filter] AND ";
@@ -107,9 +110,7 @@ function createOrderBy(array $pageVars, string $filterTable, $conn)
 <!-- Creating filters for current query -->
 <?php
 $filters = filterVarList($filterTable, $_GET, $conn);
-consolePrintArgs("Starting order by");
 $orderFilter = createOrderBy($_GET, $filterTable, $conn);
-consolePrintArgs($orderFilter);
 consolePrintArgs("Starting where filters");
 $whereFilters = createWhereFilters($filters, $filterTable, $conn);
 ?>
