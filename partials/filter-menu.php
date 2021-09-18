@@ -11,9 +11,8 @@ consolePrintArgs("GET Args", $_GET, "End GET Args");
 
 <!-- Create array with filter variables only -->
 <?php
-function filterVarList(string $filterTable, array $pageVars)
+function filterVarList(string $filterTable, array $pageVars, $conn)
 {
-    require_once 'config/constants.php';
     $res = mysqli_query($conn, "SELECT field_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
     $filters = [];
     while ($row = mysqli_fetch_assoc($res)) {
@@ -53,7 +52,7 @@ function createLink(string $page, array $pageVars = [], bool $drop = false, arra
 
 <!-- Function for creating additional where clauses -->
 <?php
-function createWhereFilters(array $filters, $filterTable)
+function createWhereFilters(array $filters, $filterTable, $conn)
 {
     //if empty return empty string
     if (empty($filters)) {
@@ -61,7 +60,6 @@ function createWhereFilters(array $filters, $filterTable)
     }
 
     // get which fields are strings
-    require_once 'config/constants.php';
     $res = mysqli_query($conn, "SELECT field_name, is_string FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
     $isString = [];
     while ($row = mysqli_fetch_assoc($res)) {
@@ -87,7 +85,6 @@ function createWhereFilters(array $filters, $filterTable)
 <?php
 function createOrderBy(array $pageVars, string $filterTable, $conn)
 {
-    // require_once 'config/constants.php';
     if (!empty($pageVars) and (isset($pageVars['sortby']) or isset($pageVars['ascending']))) {
         // get list of possible sortby fields
         $res = mysqli_query($conn, "SELECT field_name FROM $filterTable WHERE sort_by = 1 ORDER BY sort_order");
@@ -139,12 +136,12 @@ function createOrderBy(array $pageVars, string $filterTable, $conn)
 
 <!-- Creating filters for current query -->
 <?php
-$filters = filterVarList($filterTable, $_GET);
+$filters = filterVarList($filterTable, $_GET, $conn);
 consolePrintArgs("Starting order by");
 $orderFilter = createOrderBy($_GET, $filterTable, $conn);
 consolePrintArgs($orderFilter);
 consolePrintArgs("Starting where filters");
-$whereFilters = createWhereFilters($filters, $filterTable);
+$whereFilters = createWhereFilters($filters, $filterTable, $conn);
 ?>
 
 <!-- Add the current filters to be selected and removed -->
@@ -155,7 +152,6 @@ if (!empty($filters)) {
 	<tr>
 		<th colspan=\"2\" scope=\"colgroup\">Current Filters</th>
 	</tr>";
-    require_once 'config/constants.php';
     $res = mysqli_query($conn, "SELECT field_name, display_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
     while ($row = mysqli_fetch_assoc($res)) {
         if (in_array($row['field_name'], array_keys($filters))) {
