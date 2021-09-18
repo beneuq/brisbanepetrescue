@@ -6,16 +6,7 @@ $orderFilter = "Breed"
 
 <!-- TODO: Remove after testing -->
 <?php
-echo "<script>";
-echo "console.log(\"pre-get-print\");";
-echo "console.log(\"" . strval($_GET) . "\");";
-foreach (array_keys($_GET) as $akey) {
-    echo "console.log(\"$akey: " . $_GET[$akey] . "\");";
-}
-foreach ($_GET as $avalue) {
-    echo "console.log(\"$avalue\");";
-}
-echo "</script>";
+consolePrintArgs("GET Args", $_GET, "End GET Args");
 ?>
 
 <!-- Create array with filter variables only -->
@@ -92,12 +83,13 @@ function createWhereFilters(array $filters, $filterTable)
 
 <!-- Function for creating order clause -->
 <?php
-function createOrderBy(array $pageVars, $filterTable)
+function createOrderBy(array $pageVars, string $filterTable)
 {
     require_once 'config/constants.php';
     if (!empty($pageVars) and (isset($pageVars['sortby']) or isset($pageVars['ascending']))) {
         // get list of possible sortby fields
-        $res = mysqli_query($conn, "SELECT field_name FROM $filterTable WHERE sort_by = 1 ORDER BY sort_order");
+        consolePrintArgs("filter table: ", $filterTable);
+        $res = mysqli_query($conn, "SELECT field_name FROM breed_filters WHERE sort_by = 1 ORDER BY sort_order");
         $sortBy = array();
         while ($row = mysqli_fetch_array($res)) {
             consolePrintArgs("Q Results", $row, "End Q results");
