@@ -16,7 +16,7 @@ function filterVarList(string $filterTable, array $pageVars)
     require_once 'config/constants.php';
     $res = mysqli_query($conn, "SELECT field_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
     $filters = [];
-    while ($row = mysqli_fetch_array($res)) {
+    while ($row = mysqli_fetch_assoc($res)) {
         $fitlers[] = $row['field_name'];
     }
     foreach (array_keys($pageVars) as $var) {
@@ -64,7 +64,7 @@ function createWhereFilters(array $filters, $filterTable)
     require_once 'config/constants.php';
     $res = mysqli_query($conn, "SELECT field_name, is_string FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
     $isString = [];
-    while ($row = mysqli_fetch_array($res)) {
+    while ($row = mysqli_fetch_assoc($res)) {
         $isString[$row['field_name']] = $row['is_string'];
     }
     $whereFilters = "AND (";
@@ -93,9 +93,9 @@ function createOrderBy(array $pageVars, string $filterTable, $conn)
         $res = mysqli_query($conn, "SELECT * FROM dogs LIMIT 2");
         $sortBy = array();
         consolePrintArgs("Res: ", $res, "End Res");
-        while ($entry = mysqli_fetch_array($res)) {
-            consolePrintArgs("Q Results", $entry, "End Q results");
-            $sortBy[] = $entry['field_name'];
+        while ($row = mysqli_fetch_assoc($res)) {
+            consolePrintArgs("Q Results", $row, "End Q results");
+            $sortBy[] = $row['field_name'];
         }
         if (isset($pageVars['sortby']) and in_array($pageVars['sortby'], $sortBy)) {
             $orderFilter = $pageVars['sortby'];
@@ -130,7 +130,7 @@ if (!empty($filters)) {
 	</tr>";
     require_once 'config/constants.php';
     $res = mysqli_query($conn, "SELECT field_name, display_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
-    while ($row = mysqli_fetch_array($res)) {
+    while ($row = mysqli_fetch_assoc($res)) {
         if (in_array($row['field_name'], array_keys($filters))) {
             $existing .= "<tr><th scope=\"col\"><a href=\"";
             $existing .= createLink($page, $_GET, 1, array($row['field_name'] => $filters[$row['field_name']]));
@@ -146,11 +146,11 @@ if (!empty($filters)) {
 <?php
 $res = mysqli_query($conn, "SELECT field_name, display_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
 $newFilters = "";
-while ($row = mysqli_fetch_array($res)) {
+while ($row = mysqli_fetch_assoc($res)) {
     $res2 = mysqli_query($conn, "SELECT " . $row['field_name'] .
         "as field_value, COUNT(*) as field_count FROM $table WHERE $whereFilters "  .
         "GROUP BY " . $row['field_name']);
-    if (!empty($row2 = mysqli_fetch_array($res2))) {
+    if (!empty($row2 = mysqli_fetch_assoc($res2))) {
         $newFilters .= "<table>
         <colgroup span=\"2\"></colgroup>
         <tr>
@@ -159,7 +159,7 @@ while ($row = mysqli_fetch_array($res)) {
         $newFilters .= "<tr><th scope=\"col\"><a href=\"";
         $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
         $newFilters .= "\">" . $row['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row['field_count'] . "</th>" . "</tr>";
-        while ($row2 = mysqli_fetch_array($res2)) {
+        while ($row2 = mysqli_fetch_assoc($res2)) {
             $newFilters .= "<tr><th scope=\"col\"><a href=\"";
             $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
             $newFilters .= "\">" . $row['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row['field_count'] . "</th>" . "</tr>";
