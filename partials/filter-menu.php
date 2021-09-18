@@ -4,6 +4,13 @@ $whereFilters = "";
 $orderFilter = "Breed"
 ?>
 
+<!-- TODO: Remove after testing -->
+<?php
+foreach (array_keys($_GET) as $akey) {
+    echo "console.log(\"$akey: " . $_GET[$akey] . "\")";
+}
+?>
+
 <!-- Create array with filter variables only -->
 <?php
 function filterVarList(string $filterTable, array $pageVars)
