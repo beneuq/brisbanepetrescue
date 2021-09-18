@@ -137,7 +137,7 @@ if (!empty($filters)) {
     $existing .= "</table>";
     echo $existing;
     // need to add the "WHERE to the where filter so it works when no filters are included
-    $whereFiltersForFilter = "WHERE " + substr($whereFilters, 4);
+    $whereFiltersForFilter = "WHERE " . substr($whereFilters, 4);
 }
 ?>
 
