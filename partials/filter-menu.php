@@ -113,6 +113,7 @@ function createOrderBy(array $pageVars, string $filterTable)
 
 <!-- TODO: Remove after testing -->
 <?php
+$pageVars = $_GET;
 // require_once 'config/constants.php';
 if (!empty($pageVars) and (isset($pageVars['sortby']) or isset($pageVars['ascending']))) {
     // get list of possible sortby fields
