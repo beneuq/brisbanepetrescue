@@ -85,14 +85,13 @@ function createWhereFilters(array $filters, $filterTable)
 
 <!-- Function for creating order clause -->
 <?php
-function createOrderBy(array $pageVars, string $filterTable)
+function createOrderBy(array $pageVars, string $filterTable, $conn)
 {
-    require_once 'config/constants.php';
+    // require_once 'config/constants.php';
     if (!empty($pageVars) and (isset($pageVars['sortby']) or isset($pageVars['ascending']))) {
         // get list of possible sortby fields
-        $res = mysqli_query($conn, "SELECT field_name FROM breed_filters WHERE sort_by = 1 ORDER BY sort_order");
+        $res = mysqli_query($conn, "SELECT field_name FROM $filterTable WHERE sort_by = 1 ORDER BY sort_order");
         $sortBy = array();
-        consolePrintArgs("Res: ", $res, "End Res");
         while ($row = mysqli_fetch_assoc($res)) {
             consolePrintArgs("Q Results", $row, "End Q results");
             $sortBy[] = $row['field_name'];
@@ -113,35 +112,36 @@ function createOrderBy(array $pageVars, string $filterTable)
 
 <!-- TODO: Remove after testing -->
 <?php
-$pageVars = $_GET;
-// require_once 'config/constants.php';
-if (!empty($pageVars) and (isset($pageVars['sortby']) or isset($pageVars['ascending']))) {
-    // get list of possible sortby fields
-    $res = mysqli_query($conn, "SELECT field_name FROM breed_filters WHERE sort_by = 1 ORDER BY sort_order");
-    $sortBy = array();
-    while ($row = mysqli_fetch_assoc($res)) {
-        consolePrintArgs("Q Results", $row, "End Q results");
-        $sortBy[] = $row['field_name'];
-    }
-    if (isset($pageVars['sortby']) and in_array($pageVars['sortby'], $sortBy)) {
-        $orderFilter = $pageVars['sortby'];
-    } else {
-        $orderFilter = "Breed";
-    }
-    if (isset($pageVars['ascending']) and $pageVars['ascending'] == 'false') {
-        $orderFilter .= " DESC";
-    }
-    // return $orderFilter;
-} else {
-    $orderFilter = "Breed";
-}
+// $pageVars = $_GET;
+// // require_once 'config/constants.php';
+// if (!empty($pageVars) and (isset($pageVars['sortby']) or isset($pageVars['ascending']))) {
+//     // get list of possible sortby fields
+//     $res = mysqli_query($conn, "SELECT field_name FROM breed_filters WHERE sort_by = 1 ORDER BY sort_order");
+//     $sortBy = array();
+
+//     while ($row = mysqli_fetch_assoc($res)) {
+//         consolePrintArgs("Q Results", $row, "End Q results");
+//         $sortBy[] = $row['field_name'];
+//     }
+//     if (isset($pageVars['sortby']) and in_array($pageVars['sortby'], $sortBy)) {
+//         $orderFilter = $pageVars['sortby'];
+//     } else {
+//         $orderFilter = "Breed";
+//     }
+//     if (isset($pageVars['ascending']) and $pageVars['ascending'] == 'false') {
+//         $orderFilter .= " DESC";
+//     }
+//     // return $orderFilter;
+// } else {
+//     $orderFilter = "Breed";
+// }
 ?>
 
 <!-- Creating filters for current query -->
 <?php
 $filters = filterVarList($filterTable, $_GET);
 consolePrintArgs("Starting order by");
-// $orderFilter = createOrderBy($_GET, $filterTable);
+$orderFilter = createOrderBy($_GET, $filterTable, $conn);
 consolePrintArgs($orderFilter);
 consolePrintArgs("Starting where filters");
 $whereFilters = createWhereFilters($filters, $filterTable);
