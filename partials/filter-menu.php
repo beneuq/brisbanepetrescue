@@ -93,8 +93,9 @@ function createOrderBy(array $pageVars, string $filterTable)
         //TODO: Delete after testing
         $res = mysqli_query($conn, "SELECT * FROM dogs LIMIT 2");
         $sortBy = array();
+        consolePrintArgs($res);
         while ($entry = mysqli_fetch_array($res)) {
-            consolePrintArgs("Q Results", $row, "End Q results");
+            consolePrintArgs("Q Results", $entry, "End Q results");
             $sortBy[] = $entry['field_name'];
         }
         if (isset($pageVars['sortby']) and in_array($pageVars['sortby'], $sortBy)) {
