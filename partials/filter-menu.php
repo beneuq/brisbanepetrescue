@@ -154,14 +154,15 @@ while ($row = mysqli_fetch_assoc($res)) {
         <tr>
             <th colspan=\"2\" scope=\"colgroup\">" . $row['display_name'] . "</th>
         </tr>";
+        consolePrintArgs("Filter Secondary Q Row", $row2, "End filter seconday q row");
         $newFilters .= "<tr><th scope=\"col\"><a href=\"";
         $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
-        $newFilters .= "\">" . $row['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row['field_count'] . "</th>" . "</tr>";
+        $newFilters .= "\">" . $row2['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
         while ($row2 = mysqli_fetch_assoc($res2)) {
             consolePrintArgs("Filter Secondary Q Row", $row2, "End filter seconday q row");
             $newFilters .= "<tr><th scope=\"col\"><a href=\"";
             $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
-            $newFilters .= "\">" . $row['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row['field_count'] . "</th>" . "</tr>";
+            $newFilters .= "\">" . $row2['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
         }
         $newFilters .= "</table>";
     }
