@@ -9,8 +9,9 @@ $orderFilter = "Breed"
 function filterVarList(string $filterTable, array $pageVars, $conn)
 {
     $res = mysqli_query($conn, "SELECT field_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
-    $filters = [];
+    $filters = array();
     while ($row = mysqli_fetch_assoc($res)) {
+        consolePrintArgs("Filter Q Row:", $row, "End filter Q Row");
         $fitlers[] = $row['field_name'];
     }
     consolePrintArgs("Initial Filters:", $filters, "End Initial filters", "Filters to match:", array_keys($pageVars), "End filters to match");
