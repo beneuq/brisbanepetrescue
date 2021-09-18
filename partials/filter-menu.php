@@ -6,11 +6,16 @@ $orderFilter = "Breed"
 
 <!-- TODO: Remove after testing -->
 <?php
-echo "console.log(\"pre-get-print\")";
-echo "console.log(\"" . strval($_GET) . "\")";
+echo "<script>";
+echo "console.log(\"pre-get-print\");";
+echo "console.log(\"" . strval($_GET) . "\");";
 foreach (array_keys($_GET) as $akey) {
-    echo "console.log(\"$akey: " . $_GET[$akey] . "\")";
+    echo "console.log(\"$akey: " . $_GET[$akey] . "\");";
 }
+foreach ($_GET as $avalue) {
+    echo "console.log(\"$avalue\");";
+}
+echo "</script>";
 ?>
 
 <!-- Create array with filter variables only -->
