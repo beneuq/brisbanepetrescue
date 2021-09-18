@@ -114,8 +114,10 @@ function createOrderBy(array $pageVars, string $filterTable, $conn)
 <!-- Creating filters for current query -->
 <?php
 $filters = filterVarList($filterTable, $_GET);
-$whereFilters = createWhereFilters($filters, $filterTable);
+consolePrintArgs("Starting order by");
 $orderFilter = createOrderBy($_GET, $filterTable, $conn);
+consolePrintArgs("Starting where filters");
+$whereFilters = createWhereFilters($filters, $filterTable);
 ?>
 
 <!-- Add the current filters to be selected and removed -->
