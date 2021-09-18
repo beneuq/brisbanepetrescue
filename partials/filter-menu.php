@@ -83,14 +83,12 @@ function createWhereFilters(array $filters, $filterTable)
 
 <!-- Function for creating order clause -->
 <?php
-function createOrderBy(array $pageVars, string $filterTable, $conn)
+function createOrderBy(array $pageVars, string $filterTable)
 {
-    // require_once 'config/constants.php';
+    require_once 'config/constants.php';
     if (!empty($pageVars) and (isset($pageVars['sortby']) or isset($pageVars['ascending']))) {
         // get list of possible sortby fields
-        // $res = mysqli_query($conn, "SELECT field_name FROM breed_filters WHERE sort_by = 1 ORDER BY sort_order");
-        //TODO: Delete after testing
-        $res = mysqli_query($conn, "SELECT * FROM dogs LIMIT 2");
+        $res = mysqli_query($conn, "SELECT field_name FROM breed_filters WHERE sort_by = 1 ORDER BY sort_order");
         $sortBy = array();
         consolePrintArgs("Res: ", $res, "End Res");
         while ($row = mysqli_fetch_assoc($res)) {
@@ -115,7 +113,7 @@ function createOrderBy(array $pageVars, string $filterTable, $conn)
 <?php
 $filters = filterVarList($filterTable, $_GET);
 consolePrintArgs("Starting order by");
-$orderFilter = createOrderBy($_GET, $filterTable, $conn);
+$orderFilter = createOrderBy($_GET, $filterTable);
 consolePrintArgs("Starting where filters");
 $whereFilters = createWhereFilters($filters, $filterTable);
 ?>
