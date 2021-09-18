@@ -83,9 +83,9 @@ function createWhereFilters(array $filters, $filterTable)
 
 <!-- Function for creating order clause -->
 <?php
-function createOrderBy(array $pageVars, string $filterTable)
+function createOrderBy(array $pageVars, string $filterTable, $conn)
 {
-    require_once 'config/constants.php';
+    // require_once 'config/constants.php';
     if (!empty($pageVars) and (isset($pageVars['sortby']) or isset($pageVars['ascending']))) {
         // get list of possible sortby fields
         consolePrintArgs("filter table: ", $filterTable);
@@ -116,7 +116,7 @@ function createOrderBy(array $pageVars, string $filterTable)
 <?php
 $filters = filterVarList($filterTable, $_GET);
 $whereFilters = createWhereFilters($filters, $filterTable);
-$orderFilter = createOrderBy($_GET, $filterTable);
+$orderFilter = createOrderBy($_GET, $filterTable, $conn);
 ?>
 
 <!-- Add the current filters to be selected and removed -->
