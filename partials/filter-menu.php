@@ -143,10 +143,10 @@ $newFilters = "";
 while ($row = mysqli_fetch_assoc($res)) {
     consolePrintArgs("Filter Main Q Row:", $row);
     consolePrintArgs("SELECT " . $row['field_name'] .
-        "as field_value, COUNT(*) as field_count FROM $table WHERE $whereFilters "  .
+        " as field_value, COUNT(*) as field_count FROM $table WHERE $whereFilters "  .
         "GROUP BY " . $row['field_name']);
     $res2 = mysqli_query($conn, "SELECT " . $row['field_name'] .
-        "as field_value, COUNT(*) as field_count FROM $table WHERE $whereFilters "  .
+        " as field_value, COUNT(*) as field_count FROM $table WHERE $whereFilters "  .
         "GROUP BY " . $row['field_name']);
     if (!empty($row2 = mysqli_fetch_assoc($res2))) {
         $newFilters .= "<table>
