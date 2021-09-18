@@ -88,12 +88,11 @@ function createOrderBy(array $pageVars, string $filterTable, $conn)
     // require_once 'config/constants.php';
     if (!empty($pageVars) and (isset($pageVars['sortby']) or isset($pageVars['ascending']))) {
         // get list of possible sortby fields
-        consolePrintArgs("filter table: ", $filterTable);
-        $res = mysqli_query($conn, "SELECT field_name FROM breed_filters WHERE sort_by = 1 ORDER BY sort_order");
+        // $res = mysqli_query($conn, "SELECT field_name FROM breed_filters WHERE sort_by = 1 ORDER BY sort_order");
         //TODO: Delete after testing
         $res = mysqli_query($conn, "SELECT * FROM dogs LIMIT 2");
         $sortBy = array();
-        consolePrintArgs($res);
+        consolePrintArgs("Res: ", $res, "End Res");
         while ($entry = mysqli_fetch_array($res)) {
             consolePrintArgs("Q Results", $entry, "End Q results");
             $sortBy[] = $entry['field_name'];
