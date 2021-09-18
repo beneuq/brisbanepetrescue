@@ -142,6 +142,7 @@ $orderFilter = "Breed";
 $filters = filterVarList($filterTable, $_GET);
 consolePrintArgs("Starting order by");
 // $orderFilter = createOrderBy($_GET, $filterTable);
+consolePrintArgs($orderFilter);
 consolePrintArgs("Starting where filters");
 $whereFilters = createWhereFilters($filters, $filterTable);
 ?>
