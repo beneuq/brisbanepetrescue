@@ -119,7 +119,7 @@ if (!empty($pageVars) and (isset($pageVars['sortby']) or isset($pageVars['ascend
     // get list of possible sortby fields
     $res = mysqli_query($conn, "SELECT field_name FROM breed_filters WHERE sort_by = 1 ORDER BY sort_order");
     $sortBy = array();
-    consolePrintArgs("Res: ", $res, "End Res");
+    // consolePrintArgs("Res: ", $res, "End Res");
     while ($row = mysqli_fetch_assoc($res)) {
         consolePrintArgs("Q Results", $row, "End Q results");
         $sortBy[] = $row['field_name'];

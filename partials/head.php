@@ -34,7 +34,7 @@ function consolePrintArgs()
             $htmlString .= "console.log(\"$argKey: " . strval($arg) . "\");";
             if (is_array($arg)) {
                 foreach (array_keys($arg) as $key) {
-                    $htmlString .= "console.log(\"$argKey: $key: " . $arg[$key] . "\");";
+                    $htmlString .= "console.log(\"$argKey: $key: " . strval($arg[$key]) . "\");";
                 }
             }
         }
