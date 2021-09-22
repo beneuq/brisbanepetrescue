@@ -796,6 +796,8 @@ h1 {
     border-radius: 10px;
     display: block;
     box-shadow: 0 0 10px rgba(128, 128, 128, 0.411);
+    /* Ensures the auto-scroll JS function scrolls to a spot comfortably above the div */
+    scroll-margin-top: 55px;
 }
 
 #contact input:focus {
@@ -909,6 +911,11 @@ h1 {
 #personality-quiz h2 {
     font-size: 1.2em;
 }
+
+#personality-quiz-results {
+    /* display: none; */
+}
+
 
 #menuToggle {
     display: none;

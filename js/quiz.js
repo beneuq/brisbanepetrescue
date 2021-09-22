@@ -17,7 +17,10 @@ for (let i = 0; i < answerSliders.length; i++) {
         answerSliders[i].value = 1;
     }
     // Assign function to update scores if slider is moved
-    answerSliders[i].oninput = function () {updateScores(answerSliders[i])};
+    answerSliders[i].oninput = function () {
+        updateScores(answerSliders[i]);
+        autoScroll(i+1);
+    };
 
     // Set scores to the current default value (i.e. 3 for sliders, 1 for toggles)
     updateScores(answerSliders[i]);
@@ -105,11 +108,46 @@ function updateBreedResults() {
     xmlReq2.send();
 }
 
+//After a user input, auto-scrolls to the next question
+function autoScroll(questionNum){
+    //If we are on the last question, there is no question to scoll to next
+    if (questionNum == 11) {
+        return;
+    }
+    let nextquestionNum = questionNum + 1;
+    let nextQuestionID =  "p-quiz-q" + nextquestionNum;
+    document.getElementById(nextQuestionID).scrollIntoView({behavior: "smooth"});
+}
+
+ 
+function displayResults() {
+    let results = document.getElementById("personality-quiz-results");
+    results.style.display = "block";
+}
+
 // This function here was an adjustment I made to try and count when the submit button is clicked
 // pretty much just changes answer when the submit button is clicked. I have checked the console and this
 // does work. Pretty much works by checking if the flag has been changed.
-submitClick = document.getElementById('submit');
+let submitClick = document.getElementById('submit');
 submitClick.addEventListener('click', submitClicked.bind(null, 1));
+
+//Checks whether the quiz has been submitted before. If so, displays the results after relaoding, rather than 
+// hiding them (which is the default)
+let results = document.getElementById("personality-quiz-results");
+if (sessionStorage.getItem("loadedEarlier")) {
+    results.style.display = "block";
+    console.log("Quiz submitted");
+} else {
+    console.log("Quiz not submitted");
+    results.style.display = "none";
+}
+
+function scrollToResults() {
+    if (sessionStorage.getItem("loadedEarlier")) {
+        document.getElementById("personality-quiz-results").scrollIntoView({behvaior: smooth});
+    } 
+}
+
 let ifSubmitClicked = false;
 /* Check if the submit button has been clicked */
 function submitClicked(change) {
@@ -118,6 +156,13 @@ function submitClicked(change) {
     } else {
         ifSubmitClicked = true;
         console.log("was clicked");
+        
+         // puts the results into session storage, ensuring the page loads (after submission button is clicked)
+        // with the results showing
+        sessionStorage.setItem("loadedEarlier", "yes");
+        
+        // Reveal results
+        displayResults();
         return 1;
     }
 }

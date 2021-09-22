@@ -21,9 +21,11 @@
         $active_home = 'active';
         ?>
         <script src="/js/cookies.js"></script>
+        <script src="/js/jquery-3.5.1.min.js"></script>
+        <script src="/js/script.js" async defer></script>
     </head>
 
-    <body>
+    <body onload="scrollToResults()">
         <div class="underneath-nav"></div>
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
@@ -181,7 +183,7 @@
             </form>
             <!-- This div is populated with the currently compatible breeds based on the quiz -->
         </section>
-        <section id="personality-quiz" class="pg-section container">
+        <section id="personality-quiz-results" class="pg-section container">
             <h1>Your Most Compatible Breeds</h1>
             <div id="compatibleBreeds"></div>
         </section>
