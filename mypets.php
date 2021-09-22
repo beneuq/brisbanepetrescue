@@ -1,7 +1,7 @@
 <?php
     require_once "config/constants.php";
     enforce_login(); // Redirect to login page if not logged in.
-    const REMINDER_DAYS_TO_SHOW = 365; // Don't show reminders more than this many days away
+    const REMINDER_DAYS_TO_SHOW = 14; // Don't show reminders more than this many days away
     // TODO maybe set to <30 days (but must be sure to pick dogs where this can be shown off in the demo)
 ?>
 <!DOCTYPE html>
@@ -61,6 +61,8 @@
                 </table>
 
                 <h2 class="tasks-txt">Reminders</h2>
+                <?php include "partials/task-calendar.php";?>
+                <h3 class="tasks-txt">Next 2 weeks</h3>
                 <table class="tasks">
                     <tr>
                         <th>Event</th>
@@ -69,7 +71,7 @@
                     </tr>
                     <!-- Add rows for each reminder -->
                     <?php
-                        foreach ($reminders as $reminder) {
+                        foreach ($reminders_soon as $reminder) {
                             echo "
                             <tr>
                                 <td class='{$reminder['cell_class']}'>{$reminder['text']}</td>
@@ -113,8 +115,6 @@
                     <tr><th>Dog Groomers</th><th>Location</th><th>Rating</th></tr>
                 </table>
             </div>
-
-            <?php include "partials/task-calendar.php";?>
 
             <!-- Pet Overview Table -->
             <?php include "partials/mypets-pet-table.php";?>

@@ -280,6 +280,10 @@
     padding: 0 0 0 7px;
 }
 
+.event a:hover{
+    text-decoration: line-through;
+}
+
 .legend {
     position: absolute;
     bottom: 0;

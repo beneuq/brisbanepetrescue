@@ -181,4 +181,4 @@ usort($reminders, function ($item1, $item2) {
 });
 
 // Exclude any reminders that are more than REMINDER_DAYS_TO_SHOW away
-$reminders = array_filter($reminders, function ($x) { return $x['days'] <= REMINDER_DAYS_TO_SHOW; });
+$reminders_soon = array_filter($reminders, function ($x) { return $x['days'] <= REMINDER_DAYS_TO_SHOW; });
