@@ -14,6 +14,7 @@
         $active_home = 'active';
         ?>
         <script src="/js/mypets-task-complete.js"></script>
+        <link rel="stylesheet" href="/css/task.calendar.css">
     </head>
     <body>
         <?php
@@ -112,6 +113,9 @@
                     <tr><th>Dog Groomers</th><th>Location</th><th>Rating</th></tr>
                 </table>
             </div>
+
+            <?php include "partials/task-calendar.php";?>
+
             <!-- Pet Overview Table -->
             <?php include "partials/mypets-pet-table.php";?>
 

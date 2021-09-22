@@ -39,6 +39,7 @@ while($entry = mysqli_fetch_array($res)) {
         $task = array(
             "text" => "Register {$entry['name']} with your local council",
             "dog_id" => $entry['dog_id'],
+            "dog_name" => $entry['name'],
             "type" => "council_registration_id",
         );
         array_push($post_adopt_tasks, $task);
@@ -50,6 +51,7 @@ while($entry = mysqli_fetch_array($res)) {
         $task = array(
             "text" => "Vaccinate {$entry['name']} at your local vet",
             "dog_id" => $entry['dog_id'],
+            "dog_name" => $entry['name'],
             "type" => "vaccinated",
         );
         array_push($post_adopt_tasks, $task);
@@ -62,6 +64,7 @@ while($entry = mysqli_fetch_array($res)) {
         $task = array(
             "text" => "Get {$entry['name']} de-sexed at your local vet",
             "dog_id" => $entry['dog_id'],
+            "dog_name" => $entry['name'],
             "type" => "desexed",
         );
         array_push($post_adopt_tasks, $task);
@@ -76,6 +79,7 @@ while($entry = mysqli_fetch_array($res)) {
             "date"=>$entry['next_birthday'],
             "days"=>$entry['days_to_birthday'],
             "dog_id"=>$entry['dog_id'],
+            "dog_name" => $entry['name'],
             "type"=>"birthday",
             "cell_class"=>"overdueReminder"
         );
@@ -83,10 +87,11 @@ while($entry = mysqli_fetch_array($res)) {
     } else if ($entry['days_to_birthday'] < 300) {
         // Birthday is approaching
         $reminder = array(
-            "text"=>"{$entry['name']}'s {$ordinal_age} birthday is coming up",
+            "text"=>"{$entry['name']}'s {$ordinal_age} birthday",
             "date"=>$entry['next_birthday'],
             "days"=>$entry['days_to_birthday'],
             "dog_id"=>$entry['dog_id'],
+            "dog_name" => $entry['name'],
             "type"=>"birthday",
             "cell_class"=>"regularReminder"
         );
@@ -104,6 +109,7 @@ while($entry = mysqli_fetch_array($res)) {
         $task = array(
             "text"=>"Start {$entry['name']} on de-worming medication",
             "dog_id"=>$entry['dog_id'],
+            "dog_name" => $entry['name'],
             "type"=>"worm_meds_start",
         );
         array_push($post_adopt_tasks, $task);
@@ -114,6 +120,7 @@ while($entry = mysqli_fetch_array($res)) {
             "date"=>$entry['worm_meds_date'],
             "days"=>$entry['worm_meds_due'],
             "dog_id"=>$entry['dog_id'],
+            "dog_name" => $entry['name'],
             "type"=>"worm_meds_due",
             "cell_class"=>"overdueReminder"
         );
@@ -121,10 +128,11 @@ while($entry = mysqli_fetch_array($res)) {
     } else {
         // Worm meds not due yet, but add to reminders
         $reminder = array(
-            "text"=>"{$entry['name']} is due for de-worming medication soon",
+            "text"=>"{$entry['name']} is due for de-worming medication",
             "date"=>$entry['worm_meds_date'],
             "days"=>$entry['worm_meds_due'],
             "dog_id"=>$entry['dog_id'],
+            "dog_name" => $entry['name'],
             "type"=>"worm_meds_due",
             "cell_class"=>"regularReminder"
         );
@@ -137,6 +145,7 @@ while($entry = mysqli_fetch_array($res)) {
         $task = array(
             "text"=>"Start {$entry['name']} on tick medication",
             "dog_id"=>$entry['dog_id'],
+            "dog_name" => $entry['name'],
             "type"=>"tick_meds_start",
         );
         array_push($post_adopt_tasks, $task);
@@ -147,6 +156,7 @@ while($entry = mysqli_fetch_array($res)) {
             "date"=>$entry['tick_meds_date'],
             "days"=>$entry['tick_meds_due'],
             "dog_id"=>$entry['dog_id'],
+            "dog_name" => $entry['name'],
             "type"=>"tick_meds_due",
             "cell_class"=>"overdueReminder"
         );
@@ -154,10 +164,11 @@ while($entry = mysqli_fetch_array($res)) {
     } else {
         // Tick meds not due yet, but add to reminders
         $reminder = array(
-            "text"=>"{$entry['name']} is due for tick medication soon",
+            "text"=>"{$entry['name']} is due for tick medication",
             "date"=>$entry['tick_meds_date'],
             "days"=>$entry['tick_meds_due'],
             "dog_id"=>$entry['dog_id'],
+            "dog_name" => $entry['name'],
             "type"=>"tick_meds_due",
             "cell_class"=>"regularReminder"
         );
