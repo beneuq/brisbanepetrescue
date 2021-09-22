@@ -25,7 +25,7 @@
         <script src="/js/script.js" async defer></script>
     </head>
 
-    <body onload="scrollToResults()">
+    <body>
         <div class="underneath-nav"></div>
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
@@ -42,7 +42,7 @@
         </section>
         <!-- Section 2 -->
         <section id="personality-quiz" class="pg-section container">
-            <form action="">
+            <form action="quiz.php#personality-quiz-results">
                 <!-- Question 1 -->
                 <fieldset id="p-quiz-q1" class="input-card">
                     <h1>Question 1</h1>
