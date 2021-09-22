@@ -104,7 +104,7 @@ while($entry = mysqli_fetch_array($res)) {
         $task = array(
             "text"=>"Start {$entry['name']} on de-worming medication",
             "dog_id"=>$entry['dog_id'],
-            "type"=>"worm_meds_due",
+            "type"=>"worm_meds_start",
         );
         array_push($post_adopt_tasks, $task);
     } else if ($entry['worm_meds_due'] <= 0) {
@@ -137,7 +137,7 @@ while($entry = mysqli_fetch_array($res)) {
         $task = array(
             "text"=>"Start {$entry['name']} on tick medication",
             "dog_id"=>$entry['dog_id'],
-            "type"=>"tick_meds_due",
+            "type"=>"tick_meds_start",
         );
         array_push($post_adopt_tasks, $task);
     } else if ($entry['tick_meds_due'] <= 0) {

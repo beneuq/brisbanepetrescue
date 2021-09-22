@@ -13,6 +13,7 @@
         include('partials/head.php'); 
         $active_home = 'active';
         ?>
+        <script src="/js/mypets-task-complete.js"></script>
     </head>
     <body>
         <?php
@@ -51,7 +52,7 @@
                             echo "
                                 <tr>
                                     <td>{$task["text"]}</td>
-                                    <td>complete/inititate task {$task["type"]} for dog_id={$task["dog_id"]}</td>
+                                    <td><button onclick='complete_task(\"{$task["type"]}\", \"{$task["dog_id"]}\")'>Complete</button></td>
                                 </tr>
                             ";
                         }
@@ -72,7 +73,7 @@
                             <tr>
                                 <td class='{$reminder['cell_class']}'>{$reminder['text']}</td>
                                 <td class='{$reminder['cell_class']}'>{$reminder['date']} ({$reminder['days']} days)</td>
-                                <td class='{$reminder['cell_class']}'>complete {$reminder['type']} for dog_id={$reminder['dog_id']}</td>
+                                <td class='{$reminder['cell_class']}'><button onclick='complete_task(\"{$reminder["type"]}\", \"{$reminder["dog_id"]}\")'>Complete</button></td>
                             </tr>
                             ";
                         }
