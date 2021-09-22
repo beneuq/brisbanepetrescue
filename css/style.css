@@ -1113,9 +1113,12 @@ h1 {
 /* Appeared First text */
 .rss-left {font-size: 0}
 .rss-right p:nth-child(5n) {display: none;}
+.rss-left p:nth-child(5n) {display: none;}
 
 /* Read More text */
 .rss-left p a {display: none;}
+.rss-right p a {display: none;}
+
 
 /* CSS for Mobile Size or Smaller Screen */
 
