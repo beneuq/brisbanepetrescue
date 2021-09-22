@@ -18,6 +18,7 @@
             <th>Vaccinated</th>
             <th>Worming Tablet</th>
             <th>Tick Medication</th>
+            <th>Council ID</th>
             <th></th>
         </tr>
         <thead>
@@ -34,6 +35,7 @@
                 gender,
                 desexed,
                 vaccinated,
+                council_registration_id,
                 path,
                 d.dog_id AS dog_id,
                 d.breed_id AS breed_id,
@@ -76,6 +78,7 @@
             <td style='width:5%;'><img src='/images/icons/boolean-checkbox-<?php echo $entry['vaccinated'];?>.png' alt='dog image' width='25%'></td>
             <td style='width:5%;<?php echo $add_style_worm;?>'><?php echo $entry['worm_meds_due'];?> days</td>
             <td style='width:5%;<?php echo $add_style_tick;?>'><?php echo $entry['tick_meds_due'];?> days</td>
+            <td style='width:5%'><?php echo $entry['council_registration_id'];?></td>
             <td style='width:10%;'> <img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='50%'> </td>
         </tr>
         <?php

@@ -136,6 +136,7 @@
                             <p>Email: <a href="mailto:<?php echo $row3['email']; ?>"><?php echo $row3['email']; ?></a></p>
                             <p>Hours: <?php echo $row3['hours']; ?></p>
                             <p><a href="https://form.jotform.com/212502680325043?<?php echo str_replace(' ', '%20', "shelterName=" . $row3['s_name'] . "&shelterEmail=" . $row3['email'] . "&dogId=" . $dog_id . "&dogName=" . $row3['d_name']); ?>">Apply to Adopt</a></p>
+                            <p><a href="/form_submissions/adopt_pet.php?dog_id=<?php echo $dog_id;?>">Adopt Immediately</a></p>
                         </div>
                     </div>
                 </div>
