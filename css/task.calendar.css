@@ -140,10 +140,6 @@
     color: rgb(131, 44, 255);
 }
 
-.day.today {
-    color: rgb(186, 186, 187);
-}
-
 .day-name {
     font-size: 9px;
     text-transform: uppercase;
@@ -151,6 +147,16 @@
     color: rgb(70, 0, 180);
     letter-spacing: .7px;
 }
+
+.day.today {
+    color: rgb(255, 255, 255);
+    background-color: rgba(131, 44, 255, 0.73);
+}
+
+.day.today div{
+    color: rgb(255, 255, 255);
+}
+
 
 .day-number {
     font-size: 24px;
