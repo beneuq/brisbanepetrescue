@@ -67,9 +67,9 @@ function updateScores(slider, answerNA) {
             // TODO Add weightings instead of just adding 1-5 (Size probably more important than playfulness, etc.)
 
             // First check if NA is currently ticked
+            const inverted_slider =  slider.classList.contains("quizInvert");
             if (currentNA) {
                 // Whether the slider is inverted to the actual sql data (5<->1, 4<->2)
-                const inverted_slider =  slider.classList.contains("quizInvert");
                 if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
                     breed_scores[breed_id] += Math.abs(answer - results[breed_id]) + 1;
                 } else {
