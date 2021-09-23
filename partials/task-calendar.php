@@ -273,7 +273,7 @@
 
                     if(!events.length) {
                         let div = createElement('div', 'event empty');
-                        let span = createElement('span', '', 'No Events');
+                        let span = createElement('span', '', 'No Reminders');
 
                         div.appendChild(span);
                         wrapper.appendChild(div);
