@@ -4,7 +4,7 @@
 
     // Debug Flags:
         // Set to true if running test server locally, some features will not work.
-        const SKIP_DB_CONNECTION = true;
+        const SKIP_DB_CONNECTION = false;
         // Set to false to avoid using up our maximum free 5000 results/month, only set to true when ready to test
         const USE_GOOGLE_MAPS_API = false;
 

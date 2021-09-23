@@ -25,6 +25,12 @@ for (let i = 0; i < answerSliders.length; i++) {
         autoScroll(i+1);
     };
 
+    // Assign function to update scores if N/A gets ticked
+    answerNA[i].oninput = function () {
+        updateScores(answerSliders[i], answerNA[i]);
+        autoScroll(i+1);
+    }
+
     // Set scores to the current default value (i.e. 3 for sliders, 1 for toggles)
     updateScores(answerSliders[i], answerNA[i]);
 }
@@ -37,7 +43,8 @@ function updateScores(slider, answerNA) {
 
     // Get the current N/A values
     let currentNA = answerNA.checked;
-    console.log(currentNA);
+    let previousNA = currentNA[question];
+    //console.log(currentNA);
 
     // Now update the breed_scores cookie to add scores to compatible breeds
 
@@ -59,19 +66,26 @@ function updateScores(slider, answerNA) {
             // TODO Also have a "not important to me" checkbox, that doesn't add any score!
             // TODO Add weightings instead of just adding 1-5 (Size probably more important than playfulness, etc.)
 
-            // Whether the slider is inverted to the actual sql data (5<->1, 4<->2)
-            const inverted_slider =  slider.classList.contains("quizInvert");
-            if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
-                breed_scores[breed_id] += Math.abs(answer - results[breed_id]) + 1;
-            } else {
-                breed_scores[breed_id] += (5 - Math.abs(answer - results[breed_id]));
-            }
-            // Also revert the score changes made by the last selected answer
-            if (previousAnswer) { //todo remove false
+            // First check if NA is currently ticked
+            if (currentNA) {
+                // Whether the slider is inverted to the actual sql data (5<->1, 4<->2)
+                const inverted_slider =  slider.classList.contains("quizInvert");
                 if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
-                    breed_scores[breed_id] -= (Math.abs(previousAnswer - results[breed_id]) + 1);
+                    breed_scores[breed_id] += Math.abs(answer - results[breed_id]) + 1;
                 } else {
-                    breed_scores[breed_id] -= (5 - Math.abs(previousAnswer - results[breed_id]));
+                    breed_scores[breed_id] += (5 - Math.abs(answer - results[breed_id]));
+                }
+            }   
+
+            // Check if NA was only recently ticked cause if it was, we need to remove previous scores
+            if (!previousNA) {
+                // Also revert the score changes made by the last selected answer
+                if (previousAnswer) { //todo remove false
+                    if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
+                        breed_scores[breed_id] -= (Math.abs(previousAnswer - results[breed_id]) + 1);
+                    } else {
+                        breed_scores[breed_id] -= (5 - Math.abs(previousAnswer - results[breed_id]));
+                    }
                 }
             }
             // Update the cookie
@@ -85,6 +99,7 @@ function updateScores(slider, answerNA) {
 
         // update the answerSelected dictionary with the new answer
         answersSelected[question] = answer;
+        answerNA[question] = currentNA;
     };
     xmlReq.open("get", "/form_submissions/return_breed_info.php?lookup_field="+question, true);
     xmlReq.send();
