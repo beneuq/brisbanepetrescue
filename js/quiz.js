@@ -6,6 +6,8 @@ let answersSelected = {};
 
 // Iterate through all sliders and update them per the below
 let answerSliders = document.getElementsByClassName("quizAnswer");
+let answerNA = document.getElementsByClassName("N/A");
+console.log(answerNA);
 for (let i = 0; i < answerSliders.length; i++) {
     // Default values (to avoid repetition in HTML)
     answerSliders[i].min = 1;

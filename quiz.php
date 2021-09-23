@@ -47,6 +47,8 @@
                 <fieldset id="p-quiz-q1" class="input-card">
                     <h1>Question 1</h1>
                     <h2>What size are you looking for in your dog?</h2>
+                    <input type="checkbox" id="question1N/A" class="N/A" name="question1N/A">
+                    <label for="question1N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-size_class">
                     <div class="quizSliderLabels">
                         <p>Small</p>
@@ -60,6 +62,8 @@
                 <fieldset id="p-quiz-q2" class="input-card">
                     <h1>Question 2</h1>
                     <h2>How much are you willing to spend on the initial purchase?</h2>
+                    <input type="checkbox" id="question2N/A" class="N/A" name="question2N/A">
+                    <label for="question2N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-average_purchase_price_class">
                     <div class="quizSliderLabels">
                         <p><?php echo EMOJI_DOLLAR;?></p>
@@ -73,6 +77,8 @@
                 <fieldset id="p-quiz-q3" class="input-card">
                     <h1>Question 3</h1>
                     <h2>How much are you willing to spend over your dog's lifetime?</h2>
+                    <input type="checkbox" id="question3N/A" class="N/A" name="question3N/A">
+                    <label for="question3N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-lifetime_cost_class">
                     <div class="quizSliderLabels">
                         <p><?php echo EMOJI_DOLLAR;?></p>
@@ -86,6 +92,8 @@
                 <fieldset id="p-quiz-q4" class="input-card">
                     <h1>Question 4</h1>
                     <h2>Are you looking for or interested in a guard dog?</h2>
+                    <input type="checkbox" id="question4N/A" class="N/A" name="question4N/A">
+                    <label for="question4N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizToggle" id="quiz-watchdog_class">
                     <div class="quizSliderLabels quizToggle">
                         <p>No</p>
@@ -96,6 +104,8 @@
                 <fieldset id="p-quiz-q5" class="input-card">
                     <h1>Question 5</h1>
                     <h2>How often will you be away from your dog?</h2>
+                    <input type="checkbox" id="question5N/A" class="N/A" name="question5N/A">
+                    <label for="question5N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-tolerates_being_alone_class">
                     <div class="quizSliderLabels">
                         <p>Rarely</p>
@@ -109,6 +119,8 @@
                 <fieldset id="p-quiz-q6" class="input-card">
                     <h1>Question 6</h1>
                     <h2>How playful do you want your dog to be?</h2>
+                    <input type="checkbox" id="question6N/A" class="N/A" name="question6N/A">
+                    <label for="question6N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-potential_for_playfulness_class">
                     <div class="quizSliderLabels">
                         <p>None</p>
@@ -122,6 +134,8 @@
                  <fieldset id="p-quiz-q7" class="input-card">
                     <h1>Question 7</h1>
                     <h2>Do you require the dog to be kid friendly?</h2>
+                    <input type="checkbox" id="question7N/A" class="N/A" name="question7N/A">
+                    <label for="question7N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizToggle" id="quiz-incredibly_kid_friendly_class">
                      <div class="quizSliderLabels quizToggle">
                          <p>No</p>
@@ -132,6 +146,8 @@
                  <fieldset id="p-quiz-q8" class="input-card">
                     <h1>Question 8</h1>
                     <h2>How much experience have you had with pet ownership?</h2>
+                    <input type="checkbox" id="question8N/A" class="N/A" name="question8N/A">
+                    <label for="question8N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider quizInvert" id="quiz-good_for_novice_owners">
                      <div class="quizSliderLabels">
                          <p>First-time</p>
@@ -145,6 +161,8 @@
                  <fieldset id="p-quiz-q9" class="input-card">
                     <h1>Question 9</h1>
                     <h2>How often could you to take your dog for exercise?</h2>
+                    <input type="checkbox" id="question9N/A" class="N/A" name="question9N/A">
+                    <label for="question9N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-exercise_needs_class">
                      <div class="quizSliderLabels">
                          <p>Rarely</p>
@@ -158,6 +176,8 @@
                  <fieldset id="p-quiz-q10" class="input-card">
                     <h1>Question 10</h1>
                     <h2>How large will the dog’s living space be?</h2>
+                    <input type="checkbox" id="question10N/A" class="N/A" name="question10N/A">
+                    <label for="question10N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider quizInvert" id="quiz-apartment_living_class">
                      <div class="quizSliderLabels">
                          <p>Apartment</p>
@@ -171,6 +191,8 @@
                 <fieldset id="p-quiz-q11" class="input-card">
                     <h1>Question 11</h1>
                     <h2>Do you have any other dogs?</h2>
+                    <input type="checkbox" id="question11N/A" class="N/A" name="question11N/A">
+                    <label for="question11N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizToggle" id="quiz-dog_friendly_class">
                     <div class="quizSliderLabels quizToggle">
                         <p>No</p>
