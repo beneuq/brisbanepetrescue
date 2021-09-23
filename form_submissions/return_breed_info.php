@@ -1,5 +1,5 @@
 <?php
-require_once "../config/constants.php";
+require_once "config/constants.php";
 
 // Returns breed information (values of the supplied lookup_field, eg. "size_class" and the matching breed_ids)
 if (isset($_GET['lookup_field'])) {

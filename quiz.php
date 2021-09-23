@@ -16,7 +16,7 @@
         ?>
         <!-- import generic head section -->
         <?php 
-        $page_title = 'Home';
+        $page_title = 'Breed Quiz';
         include('partials/head.php'); 
         $active_home = 'active';
         ?>

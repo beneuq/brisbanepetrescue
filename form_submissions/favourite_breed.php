@@ -1,5 +1,5 @@
 <?php
-require_once "../config/constants.php";
+require_once "config/constants.php";
 enforce_login();
 // Adds an entry of user_id, breed_id in the favourite_breeds table, unless it already exists, in which case, delete it
 if (isset($_POST['breed_id'])) {
