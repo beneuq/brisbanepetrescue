@@ -248,9 +248,17 @@ button {
 #bottom-nav {
     background-color: #6b18aa;
     width: 100%;
-    padding-left: 7.5%;
+}
+
+#bottom-nav li {
+    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    transition: 0.3s;
+}
+
+#bottom-nav li:hover {
+    background-color: #d41adabd;
 }
 
 .underneath-nav {
@@ -275,21 +283,17 @@ button {
     color:white;
 }
 
-#main-menu li a:hover {
-    color: lightgray;
-}
-
 #main-menu .main-logo {
     line-height: 1;
     text-transform:uppercase;
 }
 
-#main-menu ul {
-    width: 50%;
+#main-menu li.active {
+    background-color: #cf10d6a2;
 }
 
 #main-menu li.active a{
-    color: var(--h1Color);
+    color: white;
 }
 
 #main-menu li {
@@ -301,7 +305,7 @@ button {
 
 .main-logo {
     font-family: 'Changa', sans-serif;
-    font-size: 40px;
+    font-size: 2.2em;
     font-weight: 700;
 }
 
@@ -331,17 +335,22 @@ button {
 
 /* User icons */
 #user-icons {
-    width: 20%;
+    width: 200px;
     margin-left: 5%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+
 }
 
-#user-icons button {
-    margin-right: 10px;
+#user-icons figure {
+    width: 60px;
 }
 
 #user-icons p {
     margin-top: 0;
     color: white;
+    font-size: 13px;
 }
 
 /* HERO SECTION */
@@ -1251,6 +1260,10 @@ h1 {
 
     #main-menu li {
         padding: 20px 0;
+    }
+
+    #main-menu li.active {
+        background-color: #b3b3b3;
     }
 
     #top-nav {
