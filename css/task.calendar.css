@@ -106,6 +106,7 @@
     opacity: 1;
 }
 
+
 .month.in.prev {
     -webkit-animation: moveFromBottomFadeMonth .4s ease-out;
     -moz-animation: moveFromBottomFadeMonth .4s ease-out;
@@ -137,7 +138,7 @@
 }
 
 .day.other {
-    color: rgb(131, 44, 255);
+    color: rgb(208, 208, 208);
 }
 
 .day-name {
@@ -338,20 +339,20 @@
     to { opacity: 0; -webkit-transform: translateY(-30%) scale(.95); }
 }
 @-moz-keyframes moveToTopFadeMonth {
-    to { opacity: 0; -moz-transform: translateY(-30%); }
+    to { opacity: 0; -webkit-transform: translateY(-30%); }
 }
 @keyframes moveToTopFadeMonth {
-    to { opacity: 0; -moz-transform: translateY(-30%); }
+    to { opacity: 0; -webkit-transform: translateY(-30%); }
 }
 
 @-webkit-keyframes moveFromTopFadeMonth {
     from { opacity: 0; -webkit-transform: translateY(30%) scale(.95); }
 }
 @-moz-keyframes moveFromTopFadeMonth {
-    from { opacity: 0; -moz-transform: translateY(30%); }
+    from { opacity: 0; -webkit-transform: translateY(30%); }
 }
 @keyframes moveFromTopFadeMonth {
-    from { opacity: 0; -moz-transform: translateY(30%); }
+    from { opacity: 0; -webkit-transform: translateY(30%); }
 }
 
 @-webkit-keyframes moveToBottomFadeMonth {

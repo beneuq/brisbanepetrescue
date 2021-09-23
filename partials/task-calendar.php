@@ -4,7 +4,6 @@
     if(isset($reminders)) {
 ?>
 
-
         <div id="calendar"></div>
         <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
         <script src="//blueimp.github.io/JavaScript-MD5/js/md5.js"></script>
@@ -143,9 +142,21 @@
 
                     //Outer Day
                     var outer = createElement('div', this.getDayClass(day));
-                    outer.addEventListener('click', function() {
-                        self.openDay(this);
-                    });
+
+                    if (day.month() < this.current.month()) {
+                        outer.addEventListener('click', function() {
+                            self.prevMonth();
+                        });
+                    } else if (day.month() > this.current.month()) {
+                        outer.addEventListener('click', function() {
+                            self.nextMonth();
+                        });
+                    } else {
+                        outer.addEventListener('click', function() {
+                            self.openDay(this);
+                        });
+                    }
+
 
                     //Day Name
                     var name = createElement('div', 'day-name', day.format('ddd'));
@@ -165,7 +176,7 @@
                 }
 
                 Calendar.prototype.drawEvents = function(day, element) {
-                    if(day.month() === this.current.month()) {
+                    if(day.month() === this.current.month() || true) {//todo or true
                         var todaysEvents = this.events.reduce(function(memo, ev) {
                             if(ev.date.isSame(day, 'day')) {
                                 memo.push(ev);
