@@ -21,7 +21,7 @@ for (let i = 0; i < answerSliders.length; i++) {
     }
     // Assign function to update scores if slider is moved
     answerSliders[i].oninput = function () {
-        updateScores(answerSliders[i]);
+        updateScores(answerSliders[i], answerNA[i]);
         autoScroll(i+1);
     };
 
