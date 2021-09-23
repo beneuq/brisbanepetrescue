@@ -1,8 +1,9 @@
 // Number of compatible breeds to show
 const NUM_RESULTS_TO_SHOW = 6;
 
-// Current answers will be stored in this array
+// Current answers and N/A will be stored in this array
 let answersSelected = {};
+let currentNA = {};
 
 // Iterate through all sliders and update them per the below
 let answerSliders = document.getElementsByClassName("quizAnswer");
@@ -25,14 +26,18 @@ for (let i = 0; i < answerSliders.length; i++) {
     };
 
     // Set scores to the current default value (i.e. 3 for sliders, 1 for toggles)
-    updateScores(answerSliders[i]);
+    updateScores(answerSliders[i], answerNA[i]);
 }
 
 // Update the breed compatibility scores based on the given slider
-function updateScores(slider) {
+function updateScores(slider, answerNA) {
     let question = slider.id.split("-")[1]; // eg. id="quiz-size_class", so question="size_class"
     let answer = slider.value;
     let previousAnswer = answersSelected[question];
+
+    // Get the current N/A values
+    let currentNA = answerNA.value;
+    console.log(currentNA);
 
     // Now update the breed_scores cookie to add scores to compatible breeds
 
