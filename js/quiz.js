@@ -68,7 +68,7 @@ function updateScores(slider, answerNA) {
 
             // First check if NA is currently ticked
             const inverted_slider =  slider.classList.contains("quizInvert");
-            if (currentNA) {
+            if (currentNA == false) {
                 // Whether the slider is inverted to the actual sql data (5<->1, 4<->2)
                 if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
                     breed_scores[breed_id] += Math.abs(answer - results[breed_id]) + 1;
@@ -78,7 +78,7 @@ function updateScores(slider, answerNA) {
             }   
 
             // Check if NA was only recently ticked cause if it was, we need to remove previous scores
-            if (!previousNA) {
+            if (previousNA == false) {
                 // Also revert the score changes made by the last selected answer
                 if (previousAnswer) { //todo remove false
                     if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
