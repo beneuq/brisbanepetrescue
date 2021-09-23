@@ -36,7 +36,7 @@ function updateScores(slider, answerNA) {
     let previousAnswer = answersSelected[question];
 
     // Get the current N/A values
-    let currentNA = answerNA.value;
+    let currentNA = answerNA.checked;
     console.log(currentNA);
 
     // Now update the breed_scores cookie to add scores to compatible breeds
