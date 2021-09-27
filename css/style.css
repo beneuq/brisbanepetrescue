@@ -519,7 +519,7 @@ button {
 
 /* Styling for breeds table on breeds.php*/
 .table-title {
-    color: black;
+    color: var(--mainColor);
     margin-top: 5%;
     text-align: center;
 }
