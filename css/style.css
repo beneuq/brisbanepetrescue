@@ -289,7 +289,7 @@ button {
 }
 
 #main-menu li.active {
-    background-color: #cf10d6a2;
+    background-color: var(--h1Color);
 }
 
 #main-menu li.active a{
