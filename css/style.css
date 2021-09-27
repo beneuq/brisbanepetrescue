@@ -1033,12 +1033,6 @@ h1 {
     padding-bottom: 2%;
 }
 
-.about-title {
-    font-size: 3em;
-    padding-bottom: 20px;
-    padding-top: 5px;
-}
-
 /* Help page styling */
 .help-main {
     background-color: rgba(0, 0, 0, 0.05)

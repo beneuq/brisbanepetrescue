@@ -19,7 +19,7 @@
         <section class="hero-section about-hero pos-relative">
             <div class="flex container">
                 <div class="flex f-col hero-content">
-                    <h1 class="about-title"><?php echo $page_title; ?></h1>
+                    <h1 class="margin-top-2 pad-bottom-2"><?php echo $page_title; ?></h1>
                 </div>
             </div>
         </section>
