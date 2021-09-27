@@ -258,7 +258,7 @@ button {
 }
 
 #bottom-nav li:hover {
-    background-color: #d41adabd;
+    background-color: (var(--h1Color));
 }
 
 .underneath-nav {
