@@ -476,11 +476,11 @@ button {
 
 /* Styling for breed squares on index.php */
 .breed-title {
-    font-size: 3em;
-    color: black;
-    margin-top: 2%;
+    /* font-size: 3em; */
+    color: var(--mainColor); 
+    /* margin-top: 2%; */
     text-align: center;
-    text-decoration: underline 4px var(--mainColor);
+    /* text-decoration: underline 4px var(--mainColor); */
 }
 
 .box-3 img {

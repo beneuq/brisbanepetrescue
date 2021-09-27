@@ -60,9 +60,9 @@
         </section>
 
         <!-- Categories Section Starts Here -->
-        <section class="categories">
+        <section class="categories pg-section">
             <div class="container">
-                <h2 class="breed-title">Explore Breeds</h2>
+                <h1 class="breed-title margin-bottom-2 pad-top-1">Explore Breeds</h1>
 
                 <?php
                 // Create SQL Query to Display Categories from Database
