@@ -120,13 +120,13 @@ function getScores(question, breed_id, answer, results) {
     switch(question) {
         case "size_class":
             // The size class is valued as an important attiribute
-            return (10 - Math.abs((answer * 2) - results[breed_id]));
+            return (10 - Math.abs((answer * 2) - (results[breed_id] * 2)));
         case "average_purchase_price_class":
             // Question is valued as important
-            return (10 - Math.abs((answer * 2) - results[breed_id]));
+            return (10 - Math.abs((answer * 2) - (results[breed_id] * 2)));
         case "lifetime_cost_class":
             // Question is valued as important
-             return (10 - Math.abs((answer * 2) - results[breed_id]));
+             return (10 - Math.abs((answer * 2) - (results[breed_id] * 2)));
         case "watchdog_class":
             // Question is not valued as important
             return (5 - Math.abs(answer - results[breed_id]));
@@ -138,16 +138,16 @@ function getScores(question, breed_id, answer, results) {
             return (5 - Math.abs(answer - results[breed_id]));
         case "incredibly_kid_friendly_class":
             // Question is valued as important
-            return (10 - Math.abs((answer * 2) - results[breed_id]));
+            return (10 - Math.abs((answer * 2) - (results[breed_id] * 2)));
         case "good_for_novice_owners":
             // Question is valued as important. Question also inverted
-            return (Math.abs((answer * 2) - results[breed_id]) + 1);
+            return (Math.abs((answer * 2) - (results[breed_id] * 2)) + 1);
         case "exercise_needs_class":
             // Question is not valued as important
             return (5 - Math.abs(answer - results[breed_id]));
         case "apartment_living_class":
             // Question is valued as important and also question inverted
-            return (Math.abs((answer * 2) - results[breed_id]) + 1);
+            return (Math.abs((answer * 2) - (results[breed_id] * 2)) + 1);
         case "dog_friendly_class":
             // Question is not valued as important
             return (5 - Math.abs(answer - results[breed_id]));
