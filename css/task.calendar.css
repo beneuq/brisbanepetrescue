@@ -314,6 +314,12 @@
     background-color: var(--dog-color);
 }
 
+@media only screen and (max-width:768px) {
+    #calendar {
+        width: 350px;
+    }
+}
+
 /* Animations are cool!  */
 @-webkit-keyframes moveFromTopFade {
     from { opacity: .3; height:0px; margin-top:0px; -webkit-transform: translateY(-100%); }
