@@ -79,11 +79,10 @@
                         }
                     ?>
                 </table>
-                
-            <!-- Pet Overview Table -->
-            <?php include "partials/mypets-pet-table.php";?>    
-
             </div>
+            <!-- Pet Overview Table -->
+            <?php include "partials/mypets-pet-table.php";?>  
+
             <div class="task-set2">
             <h2 class="tasks-txt">Reminders</h2>
                 <?php include "partials/task-calendar.php";?>
