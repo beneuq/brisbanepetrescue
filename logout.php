@@ -21,8 +21,8 @@
 <!-- import menu -->
 <?php include('partials/menu.php'); ?>
 
-<div class="wrapper">
-    <fieldset class="input-card">
+<div class="wrapper container">
+    <fieldset id="logout" class="input-card">
         <legend>You have been logged out of your account</legend>
         <div class="form-group">
             <p>Redirecting to homepage in <span id="remaining-secs">3 </span> seconds...</p>
