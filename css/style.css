@@ -884,6 +884,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    margin-bottom: 50px;
   }
   
 .tasks  td, .tasks th {
@@ -904,16 +905,14 @@ h1 {
 
 .task-set {
     float: left;
-    padding-right: 10%;
     padding-left: 10%;
     margin-bottom: 50px;
     margin-top: 25px;
-    width: 50%;
+    width: 60%;
 }
 
 .task-set2 {
     padding-right: 10%;
-    padding-left: 10%;
     margin-bottom: 50px;
     margin-top: 25px;
     float: right;
@@ -927,7 +926,7 @@ h1 {
 }
 
 .tasks-txt {
-    text-align: center;
+    text-align: left;
     margin-top: 10px;
     margin-bottom: 10px;
 }
