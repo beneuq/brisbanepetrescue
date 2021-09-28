@@ -905,16 +905,14 @@ h1 {
 
 .task-set {
     float: left;
-    padding-right: 10%;
     padding-left: 10%;
     margin-bottom: 50px;
     margin-top: 25px;
-    width: 50%;
+    width: 60%;
 }
 
 .task-set2 {
     padding-right: 10%;
-    padding-left: 10%;
     margin-bottom: 50px;
     margin-top: 25px;
     float: right;
