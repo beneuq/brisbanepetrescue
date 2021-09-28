@@ -84,7 +84,7 @@
                 </table>
 
             </div>
-            <div class="task-set">
+            <div class="task-set2">
                 <h2 class="tasks-txt">Recommendations</h2>
                 <table class="tasks">
                         <tr>

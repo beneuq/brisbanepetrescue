@@ -895,6 +895,14 @@ h1 {
 }
 
 .task-set {
+    float: left;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+.task-set2 {
     padding-right: 10%;
     padding-left: 10%;
     margin-bottom: 50px;
