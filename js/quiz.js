@@ -16,7 +16,7 @@ for (let i = 0; i < answerSliders.length; i++) {
     answerSliders[i].value = 3;
     // Different default for toggle button
     if (answerSliders[i].classList.contains("quizToggle")) {
-        answerSliders[i].step = 5;
+        answerSliders[i].step = 4;
         answerSliders[i].value = 1;
     }
     // Assign function to update scores if slider is moved
