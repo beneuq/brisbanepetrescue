@@ -1148,10 +1148,6 @@ h1 {
         overflow-x: hidden;
     } */
 
-    .breeds-table {
-        display: none;
-    }
-
     .logo {
         width: 80%;
         float: none;

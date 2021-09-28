@@ -62,7 +62,7 @@
 
                 <h2 class="tasks-txt">Reminders</h2>
                 <?php include "partials/task-calendar.php";?>
-                <h3 class="tasks-txt">Next 2 weeks</h3>
+                <h2 class="tasks-txt">Next 2 weeks</h2>
                 <table class="tasks">
                     <tr>
                         <th>Event</th>
