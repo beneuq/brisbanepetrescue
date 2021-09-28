@@ -252,9 +252,13 @@ button {
 
 #bottom-nav li {
     text-align: center;
+    transition: 0.3s;
+}
+
+#bottom-nav a {
+    display: block;
     padding-top: 10px;
     padding-bottom: 10px;
-    transition: 0.3s;
 }
 
 #bottom-nav li:hover {
