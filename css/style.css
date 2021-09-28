@@ -1458,6 +1458,10 @@ h1 {
         margin-bottom: 5%;
     }
 
+    .input-card {
+        min-width: 90%;
+    }
+
     .wrapper {
         width: auto;
         max-width: 90%;
