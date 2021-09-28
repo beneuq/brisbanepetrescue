@@ -890,10 +890,8 @@ h1 {
 }
 
 .task-set {
-    width: 50%;
-    padding-right: 50px;
-    padding-left: 50px;
-    float: left;
+    padding-right: 10%;
+    padding-left: 10%;
     margin-bottom: 50px;
     margin-top: 25px;
 }
