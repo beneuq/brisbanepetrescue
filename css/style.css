@@ -716,6 +716,14 @@ footer a:hover {
 
 
 /* LOGIN */
+#login {
+    width: 30%;
+}
+
+#login, #contact {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .wrapper input{
     width: 100%;
@@ -744,9 +752,8 @@ footer a:hover {
 .wrapper {
     color: black;
     margin: auto;
-    margin-top: 200px;
-    margin-bottom: 200px;
-    padding: 1em 2em;
+    margin-top: 80px;
+    margin-bottom: 80px;
     border: 0;
     border-radius: 10px;
 }
@@ -826,12 +833,13 @@ h1 {
 }
 
 #contact {
-    max-width: 700px;
-    margin: 0 auto;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    justify-content: center;
-    
+    max-width: 700px;   
+}
+
+#contact .input-card {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .input-card legend {

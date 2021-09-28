@@ -63,8 +63,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
 
-        <div class="wrapper"> 
-            <fieldset class="input-card">
+        <div class="wrapper container"> 
+            <fieldset id="login" class="input-card">
                 <legend>Login</legend>
                 <div class="form-group">
                     <?php
