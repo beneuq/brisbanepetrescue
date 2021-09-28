@@ -70,32 +70,32 @@ function updateScores(slider, answerNA) {
             const inverted_slider =  slider.classList.contains("quizInvert");
             if (currentNA == false) {
                 // Call the function that takes care of the calculations
-                breed_scores[breed_id] += getScores(question, breed_id, answer, results);
+                // breed_scores[breed_id] += getScores(question, breed_id, answer, results);
 
-                // // Whether the slider is inverted to the actual sql data (5<->1, 4<->2)
-                // if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
-                //     // breed_scores[breed_id] += Math.abs(answer - results[breed_id]) + 1;
+                // Whether the slider is inverted to the actual sql data (5<->1, 4<->2)
+                if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
+                    breed_scores[breed_id] += Math.abs(answer - results[breed_id]) + 1;
                     
-                // } else {
-                //     // breed_scores[breed_id] += (5 - Math.abs(answer - results[breed_id]));
-                // }
+                } else {
+                    breed_scores[breed_id] += (5 - Math.abs(answer - results[breed_id]));
+                }
             }   
 
             // Check if NA was only recently ticked cause if it was, we need to remove previous scores
             if (previousNA == false) {
                 // Also revert the score changes made by the last selected answer
                 // Call the function that takes care of the calculations
-                breed_scores[breed_id] -= getScores(question, breed_id, previousAnswer, results);
+                // breed_scores[breed_id] -= getScores(question, breed_id, previousAnswer, results);
 
-                // if (previousAnswer) { //todo remove false
-                //     if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
-                //         // breed_scores[breed_id] -= (Math.abs(previousAnswer - results[breed_id]) + 1);
+                if (previousAnswer) { //todo remove false
+                    if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
+                        breed_scores[breed_id] -= (Math.abs(previousAnswer - results[breed_id]) + 1);
                         
 
-                //     } else {
-                //         // breed_scores[breed_id] -= (5 - Math.abs(previousAnswer - results[breed_id]));
-                //     }
-                // }
+                    } else {
+                        breed_scores[breed_id] -= (5 - Math.abs(previousAnswer - results[breed_id]));
+                    }
+                }
             }
             // Update the cookie
             setCookie("breed_scores", JSON.stringify(breed_scores), 1);
