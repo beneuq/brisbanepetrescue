@@ -86,6 +86,8 @@
             <div class="task-set2">
             <h2 class="tasks-txt">Reminders</h2>
                 <?php include "partials/task-calendar.php";?>
+            </div>
+            <div class="task-set3"> 
                 <h2 class="tasks-txt">Recommendations</h2>
                 <table class="tasks">
                         <tr>

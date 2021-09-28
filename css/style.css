@@ -907,6 +907,14 @@ h1 {
     padding-left: 10%;
     margin-bottom: 50px;
     margin-top: 25px;
+    float: right;
+}
+
+.task-set3 {
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-bottom: 50px;
+    margin-top: 25px;
 }
 
 .tasks-txt {
