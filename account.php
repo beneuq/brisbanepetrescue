@@ -10,7 +10,6 @@
         <?php 
         $page_title = 'My Account';
         include('partials/head.php'); 
-        $active_home = 'active';
         ?>
     </head>
     <body>
