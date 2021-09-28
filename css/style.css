@@ -898,11 +898,19 @@ h1 {
 .tasks th {
     padding-top: 12px;
     padding-bottom: 12px;
-    background-color: #8b128f;
+    background-color: #4A0F78;
     color: white;
 }
 
 .task-set {
+    float: left;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+.task-set2 {
     padding-right: 10%;
     padding-left: 10%;
     margin-bottom: 50px;
@@ -1155,10 +1163,6 @@ h1 {
     /* *{
         overflow-x: hidden;
     } */
-
-    .breeds-table {
-        display: none;
-    }
 
     .logo {
         width: 80%;

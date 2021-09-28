@@ -194,7 +194,7 @@
     position: relative;
     width: 420px;
     height: 75px;
-    background: rgb(74, 15, 120);
+    background-color: #4A0F78;
     margin-top: 5px;
     border-radius: 4px;
 }
@@ -316,7 +316,12 @@
 
 @media only screen and (max-width:768px) {
     #calendar {
-        width: 350px;
+        width: 300px;
+        height: 750px;
+    }
+
+    .header {
+        width: 300px;
     }
 }
 
