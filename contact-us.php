@@ -15,7 +15,7 @@
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
 
-        <div id="contact-bg" class="container">
+        <div id="contact-bg" class="container wrapper">
             <form id="contact" onsubmit="contactSubmit()">
                 <fieldset class="input-card">
                     <legend>
