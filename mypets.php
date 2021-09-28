@@ -80,7 +80,8 @@
                     ?>
                 </table>
                 
-                
+            <!-- Pet Overview Table -->
+            <?php include "partials/mypets-pet-table.php";?>    
 
             </div>
             <div class="task-set2">
@@ -118,9 +119,6 @@
                     <tr><th>Dog Groomers</th><th>Location</th><th>Rating</th></tr>
                 </table>
             </div>
-
-            <!-- Pet Overview Table -->
-            <?php include "partials/mypets-pet-table.php";?>
 
             <div class="clearfix"></div>
         </div>
