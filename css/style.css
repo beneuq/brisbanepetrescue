@@ -716,11 +716,11 @@ footer a:hover {
 
 
 /* LOGIN */
-#login, #create-account {
+#login, #logout, #create-account {
     width: 30%;
 }
 
-#login, #contact, #create-account {
+#login,#logout, #contact, #create-account {
     margin-left: auto;
     margin-right: auto;
 }
@@ -1235,7 +1235,7 @@ h1 {
         justify-content: space-between;
     }
 
-    #login, #create-account, #contact .input-card {
+    #login, #logout, #create-account, #contact .input-card {
         width: 100%;
     }
 
