@@ -660,7 +660,7 @@ button {
     padding: 0 10px;
 }
 
-.quizSliderLabels p {
+.quizSliderLabels span {
     position: relative;
     display: flex;
     justify-content: center;
@@ -671,6 +671,15 @@ button {
     line-height: 40px;
     margin: 0 0 20px 0;
 }
+
+.quizSliderLabels p {
+     padding-top: 5px;
+     color: grey;
+     text-align: center;
+     line-height: 1.2;
+     font-size: 14px;
+}
+
 
 /* FOOTER */
 footer {
@@ -753,7 +762,7 @@ footer a:hover {
     color: black;
 }
 
-.input-card p {
+.input-card p, .input-card span {
     margin-bottom: 20px;
 }
 
@@ -810,10 +819,6 @@ h1 {
     box-shadow: 0 0 10px rgba(128, 128, 128, 0.411);
     /* Ensures the auto-scroll JS function scrolls to a spot comfortably above the div */
     scroll-margin-top: 55px;
-    width: 30%;
-    min-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #contact input:focus {
@@ -928,8 +933,8 @@ h1 {
     font-size: 1.2em;
 }
 
-#personality-quiz-results {
-    /* display: none; */
+#personality-quiz .input-card {
+    padding-bottom: 50px;
 }
 
 
@@ -1194,8 +1199,12 @@ h1 {
         display: none!important;
     }
 
-    .hero-content p, p {
+    .hero-content p, p  {
         width: 100%;
+    }
+
+    .quizSliderLabels p:nth-child(odd) {
+        width: initial;
     }
 
     .btn-group {

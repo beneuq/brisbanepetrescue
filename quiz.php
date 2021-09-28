@@ -51,11 +51,11 @@
                     <label for="question1N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-size_class">
                     <div class="quizSliderLabels">
-                        <p>Small</p>
-                        <p></p>
-                        <p>Medium</p>
-                        <p></p>
-                        <p>Large</p>
+                        <span><p>Small</p></span>
+                        <span></span>
+                        <span><p>Medium</p></span>
+                        <span></span>
+                        <span><p>Large</p></span>
                     </div>
                 </fieldset>
                 <!-- Question 2 -->
@@ -66,11 +66,11 @@
                     <label for="question2N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-average_purchase_price_class">
                     <div class="quizSliderLabels">
-                        <p><?php echo EMOJI_DOLLAR;?></p>
-                        <p></p>
-                        <p><?php echo str_repeat(EMOJI_DOLLAR, 2);?></p>
-                        <p></p>
-                        <p><?php echo str_repeat(EMOJI_DOLLAR, 3);?></p>
+                        <span> <p class><?php echo EMOJI_DOLLAR;?></p></span>
+                        <span> </span>
+                        <span><p><?php echo str_repeat(EMOJI_DOLLAR, 2);?></p></span>
+                        <span></span>
+                        <span><p><?php echo str_repeat(EMOJI_DOLLAR, 3);?></p></span>
                     </div>
                 </fieldset>
                 <!-- Question 3 -->
@@ -81,11 +81,11 @@
                     <label for="question3N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-lifetime_cost_class">
                     <div class="quizSliderLabels">
-                        <p><?php echo EMOJI_DOLLAR;?></p>
-                        <p></p>
-                        <p><?php echo str_repeat(EMOJI_DOLLAR, 2);?></p>
-                        <p></p>
-                        <p><?php echo str_repeat(EMOJI_DOLLAR, 3);?></p>
+                        <span><p><?php echo EMOJI_DOLLAR;?></p></span>
+                        <span></span>
+                        <span><p><?php echo str_repeat(EMOJI_DOLLAR, 2);?></p></span>
+                        <span></span>
+                        <span><p><?php echo str_repeat(EMOJI_DOLLAR, 3);?></p></span>
                     </div>
                 </fieldset>
                 <!-- Question 4 -->
@@ -96,8 +96,8 @@
                     <label for="question4N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizToggle" id="quiz-watchdog_class">
                     <div class="quizSliderLabels quizToggle">
-                        <p>No</p>
-                        <p>Yes</p>
+                        <span><p>No</p></span>
+                        <span><p>Yes</p></span>
                     </div>
                 </fieldset>
                 <!-- Question 5 -->
@@ -108,11 +108,11 @@
                     <label for="question5N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-tolerates_being_alone_class">
                     <div class="quizSliderLabels">
-                        <p>Rarely</p>
-                        <p></p>
-                        <p>Sometimes</p>
-                        <p></p>
-                        <p>Frequently</p>
+                        <span><p>Rarely</p></span>
+                        <span></span>
+                        <span><p>Sometimes</p></span>
+                        <span></span>
+                        <span><p>Very</p></span>
                     </div>
                 </fieldset>
                 <!-- Question 6 -->
@@ -123,11 +123,11 @@
                     <label for="question6N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-potential_for_playfulness_class">
                     <div class="quizSliderLabels">
-                        <p>None</p>
-                        <p></p>
-                        <p>Sometimes</p>
-                        <p></p>
-                        <p>Very</p>
+                        <span><p>Rarely</p></span>
+                        <span></span>
+                        <span><p>Sometimes</p></span>
+                        <span></span>
+                        <span><p>Very</p></span>
                     </div>
                 </fieldset>
                  <!-- Question 7 -->
@@ -137,10 +137,10 @@
                     <input type="checkbox" id="question7N/A" class="N/A" name="question7N/A">
                     <label for="question7N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizToggle" id="quiz-incredibly_kid_friendly_class">
-                     <div class="quizSliderLabels quizToggle">
-                         <p>No</p>
-                         <p>Yes</p>
-                     </div>
+                    <div class="quizSliderLabels quizToggle">
+                        <span><p>No</p></span>
+                        <span><p>Yes</p></span>
+                    </div>
                 </fieldset>
                  <!-- Question 8 -->
                  <fieldset id="p-quiz-q8" class="input-card">
@@ -149,13 +149,13 @@
                     <input type="checkbox" id="question8N/A" class="N/A" name="question8N/A">
                     <label for="question8N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider quizInvert" id="quiz-good_for_novice_owners">
-                     <div class="quizSliderLabels">
-                         <p>First-time</p>
-                         <p></p>
-                         <p>Some</p>
-                         <p></p>
-                         <p>Lots</p>
-                     </div>
+                    <div class="quizSliderLabels">
+                        <span><p>First time</p></span>
+                        <span></span>
+                        <span><p>Some</p></span>
+                        <span></span>
+                        <span><p>Lots</p></span>
+                    </div>
                 </fieldset>
                  <!-- Question 9 -->
                  <fieldset id="p-quiz-q9" class="input-card">
@@ -164,13 +164,13 @@
                     <input type="checkbox" id="question9N/A" class="N/A" name="question9N/A">
                     <label for="question9N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-exercise_needs_class">
-                     <div class="quizSliderLabels">
-                         <p>Rarely</p>
-                         <p></p>
-                         <p>Sometimes</p>
-                         <p></p>
-                         <p>Frequently</p>
-                     </div>
+                    <div class="quizSliderLabels">
+                        <span><p>Rarely</p></span>
+                        <span></span>
+                        <span><p>Sometimes</p></span>
+                        <span></span>
+                        <span><p>Frequently</p></span>
+                    </div>
                 </fieldset>
                  <!-- Question 10 -->
                  <fieldset id="p-quiz-q10" class="input-card">
@@ -179,13 +179,13 @@
                     <input type="checkbox" id="question10N/A" class="N/A" name="question10N/A">
                     <label for="question10N/A"> N/A</label><br>
                     <input type="range" class="quizAnswer quizSlider quizInvert" id="quiz-apartment_living_class">
-                     <div class="quizSliderLabels">
-                         <p>Apartment</p>
-                         <p></p>
-                         <p>Mid-size</p>
-                         <p></p>
-                         <p>Big House</p>
-                     </div>
+                    <div class="quizSliderLabels">
+                        <span><p>Apartment</p></span>
+                        <span></span>
+                        <span><p>Mid-size</p></span>
+                        <span></span>
+                        <span><p>Big House</p></span>
+                    </div>
                 </fieldset>
                 <!-- Question 11 -->
                 <fieldset id="p-quiz-q11" class="input-card">
@@ -193,10 +193,12 @@
                     <h2>Do you have any other dogs?</h2>
                     <input type="checkbox" id="question11N/A" class="N/A" name="question11N/A">
                     <label for="question11N/A"> N/A</label><br>
-                    <input type="range" class="quizAnswer quizToggle" id="quiz-dog_friendly_class">
-                    <div class="quizSliderLabels quizToggle">
-                        <p>No</p>
-                        <p>Yes</p>
+                    <div>
+                        <input type="range" class="quizAnswer quizToggle" id="quiz-dog_friendly_class">
+                        <div class="quizSliderLabels quizToggle">
+                            <span><p>No</p></span>
+                            <span><p>Yes</p></span>
+                        </div>
                     </div>
                 </fieldset>
 
