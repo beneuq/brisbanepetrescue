@@ -85,6 +85,10 @@ button {
     padding: 50px 0 50px 0;
 }
 
+.pg-section-fit-content {
+    height: fit-content;
+}
+
 .small-pg-section {
     min-height: 50vh;
 }
