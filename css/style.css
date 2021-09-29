@@ -541,6 +541,46 @@ button {
     border-radius: 10px;
 }
 
+.profile-box {
+    width: 28%;
+    float: left;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--mainColor);
+
+}
+
+.profile-box form button {
+    width: 100%;
+    align-self: center;
+}
+
+.profile-box a {
+    text-align: center;
+    color: white;
+    background-color: var(--secondaryColor);
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.profile-box a:first-of-type {
+    text-decoration: underline;
+    font-size: 1.3em;
+}
+
+.profile-box img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-box p {
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
 /* Styling for breeds table on breeds.php*/
 .table-title {
     color: var(--mainColor);
@@ -1225,6 +1265,10 @@ h1 {
         margin-bottom: 10%;
     }
     .box-3 {
+        width: 100%;
+        margin: 4% auto;
+    }
+    .profile-box {
         width: 100%;
         margin: 4% auto;
     }
