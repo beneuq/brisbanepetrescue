@@ -42,51 +42,56 @@
         <div id="sqldata">
             <div class="task-set">
                 <h2 class="tasks-txt">Post-adoption</h2>
-                <table class="tasks">
-                    <tr>
-                        <th>Tasks</th>
-                        <th>Complete</th>
-                    </tr>
-                    <!-- Add rows for each post adoption task -->
-                    <?php
-                        foreach ($post_adopt_tasks as $task) {
-                            echo "
-                                <tr>
-                                    <td>{$task["text"]}</td>
-                                    <td><button onclick='complete_task(\"{$task["type"]}\", \"{$task["dog_id"]}\")'>Complete</button></td>
-                                </tr>
-                            ";
-                        }
-                    ?>
-                </table>
+                <div class="tasks-table">
+                    <table class="tasks">
+                        <tr>
+                            <th>Tasks</th>
+                            <th>Complete</th>
+                        </tr>
+                        <!-- Add rows for each post adoption task -->
+                        <?php
+                            foreach ($post_adopt_tasks as $task) {
+                                echo "
+                                    <tr>
+                                        <td>{$task["text"]}</td>
+                                        <td><button onclick='complete_task(\"{$task["type"]}\", \"{$task["dog_id"]}\")'>Complete</button></td>
+                                    </tr>
+                                ";
+                            }
+                        ?>
+                    </table>
+                </div>
                 <h2 class="tasks-txt">Next 2 weeks</h2>
-                <table class="tasks">
-                    <tr>
-                        <th>Event</th>
-                        <th>Time</th>
-                        <th>Completion</th>
-                    </tr>
-                    <!-- Add rows for each reminder -->
-                    <?php
-                        foreach ($reminders_soon as $reminder) {
-                            echo "
-                            <tr>
-                                <td class='{$reminder['cell_class']}'>{$reminder['text']}</td>
-                                <td class='{$reminder['cell_class']}'>{$reminder['date']} ({$reminder['days']} days)</td>
-                                <td class='{$reminder['cell_class']}'><button onclick='complete_task(\"{$reminder["type"]}\", \"{$reminder["dog_id"]}\")'>Complete</button></td>
-                            </tr>
-                            ";
-                        }
-                    ?>
-                </table>
-                
-                
-
+                <div class="tasks-table">
+                    <table class="tasks">
+                        <tr>
+                            <th>Event</th>
+                            <th>Time</th>
+                            <th>Completion</th>
+                        </tr>
+                        <!-- Add rows for each reminder -->
+                        <?php
+                            foreach ($reminders_soon as $reminder) {
+                                echo "
+                                <tr>
+                                    <td class='{$reminder['cell_class']}'>{$reminder['text']}</td>
+                                    <td class='{$reminder['cell_class']}'>{$reminder['date']} ({$reminder['days']} days)</td>
+                                    <td class='{$reminder['cell_class']}'><button onclick='complete_task(\"{$reminder["type"]}\", \"{$reminder["dog_id"]}\")'>Complete</button></td>
+                                </tr>
+                                ";
+                            }
+                        ?>
+                    </table>
+                </div>
             </div>
             <div class="task-set2">
             <h2 class="tasks-txt">Reminders</h2>
                 <?php include "partials/task-calendar.php";?>
             </div>
+
+            <!-- Pet Overview Table -->
+            <?php include "partials/mypets-pet-table.php";?> 
+
             <div class="task-set3"> 
                 <h2 class="tasks-txt">Recommendations</h2>
                 <table class="tasks">
@@ -118,9 +123,6 @@
                     <tr><th>Dog Groomers</th><th>Location</th><th>Rating</th></tr>
                 </table>
             </div>
-
-            <!-- Pet Overview Table -->
-            <?php include "partials/mypets-pet-table.php";?>
 
             <div class="clearfix"></div>
         </div>
