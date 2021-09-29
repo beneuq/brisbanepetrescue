@@ -1464,6 +1464,14 @@ h1 {
 		display: none;
 	}
 
+    #menuToggle-2 span:first-child {
+		transform-origin: 0 0;
+	}
+
+	#menuToggle-2 span:nth-last-child(2) {
+		transform-origin: 0 100%;
+	}
+
     #menuToggle-2 input:checked ~ span {
 		display: block;
 		width: 33px;
@@ -1478,6 +1486,8 @@ h1 {
 		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
 					background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
 					opacity 0.55s ease;
+
+        margin-left: 75%;
 	}
 
     #menuToggle-2 input:checked ~ span {
