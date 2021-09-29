@@ -1465,7 +1465,6 @@ h1 {
 	}
 
     #menuToggle-2 span {
-		display: block;
 		width: 33px;
 		height: 4px;
 		margin-bottom: 5px;
@@ -1490,6 +1489,7 @@ h1 {
 	}
 
 	#menuToggle-2 input:checked ~ span {
+        display: block;
 		opacity: 1;
 		transform: rotate(45deg) translate(-2px, -1px);
 		background: #232323;
