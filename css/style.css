@@ -240,6 +240,26 @@ button {
     justify-content: space-between;
 }
 
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+    background: #d2d2d2;
+}
+
+/* Scrollbar Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondaryColor);
+}
+
 /* MAIN MENU */
 #top-nav {
     padding-top: 40px;
@@ -884,9 +904,8 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    margin-bottom: 50px;
   }
-  
+
 .tasks  td, .tasks th {
     border: 1px solid #ddd;
     padding: 8px;
@@ -901,6 +920,9 @@ h1 {
     padding-bottom: 12px;
     background-color: #4A0F78;
     color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .task-set {
@@ -909,7 +931,7 @@ h1 {
     margin-bottom: 50px;
     margin-top: 25px;
     width: 60%;
-    height: 570px;
+    /*height: 570px;*/
 }
 
 .task-set2 {
@@ -930,6 +952,13 @@ h1 {
     text-align: left;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.tasks-table {
+    width: 100%;
+    height: 255px;
+    margin-bottom: 25px;
+    overflow: auto;
 }
 
 .regularReminder {
