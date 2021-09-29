@@ -1305,7 +1305,7 @@ h1 {
 
     #top-nav {
         padding-bottom: 20px;
-        padding-top: 10px;
+        padding-top: 20px;
     }
 
     #bottom-nav {
@@ -1410,7 +1410,7 @@ h1 {
 		display: block;
 		position: relative;
 		left: 30px;
-        top: 5px;
+        top: 10px;
 		z-index: 1;
 		-webkit-user-select: none;
 		user-select: none;
