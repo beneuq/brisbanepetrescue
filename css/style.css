@@ -548,7 +548,6 @@ button {
     display: flex;
     flex-direction: column;
     background-color: var(--mainColor);
-
 }
 
 .profile-box form button {
@@ -565,9 +564,13 @@ button {
     padding-bottom: 5px;
 }
 
+/* Styling dog name in card */
 .profile-box a:first-of-type {
-    text-decoration: underline;
     font-size: 1.3em;
+}
+
+.profile-box a:hover {
+    background-color: var(--h1Color)
 }
 
 .profile-box img {
