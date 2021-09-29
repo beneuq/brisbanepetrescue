@@ -49,23 +49,23 @@
             ");
             while($entry = mysqli_fetch_array($res)) {
             ?>
-                <div class="box-3 float-container" id='dog_id=<?php echo $entry['dog_id'];?>'>
-                    <td style='width:10%;'>
+                <div class="profile-box float-container" id='dog_id=<?php echo $entry['dog_id'];?>'>
+                    <td><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='100%'></td>
+                    <td><a href='category-dogs.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
+                    <td><a href='category-breeds.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
+                    <td><p><?php echo $entry['age'];?> years</td></p>
+                    <td><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog gender' width='7%'></td>
+                    <td><p><?php echo $entry['Shelter'];?></td></p>
+                    <td>
                         <form method='POST' action='/form_submissions/favourite_dog.php'>
                             <button type='submit' name='dog_id' value='<?php echo $entry['dog_id'];?>'>
-                                <img width='20%' src='images/icons/heart-<?php echo $entry['favourite_icon'];?>.png'
+                                <img width='10%' src='images/icons/heart-<?php echo $entry['favourite_icon'];?>.png'
                                      onmouseover='favHover(this,"<?php echo $entry['favourite_icon'];?>");'
                                      onmouseout='favUnhover(this,"<?php echo $entry['favourite_icon'];?>");'
                                 >
                             </button>
                         </form>
                     </td>
-                    <td style='width:14%;' class='dog-name'><a href='category-dogs.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
-                    <td style='width:14%;' class='breed-name'><a href='category-breeds.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
-                    <td style='width:14%;'><?php echo $entry['age'];?> years</td>
-                    <td style='width:10%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%'></td>
-                    <td style='width:18%;'><?php echo $entry['Shelter'];?></td>
-                    <td style='width:22%;'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='50%'></td>
                 </div>
             <?php
                 }
