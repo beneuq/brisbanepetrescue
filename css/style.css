@@ -1496,6 +1496,8 @@ h1 {
 		text-decoration: none;
 		color: #232323;
 		transition: color 0.3s ease;
+        padding: 10px 0;
+        font-size: 22px;
 	}
 
 	#menuToggle-2 input {
