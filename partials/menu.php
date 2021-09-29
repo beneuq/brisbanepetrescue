@@ -5,6 +5,9 @@
 
     <nav role="navigation"> 
         <div id="menuToggle-2">
+            <span></span>
+            <span></span>
+            <span></span>
             <input type="checkbox" />
             <img src="/images/account-icon.png" alt="Account icon" width="33px" height="33px" id="mobileLogin">
             <ul id="menu-2">
