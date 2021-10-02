@@ -1249,6 +1249,11 @@ h1 {
         overflow-x: hidden;
     } */
 
+    .task-set {
+        padding-right: 10%;
+        width: 100%;
+    }
+
     .logo {
         width: 80%;
         float: none;
