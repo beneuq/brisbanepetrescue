@@ -1466,7 +1466,7 @@ h1 {
 	}
 
     #menuToggle-2 input:checked ~ img {
-		display: none;
+		opacity: 0;
 	}
 
     #menuToggle-2 span {
