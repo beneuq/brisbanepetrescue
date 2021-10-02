@@ -6,13 +6,16 @@
     <nav role="navigation"> 
         <div id="menuToggle-2">
             
+
             <input type="checkbox" />
-
-            <span></span>
-            <span></span>
-            <span></span>
-
+            
             <img src="/images/account-icon.png" alt="Account icon" width="33px" height="33px" id="mobileLogin">
+            
+            <span></span>
+            <span></span>
+            <span></span>
+
+           
             <ul id="menu-2">
                 <?php
                     $account_page = isset($_SESSION['logged_in']) ? "/account.php" : "/login.php";
