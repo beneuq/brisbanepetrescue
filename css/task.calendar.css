@@ -316,7 +316,15 @@
 @media only screen and (max-width:768px) {
     #calendar {
         width: 300px;
-        height: 750px;
+        height: 500px;
+    }
+
+    .day-number {
+        font-size: 15px;
+    }
+
+    .day {
+        width: 40px;
     }
 
     .header {
