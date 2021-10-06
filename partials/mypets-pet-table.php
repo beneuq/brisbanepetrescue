@@ -68,8 +68,8 @@
             }
             ?>
             <tr id='dog_id=<?php echo $entry['dog_id'];?>'>
-            <td style='width:5%;' class='dog-name'><a href='category-dogs.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
-            <td style='width:10%;' class='breed-name'><a href='category-breeds.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
+            <td style='width:5%;' class='dog-name'><a href='dog-profile.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
+            <td style='width:10%;' class='breed-name'><a href='breed-profile.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
             <td style='width:5%;'><?php echo $entry['age'];?></td>
             <td style='width:5%;'><?php echo $entry['birthday'];?></td>
             <td style='width:10%;'><?php echo $entry['adoption_date'];?></td>

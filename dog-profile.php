@@ -18,9 +18,9 @@
     <?php
     //CHeck whether id is passed or not
     if (isset($_GET['dog_id'])) {
-        //Category id is set and get the id
+        // Breed id is set and get the id
         $dog_id = $_GET['dog_id'];
-        // Get the CAtegory Title Based on Category ID
+        // Get the Breed name Title Based on Breed ID
         $sql = "SELECT name as title FROM dogs WHERE dog_id=$dog_id";
 
         //Execute the Query
@@ -31,17 +31,16 @@
         //Get the TItle
         $dog_title = $row['title'];
     } else {
-        //CAtegory not passed
         //Redirect to Home page
         header('location:' . SITEURL);
     }
     ?>
 
-    <section class="category-section">
+    <section class="profile-section">
         <div class="container">
             <?php
 
-            //Create SQL Query to Get foods based on Selected CAtegory
+            //Create SQL Query to Get dog breeds
             $sql2 = "SELECT path, alt_text FROM dog_breeds AS b, breed_image as i, dogs as d WHERE b.breed_id = i.breed_id AND b.breed_id=d.breed_id AND d.dog_id=$dog_id ORDER BY main_image DESC";
 
             //Execute the Query
@@ -50,14 +49,14 @@
             //Count the Rows
             $count2 = mysqli_num_rows($res2);
 
-            //CHeck whether food is available or not
+            //CHeck whether data is available or not
             if ($count2 > 0) {
             ?>
                 <div class="glide">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
                             <?php
-                            //Food is Available
+                            // Data is Available
                             while ($row2 = mysqli_fetch_assoc($res2)) {
                                 $image_name = $row2['path'];
                                 $image_alt = $row2['alt_text'];
@@ -87,10 +86,10 @@
                 </script>
 
                 <!-- description if exists -->
-                <div class="category-info">
+                <div class="profile-info">
                     <?php
 
-                    //Create SQL Query to Get foods based on Selected CAtegory
+                    //Create SQL Query to Get dogs
                     $sql3 = "SELECT d.name as d_name, Breed, age, gender, owner_id, type_of_dog, popularity_class, good_for_novice_owners, size_class, height_low, height_high, weight_low, weight_high, adult_cal_intake_low, adult_cal_intake_high, average_lifespan, b.breed_id as breed_id, s.name as s_name, address, phone, hours, email FROM dogs as d, dog_breeds as b, shelters as s WHERE d.breed_id = b.breed_id AND s.shelter_id = d.shelter_id AND d.dog_id=$dog_id";
 
                     //Execute the Query
@@ -100,7 +99,7 @@
                     $row3 = mysqli_fetch_assoc($res3);
                     ?>
                     <!-- heading -->
-                    <h2 class="category-title center-txt"><?php echo $row3['d_name']; ?>'s Adoption Profile</h2>
+                    <h2 class="profile-title center-txt"><?php echo $row3['d_name']; ?>'s Adoption Profile</h2>
                     
                     <div class="dog-information-boxes">
                         <div class="dog-info-box">
@@ -126,7 +125,7 @@
                                 <?php echo $row3['adult_cal_intake_low'] . "cals - "
                                     . $row3['adult_cal_intake_high'] . "cals"; ?></p>
                             <p>Average Lifespan: <?php echo $row3['average_lifespan']; ?> years</p>
-                            <p><a href="/category-breeds.php?breed_id=<?php echo $row3['breed_id']; ?>">More breed info</a></p>
+                            <p><a href="/breed-profile.php?breed_id=<?php echo $row3['breed_id']; ?>">More breed info</a></p>
                         </div>
                             <div class="dog-info-box">
                             <h4>Shelter Info</h4>
@@ -151,8 +150,6 @@
                 <div class="clearfix"></div>
         </div>
     </section>
-    <!-- fOOD Menu Section Ends Here -->
-
     <?php include('partials/footer.php'); ?>
 </body>
 

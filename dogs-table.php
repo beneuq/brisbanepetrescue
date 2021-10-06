@@ -73,8 +73,8 @@
                         </button>
                     </form>
                 </td>
-                <td style='width:14%;' class='dog-name'><a href='category-dogs.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
-                <td style='width:14%;' class='breed-name'><a href='category-breeds.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
+                <td style='width:14%;' class='dog-name'><a href='dog-profile.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
+                <td style='width:14%;' class='breed-name'><a href='breed-profile.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
                 <td style='width:14%;'><?php echo $entry['age'];?> years</td>
                 <td style='width:10%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%'></td>
                 <td style='width:18%;'><?php echo $entry['Shelter'];?></td>

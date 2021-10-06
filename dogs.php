@@ -50,12 +50,12 @@
             while($entry = mysqli_fetch_array($res)) {
             ?>
                 <div class="profile-box float-container" id='dog_id=<?php echo $entry['dog_id'];?>'>
-                    <td><a href='category-dogs.php?dog_id=<?php echo $entry['dog_id'];?>'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='100%'></a></td>
-                    <td style="vertical-align: middle;"><a class='dog-card-name' href='category-dogs.php?dog_id=<?php echo $entry['dog_id'];?>'><p>
+                    <td><a href='dog-profile.php?dog_id=<?php echo $entry['dog_id'];?>'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='100%'></a></td>
+                    <td style="vertical-align: middle;"><a class='dog-card-name' href='dog-profile.php?dog_id=<?php echo $entry['dog_id'];?>'><p>
                             <?php echo $entry['Dog'];?>
                             <img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog gender' width='5%'>
                             </p></a></td>
-                    <td><a href='category-breeds.php?breed_id=<?php echo $entry['breed_id'];?>'>
+                    <td><a href='breed-profile.php?breed_id=<?php echo $entry['breed_id'];?>'>
                             <?php echo $entry['age'];?> year old <?php echo $entry['Breed'];?>
                         </a></td>
                     <td></td>

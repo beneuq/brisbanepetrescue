@@ -42,7 +42,7 @@
                     $image_alt = $row['alt_text'];
                     ?>
 
-                    <a href="/category-breeds.php?breed_id=<?php echo $id; ?>">
+                    <a href="/breed-profile.php?breed_id=<?php echo $id; ?>">
                         <div class="box-3 float-container">
                             <?php
                             //Check whether Image is available or not
