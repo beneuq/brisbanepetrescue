@@ -36,7 +36,7 @@
     -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     width: 420px;
-    height: 570px;
+    height: 569px;
     overflow: hidden;
 }
 
@@ -127,7 +127,7 @@
 .day {
     display: inline-block;
     width: 60px;
-    padding: 10px;
+    padding: 5px 10px;
     text-align: center;
     vertical-align: top;
     cursor: pointer;
