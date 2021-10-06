@@ -91,7 +91,7 @@
                     <?php
 
                     //Create SQL Query to Get foods based on Selected CAtegory
-                    $sql3 = "SELECT d.name as d_name, Breed, age, gender, type_of_dog, popularity_class, good_for_novice_owners, size_class, height_low, height_high, weight_low, weight_high, adult_cal_intake_low, adult_cal_intake_high, average_lifespan, b.breed_id as breed_id, s.name as s_name, address, phone, hours, email FROM dogs as d, dog_breeds as b, shelters as s WHERE d.breed_id = b.breed_id AND s.shelter_id = d.shelter_id AND d.dog_id=$dog_id";
+                    $sql3 = "SELECT d.name as d_name, Breed, age, gender, owner_id, type_of_dog, popularity_class, good_for_novice_owners, size_class, height_low, height_high, weight_low, weight_high, adult_cal_intake_low, adult_cal_intake_high, average_lifespan, b.breed_id as breed_id, s.name as s_name, address, phone, hours, email FROM dogs as d, dog_breeds as b, shelters as s WHERE d.breed_id = b.breed_id AND s.shelter_id = d.shelter_id AND d.dog_id=$dog_id";
 
                     //Execute the Query
                     $res3 = mysqli_query($conn, $sql3);
@@ -135,9 +135,17 @@
                             <p>Phone: <?php echo $row3['phone']; ?></p>
                             <p>Email: <a href="mailto:<?php echo $row3['email']; ?>"><?php echo $row3['email']; ?></a></p>
                             <p>Hours: <?php echo $row3['hours']; ?></p>
-                            <p><a href="https://form.jotform.com/212502680325043?<?php echo str_replace(' ', '%20', "shelterName=" . $row3['s_name'] . "&shelterEmail=" . $row3['email'] . "&dogId=" . $dog_id . "&dogName=" . $row3['d_name']); ?>">Apply to Adopt</a></p>
-                            <p><a href="/form_submissions/adopt_pet.php?dog_id=<?php echo $dog_id;?>">Adopt Immediately</a></p>
-                        </div>
+
+                            <!-- Show adoption buttons only if dog not adopted yet -->
+                            <?php if (is_null($row3["owner_id"])) { ?>
+                                <p><a href="https://form.jotform.com/212502680325043?<?php echo str_replace(' ', '%20', "shelterName=" . $row3['s_name'] . "&shelterEmail=" . $row3['email'] . "&dogId=" . $dog_id . "&dogName=" . $row3['d_name']); ?>">Apply to Adopt</a></p>
+                                <p><a href="/form_submissions/adopt_pet.php?dog_id=<?php echo $dog_id;?>">Adopt Immediately</a></p>
+                            <?php } else if (!isset($_SESSION['user_id']) || $row3["owner_id"] != get_userid()) { ?>
+                                <p>Sorry, <?php echo $row3['d_name'];?> has already been adopted.</p>
+                            <?php } else { ?>
+                                <p><?php echo $row3['d_name'];?> belongs to you!</p>
+                            <?php }; ?>
+                            </div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
