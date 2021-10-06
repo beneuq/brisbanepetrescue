@@ -19,7 +19,7 @@
     <h1 class="table-title">Dog Information by Breed</h1>
 
     <!-- Adding the filter section -->
-    <div id="filters" style="display: none">
+    <div id="filters">
         <?php
         $filterTable = "breed_filters";
         $table = "dog_breeds d";

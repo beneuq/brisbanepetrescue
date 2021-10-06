@@ -584,6 +584,45 @@ button {
     text-align: center;
 }
 
+/* Styling for filters */
+#filters {
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Currently selected filters */
+.filter-current {
+    min-width: 160px;
+}
+
+/* Filter category table */
+.filter-1 {
+    border: 1px solid black;
+    position: relative;
+}
+
+/* Filter category heading */
+.filter-2 {
+}
+
+/* Filter category table elements */
+.filter-3 {
+    display: none;
+    min-width: 100px;
+}
+
+.filter-1:hover .filter-3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#filters th {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 /* Styling for breeds table on breeds.php*/
 .table-title {
     color: var(--mainColor);

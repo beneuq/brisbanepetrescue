@@ -16,3 +16,6 @@ A list of tasks to be done by anyone who needs work to do.
     - Validate user inputs in login form
     - Validate user inputs in account creation form
     - Maybe start using password hashes? Low priority though
+    - Add all filter-3 items in filter-menu.php into one div per category (e.g. filter-3 items under 'Popularity' are in a div)
+    - Change spelling of 'Playfull' in database
+    - Bug: 'Exercise needs' displays twice when selected in breed filters

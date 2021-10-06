@@ -119,7 +119,7 @@ $whereFiltersForFilter = $whereFilters;
 <!-- Add the current filters to be selected and removed -->
 <?php
 if (!empty($filters)) {
-    $existing = "<table>
+    $existing = "<table class='filter-current'>
 	<colgroup span=\"2\"></colgroup>
 	<tr>
 		<th colspan=\"2\" scope=\"colgroup\">Current Filters</th>
@@ -148,18 +148,17 @@ while ($row = mysqli_fetch_assoc($res)) {
         " as field_value, COUNT(*) as field_count FROM $table " . $whereFiltersForFilter .
         "GROUP BY " . $row['field_name']);
     if (!empty($row2 = mysqli_fetch_assoc($res2))) {
-        $newFilters .= "<table>
-        <colgroup span=\"2\"></colgroup>
-        <tr>
+        $newFilters .= "<table class='filter-1'>
+        <tr class='filter-2'>
             <th colspan=\"2\" scope=\"colgroup\">" . $row['display_name'] . "</th>
         </tr>";
-        $newFilters .= "<tr><th scope=\"col\"><a href=\"";
+        $newFilters .= "<tr class='filter-3'><th scope=\"col\"><a href=\"";
         $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
         $newFilters .= "\">" . $row2['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
         while ($row2 = mysqli_fetch_assoc($res2)) {
-            $newFilters .= "<tr><th scope=\"col\"><a href=\"";
+            $newFilters .= "<tr class='filter-3'><th scope=\"col\"><a href=\"";
             $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
-            $newFilters .= "\">" . $row2['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
+            $newFilters .= "\">" . $row2['field_value'] . "</a></th>" . "<th  class='yes'scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
         }
         $newFilters .= "</table>";
     }
