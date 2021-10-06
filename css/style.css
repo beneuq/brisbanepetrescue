@@ -565,7 +565,7 @@ button {
 }
 
 /* Styling dog name in card */
-.profile-box a:first-of-type {
+.dog-card-name {
     font-size: 1.3em;
 }
 
