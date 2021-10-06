@@ -62,7 +62,7 @@
                     </table>
                 </div>
                 <!-- Popup form appears here if opened by task completion -->
-                <div id="popup-form" class="loginPopup"></div>
+                <div id="popup-form-container" class="popup-div"></div>
 
                 <h2 class="tasks-txt">Next 2 weeks</h2>
                 <div class="tasks-table">

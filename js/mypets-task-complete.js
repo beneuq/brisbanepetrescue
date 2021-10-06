@@ -19,7 +19,7 @@ function complete_task(taskType, dogID) {
         case "council_registration_id":
             let xmlReq = new XMLHttpRequest();
             xmlReq.onload = function () {
-                document.getElementById('popup-form').innerHTML = this.responseText;
+                document.getElementById('popup-form-container').innerHTML = this.responseText;
             };
             xmlReq.open("get", "/partials/mypets-task-council.php?task_type="+taskType+"&dog_id="+dogID, true);
             xmlReq.send();
@@ -28,7 +28,7 @@ function complete_task(taskType, dogID) {
         case "tick_meds_start":
             let xmlReq2 = new XMLHttpRequest();
             xmlReq2.onload = function () {
-                document.getElementById('popup-form').innerHTML = this.responseText;
+                document.getElementById('popup-form-container').innerHTML = this.responseText;
             };
             xmlReq2.open("get", "/partials/mypets-task-medication.php?task_type="+taskType+"&dog_id="+dogID, true);
             xmlReq2.send();

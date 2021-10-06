@@ -1246,37 +1246,39 @@ h1 {
 }
 
 /* Popup form styling */
-.loginPopup {
+.popup-div {
     position: relative;
     text-align: center;
     width: 100%;
 }
-.formPopup {
-    /*display: none;*/
+.popup-form-container {
     position: fixed;
-    left: 45%;
-    top: 45%;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, 5%);
-    border: 3px solid #999999;
-    z-index: 9;
+    border-radius: 25px;
+    border: 3px solid var(--mainColor);
+    box-shadow: 0 0 50px -10px #000;
+    z-index: 99;
 }
-.formContainer {
+.popup-form {
     max-width: 300px;
-    padding: 20px;
+    padding: 10px;
+    border-radius: 25px;
     background-color: #fff;
 }
-.formContainer input {
-    width: 100%;
+.popup-form input {
+    width: 75%;
     padding: 15px;
     margin: 5px 0 20px 0;
     border: none;
     background: #eee;
 }
-.formContainer input:focus {
+.popup-form input:focus {
     background-color: #ddd;
     outline: none;
 }
-.formContainer .btn {
+.popup-form .btn {
     padding: 12px 10px;
     border: none;
     background-color: var(--secondaryColor);
@@ -1286,14 +1288,12 @@ h1 {
     margin-bottom: 15px;
     opacity: 0.8;
 }
-.formContainer .cancel {
+.popup-form .cancel {
     background-color: var(--h1Color);
 }
-.formContainer .btn:hover,
-.openButton:hover {
+.popup-form .btn:hover {
     opacity: 1;
 }
-
 
 /* CSS for Mobile Size or Smaller Screen */
 

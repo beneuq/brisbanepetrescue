@@ -23,8 +23,8 @@ if (isset($_GET['task_type']) && isset($_GET['dog_id'])) {
     }
     ?>
 
-<div class="formPopup" id="popupForm">
-    <form method="POST" action="../form_submissions/complete-task.php" class="formContainer">
+<div class="popup-form-container" id="popupForm">
+    <form method="POST" action="../form_submissions/complete-task.php" class="popup-form">
         <h3>Medication Reminder Setup for <?php echo $row['name'];?></h3>
         <label for="days">Days between <?php echo $medication_type;?> doses: </label>
         <input type="number" id="days" name="task_data" value=30>

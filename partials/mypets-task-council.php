@@ -12,8 +12,8 @@ if (isset($_GET['task_type']) && isset($_GET['dog_id'])) {
     $row = mysqli_fetch_assoc($res);
     ?>
 
-<div class="formPopup" id="popupForm">
-    <form method="POST" action="../form_submissions/complete-task.php" class="formContainer">
+<div class="popup-form-container" id="popupForm">
+    <form method="POST" action="../form_submissions/complete-task.php" class="popup-form">
         <h3>Council Registration</h3>
         <label for="council-id">Enter <?php echo $row['name'];?>'s Registration ID (Numbers only)</label><br>
         <input type="text" id="council-id" name="task_data">
