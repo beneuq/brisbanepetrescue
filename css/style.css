@@ -1245,6 +1245,55 @@ h1 {
     display: none;
 }
 
+/* Popup form styling */
+.loginPopup {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.formPopup {
+    /*display: none;*/
+    position: fixed;
+    left: 45%;
+    top: 45%;
+    transform: translate(-50%, 5%);
+    border: 3px solid #999999;
+    z-index: 9;
+}
+.formContainer {
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+}
+.formContainer input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #eee;
+}
+.formContainer input:focus {
+    background-color: #ddd;
+    outline: none;
+}
+.formContainer .btn {
+    padding: 12px 10px;
+    border: none;
+    background-color: var(--secondaryColor);
+    color: #fff;
+    cursor: pointer;
+    width: 45%;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+.formContainer .cancel {
+    background-color: var(--h1Color);
+}
+.formContainer .btn:hover,
+.openButton:hover {
+    opacity: 1;
+}
+
 
 /* CSS for Mobile Size or Smaller Screen */
 

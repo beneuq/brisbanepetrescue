@@ -6,6 +6,10 @@ enforce_login();
 // Completes a task or reminder (behaviour depends on task_type parameter)
 if (isset($_GET['task_type']) && isset($_GET['dog_id'])) {
     $user_id = get_userid();
+    // Get dog's name from its ID
+    $sql = "SELECT name FROM dogs WHERE dog_id={$_GET['dog_id']}";
+    $res = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($res);
 
     switch ($_GET['task_type']) {
         case "worm_meds_start":
@@ -19,29 +23,20 @@ if (isset($_GET['task_type']) && isset($_GET['dog_id'])) {
     }
     ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<div class="formPopup" id="popupForm">
+    <form method="POST" action="../form_submissions/complete-task.php" class="formContainer">
+        <h3>Medication Reminder Setup for <?php echo $row['name'];?></h3>
+        <label for="days">Days between <?php echo $medication_type;?> doses: </label>
+        <input type="number" id="days" name="task_data" value=30>
+        <input type="hidden" name="task_type" value="<?php echo $_GET['task_type']; ?>">
+        <input type="hidden" name="dog_id" value="<?php echo $_GET['dog_id']; ?>">
+        <input type="hidden" name="close_on_submit" value="true">
+        <br>
+        <button type="button" class="btn cancel" onclick="location.reload()">Cancel</button>
+        <input type="submit" class="btn" value="Administer now">
+    </form>
+</div>
 
-<head>
-    <title>Medication Reminder</title>
-</head>
-
-<body>
-<!-- Start main page body -->
-<h1>Medication Reminder Setup</h1>
-<form method="POST" action="../form_submissions/complete-task.php">
-    <label for="days">Days between <?php echo $medication_type;?> doses: </label>
-    <input type="number" id="days" name="task_data" value=30>
-    <input type="hidden" name="task_type" value="<?php echo $_GET['task_type']; ?>">
-    <input type="hidden" name="dog_id" value="<?php echo $_GET['dog_id']; ?>">
-    <input type="hidden" name="close_on_submit" value="true">
-    <br>
-    <input type="submit" value="Administer first dose now">
-</form>
-
-</body>
-
-</html>
 
 <?php
 }
