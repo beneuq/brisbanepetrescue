@@ -98,7 +98,11 @@ function createOrderBy(array $pageVars, string $filterTable, $conn)
         }
         return $orderFilter;
     }
-    return "Breed";
+    // choosing a different default sort variable based on the filter table
+    if ($filterTable == "breed_filters") {
+        return "Breed";
+    }
+    return "d.name";
 }
 ?>
 
