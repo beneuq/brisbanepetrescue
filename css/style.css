@@ -1197,7 +1197,13 @@ h1 {
 }
 
 /* Styling for RSS Feeds */
-.rss-feed {font-size: small;}
+.rss-feed {
+    font-size: small;
+    width: 47%;
+    float: left;
+    padding-left: 5%;
+    margin-top: 25px;
+}
 
 /* Title of RSS Feed */
 .feed-title a {
@@ -1211,7 +1217,6 @@ h1 {
 
 /* Headlines of RSS feed items */
 .feed-item-title a {
-    padding-top: 1em;
     color: #6b18aa;
     font-size: medium;
 }
