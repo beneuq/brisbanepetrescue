@@ -1,5 +1,7 @@
 // Number of compatible breeds to show
 const NUM_RESULTS_TO_SHOW = 6;
+// Number of questions on the quiz
+const NUM_QUESTIONS = 12;
 
 // Current answers and N/A will be stored in this array
 let answersSelected = {};
@@ -151,6 +153,9 @@ function getScores(question, breed_id, answer, results) {
         case "dog_friendly_class":
             // Question is valued as moderately important
             return (7.5 - Math.abs((answer * 1.5) - (results[breed_id] * 1.5)));
+        case "shedding_amount_class":
+            // Question is valued as important. Question also inverted
+            return (Math.abs((answer * 1.5) - (results[breed_id] * 1.5)) + 1);
         default:
             // This should not execute
             console.log("Something went wrong with scoring!!");
@@ -185,7 +190,7 @@ function updateBreedResults() {
 //After a user input, auto-scrolls to the next question
 function autoScroll(questionNum){
     //If we are on the last question, there is no question to scoll to next
-    if (questionNum == 11) {
+    if (questionNum == NUM_QUESTIONS) {
         return;
     }
     let nextquestionNum = questionNum + 1;
