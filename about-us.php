@@ -31,6 +31,20 @@
             <p class="about-us-text">Nunc sit amet porta nibh. Mauris ac ligula at metus laoreet pharetra. Nulla vel felis metus. Integer sit amet lorem vitae tellus molestie pulvinar. Donec vitae dolor at est scelerisque varius eu at felis. Etiam volutpat tortor libero. Vestibulum sit amet cursus turpis, ut feugiat metus. Maecenas posuere, urna ut porttitor sagittis, nibh velit posuere arcu, quis lacinia mauris erat at mi. Quisque facilisis finibus tortor, ut fringilla elit rhoncus sed. Aliquam sed ligula tempus, euismod ligula sit amet, molestie tortor. Praesent id nibh sed elit condimentum dapibus eu et metus.</p>   
         </section>
 
+        <!-- Section 3 -->
+        <section id="start-quiz-section" class="pg-section small-pg-section flex" style="background-color: lightgrey;">
+            <div class="container">
+                <div class="fleX pad-top-1">
+                    <h1 class="pad-top-2 pad-bottom-1">Ready to get the ball rolling?</h1>
+                    <h2 class="pad-bottom-1">Start with a personality quiz</h2>
+                    <p class="pad-bottom-2">Taking our specialised quiz will help us to find a breed of dog that suits your and your lifestyle best!</p>
+
+                    <div class="btn-group pad-bottom-2">
+                        <a href="quiz.php" class="hero-btn hero-btn-alt">Take the Quiz</a>
+                    </div>
+            </div>
+        </section>
+
         <!-- FOOTER -->
         <?php include('partials/footer.php'); ?>
     </body>
