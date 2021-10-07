@@ -1451,6 +1451,11 @@ h1 {
         background-position: center;
     }
 
+    #start-quiz-section {
+        background-position: center;
+        background-size: auto 100%;
+    }
+
     #personality-quiz form {
         width: 100%;
     }
