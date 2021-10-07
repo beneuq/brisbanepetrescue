@@ -30,7 +30,6 @@ if (isset($_GET['task_type']) && isset($_GET['dog_id'])) {
         <input type="number" id="days" name="task_data" value=30>
         <input type="hidden" name="task_type" value="<?php echo $_GET['task_type']; ?>">
         <input type="hidden" name="dog_id" value="<?php echo $_GET['dog_id']; ?>">
-        <input type="hidden" name="close_on_submit" value="true">
         <br>
         <button type="button" class="btn cancel" onclick="location.reload()">Cancel</button>
         <input type="submit" class="btn" value="Administer now">

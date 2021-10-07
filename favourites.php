@@ -28,9 +28,10 @@
                 <div class="flex f-col hero-content hero-content-full-width">
                     <h1 class="pad-bottom-1">Favourites</h1>
                     <h2><?php echo $firstname ?>'s Saved Pets</h2>
-                    <p class="pad-bottom-1">You can keep remember your favourite breeds or shortlist dogs by clicking the heart next to them. <br>You can find some that match your personality or explore your options here: </p>
 
-                    <div class="pad-bottom-2">
+
+                    <div class="pad-bottom-
+                    2">
                         <a href="quiz.php" class="margin-right-1 hero-btn">Personality quiz</a>
                         <a href="breeds.php" class="margin-right-1 hero-btn hero-btn-alt">Explore breeds</a>
                         <a href="dogs.php" class="hero-btn hero-btn-alt">Explore available dogs</a>

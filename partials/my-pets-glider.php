@@ -40,6 +40,7 @@ $count2 = mysqli_num_rows($res2);
 
 // Check whether data is available or not
 if ($count2 <= 0) {
+    // Todo make this look better
     echo "<h1>You haven't adopted any pets yet. Adopt one first then come back and check this page out!</h1>";
 } else {
 ?>

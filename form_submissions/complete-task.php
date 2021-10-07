@@ -89,8 +89,5 @@ if (isset($_POST['task_type']) && isset($_POST['dog_id'])) {
 }
 
 // Send user back to My Pets page or close popup window
-if (isset($_POST["close_on_submit"])) {
-    echo "<script>window.close();</script>";
-} else {
-    header('Location: /mypets.php');
-}
+header('Location: /mypets.php');
+
