@@ -25,14 +25,15 @@
         <!-- Hero Section -->
         <section class="hero-section small-hero pos-relative">
             <div class="flex container">
-                <div class="flex f-col hero-content">
+                <div class="flex f-col hero-content hero-content-full-width">
                     <h1 class="pad-bottom-1">Favourites</h1>
-                    <h2 class="pad-bottom-2"><?php echo $firstname ?>'s Saved Pets</h2>
-<!--                    <p class="pad-bottom-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat id earum iste minus sed libero alias nam illo aut nemo deserunt, temporibus necessitatibus ad, magnam est facere? Cumque adipisci quis aliquam.</p>-->
+                    <h2><?php echo $firstname ?>'s Saved Pets</h2>
+                    <p class="pad-bottom-1">You can keep remember your favourite breeds or shortlist dogs by clicking the heart next to them. <br>You can find some that match your personality or explore your options here: </p>
 
                     <div class="pad-bottom-2">
-                        <a href="dogs.php" class="hero-btn hero-btn-alt">Find more dogs</a>
-                        <a href="breeds.php" class="margin-right-1 hero-btn">Find more breeds</a>
+                        <a href="quiz.php" class="margin-right-1 hero-btn">Personality quiz</a>
+                        <a href="breeds.php" class="margin-right-1 hero-btn hero-btn-alt">Explore breeds</a>
+                        <a href="dogs.php" class="hero-btn hero-btn-alt">Explore available dogs</a>
                     </div>
                     <br>
                 </div>

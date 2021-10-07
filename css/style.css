@@ -462,6 +462,10 @@ button {
     width: 60%;
 }
 
+.hero-content-full-width p {
+    width: 100%;
+}
+
 .hero-content h1 {
     /* text-transform: uppercase; */
     color: var(--titleColor);
