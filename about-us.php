@@ -37,7 +37,7 @@
                 <div class="fleX pad-top-1">
                     <h1 class="pad-top-2 pad-bottom-1">Ready to get the ball rolling?</h1>
                     <h2 class="pad-bottom-1">Start with a personality quiz</h2>
-                    <p class="pad-bottom-2">Taking our specialised quiz will help us to find a breed of dog that suits your and your lifestyle best!</p>
+                    <p class="pad-bottom-2">Taking our specialised quiz will help us to find a breed of dog that suits you and your lifestyle best!</p>
 
                     <div class="btn-group pad-bottom-2">
                         <a href="quiz.php" class="hero-btn hero-btn-alt">Take the Quiz</a>
