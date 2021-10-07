@@ -68,9 +68,9 @@
                 <div class="tasks-table">
                     <table class="tasks">
                         <tr>
-                            <th>Event</th>
-                            <th>Time</th>
-                            <th>Completion</th>
+                            <th>Reminders</th>
+                            <th>Due Date</th>
+                            <th>Complete</th>
                         </tr>
                         <!-- Add rows for each reminder -->
                         <?php
@@ -78,7 +78,7 @@
                                 echo "
                                 <tr>
                                     <td class='{$reminder['cell_class']}'>{$reminder['text']}</td>
-                                    <td class='{$reminder['cell_class']}'>{$reminder['date']} ({$reminder['days']} days)</td>
+                                    <td class='{$reminder['cell_class']}'>in {$reminder['days']} days</td>
                                     <td class='{$reminder['cell_class']}'><button onclick='complete_task(\"{$reminder["type"]}\", \"{$reminder["dog_id"]}\")'>Complete</button></td>
                                 </tr>
                                 ";
