@@ -94,7 +94,8 @@
                             768: {
                             perView: 1
                             }
-                        }
+                        },
+                        focusAt: 'center'
                     }
                     new Glide('.glide', config).mount()
                 </script>

@@ -575,6 +575,12 @@ button {
     background-color: var(--mainColor);
 }
 
+.profile-box.profile-box-mypets {
+    width: 100%;
+    margin: 0;
+    background-color: var(--mainColor);
+}
+
 .profile-box form button {
     width: 100%;
     align-self: center;
@@ -1128,6 +1134,14 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
+    max-width: 100%;
+}
+
+.glide.glide-mypets img:first-of-type {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
     max-width: 100%;
 }
 

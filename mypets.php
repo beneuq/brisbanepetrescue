@@ -15,6 +15,9 @@
         ?>
         <script src="/js/mypets-task-complete.js"></script>
         <link rel="stylesheet" href="/css/task.calendar.css">
+        <!-- add styles for slider -->
+        <link rel="stylesheet" href="/css/glide.core.css">
+        <link rel="stylesheet" href="/css/glide.theme.css">
     </head>
     <body>
         <?php
@@ -25,6 +28,7 @@
         <!-- import menu -->
         <?php include('partials/menu.php'); ?>
 
+
         <!-- Hero Section -->
         <section class="hero-section small-hero pos-relative">
             <div class="flex container">
@@ -34,9 +38,12 @@
                 </div>
             </div>
         </section>
+        <?php include "partials/mypets-tasks-and-reminders-logic.php";?>
+
+        <?php include "partials/my-pets-glider.php";?>
 
         <!-- This code iterates through the database and adds a table row for each dog in the database -->
-        <?php include "partials/mypets-tasks-and-reminders-logic.php";?>
+
 
 
         <div id="sqldata">
@@ -91,9 +98,6 @@
             <h2 class="tasks-txt">Reminders</h2>
                 <?php include "partials/task-calendar.php";?>
             </div>
-
-            <!-- Pet Overview Table -->
-            <?php include "partials/mypets-pet-table.php";?> 
 
             <div class="task-set3"> 
                 <h2 class="tasks-txt">Recommendations</h2>
