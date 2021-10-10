@@ -184,7 +184,8 @@ while ($row = mysqli_fetch_assoc($res)) {
         </tr>";
         $newFilters .= "<tr class='filter-3'><th scope=\"col\"><a href=\"";
         $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
-        $newFilters .= "\">" . $row2['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
+        $newFilters .= "\">" . getFieldName($row2['field_value'], $row['class_field'], $row['bool_field']) .
+            "</a></th>" . "<th scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
         while ($row2 = mysqli_fetch_assoc($res2)) {
             $newFilters .= "<tr class='filter-3'><th scope=\"col\"><a href=\"";
             $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
