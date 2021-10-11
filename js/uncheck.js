@@ -1,9 +1,9 @@
-$('#menuToggle').on('click' , function() {
-    $('#menuToggle-2').each(function(){
+$('#check1').on('click' , function() {
+    $('#check2').each(function(){
        $(this).removeAttr('checked');
     })
 });
    
-$('#menuToggle-2').on('click', function(){
-    $('#menuToggle').removeAttr('checked');
+$('#check2').on('click', function(){
+    $('#check1').removeAttr('checked');
 });

@@ -7,7 +7,7 @@
         <div id="menuToggle-2">
             
 
-            <input type="checkbox" />
+            <input type="checkbox" id="check1"/>
             
             <img src="/images/account-icon.png" alt="Account icon" width="33px" height="33px" id="mobileLogin">
             
@@ -94,7 +94,7 @@
     <nav role="navigation"> 
         <div id="menuToggle">
             
-            <input type="checkbox" />
+            <input type="checkbox" id="check2"/>
 
             <span></span>
             <span></span>
