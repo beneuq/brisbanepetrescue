@@ -1,6 +1,5 @@
 <?php require_once "config/constants.php"; ?>
 <!-- Navigation bar -->
-
 <div id="main-menu">
 
     <nav role="navigation"> 
@@ -149,6 +148,6 @@
             </li>
         </ul>
     </div>
-
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/uncheck.js"></script>
 </div>

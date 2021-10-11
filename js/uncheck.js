@@ -1,9 +1,7 @@
-$('#check1').on('click' , function() {
-    $('#check2').each(function(){
-       $(this).removeAttr('checked');
-    })
+$('#check1').on('change', function() {
+    $('#check2').not(this).prop('checked', false);  
 });
-   
-$('#check2').on('click', function(){
-    $('#check1').removeAttr('checked');
+
+$('#check2').on('change', function() {
+    $('#check1').not(this).prop('checked', false);  
 });
