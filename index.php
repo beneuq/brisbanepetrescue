@@ -117,6 +117,5 @@
 
         <!-- FOOTER -->
         <?php include('partials/footer.php'); ?>
-        <script src="js/uncheck.js"></script>
     </body>
 </html>
