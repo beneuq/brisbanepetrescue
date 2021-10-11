@@ -149,4 +149,6 @@
             </li>
         </ul>
     </div>
+
+    <script src="js/uncheck.js"></script>
 </div>
