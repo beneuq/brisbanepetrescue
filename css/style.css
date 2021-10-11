@@ -1072,6 +1072,7 @@ h1 {
     height: 255px;
     margin-bottom: 25px;
     overflow: auto;
+    border-radius: 10px 10px 0 0;
 }
 
 .regularReminder {
@@ -1380,6 +1381,10 @@ h1 {
     /* *{
         overflow-x: hidden;
     } */
+
+    .tasks-table {
+        height: 150px;
+    }
 
     .task-set {
         padding-right: 10%;
