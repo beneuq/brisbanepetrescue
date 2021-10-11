@@ -111,7 +111,9 @@
                             </tr>
                     </table>
                 </div>
-           
+            </div>
+                            
+            <div class="task-set3">               
                 <h2 class="tasks-txt">In your area</h2>
                 <div class="tasks-table">
                     <table class="tasks" id="nearby-places">
