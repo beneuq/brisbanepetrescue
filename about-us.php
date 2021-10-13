@@ -25,10 +25,24 @@
         </section>
         <!-- Section 2 -->
         <section class="pg-section">
-            <p class="about-us-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent metus turpis, rutrum a ullamcorper eu, faucibus non nunc. Nam dignissim euismod dui, id tincidunt lacus sollicitudin eget. Sed mauris turpis, hendrerit in condimentum nec, tristique non diam. Aliquam eu lectus ligula. Fusce posuere leo id ipsum malesuada ullamcorper. Nunc sed ornare diam. Cras porttitor leo ultricies magna feugiat gravida. Etiam posuere commodo fringilla.</p>
-            <p class="about-us-text">Donec ultricies pretium diam, ac laoreet nisl. Etiam posuere nunc hendrerit lorem ornare egestas. Sed a cursus augue. Sed a posuere tortor. Quisque non lacus nulla. Ut porttitor vulputate metus non luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem viverra, fermentum augue a, consequat sem. Aliquam ullamcorper dictum pretium.</p>
-            <p class="about-us-text">Praesent suscipit vestibulum faucibus. Praesent aliquam mi non mi tempus fringilla. Maecenas laoreet justo lacus, nec euismod erat malesuada sed. Pellentesque efficitur mi sem, in commodo dui rhoncus vel. Aenean eget tincidunt risus, a eleifend mi. Fusce eget justo elementum, consectetur metus at, iaculis neque. Suspendisse interdum luctus dignissim. Curabitur ullamcorper velit eu ante vehicula, quis lacinia risus laoreet. Curabitur pharetra, ipsum vitae pretium venenatis, tortor felis volutpat arcu, in tincidunt justo velit id odio. Maecenas blandit at turpis ut mattis. In porta imperdiet efficitur. In feugiat tellus eget nulla eleifend pellentesque. Aliquam erat volutpat. Nulla quis ipsum vulputate, consequat ligula in, luctus enim. Etiam tempor nisl sed magna semper ullamcorper. Sed sit amet cursus dolor.</p>
-            <p class="about-us-text">Nunc sit amet porta nibh. Mauris ac ligula at metus laoreet pharetra. Nulla vel felis metus. Integer sit amet lorem vitae tellus molestie pulvinar. Donec vitae dolor at est scelerisque varius eu at felis. Etiam volutpat tortor libero. Vestibulum sit amet cursus turpis, ut feugiat metus. Maecenas posuere, urna ut porttitor sagittis, nibh velit posuere arcu, quis lacinia mauris erat at mi. Quisque facilisis finibus tortor, ut fringilla elit rhoncus sed. Aliquam sed ligula tempus, euismod ligula sit amet, molestie tortor. Praesent id nibh sed elit condimentum dapibus eu et metus.</p>   
+            <p class="about-us-text">Bit by Bit was first founded in 2021 as a University group of dedicated students who are all massive dog lovers. Our goal was to develop and create a simple, easy and helpful website to reduce the amount of euthanased animals each year. Each individual brought something to the table and we believe our project can make a difference in the pet adoption process.</p>
+            <p class="about-us-text">According to the RSPCA, 12.35% of dogs were euthanased in the 2019 to 2020 financial year. It is unthinkable to think that the 'Man's best friend' is being put down at these alarming rates. A majority of these cases, these pets just need a loving home but wannabe pet owner's are unable to find a perfect match.</p>
+            <p class="about-us-text">Our project can tackle the amount of animals that go unloved through a variety of user friendly features which you can freely explore. We assist at all stages of the process such as: scouting out the pefect pet, adopting the dog from a verified adoption clinic and post adoption assistance.</p>
+            <p class="about-us-text">If you have or are looking for a pet, do not worry. We have you covered! Our personality quiz and filters will make the search as easy as walking the dog. Worried you might forget your pets vaccinations? We got you covered with a simple reminder calendar which stores all information you need. Happy adopting and if you have any enquires feel free to contact us.</p>   
+        </section>
+
+        <!-- Section 3 -->
+        <section id="start-quiz-section" class="pg-section small-pg-section flex" style="background-color: lightgrey;">
+            <div class="container">
+                <div class="fleX pad-top-1">
+                    <h1 class="pad-top-2 pad-bottom-1">Ready to get the ball rolling?</h1>
+                    <h2 class="pad-bottom-1">Start with a personality quiz</h2>
+                    <p class="pad-bottom-2">Taking our specialised quiz will help us to find a breed of dog that suits you and your lifestyle best!</p>
+
+                    <div class="btn-group pad-bottom-2">
+                        <a href="quiz.php" class="hero-btn hero-btn-alt">Take the Quiz</a>
+                    </div>
+            </div>
         </section>
 
         <!-- FOOTER -->

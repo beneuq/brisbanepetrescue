@@ -25,14 +25,16 @@
         <!-- Hero Section -->
         <section class="hero-section small-hero pos-relative">
             <div class="flex container">
-                <div class="flex f-col hero-content">
+                <div class="flex f-col hero-content hero-content-full-width">
                     <h1 class="pad-bottom-1">Favourites</h1>
-                    <h2 class="pad-bottom-2"><?php echo $firstname ?>'s Saved Pets</h2>
-<!--                    <p class="pad-bottom-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat id earum iste minus sed libero alias nam illo aut nemo deserunt, temporibus necessitatibus ad, magnam est facere? Cumque adipisci quis aliquam.</p>-->
+                    <h2><?php echo $firstname ?>'s Saved Pets</h2>
 
-                    <div class="pad-bottom-2">
-                        <a href="dogs.php" class="hero-btn hero-btn-alt">Find more dogs</a>
-                        <a href="breeds.php" class="margin-right-1 hero-btn">Find more breeds</a>
+
+                    <div class="pad-bottom-
+                    2">
+                        <a href="quiz.php" class="margin-right-1 hero-btn">Personality quiz</a>
+                        <a href="breeds.php" class="margin-right-1 hero-btn hero-btn-alt">Explore breeds</a>
+                        <a href="dogs.php" class="hero-btn hero-btn-alt">Explore available dogs</a>
                     </div>
                     <br>
                 </div>
@@ -69,7 +71,7 @@
                             <!-- Start Individual Breed Row -->
                             <tr id='breed_id=<?php echo $entry['breed_id'];?>'>
                                 <td style='font-weight:bold; width:20%;' class='breed-name'>
-                                    <a href='category-breeds.php?breed_id=<?php echo $entry['breed_id'];?>' style='color:black'><?php echo $entry['Breed'];?></a>
+                                    <a href='breed-profile.php?breed_id=<?php echo $entry['breed_id'];?>' style='color:black'><?php echo $entry['Breed'];?></a>
                                 </td>
                                 <td style='width:25%;'><?php echo $entry['intelligence_desc'];?></td>
                                 <td class='text-center' style='width:10%;'><?php echo str_repeat(EMOJI_DOLLAR,$entry['lifetime_cost_class']);?></td>
@@ -126,8 +128,8 @@
                             ?>
                             <!-- Start Individual Dog Row -->
                             <tr id='dog_id=<?php echo $entry['dog_id'];?>'>
-                                <td style='width:15%;' class='dog-name'><a href='category-dogs.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
-                                <td style='width:20%;' class='breed-name'><a href='category-breeds.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
+                                <td style='width:15%;' class='dog-name'><a href='dog-profile.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
+                                <td style='width:20%;' class='breed-name'><a href='breed-profile.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
                                 <td style='width:10%;'><?php echo $entry['age'];?> years</td>
                                 <td style='width:5%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%' class="zoom-on-hover"></td>
                                 <td style='width:20%;'><?php echo $entry['Shelter'];?></td>

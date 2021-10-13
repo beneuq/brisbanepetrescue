@@ -1,5 +1,7 @@
 // Number of compatible breeds to show
 const NUM_RESULTS_TO_SHOW = 6;
+// Number of questions on the quiz
+const NUM_QUESTIONS = 12;
 
 // Current answers and N/A will be stored in this array
 let answersSelected = {};
@@ -122,35 +124,38 @@ function getScores(question, breed_id, answer, results) {
             // The size class is valued as an important attiribute
             return (10 - Math.abs((answer * 2) - (results[breed_id] * 2)));
         case "average_purchase_price_class":
-            // Question is valued as important
-            return (10 - Math.abs((answer * 2) - (results[breed_id] * 2)));
+            // Question is valued as moderately important
+            return (7.5 - Math.abs((answer * 1.5) - (results[breed_id] * 1.5)));
         case "lifetime_cost_class":
-            // Question is valued as important
-             return (10 - Math.abs((answer * 2) - (results[breed_id] * 2)));
+            // Question is valued as moderately important
+            return (7.5 - Math.abs((answer * 1.5) - (results[breed_id] * 1.5)));
         case "watchdog_class":
             // Question is not valued as important
             return (5 - Math.abs(answer - results[breed_id]));
         case "tolerates_being_alone_class":
-            // Question is not valued as important
-            return (5 - Math.abs(answer - results[breed_id]));
+            // Question is valued as moderately important
+            return (7.5 - Math.abs((answer * 1.5) - (results[breed_id] * 1.5)));
         case "potential_for_playfulness_class":
-            // Question is not valued as important
-            return (5 - Math.abs(answer - results[breed_id]));
+            // Question is valued as important
+            return (10 - Math.abs((answer * 2) - (results[breed_id] * 2)));
         case "incredibly_kid_friendly_class":
             // Question is valued as important
             return (10 - Math.abs((answer * 2) - (results[breed_id] * 2)));
         case "good_for_novice_owners":
             // Question is valued as important. Question also inverted
-            return (Math.abs((answer * 2) - (results[breed_id] * 2)) + 1);
+            return (Math.abs((answer * 1.5) - (results[breed_id] * 1.5)) + 1);
         case "exercise_needs_class":
-            // Question is not valued as important
-            return (5 - Math.abs(answer - results[breed_id]));
+            // Question is valued as important
+            return (10 - Math.abs((answer * 2) - (results[breed_id] * 2)));
         case "apartment_living_class":
-            // Question is valued as important and also question inverted
-            return (Math.abs((answer * 2) - (results[breed_id] * 2)) + 1);
+            // Question is valued as very important and also question inverted
+            return (Math.abs((answer * 2.5) - (results[breed_id] * 2.5)) + 1);
         case "dog_friendly_class":
-            // Question is not valued as important
-            return (5 - Math.abs(answer - results[breed_id]));
+            // Question is valued as moderately important
+            return (7.5 - Math.abs((answer * 1.5) - (results[breed_id] * 1.5)));
+        case "shedding_amount_class":
+            // Question is valued as important. Question also inverted
+            return (Math.abs((answer * 1.5) - (results[breed_id] * 1.5)) + 1);
         default:
             // This should not execute
             console.log("Something went wrong with scoring!!");
@@ -185,7 +190,7 @@ function updateBreedResults() {
 //After a user input, auto-scrolls to the next question
 function autoScroll(questionNum){
     //If we are on the last question, there is no question to scoll to next
-    if (questionNum == 11) {
+    if (questionNum == NUM_QUESTIONS) {
         return;
     }
     let nextquestionNum = questionNum + 1;

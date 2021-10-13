@@ -17,23 +17,21 @@ function complete_task(taskType, dogID) {
             location.reload();
             break;
         case "council_registration_id":
-            popup = window.open("partials/mypets-task-council.php?task_type=" + taskType + "&dog_id=" + dogID, "", "width=400,height=300");
-            timer = setInterval(function () { // When popup window closes, refresh page
-                if (popup.closed) {
-                    clearInterval(timer);
-                    location.reload();
-                }
-            }, 1000);
+            let xmlReq = new XMLHttpRequest();
+            xmlReq.onload = function () {
+                document.getElementById('popup-form-container').innerHTML = this.responseText;
+            };
+            xmlReq.open("get", "/partials/mypets-task-council.php?task_type="+taskType+"&dog_id="+dogID, true);
+            xmlReq.send();
             break;
         case "worm_meds_start":
         case "tick_meds_start":
-            popup = window.open("partials/mypets-task-medication.php?task_type=" + taskType + "&dog_id=" + dogID, "", "width=400,height=300");
-            timer = setInterval(function () { // When popup window closes, refresh page
-                if (popup.closed) {
-                    clearInterval(timer);
-                    location.reload();
-                }
-            }, 1000);
+            let xmlReq2 = new XMLHttpRequest();
+            xmlReq2.onload = function () {
+                document.getElementById('popup-form-container').innerHTML = this.responseText;
+            };
+            xmlReq2.open("get", "/partials/mypets-task-medication.php?task_type="+taskType+"&dog_id="+dogID, true);
+            xmlReq2.send();
             break;
         default:
     }

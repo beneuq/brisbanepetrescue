@@ -69,7 +69,7 @@
                 $sql = "SELECT b.breed_id AS id, Breed as title, path, alt_text, height, width FROM dog_breeds AS b, breed_image as i WHERE b.breed_id = i.breed_id AND main_image = 1 AND b.popularity_class = 5 LIMIT 32";
                 // Execute the Query
                 $res = mysqli_query($conn, $sql);
-                // Count rows to check whether the category is available or not
+                // Count rows to check whether the breed data is available or not in the DB
                 $count = mysqli_num_rows($res);
 
                 if ($count > 0) {
@@ -82,7 +82,7 @@
                         $image_alt = $row['alt_text'];
                 ?>
 
-                        <a href="category-breeds.php?breed_id=<?php echo $id; ?>">
+                        <a href="breed-profile.php?breed_id=<?php echo $id; ?>">
                             <div class="box-3 float-container">
                                 <?php
                                 //Check whether Image is available or not

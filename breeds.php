@@ -19,7 +19,7 @@
     <h1 class="table-title">Dog Information by Breed</h1>
 
     <!-- Adding the filter section -->
-    <div id="filters" style="display: none">
+    <div id="filters">
         <?php
         $filterTable = "breed_filters";
         $table = "dog_breeds d";
@@ -35,7 +35,7 @@
                     <th>Breed</th>
                     <th>Intelligence</th>
                     <th>Lifetime Cost</th>
-                    <th>Popularity</th>
+                    <th>Commonness</th>
                     <th class="text-left">Size Class</th>
                 </tr>
                 <thead>
@@ -70,7 +70,7 @@
                                     </button>
                                 </form>
                             </td>
-                            <td style='width:20%;' class='breed-name'><a href='category-breeds.php?breed_id=<?php echo $entry['breed_id']; ?>'><?php echo $entry['Breed']; ?></a></td>
+                            <td style='width:20%;' class='breed-name'><a href='breed-profile.php?breed_id=<?php echo $entry['breed_id']; ?>'><?php echo $entry['Breed']; ?></a></td>
                             <td style='width:22%;'><?php echo $entry['intelligence_desc']; ?></td>
                             <td style='width:16%;' class='text-center'><?php echo str_repeat(EMOJI_DOLLAR, $entry['lifetime_cost_class']); ?></td>
                             <td style='width:10%;' class='text-left'><?php echo str_repeat(EMOJI_STAR, $entry['popularity_class']); ?></td>

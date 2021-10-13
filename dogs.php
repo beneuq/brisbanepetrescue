@@ -12,32 +12,32 @@
 </head>
 
 <body>
-<div class="underneath-nav"></div>
-<!-- import menu -->
-<?php include('partials/menu.php');?>
+    <div class="underneath-nav"></div>
+    <!-- import menu -->
+    <?php include('partials/menu.php'); ?>
 
-<!-- Start main page body -->
-<h1 class="table-title">Dogs looking for a home</h1>
+    <!-- Start main page body -->
+    <h1 class="table-title">Dogs looking for a home</h1>
 
-<!-- This code iterates through the database and adds a table row for each dog in the database -->
-<div id="sqldata">
-    <table class="breeds-table">
-        <thead>
-        <tr>
-            <th>Shortlist</th>
-            <th>Name</th>
-            <th>Breed</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Shelter</th>
-            <th></th>
-        </tr>
-        <thead>
-        <tbody>
+    <!-- Adding the filter section -->
+    <div id="filters" style="display: none">
         <?php
-        $user_id_for_sql = logged_in() ? get_userid() : "NULL";
-        // Gets all dogs, as well as their shelter, and also whether the dog has been shortlisted by the logged-in user
-        $res = mysqli_query($conn, "
+        $filterTable = "pet_filters";
+        $table = "((dogs 
+        INNER JOIN dog_breeds ON dogs.breed_id = dog_breeds.breed_id)
+        INNER JOIN shelters ON dogs.shelter_id= shelters.shelter_id) ";
+        $page = "dogs.php";
+        include('partials/filter-menu.php') ?>
+    </div>
+
+    <!-- This code iterates through the database and adds a table row for each dog in the database -->
+    <section class="categories">
+        <div class="container">
+            <div id="sqldata">
+                <?php
+                $user_id_for_sql = logged_in() ? get_userid() : "NULL";
+                // Gets all dogs, as well as their shelter, and also whether the dog has been shortlisted by the logged-in user
+                $res = mysqli_query($conn, "
                 SELECT DISTINCT
                     d.name AS Dog,
                     Breed,
@@ -55,43 +55,46 @@
                         LEFT JOIN favourite_dogs f ON d.dog_id = f.dog_id
                     WHERE owner_id IS NULL 
                         AND main_image  
-                        AND (user_id={$user_id_for_sql} OR user_id IS NULL)
-                    ORDER BY d.name
-        ");
-        while($entry = mysqli_fetch_array($res)) {
-            ?>
-            <!-- Start Individual Dog Row -->
-            <tr id='dog_id=<?php echo $entry['dog_id'];?>'>
-                <td style='width:10%;'>
-                    <form method='POST' action='/form_submissions/favourite_dog.php'>
-                        <button type='submit' name='dog_id' value='<?php echo $entry['dog_id'];?>'>
-                            <img width='20%' src='images/icons/heart-<?php echo $entry['favourite_icon'];?>.png'
-                                 onmouseover='favHover(this,"<?php echo $entry['favourite_icon'];?>");'
-                                 onmouseout='favUnhover(this,"<?php echo $entry['favourite_icon'];?>");'
-                                 class="zoom-on-hover"
-                            >
-                        </button>
-                    </form>
-                </td>
-                <td style='width:14%;' class='dog-name'><a href='category-dogs.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
-                <td style='width:14%;' class='breed-name'><a href='category-breeds.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
-                <td style='width:14%;'><?php echo $entry['age'];?> years</td>
-                <td style='width:10%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%'></td>
-                <td style='width:18%;'><?php echo $entry['Shelter'];?></td>
-                <td style='width:22%;'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='50%' class="zoom-on-hover"></td>
-            </tr>
-            <!-- End Individual Dog Row -->
-        <?php
-            }
-            mysqli_close($conn)
-        ?>
-        <tbody>
-    </table>
-</div>
-<!-- End main page body -->
+                        AND (user_id={$user_id_for_sql} OR user_id IS NULL) $whereFilters
+                        ORDER BY $orderFilter
+            ");
+                while ($entry = mysqli_fetch_array($res)) {
+                ?>
+                    <div class="profile-box float-container" id='dog_id=<?php echo $entry['dog_id']; ?>'>
+                        <td><a href='dog-profile.php?dog_id=<?php echo $entry['dog_id']; ?>'><img src='<?php echo SITEURL . $entry['path']; ?>' alt='dog image' width='100%'></a></td>
+                        <td style="vertical-align: middle;"><a class='dog-card-name' href='dog-profile.php?dog_id=<?php echo $entry['dog_id']; ?>'>
+                                <p>
+                                    <?php echo $entry['Dog']; ?>
+                                    <img src='/images/icons/<?php echo $entry['gender']; ?>.png' alt='dog gender' width='5%'>
+                                </p>
+                            </a></td>
+                        <td><a href='breed-profile.php?breed_id=<?php echo $entry['breed_id']; ?>'>
+                                <?php echo $entry['age']; ?> year old <?php echo $entry['Breed']; ?>
+                            </a></td>
+                        <td></td>
+                        <td>
+                            <p><?php echo $entry['Shelter']; ?></p>
+                        </td>
+                        <td>
+                            <form method='POST' action='/form_submissions/favourite_dog.php'>
+                                <button type='submit' name='dog_id' value='<?php echo $entry['dog_id']; ?>'>
+                                    <img width='10%' src='images/icons/heart-<?php echo $entry['favourite_icon']; ?>.png' onmouseover='favHover(this,"<?php echo $entry['favourite_icon']; ?>");' onmouseout='favUnhover(this,"<?php echo $entry['favourite_icon']; ?>");'>
+                                </button>
+                            </form>
+                        </td>
+                    </div>
+                <?php
+                }
+                mysqli_close($conn)
+                ?>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+    <!-- End main page body -->
 
-<!-- import footer -->
-<?php include('partials/footer.php');?>
+    <!-- import footer -->
+    <?php include('partials/footer.php'); ?>
 </body>
 
 </html>

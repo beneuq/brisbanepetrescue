@@ -1,4 +1,5 @@
 <?php
+include_once "constants.php";
 
 /**
  * Shows a popup message in an alert box
@@ -24,9 +25,7 @@ function reverse1to5($num) {
     return 6 - $num;
 }
 
-/**
- * Redirects the user to login page if they are not logged in, otherwise does nothing.
- */
+/** Redirects the user to login page if they are not logged in, otherwise does nothing. */
 function enforce_login() {
     if (!logged_in()) {
         // User not logged in, redirect them to login page
@@ -46,4 +45,16 @@ function ordinal($number): string
         return $number. 'th';
     else
         return $number. $suffix[$number % 10];
+}
+
+/** Check if user owns any dogs */
+function user_owns_dogs(): bool
+{
+    enforce_login();
+    $user_id = get_userid();
+    global $conn;
+    $sql = "SELECT * from dogs WHERE owner_id={$user_id}";
+    $res = mysqli_query($conn, $sql);
+    $count = mysqli_num_rows($res);
+    return $count > 0;
 }

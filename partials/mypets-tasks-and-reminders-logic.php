@@ -113,7 +113,7 @@ while($entry = mysqli_fetch_array($res)) {
             "type"=>"worm_meds_start",
         );
         array_push($post_adopt_tasks, $task);
-    } else if ($entry['worm_meds_due'] <= 0) {
+    } else if ($entry['worm_meds_due'] < 0) {
         // Worm meds are overdue, add to reminders and style differently
         $reminder = array(
             "text"=>"{$entry['name']}'s de-worming medication is overdue!",
@@ -149,7 +149,7 @@ while($entry = mysqli_fetch_array($res)) {
             "type"=>"tick_meds_start",
         );
         array_push($post_adopt_tasks, $task);
-    } else if ($entry['tick_meds_due'] <= 0) {
+    } else if ($entry['tick_meds_due'] < 0) {
         // Tick meds are overdue, add to reminders and style differently
         $reminder = array(
             "text"=>"{$entry['name']}'s tick medication is overdue!",

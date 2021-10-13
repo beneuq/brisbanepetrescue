@@ -24,14 +24,31 @@
         <!-- Hero Section -->
         <section id="main-hero" class="hero-section pos-relative dimmer-sm">
             <div class="flex container">
-                <div class="flex f-col hero-content bg-img">
+                <div class="flex f-col hero-content hero-content-full-width bg-img">
                     <h1 class="pad-top-2 pad-bottom-1">My Account</h1>
-                    <h2 class="pad-bottom-1">Welcome back, <?php echo $firstname ?>!</h2>
-                    <p class="pad-bottom-2">Here, we understand the struggles of finding the perfect K-9 companion. Browse through the availabe dogs straight away or do a short quiz to find the perfect pet for you.</p>
-
-                    <div class="btn-group pad-bottom-2">
-                        <a href="dogs.php" class="margin-right-1 hero-btn">Available Dogs</a>
-                        <a href="/quiz.php" class="hero-btn hero-btn-alt">Personality Quiz</a>
+                        <?php
+                        if (user_owns_dogs()) {
+                            ?>
+                            <h2 class="pad-bottom-1">Welcome back, <?php echo $firstname ?>!</h2>
+                            <p class="pad-bottom-2">Check up on your pet care reminders, find a new companion, or check out some articles below.</p>
+                            <div class="btn-group pad-bottom-2">
+                                <a href="/mypets.php" class="margin-right-1 hero-btn">My pets</a>
+                                <a href="/dogs.php" class="margin-right-1 hero-btn hero-btn-alt">Explore dogs</a>
+                                <a href="/favourites.php" class="margin-right-1 hero-btn hero-btn-alt">View favourites</a>
+                            <?php
+                        } else {
+                            ?>
+                            <h2 class="pad-bottom-1">Welcome, <?php echo $firstname ?>!</h2>
+                            <p>Time to get the ball rolling on your pet adoption?</p>
+                            <p>We recommend starting with a personality quiz to find a breed that matches your lifestyle.</p>
+                            <p class="pad-bottom-2">You can also save breeds to your favorites, or keep a shortlist of dogs you can come back to at any time! </p>
+                            <div class="btn-group pad-bottom-2">
+                                <a href="/quiz.php" class="margin-right-1 hero-btn">Personality Quiz</a>
+                                <a href="/dogs.php" class="margin-right-1 hero-btn hero-btn-alt">Explore dogs</a>
+                                <a href="/favourites.php" class="margin-right-1 hero-btn hero-btn-alt">View favourites</a>
+                            <?php
+                        }
+                        ?>
                     </div>
                     <!-- <div class="pad-bottom-2">
                         <a href="logout.php" class="hero-btn hero-btn-alt">Logout</a>

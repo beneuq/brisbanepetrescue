@@ -1,7 +1,9 @@
 <!-- Need to implement -->
 <?php
 $whereFilters = "";
-$orderFilter = "Breed"
+$orderFilter = "Breed";
+
+
 ?>
 
 <!-- Create array with filter variables only -->
@@ -98,7 +100,11 @@ function createOrderBy(array $pageVars, string $filterTable, $conn)
         }
         return $orderFilter;
     }
-    return "Breed";
+    // choosing a different default sort variable based on the filter table
+    if ($filterTable == "breed_filters") {
+        return "Breed";
+    }
+    return "d.name";
 }
 ?>
 
@@ -112,20 +118,47 @@ $whereFilters = createWhereFilters($filters, $filterTable, $conn);
 $whereFiltersForFilter = $whereFilters;
 ?>
 
+<!-- Rename filters that are classes or bools -->
+<?php
+function getFieldName($field_name, $is_class, $is_bool)
+{
+    // creating the name arrays for classes
+    $class_names = array(
+        1 => "Very Low",
+        2 => "Low",
+        3 => "Medium",
+        4 => "High",
+        5 => "Very High"
+    );
+    if ($is_class == 1) {
+        return $class_names[$field_name];
+    }
+    if ($is_bool == 1) {
+        if ($field_name == 1) {
+            return "Yes";
+        }
+        return "No";
+    }
+    return $field_name;
+}
+?>
+
 <!-- Add the current filters to be selected and removed -->
 <?php
 if (!empty($filters)) {
-    $existing = "<table>
+    $existing = "<table class='filter-current'>
 	<colgroup span=\"2\"></colgroup>
 	<tr>
 		<th colspan=\"2\" scope=\"colgroup\">Current Filters</th>
 	</tr>";
-    $res = mysqli_query($conn, "SELECT field_name, display_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
+    $res = mysqli_query($conn, "SELECT field_name, display_name, class_field, bool_field 
+        FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
     while ($row = mysqli_fetch_assoc($res)) {
         if (in_array($row['field_name'], array_keys($filters))) {
             $existing .= "<tr><th scope=\"col\"><a href=\"";
             $existing .= createLink($page, $_GET, 1, array($row['field_name'] => $filters[$row['field_name']]));
-            $existing .= "\">" . $row['display_name'] . "</a></th>" . "<th scope=\"col\">" . $filters[$row['field_name']] . "</th>" . "</tr>";
+            $existing .= "\">" . $row['display_name'] . "</a></th>" . "<th scope=\"col\">" .
+                getFieldName($filters[$row['field_name']], $row['class_field'], $row['bool_field']) . "</th>" . "</tr>";
         }
     }
     $existing .= "</table>";
@@ -137,25 +170,27 @@ if (!empty($filters)) {
 
 <!-- Add all filters to div -->
 <?php
-$res = mysqli_query($conn, "SELECT field_name, display_name FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
+$res = mysqli_query($conn, "SELECT field_name, display_name, class_field, bool_field 
+    FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
 $newFilters = "";
 while ($row = mysqli_fetch_assoc($res)) {
     $res2 = mysqli_query($conn, "SELECT " . $row['field_name'] .
         " as field_value, COUNT(*) as field_count FROM $table " . $whereFiltersForFilter .
         "GROUP BY " . $row['field_name']);
     if (!empty($row2 = mysqli_fetch_assoc($res2))) {
-        $newFilters .= "<table>
-        <colgroup span=\"2\"></colgroup>
-        <tr>
+        $newFilters .= "<table class='filter-1'>
+        <tr class='filter-2'>
             <th colspan=\"2\" scope=\"colgroup\">" . $row['display_name'] . "</th>
         </tr>";
-        $newFilters .= "<tr><th scope=\"col\"><a href=\"";
+        $newFilters .= "<tr class='filter-3'><th scope=\"col\"><a href=\"";
         $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
-        $newFilters .= "\">" . $row2['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
+        $newFilters .= "\">" . getFieldName($row2['field_value'], $row['class_field'], $row['bool_field']) .
+            "</a></th>" . "<th scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
         while ($row2 = mysqli_fetch_assoc($res2)) {
-            $newFilters .= "<tr><th scope=\"col\"><a href=\"";
+            $newFilters .= "<tr class='filter-3'><th scope=\"col\"><a href=\"";
             $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
-            $newFilters .= "\">" . $row2['field_value'] . "</a></th>" . "<th scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
+            $newFilters .= "\">" . getFieldName($row2['field_value'], $row['class_field'], $row['bool_field']) . "</a></th>" .
+                "<th  class='yes'scope=\"col\">" . $row2['field_count'] . "</th>" . "</tr>";
         }
         $newFilters .= "</table>";
     }

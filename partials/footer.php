@@ -3,6 +3,7 @@
     <!-- <div class="container">
         <p>©2021 Brisbane Pet Rescue. Designed by 'Bit By Bit'</p>
     </div> -->
+    <div class="clearfix"></div>
     <footer id="page-footer" class="pad-top-2 pad-bottom-1">
         <div class="container">
             <h3 class="pad-bottom-2">Brisbane Pet Rescue</h3>

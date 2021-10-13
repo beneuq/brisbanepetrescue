@@ -1,18 +1,20 @@
 <?php require_once "config/constants.php"; ?>
 <!-- Navigation bar -->
-
 <div id="main-menu">
 
     <nav role="navigation"> 
         <div id="menuToggle-2">
             
-            <input type="checkbox" />
 
-            <span></span>
-            <span></span>
-            <span></span>
-
+            <input type="checkbox" id="check1"/>
+            
             <img src="/images/account-icon.png" alt="Account icon" width="33px" height="33px" id="mobileLogin">
+            
+            <span></span>
+            <span></span>
+            <span></span>
+
+           
             <ul id="menu-2">
                 <?php
                     $account_page = isset($_SESSION['logged_in']) ? "/account.php" : "/login.php";
@@ -91,7 +93,7 @@
     <nav role="navigation"> 
         <div id="menuToggle">
             
-            <input type="checkbox" />
+            <input type="checkbox" id="check2"/>
 
             <span></span>
             <span></span>
@@ -146,4 +148,6 @@
             </li>
         </ul>
     </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/uncheck.js"></script>
 </div>

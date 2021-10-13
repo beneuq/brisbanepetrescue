@@ -406,7 +406,6 @@ button {
     color: var(--mainColor);
     padding-right: 20%;
     padding-left: 20%;
-
 }
 
 #pet-help-hero {
@@ -421,6 +420,28 @@ button {
 
 #pet-help-hero p {
     color: white;
+}
+
+#start-quiz-section {
+    background-image: url(/images/about-us-cta.jpg);
+    background-position: right center;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
+    text-align: center;
+    align-items: center;
+}
+
+#start-quiz-section h1 {
+    color: white;
+}
+
+#start-quiz-section h2 {
+    color: white;
+}
+
+#start-quiz-section p {
+    color: white;
+    padding-right: 20%;
+    padding-left: 20%;
 }
 
 .small-hero {
@@ -443,6 +464,10 @@ button {
 
 .hero-content p{
     width: 60%;
+}
+
+.hero-content-full-width p {
+    width: 100%;
 }
 
 .hero-content h1 {
@@ -554,6 +579,12 @@ button {
     background-color: var(--mainColor);
 }
 
+.profile-box.profile-box-mypets {
+    width: 100%;
+    margin: 0;
+    background-color: var(--mainColor);
+}
+
 .profile-box form button {
     width: 100%;
     align-self: center;
@@ -569,7 +600,7 @@ button {
 }
 
 /* Styling dog name in card */
-.profile-box a:first-of-type {
+.dog-card-name {
     font-size: 1.3em;
 }
 
@@ -586,6 +617,45 @@ button {
     color: white;
     margin: 0;
     text-align: center;
+}
+
+/* Styling for filters */
+#filters {
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Currently selected filters */
+.filter-current {
+    min-width: 160px;
+}
+
+/* Filter category table */
+.filter-1 {
+    border: 1px solid black;
+    position: relative;
+}
+
+/* Filter category heading */
+.filter-2 {
+}
+
+/* Filter category table elements */
+.filter-3 {
+    display: none;
+    min-width: 100px;
+}
+
+.filter-1:hover .filter-3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#filters th {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* Styling for breeds table on breeds.php*/
@@ -1006,6 +1076,7 @@ h1 {
     height: 255px;
     margin-bottom: 25px;
     overflow: auto;
+    border-radius: 10px 10px 0 0;
 }
 
 .regularReminder {
@@ -1045,18 +1116,18 @@ h1 {
     display: none;
 }
 
-/* Category breeds page styling */
-.category-title {
+/* Breeds profile page styling */
+.profile-title {
     font-size: 2em;
     margin-top: 2%;
 }
 
-.category-section {
+.profile-section {
     padding-top: 7%;
     background-color: var(--background);
 }
 
-.category-info h3 {
+.profile-info h3 {
     margin-top: 2%;
     font-size: 1.5em;
     font-weight: normal;
@@ -1068,6 +1139,14 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
+    max-width: 100%;
+}
+
+.glide.glide-mypets img:first-of-type {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
     max-width: 100%;
 }
 
@@ -1201,7 +1280,13 @@ h1 {
 }
 
 /* Styling for RSS Feeds */
-.rss-feed {font-size: small;}
+.rss-feed {
+    font-size: small;
+    width: 47%;
+    float: left;
+    padding-left: 5%;
+    margin-top: 25px;
+}
 
 /* Title of RSS Feed */
 .feed-title a {
@@ -1215,7 +1300,6 @@ h1 {
 
 /* Headlines of RSS feed items */
 .feed-item-title a {
-    padding-top: 1em;
     color: #6b18aa;
     font-size: medium;
 }
@@ -1244,6 +1328,55 @@ h1 {
     display: none;
 }
 
+/* Popup form styling */
+.popup-div {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.popup-form-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 5%);
+    border-radius: 25px;
+    border: 3px solid var(--mainColor);
+    box-shadow: 0 0 50px -10px #000;
+    z-index: 99;
+}
+.popup-form {
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #fff;
+}
+.popup-form input {
+    width: 75%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #eee;
+}
+.popup-form input:focus {
+    background-color: #ddd;
+    outline: none;
+}
+.popup-form .btn {
+    padding: 12px 10px;
+    border: none;
+    background-color: var(--secondaryColor);
+    color: #fff;
+    cursor: pointer;
+    width: 45%;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+.popup-form .cancel {
+    background-color: var(--h1Color);
+}
+.popup-form .btn:hover {
+    opacity: 1;
+}
 
 /* CSS for Mobile Size or Smaller Screen */
 
@@ -1253,6 +1386,21 @@ h1 {
         overflow-x: hidden;
     } */
 
+    .tasks-table {
+        height: 150px;
+    }
+
+    .task-set {
+        padding-right: 10%;
+        width: 100%;
+        margin-bottom: -50px;
+        margin-top: -25px;
+    }
+
+    .task-set2 {
+        margin-bottom: -50px;
+    }
+
     .logo {
         width: 80%;
         float: none;
@@ -1261,14 +1409,7 @@ h1 {
     .menu ul {
         text-align: center;
     }
-    .food-search input[type="search"] {
-        width: 90%;
-        padding: 2%;
-        margin-bottom: 3%;
-    }
-    .food-search {
-        padding: 10% 0;
-    }
+
     .categories {
         padding: 20% 0;
     }
@@ -1282,14 +1423,6 @@ h1 {
     .profile-box {
         width: 100%;
         margin: 4% auto;
-    }
-    .food-menu {
-        padding: 20% 0;
-    }
-    .food-menu-box {
-        width: 90%;
-        padding: 5%;
-        margin-bottom: 5%;
     }
     .social {
         padding: 5% 0;
@@ -1331,6 +1464,11 @@ h1 {
 
     #pet-help-hero {
         background-position: center;
+    }
+
+    #start-quiz-section {
+        background-position: center;
+        background-size: auto 100%;
     }
 
     #personality-quiz form {
@@ -1376,7 +1514,7 @@ h1 {
 
     #main-menu ul {
         flex-direction: column;
-        width: 100%;
+        width: 90%;
     }
 
     #main-menu li {
@@ -1574,7 +1712,7 @@ h1 {
 	#menu-2 {
 		position: absolute;
 		width: 100%;
-		margin: -50px 0 0 -30px;
+		margin: -50px 0 0 160px;
 		padding: 50px; 
 		background: #b3b3b3;
 		list-style-type: none;
@@ -1592,9 +1730,10 @@ h1 {
 
 	#menuToggle-2 input:checked ~ ul {
 		transform: none;
+        width: 50%;
 	}
 
-    .category-section {
+    .profile-section {
         margin-top: 25%;
     }
 
@@ -1608,7 +1747,7 @@ h1 {
         margin-bottom: 5%;
     }
 
-    .category-title {
+    .profile-title {
         text-align: center;
         margin-top: 10%;
     }

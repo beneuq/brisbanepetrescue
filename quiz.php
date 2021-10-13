@@ -201,6 +201,20 @@
                         </div>
                     </div>
                 </fieldset>
+                <!-- Question 12 -->
+                <fieldset id="p-quiz-q12" class="input-card">
+                    <h1>Question 12</h1>
+                    <h2>Are you okay with a dog that sheds a lot? (Consider allergies in your family)</h2>
+                    <input type="checkbox" id="question12N/A" class="N/A" name="question12N/A">
+                    <label for="question12N/A"> N/A</label><br>
+                    <div>
+                        <input type="range" class="quizAnswer quizToggle" id="quiz-shedding_amount_class">
+                        <div class="quizSliderLabels quizToggle">
+                            <span><p>No</p></span>
+                            <span><p>Yes</p></span>
+                        </div>
+                    </div>
+                </fieldset>
 
                 <!-- Submit button -->
                 <button id="submit" class="submit-btn submit-p-quiz" type="submit" value="Submit">Submit</button>
