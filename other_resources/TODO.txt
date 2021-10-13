@@ -6,7 +6,6 @@ A list of tasks to be done by anyone who needs work to do.
     - ! Make it look better on mobile
         - Contact us and login pages are too small
         - ! Work on dogs-mobile and then a breeds-mobile page to replace tables for mobiles
-    - Put content on About us page
     - Put content on Pet help page
     - @Rosario is going to make mypets page look better with calendar
     - Make entire menu buttons clickable (not just text)
