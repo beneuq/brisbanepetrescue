@@ -24,26 +24,29 @@
             </div>
         </section>
         <!-- Section 2 -->
-        <section class="pg-section container">
-            <a href="breeds.php"><h2>Learn more about Breeds</h2></a>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat id earum iste minus sed libero alias nam illo aut nemo deserunt, temporibus necessitatibus ad, magnam est facere?</p>
-
-            <div class="help-box">
-                <div class="help-content">
-                    <h2>Get help with your dog</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat id earum iste minus sed libero alias nam illo aut nemo deserunt?</p>
-                    <a href="">Read More</a>
+        <section class="pg-section container margin-top-2 margin-bottom-3">
+            <a href="breeds.php">
+                <h2 class="margin-bottom-1">Learn more about Breeds</h2>
+            </a>
+            <p class="margin-bottom-3">Taking care of a pet can be hard work, especially a new pet! To simplify things for you, we have collected some of the greatest resources from the across net, for your viewing.  With this information, you will be able to take after your pet/s with ease and confidence!</p>
+            <div id="help-boxes">
+                <div class="help-box">
+                    <div class="help-content">
+                        <h2>Get help with your dog</h2>
+                        <p>Is your dog sick? Perhaps they are showcasing behaviours you don't understand?</p>
+                        <a href="">Read More</a>
+                    </div>
+                    <div class="help-thumbnail"></div>
                 </div>
-                <div class="help-thumbnail"></div>
-            </div>
 
-            <div class="help-box">
-                <div class="help-content">
-                    <h2>Should I be doing this for my dog?</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat id earum iste minus sed libero alias nam illo aut nemo deserunt.</p>
-                    <a href="">Read More</a>
+                <div class="help-box">
+                    <div class="help-content">
+                        <h2>Should I be doing this for my dog?</h2>
+                        <p>Are you confused regarding what your dog can eat? Perhaps you are wondering whether certain behaviours should be encouraged?</p>
+                        <a href="">Read More</a>
+                    </div>
+                    <div class="help-thumbnail"></div>
                 </div>
-                <div class="help-thumbnail"></div>
             </div>
         </section>
 
