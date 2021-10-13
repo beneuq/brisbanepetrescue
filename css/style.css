@@ -1510,7 +1510,7 @@ h1 {
 
     #main-menu ul {
         flex-direction: column;
-        width: 100%;
+        width: 90%;
     }
 
     #main-menu li {
