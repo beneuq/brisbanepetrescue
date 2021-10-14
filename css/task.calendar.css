@@ -318,6 +318,7 @@
     #calendar {
         width: 300px;
         height: 502px;
+        text-align: center;
     }
 
     .day-number {
