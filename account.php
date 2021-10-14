@@ -31,7 +31,7 @@
                             ?>
                             <h2 class="pad-bottom-1">Welcome back, <?php echo $firstname ?>!</h2>
                             <p class="pad-bottom-2">Check up on your pet care reminders, find a new companion, or check out some articles below.</p>
-                            <div class="btn-group margin-bottom-1">
+                            <div class="btn-group margin-bottom-2">
                                 <a href="/mypets.php" class="margin-right-1 hero-btn">My pets</a>
                                 <a href="/dogs.php" class="margin-right-1 hero-btn hero-btn-alt">Explore dogs</a>
                             </div>
@@ -40,7 +40,7 @@
                             ?>
                             <h2 class="margin-bottom-1">Welcome, <?php echo $firstname ?>!</h2>
                             <p>Time to get the ball rolling on your pet adoption? We recommend starting with a personality quiz to find a breed that matches your lifestyle. You can also save breeds to your favorites, or keep a shortlist of dogs you can come back to at any time! </p>
-                            <div class="btn-group margin-top-2 pad-bottom-2">
+                            <div class="btn-group margin-top-1 pad-bottom-2">
                                 <a href="/quiz.php" class="margin-right-1 hero-btn">Personality Quiz</a>
                                 <a href="/dogs.php" class="margin-right-1 hero-btn hero-btn-alt">Explore dogs</a>
                             </div>
