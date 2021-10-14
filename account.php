@@ -22,7 +22,7 @@
         <?php include('partials/menu.php'); ?>
 
         <!-- Hero Section -->
-        <section id="main-hero" class="hero-section pos-relative dimmer-sm">
+        <section id="account-page-hero" class="hero-section pos-relative dimmer-sm">
             <div class="flex container">
                 <div class="flex f-col hero-content hero-content-full-width bg-img">
                     <h1 class="pad-top-2 pad-bottom-1">My Account</h1>

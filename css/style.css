@@ -87,7 +87,8 @@ button {
 
 .pg-section-fit-content {
     height: fit-content;
-    margin: 200px 0 200px 0;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .small-pg-section {
@@ -245,6 +246,10 @@ button {
     justify-content: space-between;
 }
 
+.main-purple-txt {
+    color: var(--mainColor)
+}
+
 /* Scrollbar width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -392,6 +397,13 @@ button {
 
 #main-hero {
     background-image: url(/images/newHero2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 40%;
+}
+
+#account-page-hero {
+    background-image: url(/images/account-page-hero.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 40%;
@@ -1243,8 +1255,9 @@ h1 {
 }
 
 #help-boxes {
-    /* display: flex;
-    flex-direction: row; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .help-box {
@@ -1295,11 +1308,15 @@ h1 {
 }
 
 /* Styling for RSS Feeds */
+
+#rss-feeds {
+    display: flex;
+    justify-content: space-between;
+}
+
 .rss-feed {
     font-size: small;
     width: 47%;
-    float: left;
-    padding-left: 5%;
     margin-top: 25px;
 }
 
@@ -1315,9 +1332,14 @@ h1 {
 
 /* Headlines of RSS feed items */
 .feed-item-title a {
-    color: #6b18aa;
+    color: var(--mainColor);
     font-size: medium;
 }
+
+#help-page a:hover, .feed-item-title a:hover {
+    color: var(--h1Color);
+}
+
 .feed-item-title {
     /*padding-top: 1em;*/
 }
@@ -1467,6 +1489,15 @@ h1 {
         display: flex;
         width: 100%;
         justify-content: space-between;
+    }
+
+    #rss-feeds, #help-boxes {
+        margin-top: 40px;
+        flex-direction: column;
+    }
+
+    .rss-left {
+        margin: 50px;
     }
 
     #login, #logout, #create-account, #contact .input-card {
