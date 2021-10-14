@@ -31,10 +31,9 @@
                             ?>
                             <h2 class="pad-bottom-1">Welcome back, <?php echo $firstname ?>!</h2>
                             <p class="pad-bottom-2">Check up on your pet care reminders, find a new companion, or check out some articles below.</p>
-                            <div class="btn-group margin-bottom-2">
+                            <div class="btn-group margin-bottom-1">
                                 <a href="/mypets.php" class="margin-right-1 hero-btn">My pets</a>
                                 <a href="/dogs.php" class="margin-right-1 hero-btn hero-btn-alt">Explore dogs</a>
-                                <a href="/favourites.php" class="margin-right-1 hero-btn hero-btn-alt">View favourites</a>
                             </div>
                             <?php
                         } else {
@@ -48,7 +47,7 @@
                             <?php
                         }
                         ?>
-                    <div class="pad-bottom-2">
+                    <div class="btn-group pad-bottom-2">
                         <a href="logout.php"  class="margin-right-1 hero-btn">Log out</a>
                         <a href="/favourites.php" class="margin-right-1 hero-btn hero-btn-alt">View favourites</a>
                     </div>
