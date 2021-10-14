@@ -44,7 +44,7 @@ if ($count2 <= 0) {
     echo "<h1>You haven't adopted any pets yet. Adopt one first then come back and check this page out!</h1>";
 } else {
 ?>
-<div class="glide glide-mypets">
+<div class="glide glide-mypets" style="margin-top: 0">
     <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
             <?php

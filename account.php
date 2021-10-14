@@ -49,8 +49,8 @@
                         }
                         ?>
                     <div class="pad-bottom-2">
-                        <a href="/favourites.php" class="margin-right-1 hero-btn hero-btn-alt">View favourites</a>
                         <a href="logout.php"  class="margin-right-1 hero-btn">Log out</a>
+                        <a href="/favourites.php" class="margin-right-1 hero-btn hero-btn-alt">View favourites</a>
                     </div>
                 </div>
                 <!-- <img class="home-hero-img margin-top-2" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down"> -->

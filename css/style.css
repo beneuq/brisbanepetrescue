@@ -87,8 +87,8 @@ button {
 
 .pg-section-fit-content {
     height: fit-content;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .small-pg-section {
@@ -472,6 +472,10 @@ button {
 
 .small-hero {
     min-height: calc(45vh - var(--navbarHeight));
+}
+
+.smallest-hero {
+    min-height: 0;
 }
 
 /* Hero layout for about page */
@@ -1451,8 +1455,8 @@ h1 {
 
     .tasks-table {
         height: initial;
-        max-height: 110px;
-        font-size: 10px;
+        max-height: 120px;
+        font-size: 12px;
     }
 
     .gmaps-star-rating {
@@ -1460,7 +1464,7 @@ h1 {
     }
 
     .task-complete-btn {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .tasks  td, .tasks th {
@@ -1476,17 +1480,18 @@ h1 {
         padding-right: 2%;
         padding-left: 2%;
         width: 100%;
-        margin-top: 120px;
         margin-bottom: -50px;
     }
 
     .task-set2 {
+        padding-right: 5%;
         margin-top: 65px;
         margin-bottom: -50px;
     }
 
     .task-set3 {
         margin-top: 30px;
+        margin-bottom: 0;
         padding-right: 2%;
         padding-left: 2%;
     }
@@ -1541,6 +1546,13 @@ h1 {
         display: flex;
         width: 100%;
         justify-content: space-between;
+    }
+
+    .hero-btn {
+        display: flex;
+        border: 1px solid white;
+        padding: 10px 15px;
+        width: 100%;
     }
 
     #rss-feeds, #help-boxes {

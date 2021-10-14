@@ -317,9 +317,8 @@
 
 @media only screen and (max-width:768px) {
     #calendar {
-        width: 300px;
+        width: 350px;
         height: 502px;
-        text-align: center;
     }
 
     .day-number {
@@ -327,11 +326,11 @@
     }
 
     .day {
-        width: 40px;
+        width: 50px;
     }
 
     .header {
-        width: 300px;
+        width: 350px;
     }
 
     .event span {

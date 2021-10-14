@@ -24,7 +24,7 @@
             </div>
         </section>
         <!-- Section 2 -->
-        <section id="help-page" class="pg-section container margin-top-2 margin-bottom-3">
+        <section id="help-page" class="pg-section container margin-top-2 margin-bottom-2">
             <a href="breeds.php">
                 <h1 class="margin-bottom-1">Learn more about Breeds</h1>
             </a>
