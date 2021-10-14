@@ -97,9 +97,7 @@
 
             <div class="task-set2">
                 <h2 class="tasks-txt">Reminders</h2>
-                <div class="tasks-table">
-                    <?php include "partials/task-calendar.php";?>
-                </div>
+                <?php include "partials/task-calendar.php";?>
             </div>
 
             <div class="task-set3"> 
