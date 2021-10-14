@@ -48,14 +48,14 @@
                     <h1>Question 1</h1>
                     <h2>What size are you looking for in your dog?</h2>
                     <input type="checkbox" id="question1N/A" class="N/A" name="question1N/A">
-                    <label for="question1N/A"> N/A</label><br>
+                    <label for="question1N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-size_class">
                     <div class="quizSliderLabels">
-                        <span><p>Small</p></span>
+                        <span>Small</span>
                         <span></span>
-                        <span><p>Medium</p></span>
+                        <span>Medium</span>
                         <span></span>
-                        <span><p>Large</p></span>
+                        <span>Large</span>
                     </div>
                 </fieldset>
                 <!-- Question 2 -->
@@ -63,14 +63,14 @@
                     <h1>Question 2</h1>
                     <h2>How much are you willing to spend on the initial purchase?</h2>
                     <input type="checkbox" id="question2N/A" class="N/A" name="question2N/A">
-                    <label for="question2N/A"> N/A</label><br>
+                    <label for="question2N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-average_purchase_price_class">
                     <div class="quizSliderLabels">
-                        <span> <p class><?php echo EMOJI_DOLLAR;?></p></span>
+                        <span>$50</span>
                         <span> </span>
-                        <span><p><?php echo str_repeat(EMOJI_DOLLAR, 2);?></p></span>
+                        <span>$500</span>
                         <span></span>
-                        <span><p><?php echo str_repeat(EMOJI_DOLLAR, 3);?></p></span>
+                        <span>$1000+</span>
                     </div>
                 </fieldset>
                 <!-- Question 3 -->
@@ -78,14 +78,17 @@
                     <h1>Question 3</h1>
                     <h2>How much are you willing to spend over your dog's lifetime?</h2>
                     <input type="checkbox" id="question3N/A" class="N/A" name="question3N/A">
-                    <label for="question3N/A"> N/A</label><br>
+                    <label for="question3N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-lifetime_cost_class">
                     <div class="quizSliderLabels">
-                        <span><p><?php echo EMOJI_DOLLAR;?></p></span>
+                        <span>$5k</span>
                         <span></span>
-                        <span><p><?php echo str_repeat(EMOJI_DOLLAR, 2);?></p></span>
+                        <span>$25k</span>
                         <span></span>
-                        <span><p><?php echo str_repeat(EMOJI_DOLLAR, 3);?></p></span>
+                        <span>$50k+</span>
+                    </div>
+                    <div style="text-align:center">
+                    <a href="https://www.rspcansw.org.au/what-we-do/care-for-animals/owning-a-pet/costs/" target="_blank">Why do dogs cost so much?</a>
                     </div>
                 </fieldset>
                 <!-- Question 4 -->
@@ -93,11 +96,11 @@
                     <h1>Question 4</h1>
                     <h2>Are you looking for or interested in a guard dog?</h2>
                     <input type="checkbox" id="question4N/A" class="N/A" name="question4N/A">
-                    <label for="question4N/A"> N/A</label><br>
+                    <label for="question4N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizToggle" id="quiz-watchdog_class">
                     <div class="quizSliderLabels quizToggle">
-                        <span><p>No</p></span>
-                        <span><p>Yes</p></span>
+                        <span>No</span>
+                        <span>Yes<</span>
                     </div>
                 </fieldset>
                 <!-- Question 5 -->
@@ -105,14 +108,14 @@
                     <h1>Question 5</h1>
                     <h2>How often will you be away from your dog?</h2>
                     <input type="checkbox" id="question5N/A" class="N/A" name="question5N/A">
-                    <label for="question5N/A"> N/A</label><br>
+                    <label for="question5N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-tolerates_being_alone_class">
                     <div class="quizSliderLabels">
-                        <span><p>Rarely</p></span>
+                        <span>Rarely</span>
                         <span></span>
-                        <span><p>Sometimes</p></span>
+                        <span>Sometimes</span>
                         <span></span>
-                        <span><p>Very</p></span>
+                        <span>Very</span>
                     </div>
                 </fieldset>
                 <!-- Question 6 -->
@@ -120,14 +123,14 @@
                     <h1>Question 6</h1>
                     <h2>How playful do you want your dog to be?</h2>
                     <input type="checkbox" id="question6N/A" class="N/A" name="question6N/A">
-                    <label for="question6N/A"> N/A</label><br>
+                    <label for="question6N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-potential_for_playfulness_class">
                     <div class="quizSliderLabels">
-                        <span><p>Rarely</p></span>
+                        <span>Rarely</span>
                         <span></span>
-                        <span><p>Sometimes</p></span>
+                        <span>Sometimes</span>
                         <span></span>
-                        <span><p>Very</p></span>
+                        <span>Very</span>
                     </div>
                 </fieldset>
                  <!-- Question 7 -->
@@ -135,11 +138,11 @@
                     <h1>Question 7</h1>
                     <h2>Do you require the dog to be kid friendly?</h2>
                     <input type="checkbox" id="question7N/A" class="N/A" name="question7N/A">
-                    <label for="question7N/A"> N/A</label><br>
+                    <label for="question7N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizToggle" id="quiz-incredibly_kid_friendly_class">
                     <div class="quizSliderLabels quizToggle">
-                        <span><p>No</p></span>
-                        <span><p>Yes</p></span>
+                        <span>No</span>
+                        <span>Yes</span>
                     </div>
                 </fieldset>
                  <!-- Question 8 -->
@@ -147,14 +150,14 @@
                     <h1>Question 8</h1>
                     <h2>How much experience have you had with pet ownership?</h2>
                     <input type="checkbox" id="question8N/A" class="N/A" name="question8N/A">
-                    <label for="question8N/A"> N/A</label><br>
+                    <label for="question8N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider quizInvert" id="quiz-good_for_novice_owners">
                     <div class="quizSliderLabels">
-                        <span><p>First time</p></span>
+                        <span>First time</span>
                         <span></span>
-                        <span><p>Some</p></span>
+                        <span>Some</span>
                         <span></span>
-                        <span><p>Lots</p></span>
+                        <span>Lots</span>
                     </div>
                 </fieldset>
                  <!-- Question 9 -->
@@ -162,14 +165,14 @@
                     <h1>Question 9</h1>
                     <h2>How often could you to take your dog for exercise?</h2>
                     <input type="checkbox" id="question9N/A" class="N/A" name="question9N/A">
-                    <label for="question9N/A"> N/A</label><br>
+                    <label for="question9N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-exercise_needs_class">
                     <div class="quizSliderLabels">
-                        <span><p>Rarely</p></span>
+                        <span>Rarely</span>
                         <span></span>
-                        <span><p>Sometimes</p></span>
+                        <span>Sometimes</span>
                         <span></span>
-                        <span><p>Frequently</p></span>
+                        <span>Frequently</span>
                     </div>
                 </fieldset>
                  <!-- Question 10 -->
@@ -177,14 +180,14 @@
                     <h1>Question 10</h1>
                     <h2>How large will the dog’s living space be?</h2>
                     <input type="checkbox" id="question10N/A" class="N/A" name="question10N/A">
-                    <label for="question10N/A"> N/A</label><br>
+                    <label for="question10N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider quizInvert" id="quiz-apartment_living_class">
                     <div class="quizSliderLabels">
-                        <span><p>Apartment</p></span>
+                        <span>Apartment</span>
                         <span></span>
-                        <span><p>Mid-size</p></span>
+                        <span>Mid-size</span>
                         <span></span>
-                        <span><p>Big House</p></span>
+                        <span>Big House</span>
                     </div>
                 </fieldset>
                 <!-- Question 11 -->
@@ -192,12 +195,12 @@
                     <h1>Question 11</h1>
                     <h2>Do you have any other dogs?</h2>
                     <input type="checkbox" id="question11N/A" class="N/A" name="question11N/A">
-                    <label for="question11N/A"> N/A</label><br>
+                    <label for="question11N/A"> Not sure / skip</label><br>
                     <div>
                         <input type="range" class="quizAnswer quizToggle" id="quiz-dog_friendly_class">
                         <div class="quizSliderLabels quizToggle">
-                            <span><p>No</p></span>
-                            <span><p>Yes</p></span>
+                            <span>No</span>
+                            <span>Yes</span>
                         </div>
                     </div>
                 </fieldset>
@@ -206,12 +209,12 @@
                     <h1>Question 12</h1>
                     <h2>Are you okay with a dog that sheds a lot? (Consider allergies in your family)</h2>
                     <input type="checkbox" id="question12N/A" class="N/A" name="question12N/A">
-                    <label for="question12N/A"> N/A</label><br>
+                    <label for="question12N/A"> Not sure / skip</label><br>
                     <div>
                         <input type="range" class="quizAnswer quizToggle" id="quiz-shedding_amount_class">
                         <div class="quizSliderLabels quizToggle">
-                            <span><p>No</p></span>
-                            <span><p>Yes</p></span>
+                            <span>No</span>
+                            <span>Yes</span>
                         </div>
                     </div>
                 </fieldset>
