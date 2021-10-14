@@ -1406,7 +1406,7 @@ h1 {
     } */
 
     .tasks-table {
-        height: 150px;
+        height: 170px;
     }
 
     .task-set {
@@ -1416,6 +1416,7 @@ h1 {
     }
 
     .task-set2 {
+        margin-top: 65px;
         margin-bottom: -50px;
     }
 
