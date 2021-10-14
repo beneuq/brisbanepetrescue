@@ -389,7 +389,7 @@ button {
 
 /* HERO SECTION */
 .hero-section {
-    min-height: calc(75vh - var(--navbarHeight));
+    min-height: 70vh;
     color: white;
     padding-top: 3%;
     background: var(--mainColor);
@@ -492,9 +492,13 @@ button {
     width: 60%;
 }
 
-.hero-content-full-width p {
-    width: 100%;
+#account-page-hero .hero-content p {
+    width: 50%;
 }
+
+/* .hero-content-full-width p {
+    width: 100%;
+} */
 
 .hero-content h1 {
     /* text-transform: uppercase; */
@@ -1525,7 +1529,7 @@ h1 {
         display: none!important;
     }
 
-    .hero-content p, p  {
+    .hero-content p, p, #account-page-hero .hero-content p  {
         width: 100%;
     }
 
