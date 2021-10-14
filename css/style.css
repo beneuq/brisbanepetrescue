@@ -609,22 +609,25 @@ button {
     color: white;
     background-color: var(--secondaryColor);
     width: 100%;
+}
+
+/* Styling dog name in card */
+.profile-text {
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-/* Styling dog name in card */
-.dog-card-name {
+#profile-title {
     font-size: 1.3em;
 }
 
-.profile-box a:hover {
+.profile-text:hover {
     background-color: var(--h1Color)
 }
 
 .profile-box img {
-    margin-left: auto;
-    margin-right: auto;
+    min-height: 100%;
+    vertical-align: middle;
 }
 
 .profile-box p {
