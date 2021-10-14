@@ -85,7 +85,7 @@ if ($count2 <= 0) {
 </div>
 <script>
     const config = {
-        type: 'carousel',
+        type: 'slide',
         perView: 5, //TODO: Do not display duplicates!
         autoplay: 0,
         breakpoints: {
@@ -94,7 +94,8 @@ if ($count2 <= 0) {
             }
         },
         focusAt: 'center',
-        gap:-50
+        gap:-50,
+        animationDuration: 300,
     }
     new Glide('.glide', config).mount()
 </script>
