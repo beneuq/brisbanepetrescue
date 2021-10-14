@@ -62,18 +62,18 @@
                 ?>
                     <div class="profile-box float-container" id='dog_id=<?php echo $entry['dog_id']; ?>'>
                         <td><a href='dog-profile.php?dog_id=<?php echo $entry['dog_id']; ?>'><img src='<?php echo SITEURL . $entry['path']; ?>' alt='dog image' width='100%'></a></td>
-                        <td style="vertical-align: middle;"><a class='dog-card-name' href='dog-profile.php?dog_id=<?php echo $entry['dog_id']; ?>'>
+                        <td style="vertical-align: middle;"><a class='profile-text' id='profile-title' href='dog-profile.php?dog_id=<?php echo $entry['dog_id']; ?>'>
                                 <p>
                                     <?php echo $entry['Dog']; ?>
                                     <img src='/images/icons/<?php echo $entry['gender']; ?>.png' alt='dog gender' width='5%'>
                                 </p>
                             </a></td>
-                        <td><a href='breed-profile.php?breed_id=<?php echo $entry['breed_id']; ?>'>
-                                <?php echo $entry['age']; ?> year old <?php echo $entry['Breed']; ?>
+                        <td><a class="profile-text" href='breed-profile.php?breed_id=<?php echo $entry['breed_id']; ?>'>
+                                <?php echo $entry['Breed']; ?>
                             </a></td>
                         <td></td>
                         <td>
-                            <p><?php echo $entry['Shelter']; ?></p>
+                            <p><?php echo $entry['age']; ?> years old    -   <?php echo $entry['Shelter']; ?></p>
                         </td>
                         <td>
                             <form method='POST' action='/form_submissions/favourite_dog.php'>

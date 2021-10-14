@@ -85,6 +85,11 @@ button {
     padding: 50px 0 50px 0;
 }
 
+.pg-section-fit-content {
+    height: fit-content;
+    margin: 200px 0 200px 0;
+}
+
 .small-pg-section {
     min-height: 50vh;
 }
@@ -404,6 +409,19 @@ button {
     padding-left: 20%;
 }
 
+#about-us-pg-content {
+    justify-content: space-between;
+}
+
+.about-us-aside {
+    background-image: url(/images/about-us-page-img.jpg);
+    width: 100%;
+    height: 460px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 50px;
+}
+
 #pet-help-hero {
     background-image: url(/images/about-us-cta.jpg);
     background-position: right center;
@@ -420,7 +438,7 @@ button {
 
 #start-quiz-section {
     background-image: url(/images/about-us-cta.jpg);
-    background-position: right center;
+    background-position: 55% center;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
     text-align: center;
     align-items: center;
@@ -591,22 +609,25 @@ button {
     color: white;
     background-color: var(--secondaryColor);
     width: 100%;
+}
+
+/* Styling dog name in card */
+.profile-text {
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-/* Styling dog name in card */
-.dog-card-name {
+#profile-title {
     font-size: 1.3em;
 }
 
-.profile-box a:hover {
+.profile-text:hover {
     background-color: var(--h1Color)
 }
 
 .profile-box img {
-    margin-left: auto;
-    margin-right: auto;
+    min-height: 100%;
+    vertical-align: middle;
 }
 
 .profile-box p {
@@ -923,7 +944,7 @@ footer a:hover {
 
 p {
     display: block;
-    margin-block-start: 1em;
+    /* margin-block-start: 1em; */
     margin-block-end: 1em;
     margin-inline-start: 0;
     margin-inline-end: 0;
@@ -1213,15 +1234,20 @@ h1 {
     background-color: rgba(0, 0, 0, 0.05)
 }
 
-.about-us-text {
+/* .about-us-text {
     width: 85%;
     margin: 0 auto;
     padding-bottom: 2%;
-}
+} */
 
 /* Help page styling */
 .help-main {
     background-color: rgba(0, 0, 0, 0.05)
+}
+
+#help-boxes {
+    /* display: flex;
+    flex-direction: row; */
 }
 
 .help-box {
@@ -1229,14 +1255,10 @@ h1 {
     width: 40%;
     max-height: 303px;
     background: white;
-    float: left;
     top: 0;
     height: 100%;
     transform: translateY(-5px);
     opacity: 1;
-    margin-top: 4%;
-    margin-left: 5%;
-    margin-right: 5%;
     padding-top: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
@@ -1305,10 +1327,11 @@ h1 {
 
 /* Main content of RSS feed */
 .rss-feed p {
-    line-height: 125%;
+    /* line-height: 125%; */
     font-size: 11pt;
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
+    margin-bottom: 30px;
 }
 
 /* Appeared First text */
@@ -1469,6 +1492,16 @@ h1 {
 
     #personality-quiz form {
         width: 100%;
+    }
+
+    
+    #about-us-pg-content {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .about-us-aside {
+        margin-left: 0;
     }
 
     .dimmer-sm {

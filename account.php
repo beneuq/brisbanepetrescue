@@ -50,17 +50,18 @@
                         }
                         ?>
                     </div>
-                    <div class="pad-bottom-2">
+                    <!-- <div class="pad-bottom-2">
                         <a href="logout.php" class="hero-btn hero-btn-alt">Logout</a>
+                    </div> -->
+                    <div class="pad-bottom-2">
+                        <a href="logout.php"  class="margin-right-1 hero-btn">Log out</a>
                     </div>
                 </div>
                 <!-- <img class="home-hero-img margin-top-2" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down"> -->
             </div>
-
         </section>
-
-        <!-- Show some pet care RSS feeds -->
-        <?php include('partials/rss-feeds.php'); ?>
+         <!-- Show some pet care RSS feeds -->
+         <?php include('partials/rss-feeds.php'); ?> 
 
         <!-- FOOTER -->
         <?php include('partials/footer.php'); ?>

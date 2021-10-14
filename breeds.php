@@ -35,7 +35,7 @@
                     <th>Breed</th>
                     <th>Intelligence</th>
                     <th>Lifetime Cost</th>
-                    <th>Popularity</th>
+                    <th>Commonness</th>
                     <th class="text-left">Size Class</th>
                 </tr>
                 <thead>
