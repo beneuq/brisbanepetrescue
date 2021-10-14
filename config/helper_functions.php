@@ -58,3 +58,18 @@ function user_owns_dogs(): bool
     $count = mysqli_num_rows($res);
     return $count > 0;
 }
+
+/** Get list of unique breeds owned by user */
+function get_user_breeds(): array
+{
+    enforce_login();
+    $user_id = get_userid();
+    $my_breeds = array();
+    global $conn;
+    $sql = "SELECT DISTINCT Breed FROM dog_breeds INNER JOIN dogs ON dogs.breed_id=dog_breeds.breed_id WHERE owner_id={$user_id}";
+    $res = mysqli_query($conn, $sql);
+    while($entry = mysqli_fetch_array($res)) {
+        array_push($my_breeds, $entry['Breed']);
+    }
+    return $my_breeds;
+}

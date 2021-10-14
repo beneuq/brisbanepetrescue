@@ -621,22 +621,25 @@ button {
     color: white;
     background-color: var(--secondaryColor);
     width: 100%;
+}
+
+/* Styling dog name in card */
+.profile-text {
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-/* Styling dog name in card */
-.dog-card-name {
+#profile-title {
     font-size: 1.3em;
 }
 
-.profile-box a:hover {
+.profile-text:hover {
     background-color: var(--h1Color)
 }
 
 .profile-box img {
-    margin-left: auto;
-    margin-right: auto;
+    min-height: 100%;
+    vertical-align: middle;
 }
 
 .profile-box p {
@@ -1105,6 +1108,10 @@ h1 {
     border-radius: 10px 10px 0 0;
 }
 
+.allow-full-height {
+    height: initial;
+}
+
 .regularReminder {
     /* TODO */
 }
@@ -1168,12 +1175,24 @@ h1 {
     max-width: 100%;
 }
 
+.mypets-glider {
+    /*background-color: red;*/
+    /*height: 100px;*/
+}
+
+.glide.glide-mypets img {
+    display: inline-flex;
+}
+
 .glide.glide-mypets img:first-of-type {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 0;
     max-width: 100%;
+}
+
+.dog-card-name {
+    font-size: x-large;
 }
 
 .information-boxes {
@@ -1425,18 +1444,45 @@ h1 {
     } */
 
     .tasks-table {
-        height: 150px;
+        height: initial;
+        max-height: 110px;
+        font-size: 10px;
+    }
+
+    .gmaps-star-rating {
+        font-size: 10px;
+    }
+
+    .task-complete-btn {
+        font-size: 10px;
+    }
+
+    .tasks  td, .tasks th {
+        border: 1px solid #ddd;
+        padding: 4px;
+    }
+
+    .allow-full-height {
+        height: initial;
     }
 
     .task-set {
-        padding-right: 10%;
+        padding-right: 2%;
+        padding-left: 2%;
         width: 100%;
+        margin-top: 120px;
         margin-bottom: -50px;
-        margin-top: -25px;
     }
 
     .task-set2 {
+        margin-top: 65px;
         margin-bottom: -50px;
+    }
+
+    .task-set3 {
+        margin-top: 30px;
+        padding-right: 2%;
+        padding-left: 2%;
     }
 
     .logo {

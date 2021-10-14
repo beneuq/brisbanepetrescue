@@ -38,13 +38,12 @@
                 </div>
             </div>
         </section>
+        <!-- This code iterates through the database and adds a table row for each dog in the database -->
         <?php include "partials/mypets-tasks-and-reminders-logic.php";?>
 
-        <?php include "partials/my-pets-glider.php";?>
-
-        <!-- This code iterates through the database and adds a table row for each dog in the database -->
-
-
+        <div class="mypets-glider">
+            <?php include "partials/my-pets-glider.php";?>
+        </div>
 
         <div id="sqldata">
             <div class="task-set">
@@ -61,7 +60,7 @@
                                 echo "
                                     <tr>
                                         <td>{$task["text"]}</td>
-                                        <td><button onclick='complete_task(\"{$task["type"]}\", \"{$task["dog_id"]}\")'>Complete</button></td>
+                                        <td><button onclick='complete_task(\"{$task["type"]}\", \"{$task["dog_id"]}\")' class='task-complete-btn'>Complete</button></td>
                                     </tr>
                                 ";
                             }
@@ -86,7 +85,7 @@
                                 <tr>
                                     <td class='{$reminder['cell_class']}'>{$reminder['text']}</td>
                                     <td class='{$reminder['cell_class']}'>in {$reminder['days']} days</td>
-                                    <td class='{$reminder['cell_class']}'><button onclick='complete_task(\"{$reminder["type"]}\", \"{$reminder["dog_id"]}\")'>Complete</button></td>
+                                    <td class='{$reminder['cell_class']}'><button onclick='complete_task(\"{$reminder["type"]}\", \"{$reminder["dog_id"]}\")' class='task-complete-btn'>Complete</button></td>
                                 </tr>
                                 ";
                             }
@@ -94,45 +93,68 @@
                     </table>
                 </div>
             </div>
+
             <div class="task-set2">
-            <h2 class="tasks-txt">Reminders</h2>
+                <h2 class="tasks-txt">Reminders</h2>
                 <?php include "partials/task-calendar.php";?>
             </div>
 
             <div class="task-set3"> 
-                <h2 class="tasks-txt">Recommendations</h2>
+                <h2 class="tasks-txt">Breed&nbsp;Care&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2> <!-- TODO why do I need this?! -->
                 <div class="tasks-table">
                     <table class="tasks">
-                            <tr>
-                                <th>Recommended Food</th>
-                            </tr>
-                            <tr>
-                                <td>EXAMPLE</td>
-                            </tr>
+                        <tr><th>Recommended Food</th></tr>
+                        <?php
+                        $my_breeds = get_user_breeds();
+                        foreach ($my_breeds as $breed_name) {
+                            echo "
+                                <tr>
+                                    <td><a href='https://duckduckgo.com/?q=!ducky+".urlencode("food for a ".$breed_name)."' target='_blank'>{$breed_name} recommended diet</a></td>
+                                </tr>
+                                ";
+                        }
+                        ?>
+                    </table>
+                </div>
+                <div class="tasks-table">
+                    <table class="tasks">
+                        <tr><th>Grooming Advice</th></tr>
+                        <?php
+                        foreach ($my_breeds as $breed_name) {
+                            echo "
+                                <tr>
+                                    <td><a href='https://duckduckgo.com/?q=!ducky+".urlencode("how to groom a ".$breed_name)."' target='_blank'>{$breed_name} grooming tips</a></td>
+                                </tr>
+                                ";
+                        }
+                        ?>
                     </table>
                 </div>
             </div>
                             
             <div class="task-set3">               
                 <h2 class="tasks-txt">In your area</h2>
-                <div class="tasks-table">
-                    <table class="tasks" id="nearby-places">
-                        <!-- Load Google Maps Places API Library (if enabled) -->
-                        <div id="map"></div>
-                        <?php
-                            if (USE_GOOGLE_MAPS_API) {
-                                echo "
-                                <script async src='https://maps.googleapis.com/maps/api/js?key=".GOOGLE_MAPS_API_KEY."&libraries=places'></script>
+                <!-- Load Google Maps Places API Library (if enabled) -->
+                <?php
+                if (USE_GOOGLE_MAPS_API) {
+                    echo "
+                                <script src='https://maps.googleapis.com/maps/api/js?key=".GOOGLE_MAPS_API_KEY."&libraries=places'></script>
                                 <script src='js/pet-rescue-google-maps-api.js'></script>
                                 ";
-                            } else {
-                                echo "<p style='background-color:red'>Results are not being displayed to save our free API credits. <br>Enable USE_GOOGLE_MAPS_API in constants.php to test </p>";
-                            }
-                        ?>
+                } else {
+                    echo "<p style='background-color:red'>Results are not being displayed to save our free API credits. <br>Enable USE_GOOGLE_MAPS_API in constants.php to test </p>";
+                }
+                ?>
+                <div id="map"></div>
+
+                <div class="tasks-table">
+                    <table class="tasks" id="nearby-vet-clinics">
                         <tr id="vet-clinics"><th>Veterinary Clinics</th><th>Location</th><th>Rating</th></tr>
+                    </table>
+                </div>
+                <div class="tasks-table">
+                    <table class="tasks" id="nearby-dog-parks">
                         <tr id="dog-parks"><th>Dog Parks</th><th>Location</th><th>Rating</th></tr>
-                        <tr><th>Puppy Preschools / Obedience Training</th><th>Location</th><th>Rating</th></tr>
-                        <tr><th>Dog Groomers</th><th>Location</th><th>Rating</th></tr>
                     </table>
                 </div>
             </div>

@@ -144,8 +144,10 @@
                         <ul> <?php foreach ($best_traits as $quality) {echo "<li class='good-traits'>".$quality."</li>";} ?> </ul>
                     <h3>Breed not recommended for:</h3>
                         <ul> <?php foreach ($worst_traits as $quality) {echo "<li  class='bad-traits'>".$quality."</li>";} ?> </ul>
+                    <h3>Pet Care Advice</h3>
+                    <ul><a href='https://duckduckgo.com/?q=!ducky+<?php echo urlencode("food for a ".$breed_title);?>' target='_blank'>View food recommendations for the <?php echo $breed_title;?> breed</a></ul>
+                    <ul><a href='https://duckduckgo.com/?q=!ducky+<?php echo urlencode("how to groom a ".$breed_title);?>' target='_blank'>View grooming tips for the <?php echo $breed_title;?> breed</a></ul>
                     <!-- Section with all details -->
-
                     <h3>Detailed breed information</h3>
                     <p>All breeds are given a rating from 1 to 5 (5 being high) for a number of important physical and personality traits.
                         Please note that these are general traits and may not reflect every dog of this breed. </p>
@@ -157,8 +159,7 @@
                                                 . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['popularity_class']); ?></p>
                             <p>Good first time pet: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['good_for_novice_owners'])
                                                         . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['good_for_novice_owners']); ?></p>
-                            <p>Size: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['size_class'])
-                                            . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['size_class']); ?></p>
+                            <p>Size: <br><img src='images/icons/dog_size_<?php echo $entry_breed_info['size_class']; ?>' style="width: 120px"></p>
                             <p>Height: <br><?php echo $entry_breed_info['height_low']; ?>cm - <?php echo $entry_breed_info['height_high']; ?>cm</p>
                             <p>Weight: <br><?php echo $entry_breed_info['weight_low']; ?>kgs - <?php echo $entry_breed_info['weight_high']; ?>kgs</p>
                             <p>Calorie intake (when adult):
