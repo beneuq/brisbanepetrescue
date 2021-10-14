@@ -1282,7 +1282,8 @@ h1 {
 .help-box {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     width: 40%;
-    max-height: 303px;
+    min-height: 300px;
+    max-height: 600px;
     background: white;
     top: 0;
     height: 100%;
@@ -1293,6 +1294,7 @@ h1 {
     padding-bottom: 20px;
     display: flex;
     transition: all .2s ease-in-out;
+    border-radius: 10px;
 }
 
 .help-box:hover {
