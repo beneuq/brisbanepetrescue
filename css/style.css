@@ -1542,8 +1542,12 @@ h1 {
         flex-direction: column;
     }
 
-    .rss-left {
-        margin: 50px;
+    .help-box, .rss-feed {
+        width: 100%;
+    }
+    
+    .rss-left, .help-box-2 {
+        margin-top: 50px;
     }
 
     #login, #logout, #create-account, #contact .input-card {

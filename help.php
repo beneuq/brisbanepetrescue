@@ -39,7 +39,7 @@
                     <div class="help-thumbnail"></div>
                 </div>
 
-                <div class="help-box">
+                <div class="help-box help-box-2">
                     <div class="help-content">
                         <h2>Should I be doing this for my dog?</h2>
                         <p>Are you confused regarding what your dog can eat? Perhaps you are wondering whether certain behaviours should be encouraged?</p>
