@@ -21,7 +21,7 @@
 <!-- import menu -->
 <?php include('partials/menu.php'); ?>
 
-<div class="wrapper container">
+<div class="pg-section wrapper container">
     <fieldset id="logout-btn" class="input-card">
         <legend>You have been logged out of your account</legend>
         <div class="form-group">
