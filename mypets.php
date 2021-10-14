@@ -100,19 +100,33 @@
             </div>
 
             <div class="task-set3"> 
-                <h2 class="tasks-txt">Recommendations</h2>
-                <div class="tasks-table">
+                <h2 class="tasks-txt">Breed&nbsp;Care&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2> <!-- TODO why do I need this?! -->
+                <div class="tasks-table allow-full-height">
                     <table class="tasks">
-                            <tr>
-                                <th>Recommended Food</th>
-                            </tr>
+                        <tr>
+                            <th>Recommended Food</th>
+                        </tr>
                         <!-- Add rows for each post adoption task -->
                         <?php
                         $my_breeds = get_user_breeds();
                         foreach ($my_breeds as $breed_name) {
                             echo "
                                     <tr>
-                                        <td><a href='https://duckduckgo.com/?q=!ducky+".urlencode("food for a ".$breed_name)."' target='_blank'>Food recommendations for a {$breed_name}</a>
+                                        <td><a href='https://duckduckgo.com/?q=!ducky+".urlencode("food for a ".$breed_name)."' target='_blank'>{$breed_name} recommended diet</a>
+                                        </td>
+                                    </tr>
+                                ";
+                        }
+                        ?>
+                        <tr>
+                            <th>Grooming Advice</th>
+                        </tr>
+                        <!-- Add rows for each post adoption task -->
+                        <?php
+                        foreach ($my_breeds as $breed_name) {
+                            echo "
+                                    <tr>
+                                        <td><a href='https://duckduckgo.com/?q=!ducky+".urlencode("how to groom a ".$breed_name)."' target='_blank'>{$breed_name} grooming tips</a>
                                         </td>
                                     </tr>
                                 ";
@@ -124,7 +138,7 @@
                             
             <div class="task-set3">               
                 <h2 class="tasks-txt">In your area</h2>
-                <div class="tasks-table">
+                <div class="tasks-table allow-full-height">
                     <table class="tasks" id="nearby-places">
                         <!-- Load Google Maps Places API Library (if enabled) -->
                         <div id="map"></div>

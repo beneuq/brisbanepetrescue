@@ -144,9 +144,9 @@
                         <ul> <?php foreach ($best_traits as $quality) {echo "<li class='good-traits'>".$quality."</li>";} ?> </ul>
                     <h3>Breed not recommended for:</h3>
                         <ul> <?php foreach ($worst_traits as $quality) {echo "<li  class='bad-traits'>".$quality."</li>";} ?> </ul>
-                    <h3>Diet</h3>
-                    <a href='https://duckduckgo.com/?q=!ducky+<?php echo urlencode("food for a ".$breed_title);?>' target='_blank'>View food recommendations for the <?php echo $breed_title;?> breed</a>
-
+                    <h3>Pet Care Advice</h3>
+                    <ul><a href='https://duckduckgo.com/?q=!ducky+<?php echo urlencode("food for a ".$breed_title);?>' target='_blank'>View food recommendations for the <?php echo $breed_title;?> breed</a></ul>
+                    <ul><a href='https://duckduckgo.com/?q=!ducky+<?php echo urlencode("how to groom a ".$breed_title);?>' target='_blank'>View grooming tips for the <?php echo $breed_title;?> breed</a></ul>
                     <!-- Section with all details -->
                     <h3>Detailed breed information</h3>
                     <p>All breeds are given a rating from 1 to 5 (5 being high) for a number of important physical and personality traits.
