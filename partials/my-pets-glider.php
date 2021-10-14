@@ -87,6 +87,7 @@ if ($count2 <= 0) {
     const config = {
         type: 'slide',
         perView: 5, //TODO: Do not display duplicates!
+        startAt:  <?php echo ($count2/2)-0.1;?>, // Centre on middle (or middle-left) dog
         autoplay: 0,
         breakpoints: {
             768: {
