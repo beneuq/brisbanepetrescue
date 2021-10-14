@@ -1159,12 +1159,24 @@ h1 {
     max-width: 100%;
 }
 
+.mypets-glider {
+    /*background-color: red;*/
+    /*height: 100px;*/
+}
+
+.glide.glide-mypets img {
+    display: inline-flex;
+}
+
 .glide.glide-mypets img:first-of-type {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 0;
     max-width: 100%;
+}
+
+.dog-card-name {
+    font-size: x-large;
 }
 
 .information-boxes {

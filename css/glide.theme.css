@@ -75,9 +75,17 @@
   transform: scale(0.8);
 }
 
+.glide__slide__mypets.glide__slide p {
+  display: none;
+}
+
 .glide__slide__mypets.glide__slide--active {
   transition: all .2s ease-in-out;
   transform: scale(0.9);
   z-index: 999;
   box-shadow: 0 0 20px 0 #000;
+}
+
+.glide__slide__mypets.glide__slide--active p {
+  display: block;
 }

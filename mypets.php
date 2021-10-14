@@ -38,13 +38,12 @@
                 </div>
             </div>
         </section>
+        <!-- This code iterates through the database and adds a table row for each dog in the database -->
         <?php include "partials/mypets-tasks-and-reminders-logic.php";?>
 
-        <?php include "partials/my-pets-glider.php";?>
-
-        <!-- This code iterates through the database and adds a table row for each dog in the database -->
-
-
+        <div class="mypets-glider">
+            <?php include "partials/my-pets-glider.php";?>
+        </div>
 
         <div id="sqldata">
             <div class="task-set">

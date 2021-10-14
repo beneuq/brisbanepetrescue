@@ -57,14 +57,18 @@ if ($count2 <= 0) {
                 <div class="profile-box profile-box-mypets float-container" id='dog_id=<?php echo $row2['dog_id']; ?>'>
                     <td><a href='/dog-profile.php?dog_id=<?php echo $row2['dog_id']; ?>'><img src='<?php echo SITEURL . $row2['path']; ?>' alt='dog image' width='100%'></a></td>
                     <td style="vertical-align: middle;"><a class='dog-card-name' href='/dog-profile.php?dog_id=<?php echo $row2['dog_id']; ?>'>
-                            <p>
-                                <?php echo $row2['Dog']; ?><img src='/images/icons/<?php echo $row2['gender']; ?>.png' alt='dog gender' width='5%'>
-                            </p>
+                                <?php echo $row2['Dog']; ?>&nbsp;&nbsp;<img src='/images/icons/<?php echo $row2['gender']; ?>.png' alt='dog gender' width='6%'>
                         </a></td>
                     <td><a href='/breed-profile.php?breed_id=<?php echo $row2['breed_id']; ?>'>
-                            <?php echo $row2['age']; ?> year old <?php echo $row2['Breed']; ?>
+                            <?php echo $row2['age']; ?> y/o <?php echo $row2['Breed']; ?>
                         </a></td>
-                    <td></td>
+                    <td><p>Council Registration: <?php echo $row2['council_registration_id']; ?></p></td>
+                    <td><p>
+                            Desexed: <img src='/images/icons/boolean-checkbox-<?php echo $row2['desexed'];?>.png' width='8%'>
+                            Vaccinated: <img src='/images/icons/boolean-checkbox-<?php echo $row2['vaccinated'];?>.png' width='8%'>
+                        </p></td>
+                    <td><p>Birthday: <?php echo $row2['birthday'];?></p></td>
+                    <td><p>Adopted: <?php echo $row2['adoption_date'];?></p></td>
                 </div>
             </li>
             <?php
