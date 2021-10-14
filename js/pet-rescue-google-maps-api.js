@@ -83,11 +83,10 @@ function displayNearbyDogParks(results, status) {
  *      and not the queried results (set a small radius to avoid hitting our 5000 limit)
  */
 function displayNearby(results, tableHeaderID, maxResults) {
-    let nearbyTable = document.getElementById("nearby-places");
-    let vetClinicsRowStart = document.getElementById(tableHeaderID).rowIndex + 1;
+    let nearbyTable = document.getElementById("nearby-"+tableHeaderID);
+    let dataRowStart = document.getElementById(tableHeaderID).rowIndex + 1;
     for (let i = 0; i < results.length && i < maxResults; i++) {
-        console.log(results[i]); // todo remove this once happy with data being shown
-        let newRow = nearbyTable.insertRow(vetClinicsRowStart+i)
+        let newRow = nearbyTable.insertRow(dataRowStart+i)
         let nameCell = newRow.insertCell(0);
         let locationCell = newRow.insertCell(1);
         let ratingCell = newRow.insertCell(2);
@@ -95,6 +94,7 @@ function displayNearby(results, tableHeaderID, maxResults) {
         locationCell.innerText = results[i].vicinity;
         if (results[i].user_ratings_total != null && results[i].user_ratings_total > 0) {
             ratingCell.innerText = "⭐".repeat(results[i].rating) + " (" + results[i].user_ratings_total + ")";
+            ratingCell.className = "gmaps-star-rating";
         } else {
             ratingCell.innerText = "No Ratings"
         }

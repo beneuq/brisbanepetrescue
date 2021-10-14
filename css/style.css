@@ -1422,7 +1422,22 @@ h1 {
     } */
 
     .tasks-table {
-        height: 170px;
+        height: initial;
+        max-height: 110px;
+        font-size: 10px;
+    }
+
+    .gmaps-star-rating {
+        font-size: 10px;
+    }
+
+    .task-complete-btn {
+        font-size: 10px;
+    }
+
+    .tasks  td, .tasks th {
+        border: 1px solid #ddd;
+        padding: 4px;
     }
 
     .allow-full-height {
@@ -1430,7 +1445,8 @@ h1 {
     }
 
     .task-set {
-        padding-right: 10%;
+        padding-right: 2%;
+        padding-left: 2%;
         width: 100%;
         margin-top: 120px;
         margin-bottom: -50px;
@@ -1442,7 +1458,9 @@ h1 {
     }
 
     .task-set3 {
-        margin-top: -90px;
+        margin-top: 30px;
+        padding-right: 2%;
+        padding-left: 2%;
     }
 
     .logo {
