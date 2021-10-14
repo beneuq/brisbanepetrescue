@@ -106,9 +106,18 @@
                             <tr>
                                 <th>Recommended Food</th>
                             </tr>
-                            <tr>
-                                <td>EXAMPLE</td>
-                            </tr>
+                        <!-- Add rows for each post adoption task -->
+                        <?php
+                        $my_breeds = get_user_breeds();
+                        foreach ($my_breeds as $breed_name) {
+                            echo "
+                                    <tr>
+                                        <td><a href='https://duckduckgo.com/?q=!ducky+".urlencode("food for a ".$breed_name)."' target='_blank'>Food recommendations for a {$breed_name}</a>
+                                        </td>
+                                    </tr>
+                                ";
+                        }
+                        ?>
                     </table>
                 </div>
             </div>

@@ -90,7 +90,7 @@
                     <?php
 
                     //Create SQL Query to Get dogs
-                    $sql3 = "SELECT d.name as d_name, Breed, age, gender, owner_id, type_of_dog, popularity_class, good_for_novice_owners, size_class, height_low, height_high, weight_low, weight_high, adult_cal_intake_low, adult_cal_intake_high, average_lifespan, b.breed_id as breed_id, s.name as s_name, address, phone, hours, email FROM dogs as d, dog_breeds as b, shelters as s WHERE d.breed_id = b.breed_id AND s.shelter_id = d.shelter_id AND d.dog_id=$dog_id";
+                    $sql3 = "SELECT d.name as d_name, Breed, age, gender, desexed, vaccinated, owner_id, type_of_dog, popularity_class, good_for_novice_owners, size_class, height_low, height_high, weight_low, weight_high, adult_cal_intake_low, adult_cal_intake_high, average_lifespan, b.breed_id as breed_id, s.name as s_name, address, phone, hours, email FROM dogs as d, dog_breeds as b, shelters as s WHERE d.breed_id = b.breed_id AND s.shelter_id = d.shelter_id AND d.dog_id=$dog_id";
 
                     //Execute the Query
                     $res3 = mysqli_query($conn, $sql3);
@@ -105,9 +105,11 @@
                         <div class="dog-info-box">
                             <h4>Dog Info</h4>
                             <p>Name: <?php echo $row3['d_name']; ?></p>
-                            <p>Breed: <?php echo $row3['Breed']; ?></p>
+                            <p>Breed: <a href="/breed-profile.php?breed_id=<?php echo $row3['breed_id']; ?>"><?php echo $row3['Breed']; ?></a></p>
                             <p>Age: <?php echo $row3['age']; ?></p>
                             <p>Gender: <?php echo $row3['gender']; ?></p>
+                            <p>De-sexed: <img src='/images/icons/boolean-checkbox-<?php echo $row3['desexed'];?>.png' width='8%'></p>
+                            <p>Vaccinated: <img src='/images/icons/boolean-checkbox-<?php echo $row3['vaccinated'];?>.png' width='8%'></p>
                         </div>
                         <!-- These will only display if they are true -->
                         <div class="dog-info-box">
@@ -117,14 +119,13 @@
                                                 . str_repeat("<img src='/images/icons/star-full.png' style=opacity:0.2>", 5 - $row3['popularity_class']); ?></p>
                             <p>Good first time pet: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $row3['good_for_novice_owners'])
                                                         . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $row3['good_for_novice_owners']); ?></p>
-                            <p>Size: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $row3['size_class'])
-                                            . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $row3['size_class']); ?></p>
-                            <p>Height: <?php echo $row3['height_low']; ?>cm - <?php echo $row3['height_high']; ?>cm</p>
-                            <p>Weight: <?php echo $row3['weight_low']; ?>kgs - <?php echo $row3['weight_high']; ?>kgs</p>
+                            <p>Size: <br><img src='images/icons/dog_size_<?php echo $row3['size_class']; ?>' style="width: 120px"></p>
+                            <p>Height: <br><?php echo $row3['height_low']; ?>cm - <?php echo $row3['height_high']; ?>cm</p>
+                            <p>Weight: <br><?php echo $row3['weight_low']; ?>kgs - <?php echo $row3['weight_high']; ?>kgs</p>
                             <p>Calorie intake (when adult):
-                                <?php echo $row3['adult_cal_intake_low'] . "cals - "
+                                <br><?php echo $row3['adult_cal_intake_low'] . "cals - "
                                     . $row3['adult_cal_intake_high'] . "cals"; ?></p>
-                            <p>Average Lifespan: <?php echo $row3['average_lifespan']; ?> years</p>
+                            <p>Average Lifespan: <br><?php echo $row3['average_lifespan']; ?> years</p>
                             <p><a href="/breed-profile.php?breed_id=<?php echo $row3['breed_id']; ?>">More breed info</a></p>
                         </div>
                             <div class="dog-info-box">
