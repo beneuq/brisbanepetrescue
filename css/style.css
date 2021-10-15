@@ -842,8 +842,8 @@ button {
     margin: 0 0 20px 0;
 }
 
-.quizSliderLabels p {
-     padding-top: 5px;
+.quizSliderLabels span p {
+     padding-top: 30px;
      color: grey;
      text-align: center;
      line-height: 1.2;
@@ -1361,7 +1361,7 @@ h1 {
     font-size: medium;
 }
 
-#help-page a:hover, .feed-item-title a:hover {
+#help-page a:hover, .feed-item-title a:hover, .grey-txt-hover:hover{
     color: var(--h1Color);
 }
 

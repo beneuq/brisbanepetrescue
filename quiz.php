@@ -51,11 +51,11 @@
                     <label for="question1N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-size_class">
                     <div class="quizSliderLabels">
-                        <span>Small</span>
+                        <span><p>Small</p></span>
                         <span></span>
-                        <span>Medium</span>
+                        <span><p>Medium</p></span>
                         <span></span>
-                        <span>Large</span>
+                        <span><p>Large</p></span>
                     </div>
                 </fieldset>
                 <!-- Question 2 -->
@@ -66,11 +66,11 @@
                     <label for="question2N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-average_purchase_price_class">
                     <div class="quizSliderLabels">
-                        <span>$50</span>
+                        <span><p>$50</p></span>
                         <span> </span>
-                        <span>$500</span>
+                        <span><p>$500</p></span>
                         <span></span>
-                        <span>$1000+</span>
+                        <span><p>$1000+</p></span>
                     </div>
                 </fieldset>
                 <!-- Question 3 -->
@@ -81,14 +81,14 @@
                     <label for="question3N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-lifetime_cost_class">
                     <div class="quizSliderLabels">
-                        <span>$5k</span>
+                        <span><p>$5k</p></span>
                         <span></span>
-                        <span>$25k</span>
+                        <span><p>$25k</p></span>
                         <span></span>
-                        <span>$50k+</span>
+                        <span><p>$50k+</p></span>
                     </div>
-                    <div style="text-align:center">
-                    <a href="https://www.rspcansw.org.au/what-we-do/care-for-animals/owning-a-pet/costs/" target="_blank">Why do dogs cost so much?</a>
+                    <div class="center-txt margin-top-2">
+                        <a class="main-purple-txt grey-txt-hover" href="https://www.rspcansw.org.au/what-we-do/care-for-animals/owning-a-pet/costs/" target="_blank">Why do dogs cost so much?</a>
                     </div>
                 </fieldset>
                 <!-- Question 4 -->
@@ -99,8 +99,8 @@
                     <label for="question4N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizToggle" id="quiz-watchdog_class">
                     <div class="quizSliderLabels quizToggle">
-                        <span>No</span>
-                        <span>Yes<</span>
+                        <span><p>No</p></span>
+                        <span><p>Yes</p></span>
                     </div>
                 </fieldset>
                 <!-- Question 5 -->
@@ -111,11 +111,11 @@
                     <label for="question5N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-tolerates_being_alone_class">
                     <div class="quizSliderLabels">
-                        <span>Rarely</span>
+                        <span><p>Rarely</p></span>
                         <span></span>
-                        <span>Sometimes</span>
+                        <span><p>Sometimes</p></span>
                         <span></span>
-                        <span>Very</span>
+                        <span><p>Very</p></span>
                     </div>
                 </fieldset>
                 <!-- Question 6 -->
@@ -126,11 +126,11 @@
                     <label for="question6N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-potential_for_playfulness_class">
                     <div class="quizSliderLabels">
-                        <span>Rarely</span>
+                        <span><p>Rarely</p></span>
                         <span></span>
-                        <span>Sometimes</span>
+                        <span><p>Sometimes</p></span>
                         <span></span>
-                        <span>Very</span>
+                        <span><p>Very</p></span>
                     </div>
                 </fieldset>
                  <!-- Question 7 -->
@@ -141,8 +141,8 @@
                     <label for="question7N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizToggle" id="quiz-incredibly_kid_friendly_class">
                     <div class="quizSliderLabels quizToggle">
-                        <span>No</span>
-                        <span>Yes</span>
+                        <span><p>No</p></span>
+                        <span><p>Yes</p></span>
                     </div>
                 </fieldset>
                  <!-- Question 8 -->
@@ -153,11 +153,11 @@
                     <label for="question8N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider quizInvert" id="quiz-good_for_novice_owners">
                     <div class="quizSliderLabels">
-                        <span>First time</span>
+                        <span><p>First time</p></span>
                         <span></span>
-                        <span>Some</span>
+                        <span><p>Some</p></span>
                         <span></span>
-                        <span>Lots</span>
+                        <span><p>Lots</p></span>
                     </div>
                 </fieldset>
                  <!-- Question 9 -->
@@ -168,11 +168,11 @@
                     <label for="question9N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider" id="quiz-exercise_needs_class">
                     <div class="quizSliderLabels">
-                        <span>Rarely</span>
+                        <span><p>Rarely</p></span>
                         <span></span>
-                        <span>Sometimes</span>
+                        <span><p>Sometimes</p></span>
                         <span></span>
-                        <span>Frequently</span>
+                        <span><p>Very</p></span>
                     </div>
                 </fieldset>
                  <!-- Question 10 -->
@@ -183,11 +183,11 @@
                     <label for="question10N/A"> Not sure / skip</label><br>
                     <input type="range" class="quizAnswer quizSlider quizInvert" id="quiz-apartment_living_class">
                     <div class="quizSliderLabels">
-                        <span>Apartment</span>
+                        <span><p>Apartment</p></span>
                         <span></span>
-                        <span>Mid-size</span>
+                        <span><p>Mid-size</p></span>
                         <span></span>
-                        <span>Big House</span>
+                        <span><p>Big House</p></span>
                     </div>
                 </fieldset>
                 <!-- Question 11 -->
@@ -199,8 +199,8 @@
                     <div>
                         <input type="range" class="quizAnswer quizToggle" id="quiz-dog_friendly_class">
                         <div class="quizSliderLabels quizToggle">
-                            <span>No</span>
-                            <span>Yes</span>
+                            <span><p>No</p></span>
+                            <span><p>Yes</p></span>
                         </div>
                     </div>
                 </fieldset>
@@ -213,8 +213,8 @@
                     <div>
                         <input type="range" class="quizAnswer quizToggle" id="quiz-shedding_amount_class">
                         <div class="quizSliderLabels quizToggle">
-                            <span>No</span>
-                            <span>Yes</span>
+                            <span><p>No</p></span>
+                            <span><p>Yes</p></span>
                         </div>
                     </div>
                 </fieldset>
