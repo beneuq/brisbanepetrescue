@@ -22,7 +22,7 @@ for (let i = 0; i < answerSliders.length; i++) {
         answerSliders[i].value = 1;
     }
     // Assign function to update scores if slider is moved
-    answerSliders[i].oninput = function () {
+    answerSliders[i].onmouseup = function () {
         updateScores(answerSliders[i], answerNA[i]);
         autoScroll(i+1);
     };
