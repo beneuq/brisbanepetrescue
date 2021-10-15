@@ -11,7 +11,8 @@ function alert_box($msg) {
 }
 
 /** Returns true if user is logged in, false otherwise */
-function logged_in() {
+function logged_in(): bool
+{
     return isset($_SESSION['logged_in']);
 }
 

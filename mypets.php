@@ -30,11 +30,10 @@
 
 
         <!-- Hero Section -->
-        <section class="hero-section small-hero pos-relative">
-            <div class="flex container">
-                <div class="flex f-col hero-content">
-                    <h1 class="pad-bottom-1">My Pets</h1>
-                    <h2 class="pad-bottom-2"><?php echo $firstname ?>'s Adopted K-9 Friends</h2>
+        <section class="hero-section smallest-hero pos-relative center-txt">
+            <div class="container center-txt">
+                <div class="f-col hero-content center-txt">
+                    <h1 class="pad-bottom-1 pad-top-1 center-txt"><?php echo $firstname ?>'s Pets</h1>
                 </div>
             </div>
         </section>
@@ -47,7 +46,7 @@
 
         <div id="sqldata">
             <div class="task-set">
-                <h2 class="tasks-txt">Post-adoption</h2>
+                <h2 class="tasks-txt">Post-adoption tasks</h2>
                 <div class="tasks-table">
                     <table class="tasks">
                         <tr>
@@ -70,12 +69,12 @@
                 <!-- Popup form appears here if opened by task completion -->
                 <div id="popup-form-container" class="popup-div"></div>
 
-                <h2 class="tasks-txt">Next 2 weeks</h2>
+                <h2 class="tasks-txt">Upcoming reminders</h2>
                 <div class="tasks-table">
                     <table class="tasks">
                         <tr>
                             <th>Reminders</th>
-                            <th>Due Date</th>
+                            <th>Due</th>
                             <th>Complete</th>
                         </tr>
                         <!-- Add rows for each reminder -->
@@ -84,7 +83,7 @@
                                 echo "
                                 <tr>
                                     <td class='{$reminder['cell_class']}'>{$reminder['text']}</td>
-                                    <td class='{$reminder['cell_class']}'>in {$reminder['days']} days</td>
+                                    <td class='{$reminder['cell_class']}'>{$reminder['days']} days</td>
                                     <td class='{$reminder['cell_class']}'><button onclick='complete_task(\"{$reminder["type"]}\", \"{$reminder["dog_id"]}\")' class='task-complete-btn'>Complete</button></td>
                                 </tr>
                                 ";
@@ -95,7 +94,7 @@
             </div>
 
             <div class="task-set2">
-                <h2 class="tasks-txt">Reminders</h2>
+                <h2 class="tasks-txt">Pet Calendar</h2>
                 <?php include "partials/task-calendar.php";?>
             </div>
 

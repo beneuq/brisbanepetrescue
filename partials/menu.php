@@ -17,21 +17,22 @@
            
             <ul id="menu-2">
                 <?php
-                    $account_page = isset($_SESSION['logged_in']) ? "/account.php" : "/login.php";
-                    $favourites_page = isset($_SESSION['logged_in']) ? "/favourites.php" : "/login.php";
-                    $mypets_page = isset($_SESSION['logged_in']) ? "/mypets.php" : "/login.php";
-                    $login_caption = isset($_SESSION['logged_in']) ? $_SESSION['firstname'] : "Login";
+                    $account_page = logged_in() ? "/account.php" : "/login.php";
+                    $favourites_page = logged_in() ? "/favourites.php" : "/login.php";
+                    $mypets_page = logged_in() ? "/mypets.php" : "/login.php";
+                    $login_caption = logged_in() ? $_SESSION['firstname'] : "Login";
+                    $account_caption = logged_in() ? "Account" : "Login";
                 ?>
                 <li>
                     <button onclick="location.href = '<?php echo $account_page ?>'">
                         
-                        <a><?php echo $login_caption?></a>
+                        <a><?php echo $account_caption?></a>
                 
                     </button>
                 </li>
                 <li>
                     <button onclick="location.href = '<?php echo $favourites_page ?>'">
-                        <a>Saved</a>
+                        <a>Favourites</a>
                     </button>
                 </li>
                 <li>
@@ -39,6 +40,13 @@
                         <a>My Pets</a>
                     </button>
                 </li>
+                <?php if (logged_in()) { ?>
+                    <li>
+                        <button onclick="location.href = '/logout.php'">
+                            <a>Logout</a>
+                        </button>
+                    </li>
+                <?php } ?>
                 
             </ul>
         </div>
@@ -62,12 +70,6 @@
 
         <!-- Account Icons -->
         <div id="user-icons" class="sm-d-none">
-            <?php
-                $account_page = isset($_SESSION['logged_in']) ? "/account.php" : "/login.php";
-                $favourites_page = isset($_SESSION['logged_in']) ? "/favourites.php" : "/login.php";
-                $mypets_page = isset($_SESSION['logged_in']) ? "/mypets.php" : "/login.php";
-                $login_caption = isset($_SESSION['logged_in']) ? $_SESSION['firstname'] : "Login";
-            ?>
             <button onclick="location.href = '<?php echo $account_page ?>'">
                 <figure>
                     <img src="/images/account-icon.png" alt="Account icon" width="40px" height="40px">
@@ -86,6 +88,7 @@
                     <p>My Pets</p>
                 </figure>
             </button>
+
 
         </div>
     </div>

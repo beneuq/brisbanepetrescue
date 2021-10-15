@@ -34,23 +34,22 @@
                             <div class="btn-group margin-bottom-2">
                                 <a href="/mypets.php" class="margin-right-1 hero-btn">My pets</a>
                                 <a href="/dogs.php" class="margin-right-1 hero-btn hero-btn-alt">Explore dogs</a>
-                                <a href="/favourites.php" class="margin-right-1 hero-btn hero-btn-alt">View favourites</a>
                             </div>
                             <?php
                         } else {
                             ?>
                             <h2 class="margin-bottom-1">Welcome, <?php echo $firstname ?>!</h2>
                             <p>Time to get the ball rolling on your pet adoption? We recommend starting with a personality quiz to find a breed that matches your lifestyle. You can also save breeds to your favorites, or keep a shortlist of dogs you can come back to at any time! </p>
-                            <div class="btn-group margin-top-2 pad-bottom-2">
+                            <div class="btn-group margin-top-1 pad-bottom-2">
                                 <a href="/quiz.php" class="margin-right-1 hero-btn">Personality Quiz</a>
                                 <a href="/dogs.php" class="margin-right-1 hero-btn hero-btn-alt">Explore dogs</a>
                             </div>
                             <?php
                         }
                         ?>
-                    <div class="pad-bottom-2">
-                        <a href="/favourites.php" class="margin-right-1 hero-btn hero-btn-alt">View favourites</a>
+                    <div class="btn-group pad-bottom-2">
                         <a href="logout.php"  class="margin-right-1 hero-btn">Log out</a>
+                        <a href="/favourites.php" class="margin-right-1 hero-btn hero-btn-alt">View favourites</a>
                     </div>
                 </div>
                 <!-- <img class="home-hero-img margin-top-2" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down"> -->

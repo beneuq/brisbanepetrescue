@@ -1,7 +1,7 @@
 <?php const RSS_ITEMS_TO_DISPLAY = 5; ?>
 
 <section class="pg-section-fit-content container">
-    <h1 class="main-purple-txt center-txt margin-top-3 margin-bottom-2">Some Pet Care Articles from our Partners</h1>
+    <h1 class="main-purple-txt center-txt margin-top-1 margin-bottom-1">Some Pet Care Articles from our Partners</h1>
     
     <div id="rss-feeds">
         <div class="rss-feed rss-left">
