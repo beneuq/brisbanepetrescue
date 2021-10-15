@@ -4,9 +4,9 @@
     <head>
         <!-- import generic head section -->
         <?php 
-        $page_title = 'Help';
+        $page_title = 'Pet Help';
         include('partials/head.php'); 
-        $active_help = 'active';
+        $active_pet_help = 'active';
         ?>
     </head>
 

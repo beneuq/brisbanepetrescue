@@ -116,7 +116,7 @@
                 <li class="<?php echo $active_about_us; ?>">
                     <a href="/about-us.php">About Us</a>
                 </li>
-                <li class="<?php echo $active_help; ?>">
+                <li class="<?php echo $active_pet_help; ?>">
                     <a href="/help.php">Pet Help</a>
                 </li>
                 <li class="<?php echo $active_contact; ?>">
@@ -143,7 +143,7 @@
             <li class="<?php echo $active_about_us; ?>">
                 <a href="/about-us.php">About Us</a>
             </li>
-            <li class="<?php echo $active_help; ?>">
+            <li class="<?php echo $active_pet_help; ?>">
                 <a href="/help.php">Pet Help</a>
             </li>
             <li class="<?php echo $active_contact; ?>">
