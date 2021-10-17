@@ -1506,6 +1506,16 @@ h1 {
         font-size: small;
     }
 
+    .tasks-table-2 {
+        max-height: 250px;
+        width: 100%;
+    }
+
+    .tasks-table-3 {
+        max-height: 250px;
+        width: 100%;
+    }
+
     /* Make favourite button bigger on mobile */
     .breeds-table td:nth-child(1) img {
         width: 50%;
