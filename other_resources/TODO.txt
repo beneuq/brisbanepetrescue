@@ -21,3 +21,5 @@ A list of tasks to be done by anyone who needs work to do.
     - @Matt needs to come up with a better approach to the complete buttons on mypets
             - Maybe make them obvious buttons on desktop and crossout-links on mobile to save space?
             - Also make the favourites buttons on the breed and dog profiles much better looking (heart icon maybe?)
+    - Replace Bull terrier images with correct images - all the current ones are not bull terriers
+    - Randomise images of dogs on the dogs page (Especially noticeable when filtering by breed!)
