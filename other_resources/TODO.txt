@@ -4,6 +4,8 @@ A list of tasks to be done by anyone who needs work to do.
 
 @Front-End:
     - Put content on Pet help page
+    - Make Food and Grooming advice tables side-by-side on desktop, but still vertical on mobile
+            - Like how the calendar and reminder tables work. @Rosario maybe you can take a look?
 
 
 @Back-End:
