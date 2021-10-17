@@ -768,6 +768,8 @@ button {
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 .breeds-table2 tbody tr {
