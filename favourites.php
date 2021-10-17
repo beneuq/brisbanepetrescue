@@ -47,12 +47,13 @@
                     <table class="breeds-table">
                         <thead>
                         <tr>
+                            <th></th>
                             <th>Breed</th>
                             <th>Intelligence</th>
                             <th class='desktop-only'>Lifetime Cost</th>
                             <th class='desktop-only'>Popularity</th>
                             <th class="text-left">Size Class</th>
-                            <th></th>
+ 
                         </tr>
                         <thead>
                         <tbody style="color: black">
@@ -100,12 +101,12 @@
                     <table class="breeds-table">
                         <thead>
                         <tr>
+                            <th></th>
                             <th>Name</th>
                             <th>Breed</th>
                             <th class='desktop-only'>Age</th>
                             <th class='desktop-only'>Gender</th>
                             <th>Shelter</th>
-                            <th></th>
                             <th></th>
                         </tr>
                         <thead>
