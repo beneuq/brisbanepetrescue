@@ -90,7 +90,7 @@
                     <?php
 
                     //Create SQL Query to Get dogs
-                    $sql3 = "SELECT d.name as d_name, Breed, age, gender, desexed, vaccinated, owner_id, type_of_dog, popularity_class, good_for_novice_owners, size_class, height_low, height_high, weight_low, weight_high, adult_cal_intake_low, adult_cal_intake_high, average_lifespan, b.breed_id as breed_id, s.name as s_name, address, phone, hours, email FROM dogs as d, dog_breeds as b, shelters as s WHERE d.breed_id = b.breed_id AND s.shelter_id = d.shelter_id AND d.dog_id=$dog_id";
+                    $sql3 = "SELECT d.name as d_name, d.dog_id as dog_id, Breed, age, gender, desexed, vaccinated, owner_id, type_of_dog, popularity_class, good_for_novice_owners, size_class, height_low, height_high, weight_low, weight_high, adult_cal_intake_low, adult_cal_intake_high, average_lifespan, b.breed_id as breed_id, s.name as s_name, address, phone, hours, email FROM dogs as d, dog_breeds as b, shelters as s WHERE d.breed_id = b.breed_id AND s.shelter_id = d.shelter_id AND d.dog_id=$dog_id";
 
                     //Execute the Query
                     $res3 = mysqli_query($conn, $sql3);
@@ -105,6 +105,12 @@
                         <div class="dog-info-box">
                             <h4>Dog Info</h4>
                             <p>Name: <?php echo $row3['d_name']; ?></p>
+                            <form method='POST' action='/form_submissions/favourite_dog.php'>
+                                <button type='submit' name='dog_id' value='<?php echo $row3['dog_id'];?>'>
+                                    Add Dog to Favourites <!-- TODO Make this look better (use icon code from other pages) -->
+                                </button>
+                            </form>
+                            <p></p>
                             <p>Breed: <a href="/breed-profile.php?breed_id=<?php echo $row3['breed_id']; ?>"><?php echo $row3['Breed']; ?></a></p>
                             <p>Age: <?php echo $row3['age']; ?></p>
                             <p>Gender: <?php echo $row3['gender']; ?></p>

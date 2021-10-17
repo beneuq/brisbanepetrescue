@@ -140,6 +140,14 @@
                 <div class="profile-info">
                     <h3>Description</h3>
                     <p> TODO: Add description </p>
+                    <p><a href="dogs.php?Breed=<?php echo urlencode($breed_title); ?>">Show <?php echo $breed_title ?> dogs available to adopt now</a></p>
+                    <p>
+                    <form method='POST' action='/form_submissions/favourite_breed.php'>
+                        <button type='submit' name='breed_id' value='<?php echo $breed_id;?>'>
+                            Add Breed to Favourites <!-- TODO Make this look better (use icon code from other pages) -->
+                        </button>
+                    </form>
+                    </p>
                     <h3>Great breed qualities</h3>
                         <ul> <?php foreach ($best_traits as $quality) {echo "<li class='good-traits'>".$quality."</li>";} ?> </ul>
                     <h3>Breed not recommended for:</h3>

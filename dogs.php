@@ -20,7 +20,7 @@
     <h1 class="table-title">Dogs looking for a home</h1>
 
     <!-- Adding the filter section -->
-    <div id="filters" style="display: none">
+    <div id="filters">
         <?php
         $filterTable = "pet_filters";
         $table = "((dogs 
