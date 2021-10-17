@@ -743,7 +743,6 @@ button {
 
 .dog-name a {
     font-weight:normal;
-    font-size: large;
     color: var(--secondaryColor);
 }
 .dog-name a:hover {
@@ -1512,8 +1511,8 @@ h1 {
         width: 100%;
     }
 
-    .dog-name a {
-        font-size: normal;
+    .favourites-remove {
+        width: 20%;
     }
 
     /* Make favourite button bigger on mobile */
