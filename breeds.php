@@ -31,12 +31,14 @@
         <table class="breeds-table">
             <thead>
                 <tr>
-                    <th class='text-center'>Favourite</th>
+                    <th class='text-center desktop-only'>Favourite</th>
+                    <th class='text-center mobile-only'></th>
                     <th>Breed</th>
-                    <th>Intelligence</th>
-                    <th>Lifetime Cost</th>
-                    <th>Commonness</th>
-                    <th class="text-left">Size Class</th>
+                    <th class='desktop-only'>Intelligence</th>
+                    <th class='desktop-only'>Lifetime Cost</th>
+                    <th class='desktop-only'>Commonness</th>
+                    <th class='mobile-only'>Common</th>
+                    <th class="text-left">Size</th>
                 </tr>
                 <thead>
                 <tbody>
@@ -71,8 +73,8 @@
                                 </form>
                             </td>
                             <td style='width:20%;' class='breed-name'><a href='breed-profile.php?breed_id=<?php echo $entry['breed_id']; ?>'><?php echo $entry['Breed']; ?></a></td>
-                            <td style='width:22%;'><?php echo $entry['intelligence_desc']; ?></td>
-                            <td style='width:16%;' class='text-center'><?php echo str_repeat(EMOJI_DOLLAR, $entry['lifetime_cost_class']); ?></td>
+                            <td class='desktop-only' style='width:22%;'><?php echo $entry['intelligence_desc']; ?></td>
+                            <td class='desktop-only' style='width:16%;' class='text-center'><?php echo str_repeat(EMOJI_DOLLAR, $entry['lifetime_cost_class']); ?></td>
                             <td style='width:10%;' class='text-left'><?php echo str_repeat(EMOJI_STAR, $entry['popularity_class']); ?></td>
                             <td style='width:16%;'><img src='images/icons/dog_size_<?php echo $entry['size_class']; ?>' alt='dog size chart' width='50%'></td>
                         </tr>
