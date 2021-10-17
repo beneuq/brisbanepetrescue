@@ -80,6 +80,7 @@ button {
 
 .bg-img {
     background-size: cover;
+    /* background-position: center center; */
     background-repeat: no-repeat;
 }
 
@@ -409,7 +410,7 @@ button {
     background-image: url(/images/account-page-hero.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 40%;
+    background-position: 0 40%;
 }
 
 #about-us-cta {
@@ -504,7 +505,12 @@ button {
     width: 50%;
 }
 
+/* .hero-content-full-width p {
+    width: 100%;
+} */
+
 .hero-content h1 {
+    /* text-transform: uppercase; */
     color: var(--titleColor);
 }
 
@@ -541,7 +547,13 @@ button {
     max-height: 410.25px;
     max-width: 312.6px;
 }
-
+ 
+/* .home-section2-img {
+    background-image: url("/images/about-us-cta.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50%;
+} */
 /* CSS for Categories */
 
 .categories {
@@ -556,8 +568,11 @@ button {
 
 /* Styling for breed squares on index.php */
 .breed-title {
-    color: var(--mainColor);
+    /* font-size: 3em; */
+    color: var(--mainColor); 
+    /* margin-top: 2%; */
     text-align: center;
+    /* text-decoration: underline 4px var(--mainColor); */
 }
 
 .box-3 img {
@@ -954,6 +969,7 @@ footer a:hover {
 
 p {
     display: block;
+    /* margin-block-start: 1em; */
     margin-block-end: 1em;
     margin-inline-start: 0;
     margin-inline-end: 0;
@@ -968,6 +984,7 @@ h1 {
 }
 
 .banner {
+    /* background-image: url(../images/banner.jpg); */
     background-attachment: fixed;
     background-size: cover;
 }
@@ -1033,6 +1050,7 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px 15px;
+    /* width: 100%; */
     margin-bottom: 1em;
 }
 
@@ -1072,6 +1090,7 @@ h1 {
     margin-bottom: 50px;
     margin-top: 25px;
     width: 60%;
+    /*height: 570px;*/
 }
 
 .task-set2 {
@@ -1129,9 +1148,11 @@ h1 {
 }
 
 .regularReminder {
+    /* TODO */
 }
 
 .overdueReminder {
+    /* TODO */
     color: red;
 }
 
@@ -1190,6 +1211,8 @@ h1 {
 }
 
 .mypets-glider {
+    /*background-color: red;*/
+    /*height: 100px;*/
 }
 
 .glide.glide-mypets img {
@@ -1273,6 +1296,12 @@ h1 {
 .about-main {
     background-color: rgba(0, 0, 0, 0.05)
 }
+
+/* .about-us-text {
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 2%;
+} */
 
 /* Help page styling */
 .help-main {
@@ -1368,10 +1397,12 @@ h1 {
 }
 
 .feed-item-title {
+    /*padding-top: 1em;*/
 }
 
 /* Main content of RSS feed */
 .rss-feed p {
+    /* line-height: 125%; */
     font-size: 11pt;
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
@@ -1444,6 +1475,10 @@ h1 {
 /* CSS for Mobile Size or Smaller Screen */
 
 @media only screen and (max-width:768px) {
+    /* may need to hide overflow, but it stuffs up the navbar currently */
+    /* *{
+        overflow-x: hidden;
+    } */
 
     .mobile-only {
         display: block;
@@ -1467,14 +1502,6 @@ h1 {
         padding-left: 2px;
         padding-right: 2px;
         font-size: small;
-    }
-
-    .breeds-table th:nth-child(3){
-        display: none
-    }
-
-    .breeds-table th:nth-child(4){
-        display: none
     }
 
     .tasks-table-2 {
@@ -1613,10 +1640,6 @@ h1 {
     #rss-feeds, #help-boxes {
         margin-top: 40px;
         flex-direction: column;
-    }
-
-    #account-page-hero {
-        background-position: 82% 40%;
     }
 
     .help-box, .rss-feed {
