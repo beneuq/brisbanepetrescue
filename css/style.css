@@ -1525,7 +1525,6 @@ h1 {
     /* Make stars smaller on mobile */
     .breeds-table td:nth-child(5) {
         font-size: xx-small;
-        letter-spacing: -3px;
     }
 
     /* Make size images bigger on mobile */

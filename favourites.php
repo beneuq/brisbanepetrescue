@@ -75,7 +75,7 @@
                                 <td style='width:25%;'><?php echo $entry['intelligence_desc'];?></td>
                                 <td class='desktop-only' class='text-center' style='width:10%;'><?php echo str_repeat(EMOJI_DOLLAR,$entry['lifetime_cost_class']);?></td>
                                 <td class='desktop-only' class='text-left' style='width:10%;'><?php echo str_repeat(EMOJI_STAR,$entry['popularity_class']);?></td>
-                                <td style='width:10%;'> <img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'> </td>
+                                <td style='width:16%;'> <img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'> </td>
                                 <td style='width:5%;'>
                                     <form method='POST' action='/form_submissions/favourite_breed.php'>
                                         <button type='submit' name='breed_id' value='<?php echo $entry['breed_id'];?>'>
