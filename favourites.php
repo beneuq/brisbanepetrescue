@@ -49,8 +49,8 @@
                         <tr>
                             <th>Breed</th>
                             <th>Intelligence</th>
-                            <th>Lifetime Cost</th>
-                            <th>Popularity</th>
+                            <th class='desktop-only'>Lifetime Cost</th>
+                            <th class='desktop-only'>Popularity</th>
                             <th class="text-left">Size Class</th>
                             <th></th>
                         </tr>
@@ -102,8 +102,8 @@
                         <tr>
                             <th>Name</th>
                             <th>Breed</th>
-                            <th>Age</th>
-                            <th>Gender</th>
+                            <th class='desktop-only'>Age</th>
+                            <th class='desktop-only'>Gender</th>
                             <th>Shelter</th>
                             <th></th>
                             <th></th>
