@@ -98,11 +98,6 @@ while($entry = mysqli_fetch_array($res)) {
         array_push($reminders, $reminder);
     }
 
-    // Check if adoption anniversary approaching
-    // TODO can mostly copy birthday one above, just need to calculate how many years
-
-
-
     // Check worming medication status
     if (is_null($entry['worm_meds_due'])) {
         // No worm meds data yet, add as task

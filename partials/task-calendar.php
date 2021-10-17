@@ -176,7 +176,7 @@
                 }
 
                 Calendar.prototype.drawEvents = function(day, element) {
-                    if(day.month() === this.current.month() || true) {//todo or true
+                    if(day.month() === this.current.month() || true) {
                         let todaysEvents = this.events.reduce(function(memo, ev) {
                             if(ev.date.isSame(day, 'day')) {
                                 memo.push(ev);

@@ -12,7 +12,6 @@
             $breed_scores[$entry['breed_id']] = 0;
         }
         setcookie('breed_scores', json_encode($breed_scores));
-        // TODO: If we need to get this in php again: $breed_scores = json_decode($_COOKIE['breed_scores'], true);
         ?>
         <!-- import generic head section -->
         <?php 

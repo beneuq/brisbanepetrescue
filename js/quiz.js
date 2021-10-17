@@ -65,8 +65,6 @@ function updateScores(slider, answerNA) {
             //              # breeds with size_class=3 get +4
             //              # breeds with size_class=4 get +5
             //              # breeds with size_class=5 get +4
-            // TODO Also have a "not important to me" checkbox, that doesn't add any score!
-            // TODO Add weightings instead of just adding 1-5 (Size probably more important than playfulness, etc.)
 
             // First check if NA is currently ticked
             const inverted_slider =  slider.classList.contains("quizInvert");
@@ -88,16 +86,6 @@ function updateScores(slider, answerNA) {
                 // Also revert the score changes made by the last selected answer
                 // Call the function that takes care of the calculations
                 breed_scores[breed_id] -= getScores(question, breed_id, previousAnswer, results);
-
-                // if (previousAnswer) { //todo remove false
-                //     if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
-                //         breed_scores[breed_id] -= (Math.abs(previousAnswer - results[breed_id]) + 1);
-                        
-
-                //     } else {
-                //         breed_scores[breed_id] -= (5 - Math.abs(previousAnswer - results[breed_id]));
-                //     }
-                // }
             }
             // Update the cookie
             setCookie("breed_scores", JSON.stringify(breed_scores), 1);
