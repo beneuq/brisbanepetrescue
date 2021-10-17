@@ -1590,6 +1590,14 @@ h1 {
         width: 90%;
     }
 
+    .breeds-table2 td:nth-child(6) img{
+        width: 15%;
+    }
+
+    .breeds-table2 td:nth-child(7) img{
+        width: 15%;
+    }
+
     /* Make size images bigger on mobile */
     .breeds-table td:nth-child(6) img {
         width: 90%;
