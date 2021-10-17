@@ -1511,10 +1511,6 @@ h1 {
         width: 100%;
     }
 
-    .favourites-remove {
-        width: 20%;
-    }
-
     /* Make favourite button bigger on mobile */
     .breeds-table td:nth-child(1) img {
         width: 50%;

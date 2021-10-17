@@ -76,7 +76,7 @@
                                 <td class='desktop-only' class='text-center' style='width:10%;'><?php echo str_repeat(EMOJI_DOLLAR,$entry['lifetime_cost_class']);?></td>
                                 <td class='text-left' style='width:10%;'><?php echo str_repeat(EMOJI_STAR,$entry['popularity_class']);?></td>
                                 <td style='width:16%;'> <img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'> </td>
-                                <td class="favourites-remove">
+                                <td style="width:10%;">
                                     <form method='POST' action='/form_submissions/favourite_breed.php'>
                                         <button type='submit' name='breed_id' value='<?php echo $entry['breed_id'];?>'>
                                             <img width='20%' alt='Remove from favourites' src='images/icons/x-icon.png' class="zoom-on-hover">
@@ -133,7 +133,7 @@
                                 <td class='desktop-only' style='width:5%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%' class="zoom-on-hover"></td>
                                 <td style='width:20%;'><?php echo $entry['Shelter'];?></td>
                                 <td style='width:15%;'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='33%'></td>
-                                <td class="favourites-remove">
+                                <td>
                                     <form method='POST' action='/form_submissions/favourite_dog.php'>
                                         <button type='submit' name='dog_id' value='<?php echo $entry['dog_id'];?>'>
                                             <img width='25%' alt='Remove from favourites' src='images/icons/x-icon.png' class="zoom-on-hover">
