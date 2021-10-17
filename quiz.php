@@ -226,6 +226,7 @@
         </section>
         <section id="personality-quiz-results" class="pg-section container">
             <h1>Your Most Compatible Breeds</h1>
+            <h3>Click the heart icon to add the breed to your favourites</h3>
             <div id="compatibleBreeds"></div>
         </section>
 
