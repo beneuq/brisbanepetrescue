@@ -7,6 +7,7 @@
         include('partials/head.php'); 
         $active_home = 'active';
         ?>
+        <link rel="stylesheet" href="js/aos/aos.css">
     </head>
 
     <body>
@@ -33,7 +34,7 @@
         </section>
         <!-- Section 2 -->
         <section id="about-us-cta" class="pg-section small-pg-section flex" style="background-color: lightgrey;">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <div class="fleX pad-top-1">
                 <h1 class="margin-bottom-1">Brisbane Pet Rescue - Who are we?</h1>
                 <p class="pad-bottom-2">For the team at Brisbane Pet Rescue, our primary mission is to give great dogs a chance at a loving home. By doing so, we hope to prevent overcrowing in animal shelters.</p>
@@ -45,7 +46,7 @@
         </section>
         <!-- Section 3 -->
         <section id="pet-help-hero" class="pg-section bg-img dimmer dimmer-sm">
-            <div class="flex container">
+            <div class="flex container" data-aos="fade-left">
                 <div class="flex f-col hero-content">
                     <h1 class="pad-top-2 pad-bottom-1">Looking for help with your pet?</h1>
                     <h2 class="pad-bottom-1">Well, you're in the right place</h2>
@@ -62,7 +63,7 @@
         <!-- Categories Section Starts Here -->
         <section class="categories pg-section">
             <div class="container">
-                <h1 class="breed-title margin-bottom-2 pad-top-1">Explore Breeds</h1>
+                <h1 class="breed-title margin-bottom-2 pad-top-1" data-aos="fade-up">Explore Breeds</h1>
 
                 <?php
                 // Create SQL Query to Display Categories from Database
@@ -117,5 +118,9 @@
 
         <!-- FOOTER -->
         <?php include('partials/footer.php'); ?>
+        <script src="js/aos/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
     </body>
 </html>
