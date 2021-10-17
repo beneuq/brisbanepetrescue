@@ -1526,8 +1526,9 @@ h1 {
         font-size: xx-small;
     }
 
-    .breeds-table td:nth-child(4) {
-        font-size: xx-small;
+    /* Make size images bigger on mobile */
+    .breeds-table td:nth-child(6) img {
+        width: 90%;
     }
 
     .gmaps-star-rating {
