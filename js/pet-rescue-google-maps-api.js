@@ -95,7 +95,7 @@ function displayNearby(results, tableHeaderID, maxResults) {
         nameCell.innerText = results[i].name;
         locationCell.innerText = results[i].vicinity;
         if (results[i].user_ratings_total != null && results[i].user_ratings_total > 0) {
-            ratingCell.innerText = "⭐".repeat(results[i].rating) + " (" + results[i].user_ratings_total + ")";
+            ratingCell.innerText = "⭐".repeat(Math.round(results[i].rating)) + " (" + results[i].user_ratings_total + ")";
             ratingCell.className = "gmaps-star-rating";
         } else {
             ratingCell.innerText = "No Ratings"
