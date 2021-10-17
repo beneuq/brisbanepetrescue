@@ -100,7 +100,7 @@
 
             <div class="task-set3"> 
                 <h2 class="tasks-txt">Breed&nbsp;Care&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2> <!-- TODO why do I need this?! -->
-                <div class="tasks-table">
+                <div class="tasks-table-2">
                     <table class="tasks">
                         <tr><th>Recommended Food</th></tr>
                         <?php
@@ -115,7 +115,7 @@
                         ?>
                     </table>
                 </div>
-                <div class="tasks-table">
+                <div class="tasks-table-3">
                     <table class="tasks">
                         <tr><th>Grooming Advice</th></tr>
                         <?php
