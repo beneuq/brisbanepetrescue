@@ -76,7 +76,7 @@
                                 <td class='desktop-only' class='text-center' style='width:10%;'><?php echo str_repeat(EMOJI_DOLLAR,$entry['lifetime_cost_class']);?></td>
                                 <td class='desktop-only' class='text-left' style='width:10%;'><?php echo str_repeat(EMOJI_STAR,$entry['popularity_class']);?></td>
                                 <td class='desktop-only' style='width:16%;'> <img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'> </td>
-                                <td class='mobile-only' style='width:90%;'> <img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'> </td>
+                                <td class='mobile-only' style='width:90%; padding-top: 20px;'> <img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'> </td>
                                 <td class="favourites-remove">
                                     <form method='POST' action='/form_submissions/favourite_breed.php'>
                                         <button type='submit' name='breed_id' value='<?php echo $entry['breed_id'];?>'>
