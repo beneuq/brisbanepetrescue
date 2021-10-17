@@ -92,14 +92,20 @@ function displayNearby(results, tableHeaderID, maxResults) {
         let nameCell = newRow.insertCell(0);
         let locationCell = newRow.insertCell(1);
         let ratingCell = newRow.insertCell(2);
+
+        // Add the name as appears in Google Maps
         nameCell.innerText = results[i].name;
-        locationCell.innerText = results[i].vicinity;
+
+        // Add link to Google maps entry for the location/address
+        let placeURL = "https://www.google.com/maps/search/?api=1&query="+results[i].vicinity+"&query_place_id="+results[i].place_id;
+        locationCell.innerHTML = "<a href='"+encodeURI(placeURL)+"' target='_blank'>"+results[i].vicinity+"</a>";
+
+        // Add Google Maps rating
         if (results[i].user_ratings_total != null && results[i].user_ratings_total > 0) {
             ratingCell.innerText = "⭐".repeat(Math.round(results[i].rating)) + " (" + results[i].user_ratings_total + ")";
             ratingCell.className = "gmaps-star-rating";
         } else {
             ratingCell.innerText = "No Ratings"
         }
-
     }
 }
