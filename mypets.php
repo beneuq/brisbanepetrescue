@@ -131,7 +131,7 @@
                 </div>
             </div>
                             
-            <div class="task-set3">               
+            <div class="task-set4">               
                 <h2 class="tasks-txt">In your area</h2>
                 <!-- Load Google Maps Places API Library (if enabled) -->
                 <?php

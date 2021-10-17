@@ -1095,12 +1095,18 @@ h1 {
 
 .task-set2 {
     padding-right: 10%;
-    margin-bottom: 50px;
     margin-top: 25px;
     float: right;
 }
 
 .task-set3 {
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+.task-set4 {
     padding-right: 10%;
     padding-left: 10%;
     margin-bottom: 50px;
@@ -1122,19 +1128,21 @@ h1 {
 }
 
 .tasks-table-2 {
-    width: 50%;
+    width: 40%;
     height: 255px;
     margin-bottom: 25px;
     overflow: auto;
     border-radius: 10px 10px 0 0;
+    float: left;
 }
 
 .tasks-table-3 {
-    width: 50%;
+    width: 40%;
     height: 255px;
     margin-bottom: 25px;
     overflow: auto;
     border-radius: 10px 10px 0 0;
+    float: right;
 }
 
 .allow-full-height {
@@ -1550,6 +1558,13 @@ h1 {
     }
 
     .task-set3 {
+        margin-top: 30px;
+        margin-bottom: 0;
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+
+    .task-set4 {
         margin-top: 30px;
         margin-bottom: 0;
         padding-right: 2%;
