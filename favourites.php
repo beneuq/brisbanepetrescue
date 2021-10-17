@@ -77,7 +77,7 @@
                                 <td class='desktop-only' class='text-left' style='width:10%;'><?php echo str_repeat(EMOJI_STAR,$entry['popularity_class']);?></td>
                                 <td class='desktop-only' style='width:16%;'> <img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'> </td>
                                 <td class='mobile-only' style='width:90%;'> <img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'> </td>
-                                <td style='width:5%;' class="favourites-remove">
+                                <td class="favourites-remove">
                                     <form method='POST' action='/form_submissions/favourite_breed.php'>
                                         <button type='submit' name='breed_id' value='<?php echo $entry['breed_id'];?>'>
                                             <img width='20%' alt='Remove from favourites' src='images/icons/x-icon.png' class="zoom-on-hover">
@@ -134,7 +134,7 @@
                                 <td class='desktop-only' style='width:5%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%' class="zoom-on-hover"></td>
                                 <td style='width:20%;'><?php echo $entry['Shelter'];?></td>
                                 <td style='width:15%;'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='33%'></td>
-                                <td style='width:5%;' class="favourites-remove">
+                                <td class="favourites-remove">
                                     <form method='POST' action='/form_submissions/favourite_dog.php'>
                                         <button type='submit' name='dog_id' value='<?php echo $entry['dog_id'];?>'>
                                             <img width='25%' alt='Remove from favourites' src='images/icons/x-icon.png' class="zoom-on-hover">
