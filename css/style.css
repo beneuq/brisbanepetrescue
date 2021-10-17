@@ -1129,7 +1129,6 @@ h1 {
 
 .tasks-table-2 {
     width: 40%;
-    height: 255px;
     margin-bottom: 25px;
     overflow: auto;
     border-radius: 10px 10px 0 0;
@@ -1138,7 +1137,6 @@ h1 {
 
 .tasks-table-3 {
     width: 40%;
-    height: 255px;
     margin-bottom: 25px;
     overflow: auto;
     border-radius: 10px 10px 0 0;
@@ -1507,12 +1505,10 @@ h1 {
     }
 
     .tasks-table-2 {
-        max-height: 250px;
         width: 100%;
     }
 
     .tasks-table-3 {
-        max-height: 250px;
         width: 100%;
     }
 
