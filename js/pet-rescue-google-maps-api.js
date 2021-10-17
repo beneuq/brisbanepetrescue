@@ -52,6 +52,7 @@ let request = {
 function displayNearbyVets(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
         displayNearby(results, "vet-clinics", maxResults)
+        document.getElementById("vetclinics-location-error").remove();
     }
 }
 
@@ -71,6 +72,7 @@ function queryNearbyDogParks(latitude, longitude, radius) {
 function displayNearbyDogParks(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
         displayNearby(results, "dog-parks", maxResults)
+        document.getElementById("dogparks-location-error").remove();
     }
 }
 
