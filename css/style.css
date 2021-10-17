@@ -410,7 +410,7 @@ button {
     background-image: url(/images/account-page-hero.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 40%;
+    background-position: 40%;
 }
 
 #about-us-cta {
@@ -1640,6 +1640,10 @@ h1 {
     #rss-feeds, #help-boxes {
         margin-top: 40px;
         flex-direction: column;
+    }
+
+    #account-page-hero {
+        background-position: 82% 40%;
     }
 
     .help-box, .rss-feed {
