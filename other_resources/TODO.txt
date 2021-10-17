@@ -3,15 +3,16 @@ A list of tasks to be done by anyone who needs work to do.
 ! <-- Indicates high priority task
 
 @Front-End:
-    - ! Make it look better on mobile
-        - Contact us and login pages are too small
-        - ! Work on dogs-mobile and then a breeds-mobile page to replace tables for mobiles
     - Put content on Pet help page
-    - @Rosario is going to make mypets page look better with calendar
-    - Make entire menu buttons clickable (not just text)
 
 
 @Back-End:
+    - Filters @Ben:
+        - ! Allow multiple options in same filter to be selected (i.e. Size is Very Small OR Small)
+        - ! Add a button or tickbox on both the dogs and breeds page labelled "Show favourites" that does the following:
+                1. Ensures user is logged in (should be as easy as calling enforce_login())
+                2. Applies filter "favourite_breeds.userid=get_userid()" if it is ticked/selected
+        - Fix text for size filter (Small-Large instead of Low-High)
     - Validate user inputs in login form
     - Validate user inputs in account creation form
     - Maybe start using password hashes? Low priority though
