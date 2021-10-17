@@ -1580,6 +1580,11 @@ h1 {
         font-size: xx-small;
     }
 
+    /* Make stars smaller on mobile */
+    .breeds-table2 td:nth-child(4) {
+        font-size: xx-small;
+    }
+
     /* Make size images bigger on mobile */
     .breeds-table td:nth-child(6) img {
         width: 90%;
