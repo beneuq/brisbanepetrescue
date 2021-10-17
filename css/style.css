@@ -442,6 +442,7 @@ button {
     background-image: url(/images/about-us-cta.jpg);
     background-position: right center;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6);
+    overflow: hidden;
 }
 
 #pet-help-hero h2 {
