@@ -1586,7 +1586,7 @@ h1 {
     }
 
     /* Make size images bigger on mobile */
-    .breeds-table2 td:nth-child(5) {
+    .breeds-table2 td:nth-child(5) img{
         width: 90%;
     }
 
