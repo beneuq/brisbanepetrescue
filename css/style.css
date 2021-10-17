@@ -741,6 +741,40 @@ button {
     scroll-margin-top: 50px;
 }
 
+.breeds-table2 {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    margin: 25px auto;
+    width: 75%;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.breeds-table2 thead tr {
+    background-color: var(--mainColor);
+    color: white;
+    font-weight: bold;
+}
+
+.breeds-table2 th {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.breeds-table2 td {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.breeds-table2 tbody tr {
+    border-bottom: 1px solid grey;
+    scroll-margin-top: 50px;
+}
+
 .dog-name a {
     font-weight:normal;
     color: var(--secondaryColor);
@@ -766,6 +800,16 @@ button {
 
 /* Applies styling to last row of table */
 .breeds-table tbody tr:last-of-type {
+    border-bottom: 4px solid var(--mainColor);
+}
+
+/* Applies styling to every second row of table */
+.breeds-table2 tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/* Applies styling to last row of table */
+.breeds-table2 tbody tr:last-of-type {
     border-bottom: 4px solid var(--mainColor);
 }
 
@@ -1498,6 +1542,16 @@ h1 {
     }
 
     .breeds-table th {
+        padding-left: 2px;
+        padding-right: 2px;
+        font-size: small;
+    }
+
+    .breeds-table2 {
+        width: 90%;
+    }
+
+    .breeds-table2 th {
         padding-left: 2px;
         padding-right: 2px;
         font-size: small;

@@ -44,7 +44,7 @@
             <section id="fav-breeds" class="pg-section min-pg-section" style="background-color: grey;">
                 <h2 class="center-txt">Breeds I'm interested in</h2>
                 <div id="sqldata">
-                    <table class="breeds-table">
+                    <table class="breeds-table2">
                         <thead>
                         <tr>
                             <th>Breed</th>
@@ -97,7 +97,7 @@
             <section id="fav-dogs" class="pg-section min-pg-section" style="background-color: white;">
                 <h2 class="center-txt" style="color: black">Dogs I'm considering adopting</h2>
                 <div id="sqldata">
-                    <table class="breeds-table">
+                    <table class="breeds-table2">
                         <thead>
                         <tr>
                             <th>Name</th>
