@@ -39,7 +39,7 @@ if (isset($_POST['task_type']) && isset($_POST['dog_id'])) {
         case "vaccinated": // Set vaccinated field to true
             $sql = "UPDATE dogs SET vaccinated=1 WHERE dog_id={$dog_id}";
             break;
-        case "council_registration_id": // // Set council_registration_id to task_data
+        case "council_registration_id": // Set council_registration_id to task_data
             $council_reg_id = get_extra_param();
             if (is_numeric($council_reg_id)) {
                 $sql = "UPDATE dogs SET council_registration_id={$council_reg_id} WHERE dog_id={$dog_id}";

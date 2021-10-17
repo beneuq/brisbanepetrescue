@@ -1,6 +1,6 @@
 /**
  * This script was built to enable the use of the Google Maps Places API to populate nearby locations.
- * The free subscription provides only 5000 RESULTS per month, so please set DO_NOT_USE_GOOGLE_MAPS_API
+ * The free subscription provides only 5000 RESULTS per month, so set DO_NOT_USE_GOOGLE_MAPS_API
  *      (in constants.php) to true when not in use.
  */
 
@@ -8,7 +8,7 @@ let latitude;
 let longitude;
 let service;
 
-let maxResults = 5; //Be sure to limit radius as well - maxResults just hides extra results, queries still take place!
+let maxResults = 5; // TODO Be sure to limit radius as well - maxResults just hides extra results, queries still take place!
 let radiusVet = 5000; // metres
 let radiusDogPark = 5000; // metres
 
@@ -92,14 +92,20 @@ function displayNearby(results, tableHeaderID, maxResults) {
         let nameCell = newRow.insertCell(0);
         let locationCell = newRow.insertCell(1);
         let ratingCell = newRow.insertCell(2);
+
+        // Add the name as appears in Google Maps
         nameCell.innerText = results[i].name;
-        locationCell.innerText = results[i].vicinity;
+
+        // Add link to Google maps entry for the location/address
+        let placeURL = "https://www.google.com/maps/search/?api=1&query="+results[i].vicinity+"&query_place_id="+results[i].place_id;
+        locationCell.innerHTML = "<a href='"+encodeURI(placeURL)+"' target='_blank'>"+results[i].vicinity+"</a>";
+
+        // Add Google Maps rating
         if (results[i].user_ratings_total != null && results[i].user_ratings_total > 0) {
-            ratingCell.innerText = "⭐".repeat(results[i].rating) + " (" + results[i].user_ratings_total + ")";
+            ratingCell.innerText = "⭐".repeat(Math.round(results[i].rating)) + " (" + results[i].user_ratings_total + ")";
             ratingCell.className = "gmaps-star-rating";
         } else {
             ratingCell.innerText = "No Ratings"
         }
-
     }
 }

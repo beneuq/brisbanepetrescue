@@ -4,8 +4,7 @@ A list of tasks to be done by anyone who needs work to do.
 
 @Front-End:
     - Put content on Pet help page
-    - Make Food and Grooming advice tables side-by-side on desktop, but still vertical on mobile
-            - Like how the calendar and reminder tables work. @Rosario maybe you can take a look?
+    - Make standard <a> links look better - particularly on mypets.php
 
 
 @Back-End:
@@ -19,3 +18,8 @@ A list of tasks to be done by anyone who needs work to do.
     - Validate user inputs in account creation form
     - Maybe start using password hashes? Low priority though
     - Add all filter-3 items in filter-menu.php into one div per category (e.g. filter-3 items under 'Popularity' are in a div)
+    - @Matt needs to come up with a better approach to the complete buttons on mypets
+            - Maybe make them obvious buttons on desktop and crossout-links on mobile to save space?
+            - Also make the favourites buttons on the breed and dog profiles much better looking (heart icon maybe?)
+    - Replace Bull terrier images with correct images - all the current ones are not bull terriers
+    - Randomise images of dogs on the dogs page (Especially noticeable when filtering by breed!)

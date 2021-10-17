@@ -150,7 +150,7 @@
                                 <p>Sorry, <?php echo $row3['d_name'];?> has already been adopted.</p>
                             <?php } else { ?>
                                 <p><?php echo $row3['d_name'];?> belongs to you!</p>
-                            <?php }; ?>
+                            <?php } ?>
                             </div>
                     </div>
                 </div>

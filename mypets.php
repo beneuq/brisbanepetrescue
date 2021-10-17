@@ -2,7 +2,6 @@
     require_once "config/constants.php";
     enforce_login(); // Redirect to login page if not logged in.
     const REMINDER_DAYS_TO_SHOW = 14; // Don't show reminders more than this many days away
-    // TODO maybe set to <30 days (but must be sure to pick dogs where this can be shown off in the demo)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -150,13 +149,13 @@
                     <table class="tasks" id="nearby-vet-clinics">
                         <tr id="vet-clinics"><th>Veterinary Clinics</th><th>Location</th><th>Rating</th></tr>
                     </table>
-                    <p style="text-align: center; font-size: large" id="vetclinics-location-error">Allow location permissions to use this feature.</p>
+                    <p style="text-align: center; font-size: large" id="vetclinics-location-error"><a href="<?php echo $_SERVER["REQUEST_URI"]; ?>">Allow location permissions to use this feature.</a></p>
                 </div>
                 <div class="tasks-table">
                     <table class="tasks" id="nearby-dog-parks">
                         <tr id="dog-parks"><th>Dog Parks</th><th>Location</th><th>Rating</th></tr>
                     </table>
-                    <p style="text-align: center; font-size: large" id="dogparks-location-error">Allow location permissions to use this feature.</p>
+                    <p style="text-align: center; font-size: large" id="dogparks-location-error"><a href="<?php echo $_SERVER["REQUEST_URI"]; ?>">Allow location permissions to use this feature.</a></p>
                 </div>
             </div>
 

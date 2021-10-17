@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['firstname'] = $first_name;
                     header("Location: /account.php");
                 } else {
-                    alert_box("Login failed! $first_name's password is actually $password");
+                    alert_box("Incorrect password!");
                 }
             } else {
                 alert_box("No user found matching the username: $username");

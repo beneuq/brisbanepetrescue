@@ -50,7 +50,6 @@ function updateScores(slider, answerNA) {
 
     // Now update the breed_scores cookie to add scores to compatible breeds
 
-
     // Get all breeds and associated class result from SQL
     let xmlReq = new XMLHttpRequest();
     xmlReq.onload = function() {
@@ -65,22 +64,12 @@ function updateScores(slider, answerNA) {
             //              # breeds with size_class=3 get +4
             //              # breeds with size_class=4 get +5
             //              # breeds with size_class=5 get +4
-            // TODO Also have a "not important to me" checkbox, that doesn't add any score!
-            // TODO Add weightings instead of just adding 1-5 (Size probably more important than playfulness, etc.)
 
             // First check if NA is currently ticked
             const inverted_slider =  slider.classList.contains("quizInvert");
             if (currentNA == false) {
                 // Call the function that takes care of the calculations
                 breed_scores[breed_id] += getScores(question, breed_id, answer, results);
-
-                // Whether the slider is inverted to the actual sql data (5<->1, 4<->2)
-                // if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
-                //     breed_scores[breed_id] += Math.abs(answer - results[breed_id]) + 1;
-                    
-                // } else {
-                //     breed_scores[breed_id] += (5 - Math.abs(answer - results[breed_id]));
-                // }
             }   
 
             // Check if NA was only recently ticked cause if it was, we need to remove previous scores
@@ -88,16 +77,6 @@ function updateScores(slider, answerNA) {
                 // Also revert the score changes made by the last selected answer
                 // Call the function that takes care of the calculations
                 breed_scores[breed_id] -= getScores(question, breed_id, previousAnswer, results);
-
-                // if (previousAnswer) { //todo remove false
-                //     if (inverted_slider) { // If the slider is inverted to the actual sql data (5<->1, 4<->2)
-                //         breed_scores[breed_id] -= (Math.abs(previousAnswer - results[breed_id]) + 1);
-                        
-
-                //     } else {
-                //         breed_scores[breed_id] -= (5 - Math.abs(previousAnswer - results[breed_id]));
-                //     }
-                // }
             }
             // Update the cookie
             setCookie("breed_scores", JSON.stringify(breed_scores), 1);
@@ -189,7 +168,7 @@ function updateBreedResults() {
 
 //After a user input, auto-scrolls to the next question
 function autoScroll(questionNum){
-    //If we are on the last question, there is no question to scoll to next
+    //If we are on the last question, there is no question to scroll to next
     if (questionNum == NUM_QUESTIONS) {
         return;
     }
@@ -215,7 +194,7 @@ submitClick.addEventListener('click', submitClicked.bind(null, 1));
 let results = document.getElementById("personality-quiz-results");
 if (sessionStorage.getItem("loadedEarlier")) {
     results.style.display = "block";
-    // No clue why this won't work
+    // TODO No clue why this won't work
     // window.addEventListener('DOMContentLoaded', scrollToResults);
     console.log("Quiz submitted");
 } else {
@@ -223,7 +202,7 @@ if (sessionStorage.getItem("loadedEarlier")) {
     results.style.display = "none";
 }
 
-// function scrollToResults() {
+// TODO function scrollToResults() {
 //     if (sessionStorage.getItem("loadedEarlier")) {
 //         results.scrollIntoView({behavaior: 'smooth'});
 //     } 

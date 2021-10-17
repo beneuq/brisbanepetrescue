@@ -52,10 +52,9 @@ if ($count2 <= 0) {
             while ($row2 = mysqli_fetch_assoc($res2)) {
             ?>
             <!-- use slider -->
-            <!-- TODO Add more info: Council ID, Vaccination, Desex status, Birthday, etc. -->
             <li class="glide__slide glide__slide__mypets">
                 <div class="profile-box profile-box-mypets float-container" id='dog_id=<?php echo $row2['dog_id']; ?>'>
-                    <td><a href='/dog-profile.php?dog_id=<?php echo $row2['dog_id']; ?>'><img src='<?php echo SITEURL . $row2['path']; ?>' alt='dog image' width='100%'></a></td>
+                    <td><img src='<?php echo SITEURL . $row2['path']; ?>' alt='dog image' width='100%'></td>
                     <td style="vertical-align: middle;"><a class='dog-card-name' href='/dog-profile.php?dog_id=<?php echo $row2['dog_id']; ?>'>
                                 <?php echo $row2['Dog']; ?>&nbsp;&nbsp;<img src='/images/icons/<?php echo $row2['gender']; ?>.png' alt='dog gender' width='6%'>
                         </a></td>
@@ -86,7 +85,7 @@ if ($count2 <= 0) {
 <script>
     const config = {
         type: 'slide',
-        perView: 5, //TODO: Do not display duplicates!
+        perView: 5,
         startAt:  <?php echo ($count2/2)-0.1;?>, // Centre on middle (or middle-left) dog
         autoplay: 0,
         breakpoints: {
