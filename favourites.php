@@ -47,12 +47,12 @@
                     <table class="breeds-table">
                         <thead>
                         <tr>
+                            <th></th>
                             <th>Breed</th>
                             <th>Intelligence</th>
                             <th class='desktop-only'>Lifetime Cost</th>
                             <th class='desktop-only'>Popularity</th>
                             <th class="text-left">Size Class</th>
-                            <th></th>
                         </tr>
                         <thead>
                         <tbody style="color: black">
@@ -69,13 +69,6 @@
                             ?>
                             <!-- Start Individual Breed Row -->
                             <tr id='breed_id=<?php echo $entry['breed_id'];?>'>
-                                <td style='font-weight:bold; width:20%;' class='breed-name'>
-                                    <a href='breed-profile.php?breed_id=<?php echo $entry['breed_id'];?>' style='color:black'><?php echo $entry['Breed'];?></a>
-                                </td>
-                                <td class='desktop-only' style='width:22%;'><?php echo $entry['intelligence_desc'];?></td>
-                                <td class='desktop-only' class='text-center' style='width:10%;'><?php echo str_repeat(EMOJI_DOLLAR,$entry['lifetime_cost_class']);?></td>
-                                <td class='text-left' style='width:10%;'><?php echo str_repeat(EMOJI_STAR,$entry['popularity_class']);?></td>
-                                <td style='width:16%;'> <img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'> </td>
                                 <td>
                                     <form method='POST' action='/form_submissions/favourite_breed.php'>
                                         <button type='submit' name='breed_id' value='<?php echo $entry['breed_id'];?>'>
@@ -83,6 +76,13 @@
                                         </button>
                                     </form>
                                 </td>
+                                <td style='font-weight:bold; width:20%;' class='breed-name'>
+                                    <a href='breed-profile.php?breed_id=<?php echo $entry['breed_id'];?>' style='color:black'><?php echo $entry['Breed'];?></a>
+                                </td>
+                                <td class='desktop-only' style='width:22%;'><?php echo $entry['intelligence_desc'];?></td>
+                                <td class='desktop-only' class='text-center' style='width:10%;'><?php echo str_repeat(EMOJI_DOLLAR,$entry['lifetime_cost_class']);?></td>
+                                <td class='text-left' style='width:10%;'><?php echo str_repeat(EMOJI_STAR,$entry['popularity_class']);?></td>
+                                <td style='width:16%;'> <img src='images/icons/dog_size_<?php echo $entry['size_class'];?>' alt='dog size chart' width='50%'> </td>
                             </tr>
                             <!-- End Individual Breed Row -->
                         <?php
@@ -100,12 +100,12 @@
                     <table class="breeds-table">
                         <thead>
                         <tr>
+                            <th></th>
                             <th>Name</th>
                             <th>Breed</th>
                             <th class='desktop-only'>Age</th>
                             <th class='desktop-only'>Gender</th>
                             <th>Shelter</th>
-                            <th></th>
                             <th></th>
                         </tr>
                         <thead>
@@ -127,12 +127,6 @@
                             ?>
                             <!-- Start Individual Dog Row -->
                             <tr id='dog_id=<?php echo $entry['dog_id'];?>'>
-                                <td style='width:15%;' class='dog-name'><a href='dog-profile.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
-                                <td style='width:20%;' class='breed-name'><a href='breed-profile.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
-                                <td class='desktop-only' style='width:10%;'><?php echo $entry['age'];?> years</td>
-                                <td class='desktop-only' style='width:5%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%' class="zoom-on-hover"></td>
-                                <td style='width:20%;'><?php echo $entry['Shelter'];?></td>
-                                <td style='width:15%;'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='33%'></td>
                                 <td>
                                     <form method='POST' action='/form_submissions/favourite_dog.php'>
                                         <button type='submit' name='dog_id' value='<?php echo $entry['dog_id'];?>'>
@@ -140,6 +134,12 @@
                                         </button>
                                     </form>
                                 </td>
+                                <td style='width:15%;' class='dog-name'><a href='dog-profile.php?dog_id=<?php echo $entry['dog_id'];?>'><?php echo $entry['Dog'];?></a></td>
+                                <td style='width:20%;' class='breed-name'><a href='breed-profile.php?breed_id=<?php echo $entry['breed_id'];?>'><?php echo $entry['Breed'];?></a></td>
+                                <td class='desktop-only' style='width:10%;'><?php echo $entry['age'];?> years</td>
+                                <td class='desktop-only' style='width:5%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%' class="zoom-on-hover"></td>
+                                <td style='width:20%;'><?php echo $entry['Shelter'];?></td>
+                                <td style='width:15%;'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='33%'></td>
                             </tr>
                             <!-- End Individual Dog Row -->
                         <?php
