@@ -1,4 +1,9 @@
 <?php
+    /**
+     * Loads a calendar for the user based on upcoming reminders
+     * The main functionality was taken from https://www.sliderrevolution.com/resources/html-calendar/
+     * It was then somewhat rewritten for our purposes of using it to show reminders and such for dogs
+     */
     require_once "config/constants.php";
     enforce_login(); // Redirect to login page if not logged in.
     if(isset($reminders)) {
@@ -8,8 +13,6 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
         <script src="//blueimp.github.io/JavaScript-MD5/js/md5.js"></script>
         <script>
-            /* FROM https://www.sliderrevolution.com/resources/html-calendar/ */
-
             !function() {
 
                 let today = moment();
@@ -67,7 +70,6 @@
                     let self = this;
 
                     this.events.forEach(function(ev) {
-                        // ev.date = self.current.clone().date(Math.random() * (29 - 1) + 1);
                         ev.date = moment(new Date(ev.date));
                     });
 
@@ -157,13 +159,11 @@
                         });
                     }
 
-
                     //Day Name
                     let name = createElement('div', 'day-name', day.format('ddd'));
 
                     //Day Number
                     let number = createElement('div', 'day-number', day.format('DD'));
-
 
                     //Events
                     let events = createElement('div', 'day-events');
@@ -209,13 +209,12 @@
 
                     let currentOpened = document.querySelector('.details');
 
-                    //Check to see if there is an open detais box on the current row
+                    //Check to see if there is an open details box on the current row
                     if(currentOpened && currentOpened.parentNode === el.parentNode) {
                         details = currentOpened;
                         arrow = document.querySelector('.arrow');
                     } else {
-                        //Close the open events on differnt week row
-                        //currentOpened && currentOpened.parentNode.removeChild(currentOpened);
+                        //Close the open events on different week row
                         if(currentOpened) {
                             currentOpened.addEventListener('webkitAnimationEnd', function() {
                                 currentOpened.parentNode.removeChild(currentOpened);
@@ -357,24 +356,16 @@
                     ?>
                 ];
 
-
                 function stringToColour(str) {
                     let colour = '#' + md5(str).slice(0, 6);
                     return colour;
-                }
-
-                function addDate(ev) {
-
                 }
 
                 let calendar = new Calendar('#calendar', data);
 
             }();
         </script>
-
         <div class="clearfix"></div>
-
-
 <?php
     }
 ?>

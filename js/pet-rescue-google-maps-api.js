@@ -1,6 +1,6 @@
 /**
  * This script was built to enable the use of the Google Maps Places API to populate nearby locations.
- * The free subscription provides only 5000 RESULTS per month, so please set DO_NOT_USE_GOOGLE_MAPS_API
+ * The free subscription provides only 5000 RESULTS per month, so set DO_NOT_USE_GOOGLE_MAPS_API
  *      (in constants.php) to true when not in use.
  */
 
@@ -8,7 +8,7 @@ let latitude;
 let longitude;
 let service;
 
-let maxResults = 5; //Be sure to limit radius as well - maxResults just hides extra results, queries still take place!
+let maxResults = 5; // TODO Be sure to limit radius as well - maxResults just hides extra results, queries still take place!
 let radiusVet = 5000; // metres
 let radiusDogPark = 5000; // metres
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 16, 2021 at 09:30 AM
+-- Generation Time: Oct 17, 2021 at 10:37 AM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -44,51 +44,50 @@ CREATE TABLE `breed_filters` (
   `field_name` varchar(31) NOT NULL,
   `filter_by` bit(1) NOT NULL,
   `display_name` varchar(27) NOT NULL,
-  `filter_order` int(11) NOT NULL,
-  `is_string` bit(1) NOT NULL,
-  `sort_by` bit(1) NOT NULL,
+  `filter_order` int(11) DEFAULT NULL,
+  `is_string` bit(1) DEFAULT NULL,
+  `sort_by` bit(1) DEFAULT NULL,
   `sort_order` int(11) DEFAULT NULL,
-  `class_field` bit(1) DEFAULT NULL
+  `class_field` bit(1) DEFAULT NULL,
+  `bool_field` bit(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `breed_filters`
 --
 
-INSERT INTO `breed_filters` (`breed_filter_id`, `field_name`, `filter_by`, `display_name`, `filter_order`, `is_string`, `sort_by`, `sort_order`, `class_field`) VALUES
-(1, 'Breed', b'1', 'Name', 1, b'1', b'1', 1, NULL),
-(2, 'intelligence_desc', b'1', 'Intelligence', 5, b'0', b'1', 6, NULL),
-(3, 'adaptability_class', b'1', 'Adaptability', 6, b'0', b'0', NULL, b'1'),
-(4, 'general_friendliness_class', b'1', 'General Friendliness', 7, b'0', b'1', 5, b'1'),
-(5, 'exercise_needs_class', b'1', 'Exercise Needs', 8, b'0', b'0', NULL, b'1'),
-(6, 'apartment_living_class', b'1', 'Adapts to Apartment', 9, b'0', b'0', NULL, b'1'),
-(7, 'family_affectionate_class', b'1', 'Affectionate Towards Family', 10, b'0', b'0', NULL, b'1'),
-(8, 'shedding_amount_class', b'1', 'Shedding Amount', 11, b'0', b'0', NULL, b'1'),
-(9, 'dog_friendly_class', b'1', 'Friendly towards Dogs', 12, b'0', b'0', NULL, b'1'),
-(10, 'drooling_potential_class', b'1', 'Drooling Potential', 13, b'0', b'0', NULL, b'1'),
-(11, 'ease_of_grooming_class', b'1', 'Easy to Groom', 14, b'0', b'0', NULL, b'1'),
-(12, 'energy_level_class', b'1', 'Engery Levels', 15, b'0', b'0', NULL, b'1'),
-(13, 'exercise_needs_class', b'1', 'Exercise Needs', 16, b'0', b'0', NULL, b'1'),
-(14, 'friendly_toward_strangers_class', b'1', 'Friendly towards Strangers', 17, b'0', b'0', NULL, b'1'),
-(15, 'general_health_class', b'1', 'General Health', 18, b'0', b'0', NULL, b'1'),
-(16, 'good_for_novice_owners', b'1', 'Good for First Time Owners', 19, b'0', b'1', 4, NULL),
-(17, 'incredibly_kid_friendly_class', b'1', 'Incredibly Child Friendly', 20, b'0', b'0', NULL, b'1'),
-(18, 'intensity_class', b'1', 'Intensity', 21, b'0', b'0', NULL, b'1'),
-(19, 'potential_for_playfulness_class', b'1', 'Playfull', 22, b'0', b'0', NULL, b'1'),
-(20, 'potential_for_weight_gain_class', b'1', 'Easily Gains Weight', 23, b'0', b'0', NULL, b'1'),
-(21, 'prey_drive_class', b'1', 'Prey Drive', 24, b'0', b'0', NULL, b'1'),
-(22, 'sensitivity_class', b'1', 'Sensitivity', 25, b'0', b'0', NULL, b'1'),
-(23, 'size_class', b'1', 'Size', 3, b'0', b'1', 2, b'1'),
-(24, 'tolerates_being_alone_class', b'1', 'OK Alone', 26, b'0', b'0', NULL, b'1'),
-(25, 'tolerates_cold_weather_class', b'1', 'Suits Cold Weather', 27, b'0', b'0', NULL, b'1'),
-(26, 'tolerates_hot_weather_class', b'1', 'Suits Hot Weather', 28, b'0', b'0', NULL, b'1'),
-(27, 'wanderlust_potential_class', b'1', 'Wanderlust Potential', 29, b'0', b'0', NULL, b'1'),
-(28, 'watchdog_class', b'1', 'Good Watchdog', 30, b'0', b'0', NULL, b'1'),
-(29, 'type_of_dog', b'1', 'Type of Dog', 2, b'1', b'1', 3, NULL),
-(30, 'lifetime_cost_class', b'1', 'Lifetime Cost', 30, b'0', b'1', 7, b'1'),
-(31, 'average_lifespan_class', b'1', 'Lifespan', 31, b'0', b'0', NULL, b'1'),
-(32, 'average_purchase_price_class', b'1', 'Purchase Price', 32, b'0', b'1', 8, b'1'),
-(33, 'popularity_class', b'1', 'Popularity', 4, b'0', b'1', 2, b'1');
+INSERT INTO `breed_filters` (`breed_filter_id`, `field_name`, `filter_by`, `display_name`, `filter_order`, `is_string`, `sort_by`, `sort_order`, `class_field`, `bool_field`) VALUES
+(2, 'intelligence_desc', b'1', 'Intelligence', 5, b'0', b'1', 6, b'0', b'0'),
+(3, 'adaptability_class', b'1', 'Adaptability', 6, b'0', b'0', NULL, b'1', b'0'),
+(4, 'general_friendliness_class', b'1', 'General Friendliness', 7, b'0', b'1', 5, b'1', b'0'),
+(6, 'apartment_living_class', b'1', 'Adapts to Apartment', 9, b'0', b'0', NULL, b'1', b'0'),
+(7, 'family_affectionate_class', b'1', 'Affectionate Towards Family', 10, b'0', b'0', NULL, b'1', b'0'),
+(8, 'shedding_amount_class', b'1', 'Shedding Amount', 11, b'0', b'0', NULL, b'1', b'0'),
+(9, 'dog_friendly_class', b'1', 'Friendly towards Dogs', 12, b'0', b'0', NULL, b'1', b'0'),
+(10, 'drooling_potential_class', b'1', 'Drooling Potential', 13, b'0', b'0', NULL, b'1', b'0'),
+(11, 'ease_of_grooming_class', b'1', 'Easy to Groom', 14, b'0', b'0', NULL, b'1', b'0'),
+(12, 'energy_level_class', b'1', 'Engery Levels', 15, b'0', b'0', NULL, b'1', b'0'),
+(13, 'exercise_needs_class', b'1', 'Exercise Needs', 16, b'0', b'0', NULL, b'1', b'0'),
+(14, 'friendly_toward_strangers_class', b'1', 'Friendly towards Strangers', 17, b'0', b'0', NULL, b'1', b'0'),
+(15, 'general_health_class', b'1', 'General Health', 18, b'0', b'0', NULL, b'1', b'0'),
+(16, 'good_for_novice_owners', b'1', 'Good for First Time Owners', 19, b'0', b'1', 4, b'0', b'1'),
+(17, 'incredibly_kid_friendly_class', b'1', 'Incredibly Child Friendly', 20, b'0', b'0', NULL, b'1', b'0'),
+(18, 'intensity_class', b'1', 'Intensity', 21, b'0', b'0', NULL, b'1', b'0'),
+(19, 'potential_for_playfulness_class', b'1', 'Playful', 22, b'0', b'0', NULL, b'1', b'0'),
+(20, 'potential_for_weight_gain_class', b'1', 'Easily Gains Weight', 23, b'0', b'0', NULL, b'1', b'0'),
+(21, 'prey_drive_class', b'1', 'Prey Drive', 24, b'0', b'0', NULL, b'1', b'0'),
+(22, 'sensitivity_class', b'1', 'Sensitivity', 25, b'0', b'0', NULL, b'1', b'0'),
+(23, 'size_class', b'1', 'Size', 3, b'0', b'1', 2, b'1', b'0'),
+(24, 'tolerates_being_alone_class', b'1', 'OK Alone', 26, b'0', b'0', NULL, b'1', b'0'),
+(25, 'tolerates_cold_weather_class', b'1', 'Suits Cold Weather', 27, b'0', b'0', NULL, b'1', b'0'),
+(26, 'tolerates_hot_weather_class', b'1', 'Suits Hot Weather', 28, b'0', b'0', NULL, b'1', b'0'),
+(27, 'wanderlust_potential_class', b'1', 'Wanderlust Potential', 29, b'0', b'0', NULL, b'1', b'0'),
+(28, 'watchdog_class', b'1', 'Good Watchdog', 30, b'0', b'0', NULL, b'1', b'0'),
+(29, 'type_of_dog', b'1', 'Type of Dog', 2, b'1', b'1', 3, b'0', b'0'),
+(30, 'lifetime_cost_class', b'1', 'Lifetime Cost', 30, b'0', b'1', 7, b'1', b'0'),
+(31, 'average_lifespan_class', b'1', 'Lifespan', 31, b'0', b'0', NULL, b'1', b'0'),
+(32, 'average_purchase_price_class', b'1', 'Purchase Price', 32, b'0', b'1', 8, b'1', b'0'),
+(33, 'popularity_class', b'1', 'Commonness', 4, b'0', b'1', 2, b'1', b'0');
 
 -- --------------------------------------------------------
 
@@ -129,7 +128,7 @@ INSERT INTO `breed_good_bad_desc` (`desc_id`, `breed_field`, `high_good`, `good_
 (18, 'watchdog_class', b'1', 'Makes a great watchdog', 'Doesn\'t make for a great watchdog'),
 (19, 'lifetime_cost_class', b'0', 'Affordable', 'High lifetime cost'),
 (20, 'average_lifespan_class', b'1', 'Has a high life expectancy', 'Lower life expectancy than other breeds'),
-(21, 'popularity_class', b'1', 'Very popular', 'A less popular breed');
+(21, 'popularity_class', b'1', 'Very common', 'A less common breed');
 
 -- --------------------------------------------------------
 
@@ -752,7 +751,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (180, NULL, 8, 37, 'Saul', 6, '2015-05-13', 'male', 1, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (181, NULL, 7, 17, 'Skye', 7, '2014-06-23', 'female', 0, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (182, NULL, 6, 67, 'Oscar', 1, '2020-02-09', 'male', 0, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
-(183, 1, 2, 29, 'Annie', 6, '2015-01-13', 'female', 0, 1, 4856345, 300, '2017-04-17', '2021-08-26', 60, '2021-08-04', 28),
+(183, 1, 2, 29, 'Annie', 6, '2015-01-13', 'female', 1, 1, 4856345, 300, '2017-04-17', '2021-08-26', 60, '2021-09-22', 28),
 (184, NULL, 9, 71, 'Hamilton', 3, '2018-05-23', 'male', 1, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
 (185, NULL, 5, 63, 'Ursula', 4, '2016-12-06', 'female', 0, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (186, NULL, 8, 43, 'Greta', 10, '2011-02-22', 'female', 0, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
@@ -813,7 +812,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (241, NULL, 16, 9, 'Thea', 7, '2013-11-15', 'female', 0, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (242, NULL, 13, 53, 'Cherry', 7, '2014-05-01', 'female', 0, 0, NULL, 250, NULL, NULL, NULL, NULL, NULL),
 (243, NULL, 10, 38, 'Vinnie', 9, '2012-02-06', 'male', 1, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
-(244, NULL, 13, 70, 'Alexander', 6, '2014-12-15', 'male', 1, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
+(244, 8, 13, 70, 'Alexander', 6, '2014-12-15', 'male', 1, 1, NULL, 200, '2021-10-17', '2021-10-17', 5, NULL, NULL),
 (245, NULL, 7, 3, 'Nina', 10, '2011-01-11', 'female', 0, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (246, NULL, 3, 77, 'Bea', 8, '2013-07-16', 'female', 1, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (247, NULL, 12, 67, 'Lady', 1, '2020-01-04', 'female', 1, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
@@ -994,7 +993,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (422, NULL, 6, 54, 'Henry', 0, '2021-03-13', 'male', 1, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (423, NULL, 15, 75, 'Kate', 4, '2017-06-21', 'female', 0, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (424, NULL, 4, 61, 'Riley', 11, '2009-11-24', 'female', 1, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
-(425, NULL, 14, 29, 'Alexia', 9, '2012-03-14', 'female', 1, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
+(425, 8, 14, 29, 'Alexia', 9, '2012-03-14', 'female', 1, 1, 123456789, 300, '2021-10-17', '2021-10-17', 7, '2021-10-17', 15),
 (426, NULL, 1, 60, 'Chester', 4, '2016-12-03', 'male', 0, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (427, NULL, 4, 59, 'Pogo', 2, '2019-06-29', 'male', 1, 0, NULL, 150, NULL, NULL, NULL, NULL, NULL),
 (428, NULL, 14, 64, 'Caesar', 11, '2009-11-05', 'male', 1, 0, NULL, 250, NULL, NULL, NULL, NULL, NULL),
@@ -1192,7 +1191,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (619, NULL, 7, 42, 'Delia', 0, '2020-11-05', 'female', 1, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (620, NULL, 14, 28, 'Vivienne', 5, '2016-03-04', 'female', 0, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (621, NULL, 15, 18, 'Hogan', 4, '2017-05-12', 'male', 0, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
-(622, 1, 6, 31, 'Parley', 6, '2015-06-23', 'male', 1, 1, NULL, 150, '2020-06-02', NULL, NULL, '2021-08-18', 30),
+(622, 1, 6, 31, 'Parley', 6, '2015-06-23', 'male', 1, 1, 123456, 150, '2020-06-02', '2021-10-06', 14, '2021-10-06', 30),
 (623, NULL, 14, 20, 'Opal', 6, '2014-12-10', 'female', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (624, NULL, 12, 7, 'Iggy', 11, '2009-12-31', 'male', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (625, NULL, 12, 29, 'Oakley', 7, '2013-09-15', 'male', 0, 0, NULL, 150, NULL, NULL, NULL, NULL, NULL),
@@ -1201,7 +1200,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (628, NULL, 4, 62, 'Billie', 0, '2021-08-16', 'female', 0, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
 (629, NULL, 16, 30, 'Sue', 6, '2015-06-13', 'female', 1, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (630, NULL, 14, 58, 'Birdie', 2, '2019-01-10', 'female', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
-(631, NULL, 9, 26, 'Carla', 7, '2013-10-31', 'female', 0, 0, NULL, 250, NULL, NULL, NULL, NULL, NULL),
+(631, 1, 9, 26, 'Carla', 7, '2013-10-31', 'female', 1, 1, 999999, 250, '2021-09-22', '2021-10-17', 7, '2021-10-14', 10),
 (632, NULL, 7, 67, 'Addie', 9, '2012-07-06', 'female', 1, 1, NULL, 250, NULL, NULL, NULL, NULL, NULL),
 (633, NULL, 14, 31, 'Iris', 5, '2016-07-03', 'female', 1, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (634, NULL, 17, 42, 'Loretta', 4, '2016-11-28', 'female', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
@@ -1211,7 +1210,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (638, NULL, 15, 9, 'Coco', 6, '2014-09-22', 'female', 1, 0, NULL, 250, NULL, NULL, NULL, NULL, NULL),
 (639, NULL, 5, 28, 'Buster', 2, '2018-12-13', 'male', 1, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (640, NULL, 16, 77, 'Silvia', 11, '2010-08-14', 'female', 1, 0, NULL, 200, NULL, NULL, NULL, NULL, NULL),
-(641, NULL, 5, 61, 'Duke', 10, '2010-12-25', 'male', 0, 0, NULL, 200, NULL, NULL, NULL, NULL, NULL),
+(641, 1, 5, 61, 'Duke', 10, '2010-12-25', 'male', 0, 0, 3481816, 200, '2021-10-14', '2021-10-14', 2, '2021-10-14', 199),
 (642, NULL, 8, 36, 'Cameron', 7, '2014-08-20', 'female', 1, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (643, NULL, 3, 19, 'Alden', 1, '2020-03-17', 'male', 1, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (644, NULL, 13, 38, 'Lizzy', 11, '2010-08-25', 'female', 1, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
@@ -1359,7 +1358,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (786, NULL, 15, 49, 'Sherwood', 1, '2020-03-15', 'male', 1, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
 (787, NULL, 13, 40, 'Indigo', 7, '2014-07-28', 'female', 0, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (788, NULL, 13, 31, 'Ives', 11, '2010-01-14', 'male', 0, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
-(789, NULL, 13, 20, 'Alistar', 5, '2015-10-01', 'male', 0, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
+(789, 1, 13, 20, 'Alistar', 5, '2015-10-01', 'male', 1, 1, NULL, 150, '2021-09-23', '2021-10-06', 30, NULL, NULL),
 (790, NULL, 18, 42, 'Lucille', 8, '2012-10-30', 'female', 0, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (791, NULL, 6, 33, 'Lane', 10, '2011-08-05', 'male', 1, 0, NULL, 150, NULL, NULL, NULL, NULL, NULL),
 (792, NULL, 6, 53, 'Madison', 8, '2012-12-03', 'female', 1, 0, NULL, 150, NULL, NULL, NULL, NULL, NULL),
@@ -1500,7 +1499,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (927, NULL, 10, 23, 'Ike', 1, '2019-10-18', 'male', 0, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (928, NULL, 4, 72, 'Ace', 9, '2011-10-05', 'male', 0, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (929, NULL, 5, 74, 'Benji', 2, '2019-01-10', 'male', 1, 1, NULL, 250, NULL, NULL, NULL, NULL, NULL),
-(930, NULL, 12, 66, 'Achilles', 5, '2016-04-22', 'male', 1, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
+(930, 5, 12, 66, 'Achilles', 5, '2016-04-22', 'male', 1, 0, NULL, 300, '2021-10-13', NULL, NULL, NULL, NULL),
 (931, NULL, 13, 10, 'Karla', 0, '2020-11-16', 'female', 0, 1, NULL, 250, NULL, NULL, NULL, NULL, NULL),
 (932, NULL, 7, 72, 'Jake', 10, '2011-07-29', 'male', 0, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (933, NULL, 6, 19, 'Dolores', 8, '2013-04-10', 'female', 1, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
@@ -1545,7 +1544,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (972, NULL, 10, 55, 'Bingo', 8, '2013-08-22', 'male', 0, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (973, NULL, 6, 25, 'Peaches', 3, '2018-05-26', 'female', 0, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (974, NULL, 6, 44, 'Thornton', 11, '2009-11-08', 'male', 0, 0, NULL, 150, NULL, NULL, NULL, NULL, NULL),
-(975, NULL, 11, 35, 'Alfie', 5, '2016-06-24', 'male', 0, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
+(975, 8, 11, 35, 'Alfie', 5, '2016-06-24', 'male', 1, 1, NULL, 200, '2021-10-17', NULL, NULL, NULL, NULL),
 (976, NULL, 7, 38, 'Baron', 6, '2015-02-20', 'male', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (977, NULL, 10, 46, 'Winston', 10, '2011-02-09', 'male', 1, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (978, NULL, 4, 76, 'Watson', 6, '2015-08-04', 'male', 1, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
@@ -1734,13 +1733,15 @@ INSERT INTO `favourite_breeds` (`user_id`, `breed_id`) VALUES
 (1, 1),
 (1, 29),
 (1, 31),
+(1, 32),
 (1, 46),
 (1, 69),
 (2, 11),
 (2, 53),
 (2, 67),
-(5, 33),
-(5, 71);
+(8, 16),
+(8, 33),
+(8, 65);
 
 -- --------------------------------------------------------
 
@@ -1762,12 +1763,53 @@ INSERT INTO `favourite_dogs` (`user_id`, `dog_id`) VALUES
 (1, 183),
 (1, 345),
 (1, 701),
+(1, 928),
 (1, 996),
 (2, 66),
 (2, 399),
-(5, 339),
-(5, 888),
-(7, 849);
+(7, 849),
+(8, 425);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pet_filters`
+--
+
+CREATE TABLE `pet_filters` (
+  `pet_filter_id` int(11) NOT NULL,
+  `field_name` varchar(31) NOT NULL,
+  `filter_by` bit(1) NOT NULL,
+  `display_name` varchar(26) NOT NULL,
+  `filter_order` int(11) DEFAULT NULL,
+  `is_string` bit(1) DEFAULT NULL,
+  `sort_by` bit(1) DEFAULT NULL,
+  `sort_order` int(11) DEFAULT NULL,
+  `class_field` bit(1) DEFAULT NULL,
+  `bool_field` bit(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `pet_filters`
+--
+
+INSERT INTO `pet_filters` (`pet_filter_id`, `field_name`, `filter_by`, `display_name`, `filter_order`, `is_string`, `sort_by`, `sort_order`, `class_field`, `bool_field`) VALUES
+(1, 'shelters.name', b'1', 'Shelter', 1, b'1', b'1', 1, b'0', b'0'),
+(2, 'Breed', b'1', 'Breed', 2, b'1', b'1', 2, b'0', b'0'),
+(3, 'age', b'1', 'Age', 3, b'0', b'1', 3, b'0', b'0'),
+(4, 'gender', b'1', 'Gender', 4, b'0', b'0', NULL, b'0', b'0'),
+(5, 'desexed', b'1', 'Desexed', 5, b'0', b'0', NULL, b'0', b'1'),
+(6, 'vaccinated', b'1', 'Vaccinated', 6, b'0', b'0', NULL, b'0', b'1'),
+(7, 'intelligence_desc', b'1', 'Intelligence', 7, b'0', b'1', 6, b'0', b'0'),
+(8, 'shedding_amount_class', b'1', 'Shedding Amount', 8, b'0', b'0', NULL, b'1', b'0'),
+(9, 'drooling_potential_class', b'1', 'Drooling Potential', 9, b'0', b'0', NULL, b'1', b'0'),
+(10, 'energy_level_class', b'1', 'Engery Levels', 10, b'0', b'0', NULL, b'1', b'0'),
+(11, 'exercise_needs_class', b'1', 'Exercise Needs', 11, b'0', b'0', NULL, b'1', b'0'),
+(12, 'good_for_novice_owners', b'1', 'Good for First Time Owners', 12, b'0', b'0', NULL, b'0', b'0'),
+(13, 'potential_for_weight_gain_class', b'1', 'Easily Gains Weight', 13, b'0', b'0', NULL, b'1', b'0'),
+(14, 'size_class', b'1', 'Size', 14, b'0', b'1', 4, b'1', b'0'),
+(15, 'type_of_dog', b'1', 'Type of Dog', 15, b'1', b'0', NULL, b'0', b'0'),
+(16, 'popularity_class', b'1', 'Commonness', 16, b'0', b'1', 5, b'1', b'0');
 
 -- --------------------------------------------------------
 
@@ -1834,7 +1876,9 @@ INSERT INTO `users` (`user_id`, `username`, `first_name`, `last_name`, `dob`, `e
 (3, 'rick_astley', 'Rick', 'Astley', '1966-02-06', 'rick.astley@gmail.com', 'NeverG0nnaGiveUUp'),
 (4, 'test', 'Test', 'User', '2021-08-19', 'test@test.com', '1234'),
 (5, 'johnsmith', 'John', 'Smith', '2007-07-07', 'john.smith@outlook.com', 'abcde'),
-(7, 'johnsmith123', 'John', 'Smith', '2007-07-07', 'john.smith1@outlook.com', 'abcde');
+(7, 'johnsmith123', 'John', 'Smith', '2007-07-07', 'john.smith1@outlook.com', 'abcde'),
+(8, 'O_T', 'Olivia', 'T', '2000-10-21', 'O.t@hotmail.com', '0000'),
+(9, 'poggers', 'Dave', 'Smith', '2002-01-21', 'dave@gmail.com', 'pogdave');
 
 --
 -- Indexes for dumped tables
@@ -1881,6 +1925,12 @@ ALTER TABLE `favourite_breeds`
 --
 ALTER TABLE `favourite_dogs`
   ADD PRIMARY KEY (`user_id`,`dog_id`);
+
+--
+-- Indexes for table `pet_filters`
+--
+ALTER TABLE `pet_filters`
+  ADD PRIMARY KEY (`pet_filter_id`);
 
 --
 -- Indexes for table `shelters`
@@ -1934,7 +1984,7 @@ ALTER TABLE `shelters`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
