@@ -1526,6 +1526,10 @@ h1 {
         font-size: xx-small;
     }
 
+    .breeds-table td:nth-child(7) img {
+        width: 90%;
+    }
+
     .breeds-table td:nth-child(4) {
         font-size: xx-small;
     }
