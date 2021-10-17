@@ -132,7 +132,7 @@
                                 <td class='desktop-only' style='width:10%;'><?php echo $entry['age'];?> years</td>
                                 <td class='desktop-only' style='width:5%;'><img src='/images/icons/<?php echo $entry['gender'];?>.png' alt='dog image' width='20%' class="zoom-on-hover"></td>
                                 <td style='width:20%;'><?php echo $entry['Shelter'];?></td>
-                                <td style='width:15%;'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='33%'></td>
+                                <td style='width:15%;'><img src='<?php echo SITEURL.$entry['path'];?>' alt='dog image' width='90%'></td>
                                 <td style='width:5%;'>
                                     <form method='POST' action='/form_submissions/favourite_dog.php'>
                                         <button type='submit' name='dog_id' value='<?php echo $entry['dog_id'];?>'>
