@@ -2009,7 +2009,6 @@ h1 {
 
 	#menuToggle-2 input:checked ~ ul {
 		transform: none;
-        width: 50%;
 	}
 
     .profile-section {
