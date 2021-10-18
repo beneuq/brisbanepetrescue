@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 17, 2021 at 10:37 AM
+-- Generation Time: Oct 18, 2021 at 06:10 AM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -1762,8 +1762,6 @@ INSERT INTO `favourite_dogs` (`user_id`, `dog_id`) VALUES
 (1, 27),
 (1, 183),
 (1, 345),
-(1, 701),
-(1, 928),
 (1, 996),
 (2, 66),
 (2, 399),
@@ -1800,7 +1798,7 @@ INSERT INTO `pet_filters` (`pet_filter_id`, `field_name`, `filter_by`, `display_
 (4, 'gender', b'1', 'Gender', 4, b'0', b'0', NULL, b'0', b'0'),
 (5, 'desexed', b'1', 'Desexed', 5, b'0', b'0', NULL, b'0', b'1'),
 (6, 'vaccinated', b'1', 'Vaccinated', 6, b'0', b'0', NULL, b'0', b'1'),
-(7, 'intelligence_desc', b'1', 'Intelligence', 7, b'0', b'1', 6, b'0', b'0'),
+(7, 'intelligence_desc', b'1', 'Intelligence', 7, b'1', b'1', 6, b'0', b'0'),
 (8, 'shedding_amount_class', b'1', 'Shedding Amount', 8, b'0', b'0', NULL, b'1', b'0'),
 (9, 'drooling_potential_class', b'1', 'Drooling Potential', 9, b'0', b'0', NULL, b'1', b'0'),
 (10, 'energy_level_class', b'1', 'Engery Levels', 10, b'0', b'0', NULL, b'1', b'0'),
