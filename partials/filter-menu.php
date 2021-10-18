@@ -150,7 +150,10 @@ if (!empty($filters)) {
 	<colgroup span=\"2\"></colgroup>
 	<tr>
 		<th colspan=\"2\" scope=\"colgroup\">Current Filters</th>
-	</tr>";
+	</tr>
+    </table>
+    <table class='filter-results'>
+	<colgroup span=\"2\"></colgroup>";
     $res = mysqli_query($conn, "SELECT field_name, display_name, class_field, bool_field 
         FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
     while ($row = mysqli_fetch_assoc($res)) {
