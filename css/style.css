@@ -1952,12 +1952,13 @@ h1 {
 	}
 
     #menuToggle-2 {
-        display: block;
-        position: relative;
-        z-index: 1;
-        -webkit-user-select: none;
-        user-select: none;
-        left: 10%;
+		display: block;
+		position: relative;
+		left: 30px;
+        top: 10px;
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
 	}
 
 	#menuToggle-2 a {
