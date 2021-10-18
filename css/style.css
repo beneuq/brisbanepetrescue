@@ -1927,7 +1927,7 @@ h1 {
 
 	#menu {
 		position: absolute;
-		max-width: 300px;
+		width: 300px;
 		margin: -100px 0 0 -80px;
         padding-left: 30%;
         padding-top: 100px;  
@@ -1989,7 +1989,7 @@ h1 {
 
 	#menu-2 {
 		position: absolute;
-		max-width: 300px;
+		width: 100%;
 		margin: -50px 0 0 120px;
 		padding: 50px; 
 		background: #b3b3b3;
