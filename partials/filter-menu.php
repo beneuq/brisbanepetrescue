@@ -150,10 +150,7 @@ if (!empty($filters)) {
 	<colgroup span=\"2\"></colgroup>
 	<tr>
 		<th colspan=\"2\" scope=\"colgroup\">Current Filters</th>
-	</tr>
-    </table>
-    <table class='filter-results'>
-	<colgroup span=\"2\"></colgroup>";
+	</tr>";
     $res = mysqli_query($conn, "SELECT field_name, display_name, class_field, bool_field 
         FROM $filterTable WHERE filter_by = 1 ORDER BY filter_order");
     while ($row = mysqli_fetch_assoc($res)) {
@@ -184,7 +181,9 @@ while ($row = mysqli_fetch_assoc($res)) {
         $newFilters .= "<table class='filter-1'>
         <tr class='filter-2'>
             <th colspan=\"2\" scope=\"colgroup\">" . $row['display_name'] . "</th>
-        </tr>";
+        </tr></table>
+        <table class='filter-results'>
+        <colgroup span=\"2\"></colgroup>";
         $newFilters .= "<tr class='filter-3'><th scope=\"col\"><a href=\"";
         $newFilters .= createLink($page, $_GET, 0, array($row['field_name'] => $row2['field_value']));
         $newFilters .= "\">" . getFieldName($row2['field_value'], $row['class_field'], $row['bool_field']) .
