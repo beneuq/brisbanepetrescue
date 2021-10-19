@@ -12,11 +12,21 @@
     <?php
     function debug_to_console($data)
     {
-        $output = $data;
-        if (is_array($output))
-            $output = implode(',', $output);
-
-        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+        echo "<script>";
+        if (is_array($data)) {
+            foreach ($data as $key => $value) {
+                if (is_array($value)) {
+                    foreach ($value as $subkey => $subvalue) {
+                        echo "console.log(" . "'" . $key . ": " . $value . ": " . $subkey . ": " . $subvalue . "')";
+                    }
+                } else {
+                    echo "console.log(" . "'" . $key . ": " . $value . "')";
+                }
+            }
+        } else {
+            echo "console.log(" . "'" . $data . "')";
+        }
+        echo "</script>";
     }
     debug_to_console($_GET);
     ?>
