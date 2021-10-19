@@ -410,7 +410,7 @@ button {
     background-image: url(/images/account-page-hero.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 40%;
+    background-position: 40%;
 }
 
 #about-us-cta {
@@ -1762,6 +1762,10 @@ h1 {
     #about-us-pg-content {
         flex-direction: column;
         margin-top: 20px;
+    }
+
+    #account-page-hero {
+        background-position: 82% 40%;
     }
 
     .about-us-aside {
