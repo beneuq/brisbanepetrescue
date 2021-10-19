@@ -31,7 +31,7 @@
     </div>
 
     <div>
-        <a href="<?php echo createLink($page, array("Breed" => array("Affenpinscher", "Akita", "Finnish Spitz", "Great Dane"))); ?>">Favs</a>
+        <a href="<?php echo createLink($page, $_GET, false, array("Breed" => array("Affenpinscher", "Akita", "Finnish Spitz", "Great Dane"))); ?>">Favs</a>
     </div>
 
     <!-- This code iterates through the database and adds a table row for each dog in the database -->
