@@ -78,7 +78,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Let's also check if the user is already in the database
             $sql = "SELECT user_id, first_name, password FROM users WHERE username LIKE ?";
-            
+
             // Preparing the SQL query
             if($query = mysqli_prepare($conn, $sql)) {
                 mysqli_stmt_bind_param($query, "s", $username);
@@ -115,6 +115,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         //     mysqli_stmt_close($query);
         // }
    // }
+    } else {
+        // There are blank fields so ask them to fill in the fields
+        $emptyError = 'You have not completed all the fields. Please fill in all account information.';
     }
     
 }    
@@ -142,6 +145,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <form action="create_account.php" method="post">
             <fieldset class ="input-card">
                 <legend>Create a New Account</legend>
+                <?php 
+                    // Check if the email is an error and print the message
+                    if(isset($emptyError)){
+                        echo '<div class="statusmsg">'.$emptyError.'</div>';
+                    } 
+                ?>
                 <div class="form-group">
                     <label for="first_name">First Name</label>
                     <input type="text" id="first_name" name="first_name" value="<?php echo $first_name;?>">
