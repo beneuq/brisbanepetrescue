@@ -666,7 +666,11 @@ button {
     margin-top: 2%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    flex-grow: 4;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Currently selected filters */
@@ -678,21 +682,31 @@ button {
 .filter-1 {
     border: 1px solid black;
     position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 /* Filter category heading */
 .filter-2 {
+    pointer-events: none;
 }
 
 /* Filter category table elements */
-.filter-3 {
+.filter-results {
     display: none;
     min-width: 100px;
-}
-
-.filter-1:hover .filter-3 {
-    display: flex;
-    justify-content: space-between;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 1;
+    left: 0;
 }
 
 #filters th {

@@ -1,4 +1,6 @@
 <!-- Need to implement -->
+<html>
+<body>
 <?php
 $whereFilters = "";
 $orderFilter = "Breed";
@@ -178,7 +180,7 @@ while ($row = mysqli_fetch_assoc($res)) {
         " as field_value, COUNT(*) as field_count FROM $table " . $whereFiltersForFilter .
         "GROUP BY " . $row['field_name']);
     if (!empty($row2 = mysqli_fetch_assoc($res2))) {
-        $newFilters .= "<table class='filter-1'>
+        $newFilters .= "<table class='filter-1' onselectstart='return false'>
         <tr class='filter-2'>
             <th colspan=\"2\" scope=\"colgroup\">" . $row['display_name'] . "</th>
         </tr></table>
@@ -199,3 +201,28 @@ while ($row = mysqli_fetch_assoc($res)) {
 }
 echo $newFilters;
 ?>
+    <script>
+    var elements = document.getElementsByClassName("filter-1");
+    for (var i=0; i<elements.length; i++) {
+        document.getElementsByClassName("filter-1")[i].addEventListener("click", function(e) {
+            e = e || window.event;
+            var target = e.target || e.srcElement  
+            var next = target.nextSibling;
+            var filters = next.nextSibling;
+            if (filters.style.display == "flex") {
+                console.log("here");
+                filters.style.display = "none";
+            }
+            else {
+                console.log(target);
+                console.log(filters);
+                var rect = target.getBoundingClientRect();
+                filters.style.display = "flex";
+                filters.style.left = rect.left + "px";
+                filters.style.top = rect.bottom - 1 + "px";
+            }
+        }, false);
+    }
+    </script>
+</body>
+</html>
