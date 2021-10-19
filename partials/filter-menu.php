@@ -53,22 +53,35 @@
     <?php
     function createLink(string $page, array $pageVars = [], bool $drop = false, array $filtersToModify = [])
     {
-        // if (!(empty($pageVars))) {
-        $page .= "?";
-        foreach (array_keys($pageVars) as $filter) {
-            // add all filters unless the are meant to be dropped
-            if (!($drop and in_array($filter, array_keys($filtersToModify)))) {
-                $page .= $filter . "=" . $pageVars[$filter] . "&";
-            }
-        }
-        if (!$drop and !empty($filtersToModify)) {
-            foreach (array_keys($filtersToModify) as $filter) {
-                $page .= $filter . "=" . $filtersToModify[$filter] . "&";
-            }
-        }
-        $page = rtrim($page, '&');
-        $page = rtrim($page, '?');
+        // // if (!(empty($pageVars))) {
+        // $page .= "?";
+        // foreach (array_keys($pageVars) as $filter) {
+        //     // add all filters unless the are meant to be dropped
+        //     if (!($drop and in_array($filter, array_keys($filtersToModify)))) {
+        //         $page .= $filter . "=" . $pageVars[$filter] . "&";
+        //     }
         // }
+        // if (!$drop and !empty($filtersToModify)) {
+        //     foreach (array_keys($filtersToModify) as $filter) {
+        //         $page .= $filter . "=" . $filtersToModify[$filter] . "&";
+        //     }
+        // }
+        // $page = rtrim($page, '&');
+        // $page = rtrim($page, '?');
+        // // }
+        // return $page;
+        // Use it in an `if` statement
+        foreach ($filtersToModify as $key => $value) {
+            if ($drop) {
+                unset($pageVars[$key]);
+            } else {
+                $pageVars[$key] = $value;
+            }
+        }
+        if (!empty($pageVars)) {
+            $qs = http_build_query($pageVars);
+            return $page . '?' . $qs;
+        }
         return $page;
     }
     ?>
@@ -89,11 +102,27 @@
             $isString[$row['field_name']] = $row['is_string'];
         }
         $whereFilters = "AND (";
-        foreach (array_keys($filters) as $filter) {
+        foreach ($filters as $filter => $value) {
             if ($isString[$filter]) {
-                $whereFilters .= " $filter = \"$filters[$filter]\" AND ";
+                if (is_array($value)) {
+                    $inFilter = '';
+                    foreach ($value as $subVal) {
+                        $inFilter .= "\"$subVal\",";
+                    }
+                    $whereFilters .= " $filter IN (" . rtrim($inFilter, ",") . ") AND ";
+                } else {
+                    $whereFilters .= " $filter = \"$value\" AND ";
+                }
             } else {
-                $whereFilters .= " $filter = $filters[$filter] AND ";
+                if (is_array($value)) {
+                    $inFilter = '';
+                    foreach ($value as $subVal) {
+                        $inFilter .= "$subVal,";
+                    }
+                    $whereFilters .= " $filter IN (" . rtrim($inFilter, ",") . ") AND ";
+                } else {
+                    $whereFilters .= " $filter = $value AND ";
+                }
             }
         }
         $whereFilters = rtrim($whereFilters, "AND ");
