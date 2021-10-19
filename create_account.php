@@ -44,32 +44,62 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     if(mysqli_stmt_num_rows($query)) {
                         $userError = 'Username is already taken. Please enter another username.';
                     } else {
-                        // Insert the user into the database
-                        $sql = "INSERT INTO users (username, first_name, last_name, dob, email, password) VALUES (?, ?, ?, ?, ?, ?)";
-
-                        if($query = mysqli_prepare($conn, $sql)) {
-                            mysqli_stmt_bind_param($query, "ssssss", $username, $first_name, $last_name, $dob, $email, $password);
-
-                            // TODO Hash the password
-                            //$password = password_hash($password, PASSWORD_DEFAULT);
-
-                            if(mysqli_stmt_execute($query)) {
-                                // Send user to login page now
-                                alert_box("Thanks for signing up, $first_name!");
-                                header("Location: /login.php");
-                            } else {
-                                alert_box("There was an error creating account. Please try again later.");
+                        // Check the password has a capital letter and number by checking each letter in password
+                        $isCapital = 0;
+                        $isNumber = 0;
+                        $isLength = 0;
+                        for ($i = 0; $i <= strlen($password) - 1; $i++) {
+                            // Check if character is a capital letter
+                            if (ctype_upper($password{$i})) {
+                                // say a capital was found
+                                $isCapital = 1;
                             }
-                            
-                            mysqli_stmt_close($query);
+
+                            // Check if character is a number
+                            if (ctype_digit($password{$i})) {
+                                // say a number was found
+                                $isNumber = 1;
+                            } 
+
+                            // Add to length
+                            $isLength++;
                         }
+
+                        
+                        // Now let's check if a capital letter, number and length criterias were met
+                        if ($isCapital == 1 AND $isNumber == 1 AND $isLength >= 8) {
+                            alert_box("Pog");
+                            // Insert the user into the database
+                            $sql = "INSERT INTO users (username, first_name, last_name, dob, email, password) VALUES (?, ?, ?, ?, ?, ?)";
+
+                            if($query = mysqli_prepare($conn, $sql)) {
+                                mysqli_stmt_bind_param($query, "ssssss", $username, $first_name, $last_name, $dob, $email, $password);
+
+                                // TODO Hash the password
+                                //$password = password_hash($password, PASSWORD_DEFAULT);
+
+                                if(mysqli_stmt_execute($query)) {
+                                    // Send user to login page now
+                                    alert_box("Thanks for signing up, $first_name!");
+                                    header("Location: /login.php");
+                                } else {
+                                    alert_box("There was an error creating account. Please try again later.");
+                                }
+                                
+                                mysqli_stmt_close($query);
+                            }
+                        } else {
+                            $passwordError = 'You require a stronger password. Ensure your password is of a minimum length of 8 characters and includes a capital letter and a number';
+                        }
+
+                        
                     }
                 }
             }
 
             mysqli_stmt_close($query);
                         
-                
+         
 
             
         } else {
@@ -188,6 +218,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" value="<?php echo $password;?>">
                 </div>
+                <?php 
+                    // Check if the password is an error and print the message
+                    if(isset($passwordError)){
+                        echo '<div class="statusmsg">'.$passwordError.'</div>';
+                    } 
+                ?>
                 <div class="form-group">
                     <input type="submit" class="submit-btn" value="Create Account">
                 </div>
