@@ -176,6 +176,9 @@
     <?php
     function getFieldName($field_name, $is_class, $is_bool)
     {
+        if (is_array($field_name)) {
+            return "Multiple";
+        }
         // creating the name arrays for classes
         $class_names = array(
             1 => "Very Low",
