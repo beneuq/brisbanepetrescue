@@ -27,6 +27,10 @@
         include('partials/filter-menu.php') ?>
     </div>
 
+    <div>
+        <a href="<?php echo createLink($page, array("Breed" => array("Affenpinscher", "Akita", "Finnish Spitz", "Great Dane"))); ?>">Favs</a>
+    </div>
+
     <div id="sqldata">
         <table class="breeds-table">
             <thead>

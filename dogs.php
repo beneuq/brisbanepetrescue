@@ -30,6 +30,10 @@
         include('partials/filter-menu.php') ?>
     </div>
 
+    <div>
+        <a href="<?php echo createLink($page, array("Breed" => array("Affenpinscher", "Akita", "Finnish Spitz", "Great Dane"))); ?>">Favs</a>
+    </div>
+
     <!-- This code iterates through the database and adds a table row for each dog in the database -->
     <section class="categories">
         <div class="container">
@@ -73,7 +77,7 @@
                             </a></td>
                         <td></td>
                         <td>
-                            <p><?php echo $entry['age']; ?> years old    -   <?php echo $entry['Shelter']; ?></p>
+                            <p><?php echo $entry['age']; ?> years old - <?php echo $entry['Shelter']; ?></p>
                         </td>
                         <td>
                             <form method='POST' action='/form_submissions/favourite_dog.php'>
