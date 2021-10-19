@@ -5,6 +5,7 @@ A list of tasks to be done by anyone who needs work to do.
 @Front-End:
     - Put content on Pet help page
     - Make standard <a> links look better - particularly on mypets.php
+    - Style error messages on create account page
 
 
 @Back-End:
@@ -14,9 +15,6 @@ A list of tasks to be done by anyone who needs work to do.
                 1. Ensures user is logged in (should be as easy as calling enforce_login())
                 2. Applies filter "favourite_breeds.userid=get_userid()" if it is ticked/selected
         - Fix text for size filter (Small-Large instead of Low-High)
-    - Validate user inputs in login form
-    - Validate user inputs in account creation form
-    - Maybe start using password hashes? Low priority though
     - Add all filter-3 items in filter-menu.php into one div per category (e.g. filter-3 items under 'Popularity' are in a div)
     - @Matt needs to come up with a better approach to the complete buttons on mypets
             - Maybe make them obvious buttons on desktop and crossout-links on mobile to save space?
