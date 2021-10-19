@@ -17,14 +17,14 @@
             foreach ($data as $key => $value) {
                 if (is_array($value)) {
                     foreach ($value as $subkey => $subvalue) {
-                        echo "console.log(" . "'" . $key . ": " . $value . ": " . $subkey . ": " . $subvalue . "')";
+                        echo "console.log(" . "'" . $key . ": " . $value . ": " . $subkey . ": " . $subvalue . "');";
                     }
                 } else {
-                    echo "console.log(" . "'" . $key . ": " . $value . "')";
+                    echo "console.log(" . "'" . $key . ": " . $value . "');";
                 }
             }
         } else {
-            echo "console.log(" . "'" . $data . "')";
+            echo "console.log(" . "'" . $data . "');";
         }
         echo "</script>";
     }
