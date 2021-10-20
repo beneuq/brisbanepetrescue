@@ -1904,8 +1904,9 @@ h1 {
 	}
 
     #menuToggle-2 span {
-		width: 33px;
-		height: 4px;
+		width: 38px;
+		height: 3px;
+        margin-top: 7.7px;
 		margin-bottom: 5px;
 		position: relative;
 		background: #cdcdcd;
