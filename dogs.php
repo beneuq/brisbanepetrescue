@@ -66,7 +66,7 @@
                     WHERE owner_id IS NULL 
                         AND main_image  
                         AND (user_id={$user_id_for_sql} OR user_id IS NULL) $whereFilters
-                        ORDER BY $orderFilter
+                        ORDER BY RAND()
             ");
                 while ($entry = mysqli_fetch_array($res)) {
                 ?>
