@@ -136,23 +136,34 @@
                     array_push($worst_traits, $trait_bad_descs[array_keys($trait_values)[count($trait_values)-$i]]);
                 }
                 ?>
-                <!-- description if exists -->
                 <div class="profile-info">
-                    <p><a href="dogs.php?Breed=<?php echo urlencode($breed_title); ?>">Show <?php echo $breed_title ?> dogs available to adopt now</a></p>
-                    <p>
-                    <form method='POST' action='/form_submissions/favourite_breed.php'>
-                        <button type='submit' name='breed_id' value='<?php echo $breed_id;?>'>
-                            Add Breed to Favourites <!-- TODO Make this look better (use icon code from other pages) -->
+                    <br>
+                    <form action='dogs.php' style="display: inline">
+                        <button type='submit' name='Breed' value='<?php echo $breed_title; ?>' class="hero-btn hero-btn-alt small-btn">
+                            Show available <?php echo $breed_title ?> dogs
                         </button>
                     </form>
-                    </p>
+                    <form method='POST' action='/form_submissions/favourite_breed.php' style="display: inline">
+                        <button type='submit' name='breed_id' value='<?php echo $breed_id;?>' class="hero-btn hero-btn-alt small-btn" >
+                            Add Breed to Favourites
+                        </button>
+                    </form>
                     <h3>Great breed qualities</h3>
                         <ul> <?php foreach ($best_traits as $quality) {echo "<li class='good-traits'>".$quality."</li>";} ?> </ul>
                     <h3>Breed not recommended for:</h3>
                         <ul> <?php foreach ($worst_traits as $quality) {echo "<li  class='bad-traits'>".$quality."</li>";} ?> </ul>
-                    <h3>Pet Care Advice</h3>
-                    <ul><a href='https://duckduckgo.com/?q=!ducky+<?php echo urlencode("food for a ".$breed_title);?>' target='_blank'>View food recommendations for the <?php echo $breed_title;?> breed</a></ul>
-                    <ul><a href='https://duckduckgo.com/?q=!ducky+<?php echo urlencode("how to groom a ".$breed_title);?>' target='_blank'>View grooming tips for the <?php echo $breed_title;?> breed</a></ul>
+                    <h3>Pet Care Advice for a <?php echo $breed_title; ?></h3>
+                    <form action='https://duckduckgo.com/' target='_blank' style="display: inline">
+                        <button type='submit' name='q' value='!ducky food for a <?php echo $breed_title;?>' class="hero-btn hero-btn-alt small-btn">
+                            Food Recommendations
+                        </button>
+                    </form>
+                    <form action='https://duckduckgo.com/' target='_blank' style="display: inline">
+                        <button type='submit' name='q' value='!ducky how to groom a <?php echo $breed_title;?>' class="hero-btn hero-btn-alt small-btn">
+                            Grooming tips
+                        </button>
+                    </form>
+
                     <!-- Section with all details -->
                     <h3>Detailed breed information</h3>
                     <p>All breeds are given a rating from 1 to 5 (5 being high) for a number of important physical and personality traits.

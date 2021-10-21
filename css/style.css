@@ -55,6 +55,12 @@ input[type="radio"] {
 
 a {
     text-decoration: none;
+    color: var(--secondaryColor);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--mainColor);
 }
 
 ul {
@@ -540,6 +546,17 @@ button {
     background-color: var(--mainColor);
     color: white;
     width: 100%;
+}
+
+.small-btn {
+    padding: 10px 15px;
+    max-width: 300px;
+    font-size: 14px;
+}
+
+.small-btn:hover {
+    border: 3px solid var(--mainColor);
+    color: #6b18aa;
 }
 
 .hero-btn:hover {
@@ -1418,7 +1435,7 @@ h1 {
 }
 
 .dog-info-box:nth-of-type(even) {
-    background-color: rgb(202, 116, 202);
+    background-color: rgb(224, 155, 255);
     border-bottom: 1px solid black;
 }
 

@@ -105,17 +105,17 @@
                         <div class="dog-info-box">
                             <h4>Dog Info</h4>
                             <p>Name: <?php echo $row3['d_name']; ?></p>
-                            <form method='POST' action='/form_submissions/favourite_dog.php'>
-                                <button type='submit' name='dog_id' value='<?php echo $row3['dog_id'];?>'>
-                                    Add Dog to Favourites <!-- TODO Make this look better (use icon code from other pages) -->
-                                </button>
-                            </form>
-                            <p></p>
                             <p>Breed: <a href="/breed-profile.php?breed_id=<?php echo $row3['breed_id']; ?>"><?php echo $row3['Breed']; ?></a></p>
                             <p>Age: <?php echo $row3['age']; ?></p>
                             <p>Gender: <?php echo $row3['gender']; ?></p>
                             <p>De-sexed: <img src='/images/icons/boolean-checkbox-<?php echo $row3['desexed'];?>.png' width='8%'></p>
                             <p>Vaccinated: <img src='/images/icons/boolean-checkbox-<?php echo $row3['vaccinated'];?>.png' width='8%'></p>
+                            <form method='POST' action='/form_submissions/favourite_dog.php'>
+                                <button type='submit' name='dog_id' value='<?php echo $row3['dog_id'];?>' class="hero-btn hero-btn-alt small-btn">
+                                    Add Dog to Favourites <!-- TODO Make this look better (use icon code from other pages) -->
+                                </button>
+                            </form>
+                            <br>
                         </div>
                         <!-- These will only display if they are true -->
                         <div class="dog-info-box">
