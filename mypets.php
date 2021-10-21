@@ -65,16 +65,14 @@
                 <div class="tasks-table">
                     <table class="tasks">
                         <tr>
-                            <th>Tasks</th>
-                            <th>Complete</th>
+                            <th>Click to complete task</th>
                         </tr>
                         <!-- Add rows for each post adoption task -->
                         <?php
                             foreach ($post_adopt_tasks as $task) {
                                 echo "
                                     <tr>
-                                        <td>{$task["text"]}</td>
-                                        <td><button onclick='complete_task(\"{$task["type"]}\", \"{$task["dog_id"]}\")' class='task-complete-btn'>Complete</button></td>
+                                        <td><button class='task-complete-btn' onclick='complete_task(\"{$task["type"]}\", \"{$task["dog_id"]}\")'>○ {$task["text"]}</button></td>
                                     </tr>
                                 ";
                             }
@@ -88,18 +86,16 @@
                 <div class="tasks-table">
                     <table class="tasks">
                         <tr>
-                            <th>Reminders</th>
-                            <th>Due</th>
-                            <th>Complete</th>
+                            <th>Click to complete task</th>
+                            <th style='width: 20%'>Due</th>
                         </tr>
                         <!-- Add rows for each reminder -->
                         <?php
                             foreach ($reminders_soon as $reminder) {
                                 echo "
                                 <tr>
-                                    <td class='{$reminder['cell_class']}'>{$reminder['text']}</td>
-                                    <td class='{$reminder['cell_class']}'>{$reminder['days']} days</td>
-                                    <td class='{$reminder['cell_class']}'><button onclick='complete_task(\"{$reminder["type"]}\", \"{$reminder["dog_id"]}\")' class='task-complete-btn'>Complete</button></td>
+                                    <td class='{$reminder['cell_class']}'><button class='task-complete-btn' onclick='complete_task(\"{$reminder["type"]}\", \"{$reminder["dog_id"]}\")'>○ {$reminder['text']}</button></td>
+                                    <td style='width: 20%' class='{$reminder['cell_class']}'><button class='{$reminder['cell_class']} task-complete-btn' onclick='complete_task(\"{$reminder["type"]}\", \"{$reminder["dog_id"]}\")'>{$reminder['days']} days</button></td>
                                 </tr>
                                 ";
                             }
