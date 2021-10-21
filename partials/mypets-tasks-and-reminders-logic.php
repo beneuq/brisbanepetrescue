@@ -8,6 +8,7 @@
 // Empty arrays to fill with task and reminder associative arrays
 $post_adopt_tasks = array();
 $reminders = array();
+$pet_count = 0;
 
 // Gets all dogs, as well as their shelter, and also whether the dog has been shortlisted by the logged-in user
 $res = mysqli_query($conn, "
@@ -33,6 +34,7 @@ $res = mysqli_query($conn, "
 
 // Populate tasks and reminders from data returned by SQL query
 while($entry = mysqli_fetch_array($res)) {
+    $pet_count++;
     // Check council registration status
     if (is_null($entry['council_registration_id'])) {
         // No council registration id recorded yet, add as task

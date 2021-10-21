@@ -39,6 +39,22 @@
         <!-- This code iterates through the database and adds a table row for each dog in the database -->
         <?php include "partials/mypets-tasks-and-reminders-logic.php";?>
 
+        <?php
+        // Check whether data is available or not
+        if ($pet_count <= 0) {
+            ?>
+            <br>
+            <h1 class='center-txt'>You haven't adopted any pets yet.</h1>
+            <h2 class='center-txt'>Adopt one first then come back check out this page!</h2>
+            <style>
+                .task-set4 {
+                    margin-top: 0;
+                }
+            </style>
+            <?php
+            } else {
+        ?>
+
         <div class="mypets-glider">
             <?php include "partials/my-pets-glider.php";?>
         </div>
@@ -129,6 +145,10 @@
                     </table>
                 </div>
             </div>
+
+            <?php
+            }
+            ?>
                             
             <div class="task-set4">               
                 <h2 class="tasks-txt">In your area</h2>
