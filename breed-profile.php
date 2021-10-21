@@ -138,8 +138,6 @@
                 ?>
                 <!-- description if exists -->
                 <div class="profile-info">
-                    <h3>Description</h3>
-                    <p> TODO: Add description </p>
                     <p><a href="dogs.php?Breed=<?php echo urlencode($breed_title); ?>">Show <?php echo $breed_title ?> dogs available to adopt now</a></p>
                     <p>
                     <form method='POST' action='/form_submissions/favourite_breed.php'>
