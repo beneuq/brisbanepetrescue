@@ -61,10 +61,9 @@
                     FROM dogs d
                         INNER JOIN shelters s ON d.shelter_id = s.shelter_id
                         INNER JOIN dog_breeds b ON d.breed_id = b.breed_id
-                        INNER JOIN breed_image bi ON d.breed_id = bi.breed_id
+                        INNER JOIN (SELECT i.* FROM breed_image i INNER JOIN dogs di WHERE i.breed_id=di.breed_id ORDER BY RAND()) as bi ON d.breed_id = bi.breed_id
                         LEFT JOIN favourite_dogs f ON d.dog_id = f.dog_id
                     WHERE owner_id IS NULL 
-                        AND main_image  
                         AND (user_id={$user_id_for_sql} OR user_id IS NULL) $whereFilters
                         ORDER BY RAND()
             ");
