@@ -294,6 +294,10 @@ button {
     padding-top: 40px;
 }
 
+#top-nav a {
+    text-decoration: none;
+}
+
 #bottom-nav {
     background-color: #6b18aa;
     width: 100%;
@@ -308,6 +312,7 @@ button {
     display: block;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-decoration: none;
 }
 
 #bottom-nav li:hover {
@@ -347,6 +352,7 @@ button {
 
 #main-menu li.active a{
     color: white;
+    text-decoration: none;
 }
 
 #main-menu li {
@@ -546,6 +552,7 @@ button {
     background-color: var(--mainColor);
     color: white;
     width: 100%;
+    text-decoration: none;
 }
 
 .small-btn {
@@ -562,6 +569,7 @@ button {
 .hero-btn:hover {
     background-color: white;
     color: var(--h1Color);
+    text-decoration: none;
 }
 
 .hero-content .hero-btn:first-child {
@@ -668,6 +676,7 @@ button {
     color: white;
     background-color: var(--secondaryColor);
     width: 100%;
+    text-decoration: none;
 }
 
 /* Styling dog name in card */
@@ -681,7 +690,8 @@ button {
 }
 
 .profile-text:hover {
-    background-color: var(--h1Color)
+    background-color: var(--h1Color);
+    text-decoration: none;
 }
 
 .profile-box img {
@@ -1459,6 +1469,10 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#help-boxes a {
+    text-decoration: none;
 }
 
 .help-box {
