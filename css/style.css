@@ -406,6 +406,14 @@ button {
     background-position: 0 40%;
 }
 
+#hero-error {
+    background-image: url(/images/404.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 100%;
+    min-height: 50vh;
+}
+
 #account-page-hero {
     background-image: url(/images/account-page-hero.png);
     background-repeat: no-repeat;
@@ -1793,6 +1801,11 @@ h1 {
     #main-hero {
         background-size: 225%;
         background-position: 90%;
+    }
+
+    #hero-error {
+        background-size: 450%;
+        background-position: 90% 100%;
     }
 
     #pet-help-hero {

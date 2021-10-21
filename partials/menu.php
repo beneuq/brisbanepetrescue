@@ -62,7 +62,7 @@
         </a>
         <!-- Searchbar -->
         <div id="searchbar">
-            <form action="<?php echo SITEURL; ?>search.php" method="POST" class="flex">
+            <form action="/search.php" method="POST" class="flex">
                 <input type="text" placeholder="Search for dogs...">
                 <button><img src="/images/search-icon.png" alt="Search icon" width="20px" height="20px"></button>
             </form>
