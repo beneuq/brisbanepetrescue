@@ -68,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                         
                         // Now let's check if a capital letter, number and length criterias were met
                         if ($isCapital == 1 AND $isNumber == 1 AND $isLength >= 8) {
-                            alert_box("Pog");
+                            // alert_box("Pog");
                             // Insert the user into the database
                             $sql = "INSERT INTO users (username, first_name, last_name, dob, email, password) VALUES (?, ?, ?, ?, ?, ?)";
 
