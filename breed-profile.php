@@ -251,7 +251,6 @@
                                                             . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['tolerates_hot_weather_class']); ?></p>
                             <p>Suited to cold weather: <br><?php echo str_repeat("<img src='/images/icons/star-full.png'>", $entry_breed_info['tolerates_cold_weather_class'])
                                                             . str_repeat("<img src='/images/icons/star-full.png' style='opacity:0.2'>", 5 - $entry_breed_info['tolerates_cold_weather_class']); ?></p>
-                            <p>count: <?php echo $count2; ?></p>
                         </div>
                     </div>
 
