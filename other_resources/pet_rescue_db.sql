@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 18, 2021 at 06:10 AM
+-- Generation Time: Oct 21, 2021 at 09:55 AM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -57,7 +57,8 @@ CREATE TABLE `breed_filters` (
 --
 
 INSERT INTO `breed_filters` (`breed_filter_id`, `field_name`, `filter_by`, `display_name`, `filter_order`, `is_string`, `sort_by`, `sort_order`, `class_field`, `bool_field`) VALUES
-(2, 'intelligence_desc', b'1', 'Intelligence', 5, b'0', b'1', 6, b'0', b'0'),
+(1, 'Breed', b'1', 'Breed', 30, b'1', b'1', 10, b'0', b'0'),
+(2, 'intelligence_desc', b'1', 'Intelligence', 5, b'1', b'1', 6, b'0', b'0'),
 (3, 'adaptability_class', b'1', 'Adaptability', 6, b'0', b'0', NULL, b'1', b'0'),
 (4, 'general_friendliness_class', b'1', 'General Friendliness', 7, b'0', b'1', 5, b'1', b'0'),
 (6, 'apartment_living_class', b'1', 'Adapts to Apartment', 9, b'0', b'0', NULL, b'1', b'0'),
@@ -70,7 +71,7 @@ INSERT INTO `breed_filters` (`breed_filter_id`, `field_name`, `filter_by`, `disp
 (13, 'exercise_needs_class', b'1', 'Exercise Needs', 16, b'0', b'0', NULL, b'1', b'0'),
 (14, 'friendly_toward_strangers_class', b'1', 'Friendly towards Strangers', 17, b'0', b'0', NULL, b'1', b'0'),
 (15, 'general_health_class', b'1', 'General Health', 18, b'0', b'0', NULL, b'1', b'0'),
-(16, 'good_for_novice_owners', b'1', 'Good for First Time Owners', 19, b'0', b'1', 4, b'0', b'1'),
+(16, 'good_for_novice_owners', b'1', 'Good for First Time Owners', 19, b'0', b'1', 4, b'1', b'0'),
 (17, 'incredibly_kid_friendly_class', b'1', 'Incredibly Child Friendly', 20, b'0', b'0', NULL, b'1', b'0'),
 (18, 'intensity_class', b'1', 'Intensity', 21, b'0', b'0', NULL, b'1', b'0'),
 (19, 'potential_for_playfulness_class', b'1', 'Playful', 22, b'0', b'0', NULL, b'1', b'0'),
@@ -988,7 +989,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (417, NULL, 15, 66, 'Scooter', 6, '2014-09-13', 'male', 1, 0, NULL, 150, NULL, NULL, NULL, NULL, NULL),
 (418, NULL, 6, 59, 'Tobias', 8, '2012-09-15', 'male', 1, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (419, NULL, 13, 13, 'Camille', 0, '2021-07-10', 'female', 0, 0, NULL, 150, NULL, NULL, NULL, NULL, NULL),
-(420, NULL, 16, 20, 'Aiden', 7, '2014-07-06', 'male', 1, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
+(420, 4, 16, 20, 'Aiden', 7, '2014-07-06', 'male', 1, 0, NULL, 300, '2021-10-19', NULL, NULL, NULL, NULL),
 (421, NULL, 14, 52, 'Josie', 6, '2015-07-01', 'female', 1, 1, NULL, 250, NULL, NULL, NULL, NULL, NULL),
 (422, NULL, 6, 54, 'Henry', 0, '2021-03-13', 'male', 1, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (423, NULL, 15, 75, 'Kate', 4, '2017-06-21', 'female', 0, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
@@ -1210,7 +1211,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (638, NULL, 15, 9, 'Coco', 6, '2014-09-22', 'female', 1, 0, NULL, 250, NULL, NULL, NULL, NULL, NULL),
 (639, NULL, 5, 28, 'Buster', 2, '2018-12-13', 'male', 1, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (640, NULL, 16, 77, 'Silvia', 11, '2010-08-14', 'female', 1, 0, NULL, 200, NULL, NULL, NULL, NULL, NULL),
-(641, 1, 5, 61, 'Duke', 10, '2010-12-25', 'male', 0, 0, 3481816, 200, '2021-10-14', '2021-10-14', 2, '2021-10-14', 199),
+(641, 1, 5, 61, 'Duke', 10, '2010-12-25', 'male', 0, 0, 3481816, 200, '2021-10-14', '2021-10-19', 2, '2021-10-14', 199),
 (642, NULL, 8, 36, 'Cameron', 7, '2014-08-20', 'female', 1, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (643, NULL, 3, 19, 'Alden', 1, '2020-03-17', 'male', 1, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (644, NULL, 13, 38, 'Lizzy', 11, '2010-08-25', 'female', 1, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
@@ -1386,7 +1387,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (814, NULL, 6, 60, 'Princess', 10, '2010-11-20', 'female', 1, 0, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (815, NULL, 12, 45, 'Jack', 1, '2020-07-11', 'male', 0, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (816, NULL, 16, 70, 'Lucia', 11, '2010-05-07', 'female', 1, 0, NULL, 250, NULL, NULL, NULL, NULL, NULL),
-(817, NULL, 18, 31, 'Basil', 1, '2020-08-03', 'male', 0, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
+(817, 10, 18, 31, 'Basil', 1, '2020-08-03', 'male', 0, 0, NULL, 300, '2021-10-20', NULL, NULL, NULL, NULL),
 (818, NULL, 5, 2, 'Nico', 5, '2016-08-05', 'male', 0, 0, NULL, 250, NULL, NULL, NULL, NULL, NULL),
 (819, NULL, 11, 55, 'Gretchen', 2, '2019-07-16', 'female', 1, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (820, NULL, 17, 33, 'Chloe', 4, '2017-02-28', 'female', 0, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
@@ -1730,15 +1731,15 @@ CREATE TABLE `favourite_breeds` (
 --
 
 INSERT INTO `favourite_breeds` (`user_id`, `breed_id`) VALUES
-(1, 1),
 (1, 29),
-(1, 31),
-(1, 32),
+(1, 35),
+(1, 40),
 (1, 46),
 (1, 69),
 (2, 11),
 (2, 53),
 (2, 67),
+(4, 44),
 (8, 16),
 (8, 33),
 (8, 65);
@@ -1765,6 +1766,8 @@ INSERT INTO `favourite_dogs` (`user_id`, `dog_id`) VALUES
 (1, 996),
 (2, 66),
 (2, 399),
+(4, 295),
+(4, 420),
 (7, 849),
 (8, 425);
 
@@ -1795,7 +1798,7 @@ INSERT INTO `pet_filters` (`pet_filter_id`, `field_name`, `filter_by`, `display_
 (1, 'shelters.name', b'1', 'Shelter', 1, b'1', b'1', 1, b'0', b'0'),
 (2, 'Breed', b'1', 'Breed', 2, b'1', b'1', 2, b'0', b'0'),
 (3, 'age', b'1', 'Age', 3, b'0', b'1', 3, b'0', b'0'),
-(4, 'gender', b'1', 'Gender', 4, b'0', b'0', NULL, b'0', b'0'),
+(4, 'gender', b'1', 'Gender', 4, b'1', b'0', NULL, b'0', b'0'),
 (5, 'desexed', b'1', 'Desexed', 5, b'0', b'0', NULL, b'0', b'1'),
 (6, 'vaccinated', b'1', 'Vaccinated', 6, b'0', b'0', NULL, b'0', b'1'),
 (7, 'intelligence_desc', b'1', 'Intelligence', 7, b'1', b'1', 6, b'0', b'0'),
@@ -1876,7 +1879,9 @@ INSERT INTO `users` (`user_id`, `username`, `first_name`, `last_name`, `dob`, `e
 (5, 'johnsmith', 'John', 'Smith', '2007-07-07', 'john.smith@outlook.com', 'abcde'),
 (7, 'johnsmith123', 'John', 'Smith', '2007-07-07', 'john.smith1@outlook.com', 'abcde'),
 (8, 'O_T', 'Olivia', 'T', '2000-10-21', 'O.t@hotmail.com', '0000'),
-(9, 'poggers', 'Dave', 'Smith', '2002-01-21', 'dave@gmail.com', 'pogdave');
+(9, 'poggers', 'Dave', 'Smith', '2002-01-21', 'dave@gmail.com', 'pogdave'),
+(10, 'Fart', 'poop', 'Fart', '1804-06-15', 'kingzoggy2243@gmail.com', 'Poopman4567'),
+(11, 'Jocelynn.anne', 'Jocelyn', 'Ifield ', '2003-02-11', 'jocelynifield@gmail.com', 'Spuddy2004');
 
 --
 -- Indexes for dumped tables
@@ -1982,7 +1987,7 @@ ALTER TABLE `shelters`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
