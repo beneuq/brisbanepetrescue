@@ -112,7 +112,7 @@
                             <p>Vaccinated: <img src='/images/icons/boolean-checkbox-<?php echo $row3['vaccinated'];?>.png' width='8%'></p>
                             <form method='POST' action='/form_submissions/favourite_dog.php'>
                                 <button type='submit' name='dog_id' value='<?php echo $row3['dog_id'];?>' class="hero-btn hero-btn-alt small-btn">
-                                    Add Dog to Favourites <!-- TODO Make this look better (use icon code from other pages) -->
+                                    Add Dog to Favourites
                                 </button>
                             </form>
                             <br>

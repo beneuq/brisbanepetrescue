@@ -251,7 +251,7 @@
 
                     this.renderEvents(todaysEvents, details);
 
-                    arrow.style.left = el.offsetLeft - el.parentNode.offsetLeft + 27 + 'px'; // TODO: Make it centred on mobile
+                    arrow.style.left = el.offsetLeft - el.parentNode.offsetLeft + 27 + 'px';
                 }
 
                 Calendar.prototype.renderEvents = function(events, ele) {

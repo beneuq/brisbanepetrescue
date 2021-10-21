@@ -59,8 +59,7 @@ while($entry = mysqli_fetch_array($res)) {
         array_push($post_adopt_tasks, $task);
     }
 
-    // Check if de-sexed
-    // todo maybe set to null (should not set to 1) to ignore?
+    // Check if desexed
     if (!$entry['desexed']) {
         // Not desexed yet, add as task
         $task = array(

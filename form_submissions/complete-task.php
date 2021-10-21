@@ -7,8 +7,6 @@ enforce_login();
 if (isset($_POST['task_type']) && isset($_POST['dog_id'])) {
     $user_id = get_userid();
 
-    // TODO Verify that owner_id value for $_POST['dog_id'] = $user_id (i.e. user owns the dog they're doing tasks on)
-
     /** Gets extra POST parameter 'task_data', or errors if param was not passed. */
     function get_extra_param() {
         if (isset($_POST['task_data'])) {

@@ -194,19 +194,11 @@ submitClick.addEventListener('click', submitClicked.bind(null, 1));
 let results = document.getElementById("personality-quiz-results");
 if (sessionStorage.getItem("loadedEarlier")) {
     results.style.display = "block";
-    // TODO No clue why this won't work
-    // window.addEventListener('DOMContentLoaded', scrollToResults);
     console.log("Quiz submitted");
 } else {
     console.log("Quiz not submitted");
     results.style.display = "none";
 }
-
-// TODO function scrollToResults() {
-//     if (sessionStorage.getItem("loadedEarlier")) {
-//         results.scrollIntoView({behavaior: 'smooth'});
-//     } 
-// }
 
 let ifSubmitClicked = false;
 /* Check if the submit button has been clicked */

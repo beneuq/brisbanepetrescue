@@ -8,7 +8,7 @@ let latitude;
 let longitude;
 let service;
 
-let maxResults = 5; // TODO Be sure to limit radius as well - maxResults just hides extra results, queries still take place!
+let maxResults = 5; // maxResults just hides extra results, queries still take place based on radius.
 let radiusVet = 5000; // metres
 let radiusDogPark = 5000; // metres
 

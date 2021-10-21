@@ -9,13 +9,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password_attempt = $_POST["password_attempt"];
 
-    // TODO Validate all user inputs!
     $sql = "SELECT user_id, first_name, password FROM users WHERE username LIKE ?";
 
     if($query = mysqli_prepare($conn, $sql)) {
         mysqli_stmt_bind_param($query, "s", $username);
-
-        // TODO use hashing
 
         // Execute the query and store result, then check if password is correct
         if(mysqli_stmt_execute($query)) {

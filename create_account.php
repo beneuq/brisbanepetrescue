@@ -19,15 +19,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
 
-    // TODO Validate all user inputs!
     // First check if any fields are empty
     if(isset($first_name) && !empty($first_name) AND isset($last_name) && !empty($last_name) AND isset($email) && !empty($email) AND 
     isset($dob) && !empty($dob) AND isset($username) && !empty($username) AND isset($password) && !empty($password)) {
-        // No fields were empty so we can begin to check them
-        
+        // No fields were empty, so we can begin to check them
+
         // Check the email address is valid
         if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            // alert_box("email goodo");
 
             // Let's also check if the user is already in the database
             $sql = "SELECT user_id, first_name, password FROM users WHERE username LIKE ?";
@@ -65,8 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                             $isLength++;
                         }
 
-                        
-                        // Now let's check if a capital letter, number and length criterias were met
+                        // Now let's check if a capital letter, number and length criteria were met
                         if ($isCapital == 1 AND $isNumber == 1 AND $isLength >= 8) {
                             // alert_box("Pog");
                             // Insert the user into the database
@@ -74,9 +71,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             if($query = mysqli_prepare($conn, $sql)) {
                                 mysqli_stmt_bind_param($query, "ssssss", $username, $first_name, $last_name, $dob, $email, $password);
-
-                                // TODO Hash the password
-                                //$password = password_hash($password, PASSWORD_DEFAULT);
 
                                 if(mysqli_stmt_execute($query)) {
                                     // Send user to login page now
@@ -96,11 +90,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     }
                 }
             }
-
             mysqli_stmt_close($query);
-                        
-         
-
             
         } else {
             // Set the email error
@@ -124,27 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             }
         }
-        
-        
-            //      I think mysqli has some functionality to escape characters but also check for blank inputs, etc.
-        // $sql = "INSERT INTO users (username, first_name, last_name, dob, email, password) VALUES (?, ?, ?, ?, ?, ?)";
 
-        // if($query = mysqli_prepare($conn, $sql)) {
-        //     mysqli_stmt_bind_param($query, "ssssss", $username, $first_name, $last_name, $dob, $email, $password);
-
-        //     // TODO Hash the password
-        //     //$password = password_hash($password, PASSWORD_DEFAULT);
-
-        //     if(mysqli_stmt_execute($query)) {
-        //         // Send user to login page now
-        //         alert_box("Thanks for signing up, $first_name!");
-        //         header("Location: /login.php");
-        //     } else {
-        //         alert_box("There was an error creating account. Please try again later.");
-        //     }
-        //     mysqli_stmt_close($query);
-        // }
-   // }
     } else {
         // There are blank fields so ask them to fill in the fields
         $emptyError = 'You have not completed all the fields. Please fill in all account information.';
@@ -164,8 +134,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- import generic head section -->
     <?php include('partials/head.php'); ?>
 </head>
-
-
 
 <div class="underneath-nav"></div>
         <!-- import menu -->
@@ -234,6 +202,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 <!-- import footer -->
 <?php include('partials/footer.php'); ?>
-
 
 </html>

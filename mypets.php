@@ -110,7 +110,7 @@
             </div>
 
             <div class="task-set3"> 
-                <h2 class="tasks-txt">Breed&nbsp;Care&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2> <!-- TODO why do I need this?! -->
+                <h2 class="tasks-txt">Breed&nbsp;Care&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
                 <div class="tasks-table-2">
                     <table class="tasks">
                         <tr><th>Recommended Food</th></tr>

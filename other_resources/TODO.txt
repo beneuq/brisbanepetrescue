@@ -4,20 +4,12 @@ A list of tasks to be done by anyone who needs work to do.
 
 @Front-End:
     - Put content on Pet help page
-    - Make standard <a> links look better - particularly on mypets.php
     - Style error messages on create account page
 
 
 @Back-End:
     - Filters @Ben:
         - ! Allow multiple options in same filter to be selected (i.e. Size is Very Small OR Small)
-        - ! Add a button or tickbox on both the dogs and breeds page labelled "Show favourites" that does the following:
-                1. Ensures user is logged in (should be as easy as calling enforce_login())
-                2. Applies filter "favourite_breeds.userid=get_userid()" if it is ticked/selected
         - Fix text for size filter (Small-Large instead of Low-High)
-    - Add all filter-3 items in filter-menu.php into one div per category (e.g. filter-3 items under 'Popularity' are in a div)
-    - @Matt needs to come up with a better approach to the complete buttons on mypets
-            - Maybe make them obvious buttons on desktop and crossout-links on mobile to save space?
-            - Also make the favourites buttons on the breed and dog profiles much better looking (heart icon maybe?)
     - Replace Bull terrier images with correct images - all the current ones are not bull terriers
     - Randomise images of dogs on the dogs page (Especially noticeable when filtering by breed!)
