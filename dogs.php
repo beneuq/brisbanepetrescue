@@ -30,8 +30,8 @@
         include('partials/filter-menu.php') ?>
     </div>
 
-    <div>
-        <a href="<?php echo createLink($page, $_GET, false, array("Breed" => array("Affenpinscher", "Akita", "Finnish Spitz", "Great Dane"))); ?>">Favs</a>
+    <div class="favs-filter">
+        <a href="<?php echo createLink($page, $_GET, false, array("Breed" => array("Affenpinscher", "Akita", "Finnish Spitz", "Great Dane"))); ?>">Filter by Favourites</a>
     </div>
 
     <!-- This code iterates through the database and adds a table row for each dog in the database -->

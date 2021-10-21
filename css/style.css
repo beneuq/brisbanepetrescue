@@ -750,6 +750,13 @@ button {
     justify-content: center;
 }
 
+.favs-filter {
+    text-align: center;
+    background-color: #ddd;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 /* Styling for breeds table on breeds.php*/
 .table-title {
     color: var(--mainColor);
