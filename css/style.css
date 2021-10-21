@@ -666,11 +666,12 @@ button {
     margin-top: 2%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    flex-grow: 4;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
+    align-content: flex-start;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #eee;
 }
 
 /* Currently selected filters */
@@ -680,10 +681,13 @@ button {
 
 /* Filter category table */
 .filter-1 {
-    border: 1px solid black;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-left: none;
     position: relative;
-    margin-right: auto;
-    margin-left: auto;
+    min-width: 250px;
+    text-align: left;
+    margin-right: 5px;
     margin-bottom: 5px;
     padding-left: 5px;
     padding-right: 5px;
@@ -694,6 +698,38 @@ button {
 /* Filter category heading */
 .filter-2 {
     pointer-events: none;
+    color: #666;
+}
+
+.filter-2 th {
+    font-weight: normal;
+}
+
+.filter-3 {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.filter-3 a {
+    font-weight: normal;
+    color: black;
+    padding-left: 5px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.filter-3 a:visited {
+    text-decoration: none;
+}
+
+.filter-3 a:focus {
+    text-decoration: none;
 }
 
 /* Filter category table elements */
@@ -701,17 +737,17 @@ button {
     display: none;
     min-width: 100px;
     position: absolute;
-    background-color: white;
+    background-color: #ddd;
     border: 1px solid black;
-    padding-left: 10px;
-    padding-right: 10px;
     z-index: 1;
     left: 0;
 }
 
-#filters th {
-    margin-left: 20px;
-    margin-right: 20px;
+.filter-results tbody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Styling for breeds table on breeds.php*/
