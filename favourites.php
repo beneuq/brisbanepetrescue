@@ -37,12 +37,19 @@
                     </div>
                     <br>
                 </div>
-<!--                <img class="hero-img" src="images/cute-puppy.png" alt="Cute brown and white puppy sitting down" style="size: 20%">-->
             </div>
 
             <!-- Favourite Breeds Section -->
-            <section id="fav-breeds" class="pg-section min-pg-section" style="background-color: grey;">
+            <section id="fav-breeds" class="pg-section min-pg-section">
                 <h2 class="center-txt">Breeds I'm interested in</h2>
+                <!-- Link to dogs page, filtering on favourite breeds only -->
+                <?php
+                    $pageVars = array();
+                    $pageVars["Breed"] = get_breed_favourites();
+                    $qs = http_build_query($pageVars);
+                    echo "<p class='center-txt'><a class='hyperlink' style='color: var(--secondaryColor);' href='/dogs.php?".$qs."'>Show avaliable dogs within these breeds</a></p>";
+                ?>
+
                 <div id="sqldata">
                     <table class="breeds-table2">
                         <thead>

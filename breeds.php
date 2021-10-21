@@ -27,10 +27,6 @@
         include('partials/filter-menu.php') ?>
     </div>
 
-    <div class="favs-filter">
-        <a href="<?php echo createLink($page, array("Breed" => array("Affenpinscher", "Akita", "Finnish Spitz", "Great Dane"))); ?>">Filter by Favourites</a>
-    </div>
-
     <div id="sqldata">
         <table class="breeds-table">
             <thead>

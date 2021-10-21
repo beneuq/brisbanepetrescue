@@ -31,7 +31,13 @@
     </div>
 
     <div class="favs-filter">
-        <a href="<?php echo createLink($page, $_GET, false, array("Breed" => array("Affenpinscher", "Akita", "Finnish Spitz", "Great Dane"))); ?>">Filter by Favourites</a>
+        <?php if (logged_in()) {
+            echo "<a href='".createLink($page, $_GET, false, array("Breed" => get_breed_favourites()))."'>Only show my favourite breeds</a>";
+        } else {
+            echo "<a href='/login.php?display-error'>Login to filter by favourites</a>";
+        }
+        ?>
+<!--        <a href="--><?php //echo createLink($page, $_GET, false, array("Breed" => get_breed_favourites())); ?><!--">Filter by Favourites</a>-->
     </div>
 
     <!-- This code iterates through the database and adds a table row for each dog in the database -->

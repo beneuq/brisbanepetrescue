@@ -74,3 +74,18 @@ function get_user_breeds(): array
     }
     return $my_breeds;
 }
+
+/** Get list of favourited breeds by user */
+function get_breed_favourites(): array
+{
+    enforce_login();
+    $user_id = get_userid();
+    $breed_favourites = array();
+    global $conn;
+    $sql = "SELECT DISTINCT Breed FROM dog_breeds INNER JOIN favourite_breeds fb on dog_breeds.breed_id = fb.breed_id WHERE user_id={$user_id}";
+    $res = mysqli_query($conn, $sql);
+    while($entry = mysqli_fetch_array($res)) {
+        array_push($breed_favourites, $entry['Breed']);
+    }
+    return $breed_favourites;
+}

@@ -5,8 +5,6 @@
     <?php
     $whereFilters = "";
     $orderFilter = "Breed";
-
-
     ?>
 
     <?php
@@ -53,24 +51,6 @@
     <?php
     function createLink(string $page, array $pageVars = [], bool $drop = false, array $filtersToModify = [])
     {
-        // // if (!(empty($pageVars))) {
-        // $page .= "?";
-        // foreach (array_keys($pageVars) as $filter) {
-        //     // add all filters unless the are meant to be dropped
-        //     if (!($drop and in_array($filter, array_keys($filtersToModify)))) {
-        //         $page .= $filter . "=" . $pageVars[$filter] . "&";
-        //     }
-        // }
-        // if (!$drop and !empty($filtersToModify)) {
-        //     foreach (array_keys($filtersToModify) as $filter) {
-        //         $page .= $filter . "=" . $filtersToModify[$filter] . "&";
-        //     }
-        // }
-        // $page = rtrim($page, '&');
-        // $page = rtrim($page, '?');
-        // // }
-        // return $page;
-        // Use it in an `if` statement
         foreach ($filtersToModify as $key => $value) {
             if ($drop) {
                 unset($pageVars[$key]);

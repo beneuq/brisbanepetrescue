@@ -78,6 +78,15 @@ button {
 
 }
 
+.hyperlink {
+    color: var(--secondaryColor);
+}
+
+.hyperlink:hover {
+    text-decoration: underline;
+    color: white;
+}
+
 .bg-img {
     background-size: cover;
     /* background-position: center center; */
@@ -763,6 +772,10 @@ button {
     background-color: #ddd;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+#fav-breeds {
+    background-color: var(--h1Color);
 }
 
 /* Styling for breeds table on breeds.php*/
