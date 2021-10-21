@@ -37,12 +37,6 @@ $res2 = mysqli_query($conn, $sql2);
 
 //Count the Rows
 $count2 = mysqli_num_rows($res2);
-
-// Check whether data is available or not
-if ($count2 <= 0) {
-    // Todo make this look better
-    echo "<h1>You haven't adopted any pets yet. Adopt one first then come back and check this page out!</h1>";
-} else {
 ?>
 <div class="glide glide-mypets" style="margin-top: 0">
     <div class="glide__track" data-glide-el="track">
@@ -71,7 +65,6 @@ if ($count2 <= 0) {
                 </div>
             </li>
             <?php
-            }
             }
             ?>
         </ul>

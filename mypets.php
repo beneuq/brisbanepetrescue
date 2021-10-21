@@ -45,7 +45,7 @@
             ?>
             <br>
             <h1 class='center-txt'>You haven't adopted any pets yet.</h1>
-            <h2 class='center-txt'>Adopt one first then come back check out this page!</h2>
+            <h2 class='center-txt'>Adopt one first then check out this page!</h2>
             <style>
                 .task-set4 {
                     margin-top: 0;
