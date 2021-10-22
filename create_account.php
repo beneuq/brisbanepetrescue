@@ -146,7 +146,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?php 
                     // Check if the email is an error and print the message
                     if(isset($emptyError)){
-                        echo '<div class="statusmsg">'.$emptyError.'</div>';
+                        echo '<div class="error-box">'.$emptyError.'</div>';
                     } 
                 ?>
                 <div class="form-group">
@@ -168,7 +168,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?php 
                     // Check if the email is an error and print the message
                     if(isset($emailError)){
-                        echo '<div class="statusmsg">'.$emailError.'</div>';
+                        echo '<div class="error-box">'.$emailError.'</div>';
                     } 
                 ?>
                 </div>
@@ -179,7 +179,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?php 
                     // Check if the username is an error and print the message
                     if(isset($userError)){
-                        echo '<div class="statusmsg">'.$userError.'</div>';
+                        echo '<div class="error-box">'.$userError.'</div>';
                     } 
                 ?>
                 <div class="form-group">
@@ -189,7 +189,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?php 
                     // Check if the password is an error and print the message
                     if(isset($passwordError)){
-                        echo '<div class="statusmsg">'.$passwordError.'</div>';
+                        echo '<div class="error-box">'.$passwordError.'</div>';
                     } 
                 ?>
                 <div class="form-group">
