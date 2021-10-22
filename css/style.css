@@ -747,6 +747,13 @@ button {
 
 .filter-2 th {
     font-weight: normal;
+    display: flex;
+}
+
+.filter-2 th:after {
+    content: " ▼";
+    display: block;
+    margin-left: auto;
 }
 
 .filter-3 {
