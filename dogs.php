@@ -22,6 +22,9 @@
     <!-- Adding the filter section -->
     <div id="filters">
         <?php
+        // adding the filters section
+        // filters display based on filter table choosen in db 
+        // creates filter conditions for populating list
         $filterTable = "pet_filters";
         $table = "((dogs 
         INNER JOIN dog_breeds ON dogs.breed_id = dog_breeds.breed_id)
@@ -31,13 +34,15 @@
     </div>
 
     <div class="favs-filter">
-        <?php if (logged_in()) {
-            echo "<a href='".createLink($page, $_GET, false, array("Breed" => get_breed_favourites()))."'>Only show my favourite breeds</a>";
+        <?php
+        // Adding filter by favourites button
+        // If user isn't logged in (can't see favourites) then prompt them to log in
+        if (logged_in()) {
+            echo "<a href='" . createLink($page, $_GET, false, array("Breed" => get_breed_favourites())) . "'>Only show my favourite breeds</a>";
         } else {
             echo "<a href='/login.php?display-error'>Login to filter by favourites</a>";
         }
         ?>
-<!--        <a href="--><?php //echo createLink($page, $_GET, false, array("Breed" => get_breed_favourites())); ?><!--">Filter by Favourites</a>-->
     </div>
 
     <!-- This code iterates through the database and adds a table row for each dog in the database -->
@@ -47,6 +52,7 @@
                 <?php
                 $user_id_for_sql = logged_in() ? get_userid() : "NULL";
                 // Gets all dogs, as well as their shelter, and also whether the dog has been shortlisted by the logged-in user
+                // uses filters created in filter-menu.php to filter list
                 $res = mysqli_query($conn, "
                 SELECT DISTINCT
                     d.name AS Dog,
@@ -67,6 +73,7 @@
                         AND (user_id={$user_id_for_sql} OR user_id IS NULL) $whereFilters
                         ORDER BY RAND()
             ");
+                // creates each dog profile for the dogs returned based on filters
                 while ($entry = mysqli_fetch_array($res)) {
                 ?>
                     <div class="profile-box float-container" id='dog_id=<?php echo $entry['dog_id']; ?>'>
