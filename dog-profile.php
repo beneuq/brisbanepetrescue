@@ -129,7 +129,7 @@
                             <p>Size: <br><img src='images/icons/dog_size_<?php echo $row3['size_class']; ?>' style="width: 120px"></p>
                             <p>Height: <br><?php echo $row3['height_low']; ?>cm - <?php echo $row3['height_high']; ?>cm</p>
                             <p>Weight: <br><?php echo $row3['weight_low']; ?>kgs - <?php echo $row3['weight_high']; ?>kgs</p>
-                            <p>Calorie intake (when adult):
+                            <p>Adult Calorie Intake:
                                 <br><?php echo $row3['adult_cal_intake_low'] . "cals - "
                                         . $row3['adult_cal_intake_high'] . "cals"; ?>
                             </p>

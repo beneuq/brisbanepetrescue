@@ -160,7 +160,7 @@
                     <ul> <?php foreach ($best_traits as $quality) {
                                 echo "<li class='good-traits'>" . $quality . "</li>";
                             } ?> </ul>
-                    <h3>Breed not recommended for:</h3>
+                    <h3>Unfavourable breed qualities</h3>
                     <ul> <?php foreach ($worst_traits as $quality) {
                                 echo "<li  class='bad-traits'>" . $quality . "</li>";
                             } ?> </ul>
@@ -180,7 +180,7 @@
 
                     <!-- Section with all details -->
                     <h3>Detailed breed information</h3>
-                    <p>All breeds are given a rating from 1 to 5 (5 being high) for a number of important physical and personality traits.
+                    <p>All breeds are given a rating from 1 to 5 (5 being highest) for a number of important physical and personality traits.
                         Please note that these are general traits and may not reflect every dog of this breed. </p>
                     <div class="information-boxes">
                         <!-- General info -->
