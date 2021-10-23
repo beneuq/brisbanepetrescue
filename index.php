@@ -21,7 +21,7 @@
                 <div class="flex f-col hero-content bg-img">
                     <h1 class="pad-top-2 pad-bottom-1">Looking to adopt?</h1>
                     <h2 class="pad-bottom-1">Brisbane Pet Rescue Has You Covered</h2>
-                    <p class="pad-bottom-2">Here, we understand the struggles of finding the perfect K-9 companion. Browse through the available dogs straight away or do a short quiz to find the perfect pet for you.</p>
+                    <p class="pad-bottom-2">Here, we understand the struggles of finding the perfect K-9 companion. Browse through the available dogs immediately or do a short quiz to find the perfect pet for you.</p>
 
                     <div class="btn-group pad-bottom-2">
                         <a href="dogs.php" class="margin-right-1 hero-btn">Available Dogs</a>
