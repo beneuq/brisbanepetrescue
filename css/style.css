@@ -1523,13 +1523,17 @@ h1 {
 }
 
 .help-thumbnail {
-    background-color: green;
+    background-image: url(/images/dog-with-hoodie.png);
     width: 47%;
     background-position: center center;
     background-size: cover;
     height: 100%;
     padding-top:58%;
     margin: auto 20px;
+}
+
+.help-box-2 .help-thumbnail {
+    background-image: url(/images/dog-with-sign.png);
 }
 
 /* Styling for RSS Feeds */
