@@ -28,7 +28,7 @@
             <a href="breeds.php">
                 <h1 class="margin-bottom-1">Learn more about Breeds</h1>
             </a>
-            <p class="margin-bottom-3">Taking care of a pet can be hard work, especially a new pet! To simplify things for you, we have collected some of the greatest resources from the across net, for your viewing.  With this information, you will be able to take after your pet/s with ease and confidence!</p>
+            <p class="margin-bottom-3">Taking care of a pet can be hard work, especially a new pet! To simplify things for you, we have collected some of the greatest resources from across the net, for your viewing.  With this information, you will be able to care of your pet/s with ease and confidence!</p>
             <div id="help-boxes">
                 <div class="help-box">
                     <div class="help-content">
