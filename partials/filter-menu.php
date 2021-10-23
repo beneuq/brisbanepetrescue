@@ -325,17 +325,19 @@
     <script>
         var elements = document.getElementsByClassName("filter-1");
         for (var i = 0; i < elements.length; i++) {
+            // Add onclick function for all filter headings
             document.getElementsByClassName("filter-1")[i].addEventListener("click", function(e) {
                 e = e || window.event;
+                // Get clicked filter
                 var target = e.target || e.srcElement
                 var next = target.nextSibling;
+                // Get filters options associated with heading
                 var filters = next.nextSibling;
                 if (filters.style.display == "flex") {
-                    console.log("here");
+                    // Close if already open
                     filters.style.display = "none";
                 } else {
-                    console.log(target);
-                    console.log(filters);
+                    // Open if closed
                     var rect = target.getBoundingClientRect();
                     filters.style.display = "flex";
                     filters.style.left = rect.left + "px";
