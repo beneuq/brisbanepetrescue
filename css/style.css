@@ -961,6 +961,7 @@ button {
     transition: opacity .2s;
     display: block;
     margin: auto;
+    padding: 5px 0 !important;
 }
 
 .quizAnswer:hover {
@@ -993,7 +994,7 @@ button {
     display: flex;
     margin: auto;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 15px;
 }
 
 .quizSliderLabels span {
