@@ -22,24 +22,5 @@ $active_contact = '';
 require_once 'config/constants.php';
 ?>
 
-<!-- creating function for printing to console -->
-<?php
-function consolePrintArgs()
-{
-    if (func_num_args() > 0) {
-        $htmlString = "<script>";
-        $funcArgs = func_get_args();
-        foreach (array_keys($funcArgs) as $argKey) {
-            $arg = $funcArgs[$argKey];
-            $htmlString .= "console.log(\"$argKey: " . strval($arg) . "\");";
-            if (is_array($arg)) {
-                foreach (array_keys($arg) as $key) {
-                    $htmlString .= "console.log(\"$argKey: $key: " . strval($arg[$key]) . "\");";
-                }
-            }
-        }
-        $htmlString .= "</script>";
-        echo $htmlString;
-    }
-}
+
 ?>

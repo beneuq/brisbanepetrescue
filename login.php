@@ -5,19 +5,19 @@ $username = "";
 $password_attempt = "";
 
 // On form submission:
-if($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password_attempt = $_POST["password_attempt"];
 
     $sql = "SELECT user_id, first_name, password FROM users WHERE username LIKE ?";
 
-    if($query = mysqli_prepare($conn, $sql)) {
+    if ($query = mysqli_prepare($conn, $sql)) {
         mysqli_stmt_bind_param($query, "s", $username);
 
         // Execute the query and store result, then check if password is correct
-        if(mysqli_stmt_execute($query)) {
+        if (mysqli_stmt_execute($query)) {
             mysqli_stmt_store_result($query);
-            if(mysqli_stmt_num_rows($query)) { // A matching username was found
+            if (mysqli_stmt_num_rows($query)) { // A matching username was found
                 mysqli_stmt_bind_result($query, $user_id, $first_name, $password);
                 mysqli_stmt_fetch($query);
                 if ($password_attempt == $password) {
@@ -47,56 +47,58 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <!-- import generic head section -->
-    <?php 
+    <?php
     $page_title = 'Login';
-    include('partials/head.php'); 
+    include('partials/head.php');
     $active_login = 'active';
     ?>
 </head>
 
 <body class="banner">
     <div id="top"></div>
-        <div class="underneath-nav"></div>
-        <!-- import menu -->
-        <?php include('partials/menu.php'); ?>
+    <div class="underneath-nav"></div>
+    <!-- import menu -->
+    <?php include('partials/menu.php'); ?>
 
-        <div class="wrapper container"> 
-            <fieldset id="login" class="input-card">
-                <legend>Login</legend>
-                <div class="form-group">
-                    <?php
-                        if (isset($_GET['display-error'])) {
-                            echo "<p class='error-box'>
+    <!-- Login Box -->
+    <div class="wrapper container">
+        <fieldset id="login" class="input-card">
+            <legend>Login</legend>
+            <div class="form-group">
+                <?php
+                if (isset($_GET['display-error'])) {
+                    echo "<p class='error-box'>
                                 Please sign-in to use that feature
                                 </p>";
-                        }
-                    ?>
-                    <p>Please fill in your credentials to login.</p>
-                    <form action="login.php" method="post">
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" id="username" name="username" class="form-control">
-                        </div>
+                }
+                ?>
+                <p>Please fill in your credentials to login.</p>
+                <form action="login.php" method="post">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" class="form-control">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="password_attempt">Password</label>
-                            <input type="password" id="password_attempt" name="password_attempt">
-                        </div>
+                    <div class="form-group">
+                        <label for="password_attempt">Password</label>
+                        <input type="password" id="password_attempt" name="password_attempt">
+                    </div>
 
-                        <div class="form-group">
-                            <input type="submit" class="submit-btn btn" value="Login">
-                        </div>
+                    <div class="form-group">
+                        <input type="submit" class="submit-btn btn" value="Login">
+                    </div>
 
-                    </form>
-                    <p>Don't have an account?
-                        <a href="create_account.php">Sign up now for free!</a>
-                    </p>
-                </div>
+                </form>
+                <p>Don't have an account?
+                    <a href="create_account.php">Sign up now for free!</a>
+                </p>
+            </div>
             <fieldset>
-        </div>
-   
+    </div>
+
     <!-- import footer -->
     <?php include('partials/footer.php'); ?>
 
 </body>
+
 </html>

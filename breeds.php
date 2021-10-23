@@ -28,8 +28,10 @@
     </div>
 
     <div id="sqldata">
+        <!-- Breed information table -->
         <table class="breeds-table">
             <thead>
+                <!-- Headers -->
                 <tr>
                     <th class='text-center desktop-only'>Favourite</th>
                     <th class='text-center mobile-only'></th>
@@ -41,6 +43,7 @@
                     <th class="text-left">Size</th>
                 </tr>
                 <thead>
+                    <!-- Breed content -->
                 <tbody>
                     <?php
                     $user_id_or_null = logged_in() ? get_userid() : "NULL"; //todo deal with any vs null (favourite the Affenpinscher signed in as mpowell to see)

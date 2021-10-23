@@ -21,20 +21,21 @@ if (isset($_GET['task_type']) && isset($_GET['dog_id'])) {
         default:
             alert_box("Error! Task type {$_POST['task_type']} not recognised.");
     }
-    ?>
+?>
 
-<div class="popup-form-container" id="popupForm">
-    <form method="POST" action="../form_submissions/complete-task.php" class="popup-form">
-        <h3>Medication Reminder Setup for <?php echo $row['name'];?></h3>
-        <label for="days">Days between <?php echo $medication_type;?> doses: </label>
-        <input type="number" id="days" name="task_data" value=30>
-        <input type="hidden" name="task_type" value="<?php echo $_GET['task_type']; ?>">
-        <input type="hidden" name="dog_id" value="<?php echo $_GET['dog_id']; ?>">
-        <br>
-        <button type="button" class="btn cancel" onclick="location.reload()">Cancel</button>
-        <input type="submit" class="btn" value="Administer now">
-    </form>
-</div>
+    <!-- Medication reminder pop-up -->
+    <div class="popup-form-container" id="popupForm">
+        <form method="POST" action="../form_submissions/complete-task.php" class="popup-form">
+            <h3>Medication Reminder Setup for <?php echo $row['name']; ?></h3>
+            <label for="days">Days between <?php echo $medication_type; ?> doses: </label>
+            <input type="number" id="days" name="task_data" value=30>
+            <input type="hidden" name="task_type" value="<?php echo $_GET['task_type']; ?>">
+            <input type="hidden" name="dog_id" value="<?php echo $_GET['dog_id']; ?>">
+            <br>
+            <button type="button" class="btn cancel" onclick="location.reload()">Cancel</button>
+            <input type="submit" class="btn" value="Administer now">
+        </form>
+    </div>
 
 
 <?php
