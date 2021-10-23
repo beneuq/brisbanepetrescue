@@ -50,7 +50,7 @@
                 <div class="flex f-col hero-content">
                     <h1 class="pad-top-2 pad-bottom-1">Looking for help with your pet?</h1>
                     <h2 class="pad-bottom-1">Well, you're in the right place</h2>
-                    <p class="pad-bottom-2">Taking care of a pet can very difficult. That's why we have worked hard to make it easy-peasy. Check out articles from our partners or contact us for more information.</p>
+                    <p class="pad-bottom-2">Taking care of a pet can be very difficult. That's why we have worked hard to make it easy-peasy! Check out articles from our partners or contact us for more information.</p>
 
                     <div class="btn-group pad-bottom-2">
                         <a href="help.php" class="margin-right-1 hero-btn">Pet Help</a>
