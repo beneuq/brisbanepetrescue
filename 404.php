@@ -19,8 +19,8 @@
 <section id="hero-error" class="hero-section pos-relative dimmer-sm">
     <div class="flex container">
         <div class="flex f-col hero-content bg-img">
-            <h1 class="pad-top-2 pad-bottom-1">Error 404: Page Not Found</h1>
-            <h2 class="pad-bottom-1">Uh-oh - Looks like that page doesn't exist!</h2>
+            <h1 class="pad-top-2 pad-bottom-1">Page under construction</h1>
+            <h2 class="pad-bottom-1">Uh-oh - That page isn't finished yet!</h2>
             <p class="pad-bottom-2">Return back to our homepage, or get in touch if you think we've made an error, but keep in mind this site may still be under construction.</p>
 
             <div class="btn-group pad-bottom-2">
