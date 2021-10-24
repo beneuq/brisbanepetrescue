@@ -44,9 +44,11 @@
         }
         ?>
     </div>
-
+    
     <!-- This code iterates through the database and adds a table row for each dog in the database -->
     <section class="categories">
+        <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Top</button>
+
         <div class="container">
             <div id="sqldata">
                 <?php
@@ -107,6 +109,7 @@
         </div>
         <div class="clearfix"></div>
     </section>
+
     <!-- End main page body -->
 
     <!-- import footer -->

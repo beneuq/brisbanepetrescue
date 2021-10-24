@@ -32,6 +32,8 @@
             </div>
 
         </section>
+
+
         <!-- Section 2 -->
         <section id="about-us-cta" class="pg-section small-pg-section flex" style="background-color: lightgrey;">
         <div class="container" data-aos="fade-up">
@@ -115,7 +117,7 @@
             </div>
         </section>
         <!-- Categories Section Ends Here -->
-
+                
         <!-- FOOTER -->
         <?php include('partials/footer.php'); ?>
         <script src="js/aos/aos.js"></script>

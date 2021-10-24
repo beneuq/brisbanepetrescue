@@ -482,6 +482,40 @@ button {
     color: white;
 }
 
+/* button#scrollToTopBtn {
+    padding: 25px;
+    background: var(--mainColor);
+    color: white;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgb(128 128 128 / 41%);
+    position: fixed;
+    z-index: 99;
+    bottom: 20px;
+    right: 30px;
+    display: none;
+}
+
+button#scrollToTopBtn:hover {
+    background: var(--secondaryColor);
+} */
+
+button#scrollToTopBtn {
+    padding: 25px;
+    background: var(--mainColor);
+    color: white;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgb(128 128 128 / 41%);
+    position: fixed;
+    z-index: 99;
+    bottom: 20px;
+    right: 30px;
+    /* display: none; */
+}
+
+button#scrollToTopBtn:hover {
+    background: var(--secondaryColor);
+}
+
 #start-quiz-section {
     background-image: url(/images/about-us-cta.jpg);
     background-position: 55% center;
