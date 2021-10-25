@@ -26,11 +26,11 @@ enforce_login(); // Redirect to login page if not logged in.
 
     <!-- Hero Section -->
     <section class="hero-section small-hero pos-relative">
-        <div class="flex container">
+        <div id="favourites-banner" class="flex container">
             <div class="flex f-col hero-content hero-content-full-width">
                 <h1 class="pad-bottom-1">Favourites</h1>
-                <h2><?php echo $firstname ?>'s Saved Pets</h2>
-                <p class="pad-bottom-1">You can remember your favourite breeds or shortlist dogs by clicking the heart next to them. <br>You can find pets that match your personality or explore your options here: </p>
+                <h2 class="margin-bottom-1"><?php echo $firstname ?>'s Saved Pets</h2>
+                <p class="pad-bottom-1">You can remember your favourite breeds or shortlist dogs by clicking the heart next to them. You can find pets that match your personality or explore your options here: </p>
 
                 <div class="btn-group pad-bottom-2">
                     <a href="quiz.php" class="margin-right-1 hero-btn">Personality quiz</a>
