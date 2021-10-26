@@ -55,6 +55,7 @@
                 $user_id_for_sql = logged_in() ? get_userid() : "NULL";
                 // Gets all dogs, as well as their shelter, and also whether the dog has been shortlisted by the logged-in user
                 // uses filters created in filter-menu.php to filter list
+                $dogs_shown = array();
                 $res = mysqli_query($conn, "
                 SELECT DISTINCT
                     d.name AS Dog,
@@ -69,15 +70,19 @@
                     FROM dogs d
                         INNER JOIN shelters s ON d.shelter_id = s.shelter_id
                         INNER JOIN dog_breeds b ON d.breed_id = b.breed_id
-                        INNER JOIN breed_image bi ON d.breed_id = bi.breed_id
+                        INNER JOIN (SELECT i.* FROM breed_image i INNER JOIN dogs di WHERE i.breed_id=di.breed_id ORDER BY RAND()) as bi ON d.breed_id = bi.breed_id
                         LEFT JOIN favourite_dogs f ON d.dog_id = f.dog_id
                     WHERE owner_id IS NULL 
-                        AND main_image  
                         AND (user_id={$user_id_for_sql} OR user_id IS NULL) $whereFilters
                         ORDER BY RAND()
             ");
                 // creates each dog profile for the dogs returned based on filters
                 while ($entry = mysqli_fetch_array($res)) {
+                    if (in_array($entry["dog_id"], $dogs_shown)) {
+                        continue;
+                    } else {
+                        array_push($dogs_shown, $entry["dog_id"]);
+                    }
                 ?>
                     <div class="profile-box float-container" id='dog_id=<?php echo $entry['dog_id']; ?>'>
                         <td><a href='dog-profile.php?dog_id=<?php echo $entry['dog_id']; ?>'><img src='<?php echo SITEURL . $entry['path']; ?>' alt='dog image' width='100%'></a></td>
