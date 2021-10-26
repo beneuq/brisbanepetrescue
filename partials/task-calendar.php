@@ -345,6 +345,7 @@
                 }
             }();
 
+            // Populate calendar events from php
             !function() {
                 let data = [
                     <?php
@@ -356,11 +357,13 @@
                     ?>
                 ];
 
+                // Converts a string to a random, colour with high contrast (so 2 random colours are unlikely to be similar
                 function stringToColour(str) {
                     let colour = '#' + md5(str).slice(0, 6);
                     return colour;
                 }
 
+                // Create the calendar object
                 let calendar = new Calendar('#calendar', data);
 
             }();

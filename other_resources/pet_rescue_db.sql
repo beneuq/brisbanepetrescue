@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 21, 2021 at 09:55 AM
+-- Generation Time: Oct 26, 2021 at 07:34 AM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -752,7 +752,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (180, NULL, 8, 37, 'Saul', 6, '2015-05-13', 'male', 1, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (181, NULL, 7, 17, 'Skye', 7, '2014-06-23', 'female', 0, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (182, NULL, 6, 67, 'Oscar', 1, '2020-02-09', 'male', 0, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
-(183, 1, 2, 29, 'Annie', 6, '2015-01-13', 'female', 1, 1, 4856345, 300, '2017-04-17', '2021-08-26', 60, '2021-09-22', 28),
+(183, 1, 2, 29, 'Annie', 6, '2015-01-13', 'female', 1, 1, 4856345, 300, '2017-04-17', '2021-08-26', 60, '2021-10-26', 28),
 (184, NULL, 9, 71, 'Hamilton', 3, '2018-05-23', 'male', 1, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
 (185, NULL, 5, 63, 'Ursula', 4, '2016-12-06', 'female', 0, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (186, NULL, 8, 43, 'Greta', 10, '2011-02-22', 'female', 0, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
@@ -1192,7 +1192,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (619, NULL, 7, 42, 'Delia', 0, '2020-11-05', 'female', 1, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (620, NULL, 14, 28, 'Vivienne', 5, '2016-03-04', 'female', 0, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (621, NULL, 15, 18, 'Hogan', 4, '2017-05-12', 'male', 0, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
-(622, 1, 6, 31, 'Parley', 6, '2015-06-23', 'male', 1, 1, 123456, 150, '2020-06-02', '2021-10-06', 14, '2021-10-06', 30),
+(622, 1, 6, 31, 'Parley', 6, '2015-06-23', 'male', 1, 1, 123456, 150, '2020-06-02', '2021-10-26', 14, '2021-10-06', 30),
 (623, NULL, 14, 20, 'Opal', 6, '2014-12-10', 'female', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (624, NULL, 12, 7, 'Iggy', 11, '2009-12-31', 'male', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (625, NULL, 12, 29, 'Oakley', 7, '2013-09-15', 'male', 0, 0, NULL, 150, NULL, NULL, NULL, NULL, NULL),
@@ -1201,7 +1201,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (628, NULL, 4, 62, 'Billie', 0, '2021-08-16', 'female', 0, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
 (629, NULL, 16, 30, 'Sue', 6, '2015-06-13', 'female', 1, 0, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (630, NULL, 14, 58, 'Birdie', 2, '2019-01-10', 'female', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
-(631, 1, 9, 26, 'Carla', 7, '2013-10-31', 'female', 1, 1, 999999, 250, '2021-09-22', '2021-10-17', 7, '2021-10-14', 10),
+(631, 1, 9, 26, 'Carla', 7, '2013-10-31', 'female', 1, 1, 999999, 250, '2021-09-22', '2021-10-17', 7, '2021-10-26', 10),
 (632, NULL, 7, 67, 'Addie', 9, '2012-07-06', 'female', 1, 1, NULL, 250, NULL, NULL, NULL, NULL, NULL),
 (633, NULL, 14, 31, 'Iris', 5, '2016-07-03', 'female', 1, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (634, NULL, 17, 42, 'Loretta', 4, '2016-11-28', 'female', 1, 1, NULL, 300, NULL, NULL, NULL, NULL, NULL),
@@ -1211,7 +1211,7 @@ INSERT INTO `dogs` (`dog_id`, `owner_id`, `shelter_id`, `breed_id`, `name`, `age
 (638, NULL, 15, 9, 'Coco', 6, '2014-09-22', 'female', 1, 0, NULL, 250, NULL, NULL, NULL, NULL, NULL),
 (639, NULL, 5, 28, 'Buster', 2, '2018-12-13', 'male', 1, 0, NULL, 300, NULL, NULL, NULL, NULL, NULL),
 (640, NULL, 16, 77, 'Silvia', 11, '2010-08-14', 'female', 1, 0, NULL, 200, NULL, NULL, NULL, NULL, NULL),
-(641, 1, 5, 61, 'Duke', 10, '2010-12-25', 'male', 0, 0, 3481816, 200, '2021-10-14', '2021-10-19', 2, '2021-10-14', 199),
+(641, 1, 5, 61, 'Duke', 10, '2010-12-25', 'male', 0, 0, 3481816, 200, '2021-10-14', '2021-10-26', 2, '2021-10-14', 199),
 (642, NULL, 8, 36, 'Cameron', 7, '2014-08-20', 'female', 1, 1, NULL, 350, NULL, NULL, NULL, NULL, NULL),
 (643, NULL, 3, 19, 'Alden', 1, '2020-03-17', 'male', 1, 1, NULL, 200, NULL, NULL, NULL, NULL, NULL),
 (644, NULL, 13, 38, 'Lizzy', 11, '2010-08-25', 'female', 1, 1, NULL, 150, NULL, NULL, NULL, NULL, NULL),
@@ -1879,8 +1879,7 @@ INSERT INTO `users` (`user_id`, `username`, `first_name`, `last_name`, `dob`, `e
 (5, 'johnsmith', 'John', 'Smith', '2007-07-07', 'john.smith@outlook.com', 'abcde'),
 (7, 'johnsmith123', 'John', 'Smith', '2007-07-07', 'john.smith1@outlook.com', 'abcde'),
 (8, 'O_T', 'Olivia', 'T', '2000-10-21', 'O.t@hotmail.com', '0000'),
-(9, 'poggers', 'Dave', 'Smith', '2002-01-21', 'dave@gmail.com', 'pogdave'),
-(10, 'Fart', 'poop', 'Fart', '1804-06-15', 'kingzoggy2243@gmail.com', 'Poopman4567'),
+(9, 'davie12', 'Dave', 'Smith', '2002-01-21', 'dave@gmail.com', 'pogdave'),
 (11, 'Jocelynn.anne', 'Jocelyn', 'Ifield ', '2003-02-11', 'jocelynifield@gmail.com', 'Spuddy2004');
 
 --
