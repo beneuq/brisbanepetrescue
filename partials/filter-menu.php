@@ -53,6 +53,7 @@
         }
         foreach (array_keys($pageVars) as $var) {
             if (!(in_array($var, $filters))) {
+                debug_to_console($pageVars[$var]);
                 unset($pageVars[$var]);
             }
         }
@@ -118,11 +119,12 @@
         // starts with 'AND' and is encapsulated so it works correctly with any other filters already added to the query
         $whereFilters = "AND (";
         foreach ($filters as $filter => $value) {
-            if ($filter == 'shelters.name') {
-                $filter == 'Shelter';
-            }
             // if string the values must be encapsulated in ""
             if ($isString[$filter]) {
+                //solution for shelter issue
+                if ($filter == 'shelters.name') {
+                    $filter == 'Shelter';
+                }
                 // if value is an array use the 'IN' clause so any matching value is ok
                 if (is_array($value)) {
                     $inFilter = '';
@@ -261,6 +263,7 @@
      * and refreshes the page
      */
     if (!empty($filters)) {
+        debug_to_console('not cleared');
         $existing = "<table class='filter-current'>
 	<colgroup span=\"2\"></colgroup>
 	<tr>
