@@ -118,6 +118,9 @@
         // starts with 'AND' and is encapsulated so it works correctly with any other filters already added to the query
         $whereFilters = "AND (";
         foreach ($filters as $filter => $value) {
+            if ($filter == 'shelters.name') {
+                $filter == 'Shelter';
+            }
             // if string the values must be encapsulated in ""
             if ($isString[$filter]) {
                 // if value is an array use the 'IN' clause so any matching value is ok
