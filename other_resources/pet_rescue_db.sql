@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 26, 2021 at 07:34 AM
+-- Generation Time: Oct 26, 2021 at 08:53 AM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21
 
@@ -183,10 +183,10 @@ INSERT INTO `breed_image` (`image_id`, `breed_id`, `path`, `alt_text`, `image_ac
 (28, 52, '/images/breeds/e42d24760fcb9e6273a29e2f083ba9b6.jpg', 'Basenji example image', b'1', b'0', 540, 540),
 (29, 52, '/images/breeds/1493bf7f5cb1ca62b4e0772d9edc702e.jpg', 'Basenji example image', b'1', b'0', 540, 540),
 (30, 52, '/images/breeds/81662662eb22135f0438459487722f98.jpg', 'Basenji example image', b'1', b'0', 540, 540),
-(31, 30, '/images/breeds/5f49abbd269cee0dffc6bcde1daa6bd3.jpg', 'Basset Hound example image', b'1', b'0', 540, 540),
+(31, 30, '/images/breeds/5f49abbd269cee0dffc6bcde1daa6bd3.jpg', 'Basset Hound example image', b'1', b'1', 540, 540),
 (32, 30, '/images/breeds/2ac0b174eeeffdca774c0731da5d736a.jpg', 'Basset Hound example image', b'1', b'0', 540, 540),
 (33, 30, '/images/breeds/fc518958bdeda396c5431d8a8ec319df.jpg', 'Basset Hound example image', b'1', b'0', 540, 540),
-(34, 30, '/images/breeds/eccc1f78f99e1f5fc1fa618be4ae7f67.jpg', 'Basset Hound example image', b'1', b'1', 540, 540),
+(34, 30, '/images/breeds/eccc1f78f99e1f5fc1fa618be4ae7f67.jpg', 'Basset Hound example image', b'1', b'0', 540, 540),
 (35, 30, '/images/breeds/2ac2f5944e38c9873fddd80f44929a91.jpg', 'Basset Hound example image', b'1', b'0', 540, 540),
 (36, 53, '/images/breeds/beagle.jpg', 'Beagle example image', b'1', b'1', 540, 540),
 (37, 53, '/images/breeds/0ea78b024dc3955332d3ddb08b8e50f0.jpg', 'Beagle example image', b'1', b'0', 540, 540),
@@ -1806,7 +1806,7 @@ INSERT INTO `pet_filters` (`pet_filter_id`, `field_name`, `filter_by`, `display_
 (9, 'drooling_potential_class', b'1', 'Drooling Potential', 9, b'0', b'0', NULL, b'1', b'0'),
 (10, 'energy_level_class', b'1', 'Engery Levels', 10, b'0', b'0', NULL, b'1', b'0'),
 (11, 'exercise_needs_class', b'1', 'Exercise Needs', 11, b'0', b'0', NULL, b'1', b'0'),
-(12, 'good_for_novice_owners', b'1', 'Good for First Time Owners', 12, b'0', b'0', NULL, b'0', b'0'),
+(12, 'good_for_novice_owners', b'1', 'Good for First Time Owners', 12, b'0', b'0', NULL, b'1', b'0'),
 (13, 'potential_for_weight_gain_class', b'1', 'Easily Gains Weight', 13, b'0', b'0', NULL, b'1', b'0'),
 (14, 'size_class', b'1', 'Size', 14, b'0', b'1', 4, b'1', b'0'),
 (15, 'type_of_dog', b'1', 'Type of Dog', 15, b'1', b'0', NULL, b'0', b'0'),
