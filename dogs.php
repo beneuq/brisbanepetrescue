@@ -78,6 +78,7 @@
             ");
                 // creates each dog profile for the dogs returned based on filters
                 while ($entry = mysqli_fetch_array($res)) {
+                    // Ensure each dog is only shown once with a random image
                     if (in_array($entry["dog_id"], $dogs_shown)) {
                         continue;
                     } else {
