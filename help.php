@@ -34,7 +34,7 @@
                     <div class="help-content">
                         <h2>Get help with your dog</h2>
                         <p>Is your dog sick? Perhaps they are showcasing behaviours you don't understand?</p>
-                        <a href="">Read More</a>
+                        <a href="read-more.php">Read More</a>
                     </div>
                     <div class="help-thumbnail"></div>
                 </div>
@@ -43,7 +43,7 @@
                     <div class="help-content">
                         <h2>Should I be doing this for my dog?</h2>
                         <p>Are you confused regarding what your dog can eat? Perhaps you are wondering whether certain behaviours should be encouraged?</p>
-                        <a href="">Read More</a>
+                        <a href="read-more.php">Read More</a>
                     </div>
                     <div class="help-thumbnail"></div>
                 </div>

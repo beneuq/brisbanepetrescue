@@ -1538,8 +1538,8 @@ h1 {
 }
 
 .help-box:hover {
-    margin-top: 3.5%;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
 }
 
 .help-content {
